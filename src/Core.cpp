@@ -2,15 +2,15 @@
 ** EPITECH PROJECT, 2021
 ** indie-studio
 ** File description:
-** main
+** Core
 */
 
 #include "indie.hpp"
 
-int main(int argc, char const **argv)
+indie::Core::Core()
 {
-    (void) argc;
-    (void) argv;
+}
 
-    return 0;
+indie::Core::~Core()
+{
 }

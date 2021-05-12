@@ -3,3 +3,4 @@
 .vscode/
 lib/
 *:Zone.Identifier
+build/

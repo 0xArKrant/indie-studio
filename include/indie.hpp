@@ -8,5 +8,9 @@
 #ifndef INDIE_HPP_
 #define INDIE_HPP_
 
+#include <iostream>
+
+#include "Core.hpp"
+#include "LibraryLoader.hpp"
 
 #endif /* !INDIE_HPP_ */
