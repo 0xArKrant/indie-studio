@@ -27,3 +27,5 @@ target_compile_options(${BIN_NAME} PUBLIC
     -Wformat-security
     -std=c++17
 )
+
+target_link_libraries(${BIN_NAME} PUBLIC ${CMAKE_DL_LIBS})

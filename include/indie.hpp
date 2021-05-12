@@ -9,6 +9,16 @@
 #define INDIE_HPP_
 
 #include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include <vector>
+#include <functional>
+#include <memory>
+#include <dlfcn.h>
+#include <dirent.h>
+#include <sys/types.h>
+#include <list>
+
 
 #include "Core.hpp"
 #include "LibraryLoader.hpp"

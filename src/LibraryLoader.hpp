@@ -5,6 +5,8 @@
 ** LibraryLoader
 */
 
+#include "indie.hpp"
+
 #ifndef LIBRARYLOADER_HPP_
 #define LIBRARYLOADER_HPP_
 
@@ -13,9 +15,20 @@ namespace indie {
         public:
             LibraryLoader(std::string);
             ~LibraryLoader();
+            void *DLOpen(const char *);
+            void DLClose(void *);
+            void *DLSym(void *, const char *);
+            template <typename library>
+            library set_ptr(std::string entryPoint) {
+                library create = nullptr;
+                void *dlsym_ptr = DLSym(this->_handler, entryPoint.c_str());
+                create = reinterpret_cast <library> (dlsym_ptr);
+                return create;
+            }
 
         protected:
         private:
+            void *_handler;
     };
 }
 
