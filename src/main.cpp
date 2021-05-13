@@ -9,8 +9,11 @@
 
 int main(int argc, char const **argv)
 {
-    (void) argc;
-    (void) argv;
-
+    try {
+        (void) argc;
+        (void) argv;
+    } catch (Errors::Exception &exception) {
+        std::cerr << "Unexpected error during runtime: " << argv[0] << exception.what() << std::endl;
+    }
     return 0;
 }

@@ -6,8 +6,9 @@ set(BIN_NAME bomberman)
 
 file(GLOB SRC_FILES
     src/main.cpp
-    src/LibraryLoader.cpp
-    src/Core.cpp
+    src/core/Core.cpp
+    src/core/LibraryLoader.cpp
+    src/error/Exception.cpp
 )
 
 add_executable(${BIN_NAME} ${SRC_FILES})
