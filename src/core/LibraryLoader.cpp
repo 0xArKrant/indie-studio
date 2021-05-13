@@ -9,7 +9,6 @@
 
 indie::LibraryLoader::LibraryLoader(std::string name)
 {
-    std::cout << "Voici le nom : " << name << std::endl;
     this->_handler = DLOpen(name.c_str());
 }
 
@@ -23,8 +22,7 @@ void *indie::LibraryLoader::DLOpen(const char *name)
     void *handler = dlopen(name, RTLD_LAZY);
 
     if (!handler) {
-        std::cerr << "Cannot open library: " << dlerror() << std::endl;
-        exit(84);
+        throw (Errors::Exception("Unable to open the dynamic library", dlerror(), __FILE__, __LINE__));
     }
     return handler;
 }
@@ -34,9 +32,8 @@ void *indie::LibraryLoader::DLSym(void *handler, const char *entryPoint)
     void *symPtr = dlsym(handler, entryPoint);
     const char *dlsym_error = dlerror();
     if (dlsym_error) {
-        std::cerr << "Cannot load symbol: " << dlsym_error << std::endl;
+        throw(Errors::Exception("Cannot load symbol", dlsym_error, __FILE__, __LINE__));
         DLClose(handler);
-        exit(84);
     }
     return symPtr;
 }

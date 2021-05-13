@@ -22,5 +22,6 @@
 
 #include "Core.hpp"
 #include "LibraryLoader.hpp"
+#include "Exception.hpp"
 
 #endif /* !INDIE_HPP_ */
