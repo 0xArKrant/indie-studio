@@ -31,6 +31,19 @@ void indie::Engine_RAYLIB::initWindow(const size_t &width, const size_t &height,
     SetTargetFPS(50);
 }
 
+std::map<indie::keyEvent, bool> indie::Engine_RAYLIB::getEvent()
+{
+    for (auto &emap : this->_emap)
+        emap.second = false;
+    for (auto &funmap : this->_ptrfun) {
+        if (this->_emap[funmap.first])
+            continue;
+        this->_emap[funmap.first] = funmap.second(*this);
+    }
+    return this->_emap;
+}
+
+
 indie::Engine_RAYLIB::~Engine_RAYLIB() {
     CloseWindow();
 }
