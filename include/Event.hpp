@@ -16,7 +16,7 @@ namespace indie {
         RIGHT,
         QUIT,
         MENU,
-        MAIN,MENU,
+        MAIN_MENU,
         CONFIRM,
         NONE
     };

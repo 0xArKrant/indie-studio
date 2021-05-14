@@ -16,6 +16,7 @@ namespace indie {
         public:
             virtual ~IEngines() = default;
             virtual std::map<keyEvent, bool> getEvent() = 0;
+            virtual void initWindow(const size_t &, const size_t &, const std::string &) = 0;
         protected:
         private:
     };
