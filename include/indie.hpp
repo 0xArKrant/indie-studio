@@ -20,7 +20,6 @@
 #include <list>
 #include <filesystem>
 
-
 #include "Core.hpp"
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
