@@ -19,9 +19,13 @@
 #include <sys/types.h>
 #include <list>
 #include <filesystem>
+#include <raylib.h>
 
 #include "Core.hpp"
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
+
+#include "Shape.hpp"
+#include "Rectangle.hpp"
 
 #endif /* !INDIE_HPP_ */
