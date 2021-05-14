@@ -19,7 +19,6 @@
 #include <sys/types.h>
 #include <list>
 
-
 #include "Core.hpp"
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
