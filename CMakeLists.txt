@@ -15,8 +15,10 @@ add_executable(${BIN_NAME} ${SRC_FILES})
 
 include_directories(
     include/
-    src/errors/
-    src/
+    src/error/
+    src/engine/
+    src/game/
+    src/core/
 )
 
 target_compile_options(${BIN_NAME} PUBLIC
