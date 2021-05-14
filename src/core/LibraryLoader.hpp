@@ -15,9 +15,6 @@ namespace indie {
         public:
             LibraryLoader(std::string);
             ~LibraryLoader();
-            void *DLOpen(const char *);
-            void DLClose(void *);
-            void *DLSym(void *, const char *);
             template <typename library>
             library set_ptr(std::string entryPoint) {
                 library create = nullptr;
@@ -28,6 +25,9 @@ namespace indie {
 
         protected:
         private:
+            void *DLOpen(const char *);
+            void DLClose(void *);
+            void *DLSym(void *, const char *);
             void *_handler;
     };
 }

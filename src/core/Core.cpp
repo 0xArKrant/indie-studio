@@ -5,8 +5,7 @@
 ** Core
 */
 
-#include <filesystem>
-#include "Core.hpp"
+#include "indie.hpp"
 
 indie::Core::Core()
 {
@@ -14,8 +13,10 @@ indie::Core::Core()
     #ifdef _WIN32
     #endif
     #ifdef __linux__
-        for (const auto & file : std::filesystem::directory_iterator(path))
-        std::cout << file.path() << std::endl;        
+        for (const auto & file : std::filesystem::directory_iterator(path)) {
+            indie::LibraryLoader *lib = new indie::LibraryLoader(file.path());
+            (void) lib;
+        }
     #endif
 }
 

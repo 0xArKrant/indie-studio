@@ -20,7 +20,6 @@ indie::LibraryLoader::~LibraryLoader()
 void *indie::LibraryLoader::DLOpen(const char *name)
 {
     void *handler = dlopen(name, RTLD_LAZY);
-
     if (!handler) {
         throw (Errors::Exception("Unable to open the dynamic library", dlerror(), __FILE__, __LINE__));
     }

@@ -18,6 +18,7 @@
 #include <dirent.h>
 #include <sys/types.h>
 #include <list>
+#include <filesystem>
 
 
 #include "Core.hpp"
