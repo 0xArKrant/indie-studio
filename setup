@@ -15,20 +15,26 @@ fi
 function check_args() {
     if [[ ${GET_OPTIONS} == "build" ]]; then
         rm -rf build/
-        mkdir build/
-        cd build/
-        cmake ..
-    fi
-    if [[ ${GET_OPTIONS} == "run" ]]; then
-        rm -rf build/
+        rm bomberman
         mkdir build/
         cd build/
         cmake ..
         make
+        mv ./bomberman ..
+    fi
+    if [[ ${GET_OPTIONS} == "run" ]]; then
+        rm -rf build/
+        rm bomberman
+        mkdir build/
+        cd build/
+        cmake ..
+        make
+        mv bomberman ../
         ./bomberman
     fi
     if [[ ${GET_OPTIONS} == "clean" ]]; then
         rm -rf build/
+        rm bomberman
     fi
 }
 

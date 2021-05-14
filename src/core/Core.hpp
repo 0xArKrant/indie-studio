@@ -15,7 +15,6 @@ namespace indie {
         public:
             Core();
             ~Core();
-
         protected:
         private:
     };
