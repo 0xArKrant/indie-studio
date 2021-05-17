@@ -7,6 +7,10 @@ set(BIN_NAME bomberman)
 
 file(GLOB SRC_FILES
     include/shape/Rectangle.cpp
+    include/shape/Pixel.cpp
+    include/shape/Ellipse.cpp
+    include/shape/Polygon.cpp
+    include/shape/Ring.cpp
     src/main.cpp
     src/core/Core.cpp
     src/core/LibraryLoader.cpp

@@ -27,5 +27,8 @@
 
 #include "Shape.hpp"
 #include "Rectangle.hpp"
-
+#include "Pixel.hpp"
+#include "Ellipse.hpp"
+#include "Polygon.hpp"
+#include "Ring.hpp"
 #endif /* !INDIE_HPP_ */
