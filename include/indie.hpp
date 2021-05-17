@@ -31,4 +31,6 @@
 #include "Ellipse.hpp"
 #include "Polygon.hpp"
 #include "Ring.hpp"
+#include "Triangle.hpp"
+
 #endif /* !INDIE_HPP_ */

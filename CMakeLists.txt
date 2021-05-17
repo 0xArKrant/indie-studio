@@ -11,6 +11,7 @@ file(GLOB SRC_FILES
     include/shape/Ellipse.cpp
     include/shape/Polygon.cpp
     include/shape/Ring.cpp
+    include/shape/Triangle.cpp
     src/main.cpp
     src/core/Core.cpp
     src/core/LibraryLoader.cpp
