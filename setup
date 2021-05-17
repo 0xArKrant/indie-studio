@@ -30,6 +30,7 @@ function check_args() {
         cmake ..
         make
         mv bomberman ../
+        cd ..
         ./bomberman
     fi
     if [[ ${GET_OPTIONS} == "clean" ]]; then
