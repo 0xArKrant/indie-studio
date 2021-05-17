@@ -6,12 +6,14 @@ find_package(raylib 2.5.0 REQUIRED)
 set(BIN_NAME bomberman)
 
 file(GLOB SRC_FILES
-    include/shape/Rectangle.cpp
-    include/shape/Pixel.cpp
-    include/shape/Ellipse.cpp
-    include/shape/Polygon.cpp
-    include/shape/Ring.cpp
-    include/shape/Triangle.cpp
+    src/engine/Shape/Rectangle.cpp
+    src/engine/Shape/Pixel.cpp
+    src/engine/Shape/Ellipse.cpp
+    src/engine/Shape/Polygon.cpp
+    src/engine/Shape/Ring.cpp
+    src/engine/Shape/Triangle.cpp
+    src/engine/Shape/Line.cpp
+    src/engine/Shape/Circle.cpp
     src/main.cpp
     src/core/Core.cpp
     src/core/LibraryLoader.cpp
@@ -22,9 +24,9 @@ add_executable(${BIN_NAME} ${SRC_FILES})
 
 include_directories(
     include/
-    include/shape/
     src/error/
     src/engine/
+    src/engine/Shape
     src/game/
     src/core/
 )

@@ -25,12 +25,14 @@
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
 
-#include "Shape.hpp"
+#include "IShape.hpp"
 #include "Rectangle.hpp"
 #include "Pixel.hpp"
 #include "Ellipse.hpp"
 #include "Polygon.hpp"
 #include "Ring.hpp"
 #include "Triangle.hpp"
+#include "Line.hpp"
+#include "Circle.hpp"
 
 #endif /* !INDIE_HPP_ */
