@@ -13,13 +13,27 @@
 namespace shape {
     class Rectangle : public Shape {
         public:
-            Rectangle(::Vector2, ::Vector2, ::Color);
+            Rectangle(int, int, int, int, ::Color);
             ~Rectangle() = default;
+            void DrawShape();
+            ::Color GetColor() { return this->_color; };
+            void SetColor(::Color color) { this->_color = color; };
+        private:
+            int _posX;
+            int _posY;
+            int _width;
+            int _height;
+            ::Color _color;
+    };
+    class RectangleV : public Shape {
+        public:
+            RectangleV(::Vector2, ::Vector2, ::Color);
+            ~RectangleV() = default;
             void DrawShape();
             ::Vector2 GetPosition() { return this->_position; };
             void SetPosition(::Vector2 position) { this->_position = position; };
             ::Color GetColor() { return this->_color; };
-            void SetColor(Color color) { this->_color = color; };
+            void SetColor(::Color color) { this->_color = color; };
         protected:
         private:
             ::Vector2 _position;

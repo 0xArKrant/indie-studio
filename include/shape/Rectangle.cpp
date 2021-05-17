@@ -7,14 +7,28 @@
 
 #include "indie.hpp"
 
-shape::Rectangle::Rectangle(Vector2 position, Vector2 size, Color color)
+shape::Rectangle::Rectangle(int posX, int posY, int width, int height, ::Color color)
+{
+    this->_posX = posX;
+    this->_posY = posY;
+    this->_width = width;
+    this->_height = height;
+    this->_color = color;
+}
+
+void shape::Rectangle::DrawShape()
+{
+    ::DrawRectangle(this->_posX, this->_posY, this->_width, this->_height, this->_color);
+}
+
+shape::RectangleV::RectangleV(Vector2 position, Vector2 size, Color color)
 {
     this->_position = position;
     this->_size = size;
     this->_color = color;
 }
 
-void shape::Rectangle::DrawShape()
+void shape::RectangleV::DrawShape()
 {
    ::DrawRectangleV(this->_position, this->_size, this->_color);
 }
