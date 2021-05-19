@@ -35,4 +35,6 @@
 #include "Line.hpp"
 #include "Circle.hpp"
 
+#include "IModels.hpp"
+#include "Cube.hpp"
 #endif /* !INDIE_HPP_ */

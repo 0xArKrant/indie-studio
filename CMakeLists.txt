@@ -14,6 +14,7 @@ file(GLOB SRC_FILES
     src/engine/Shape/Triangle.cpp
     src/engine/Shape/Line.cpp
     src/engine/Shape/Circle.cpp
+    src/engine/Models/Cube.cpp
     src/main.cpp
     src/core/Core.cpp
     src/core/LibraryLoader.cpp
@@ -27,6 +28,7 @@ include_directories(
     src/error/
     src/engine/
     src/engine/Shape
+    src/engine/Models
     src/game/
     src/core/
 )
