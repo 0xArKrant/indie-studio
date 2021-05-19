@@ -23,6 +23,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Ray.cpp
     src/engine/Models/Plane.cpp
     src/engine/Models/Grid.cpp
+    src/engine/Models/Cylinder.cpp
 
     src/main.cpp
     src/core/Core.cpp
