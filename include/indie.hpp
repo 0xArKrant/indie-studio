@@ -39,4 +39,5 @@
 #include "Cube.hpp"
 #include "Line3D.hpp"
 #include "Point3D.hpp"
+#include "Circle3D.hpp"
 #endif /* !INDIE_HPP_ */
