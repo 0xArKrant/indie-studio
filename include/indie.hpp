@@ -48,4 +48,5 @@
 #include "Sphere.hpp"
 #include "GenMesh.hpp"
 #include "MeshManipulation.hpp"
+#include "DrawBoundingBox.hpp"
 #endif /* !INDIE_HPP_ */

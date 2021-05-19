@@ -27,6 +27,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Sphere.cpp
     src/engine/Models/MeshGeneration/GenMesh.cpp
     src/engine/Models/MeshManipulation/MeshManipulation.cpp
+    src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
 
     src/main.cpp
     src/core/Core.cpp
@@ -44,6 +45,7 @@ include_directories(
     src/engine/Models/Geometric
     src/engine/Models/MeshGeneration
     src/engine/Models/MeshManipulation
+    src/engine/Models/ModelDrawing
     src/game/
     src/core/
 )
