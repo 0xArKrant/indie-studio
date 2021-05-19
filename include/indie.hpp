@@ -41,4 +41,5 @@
 #include "Point3D.hpp"
 #include "Circle3D.hpp"
 #include "Triangle3D.hpp"
+#include "Ray.hpp"
 #endif /* !INDIE_HPP_ */

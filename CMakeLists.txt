@@ -20,6 +20,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Point3D.cpp
     src/engine/Models/Circle3D.cpp
     src/engine/Models/Triangle3D.cpp
+    src/engine/Models/Ray.cpp
 
     src/main.cpp
     src/core/Core.cpp
