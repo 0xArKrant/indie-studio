@@ -50,4 +50,5 @@
 #include "MeshManipulation.hpp"
 #include "DrawBoundingBox.hpp"
 #include "DrawBillboard.hpp"
+#include "DrawModel.hpp"
 #endif /* !INDIE_HPP_ */

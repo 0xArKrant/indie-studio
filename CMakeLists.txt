@@ -29,6 +29,7 @@ file(GLOB SRC_FILES
     src/engine/Models/MeshManipulation/MeshManipulation.cpp
     src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
     src/engine/Models/ModelDrawing/DrawBillboard.cpp
+    src/engine/Models/ModelDrawing/DrawModel.cpp
 
     src/main.cpp
     src/core/Core.cpp
