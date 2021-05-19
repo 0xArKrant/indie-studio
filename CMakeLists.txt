@@ -15,16 +15,17 @@ file(GLOB SRC_FILES
     src/engine/Shape/Line.cpp
     src/engine/Shape/Circle.cpp
 
-    src/engine/Models/Cube.cpp
-    src/engine/Models/Line3D.cpp
-    src/engine/Models/Point3D.cpp
-    src/engine/Models/Circle3D.cpp
-    src/engine/Models/Triangle3D.cpp
-    src/engine/Models/Ray.cpp
-    src/engine/Models/Plane.cpp
-    src/engine/Models/Grid.cpp
-    src/engine/Models/Cylinder.cpp
-    src/engine/Models/Sphere.cpp
+    src/engine/Models/Geometric/Cube.cpp
+    src/engine/Models/Geometric/Line3D.cpp
+    src/engine/Models/Geometric/Point3D.cpp
+    src/engine/Models/Geometric/Circle3D.cpp
+    src/engine/Models/Geometric/Triangle3D.cpp
+    src/engine/Models/Geometric/Ray.cpp
+    src/engine/Models/Geometric/Plane.cpp
+    src/engine/Models/Geometric/Grid.cpp
+    src/engine/Models/Geometric/Cylinder.cpp
+    src/engine/Models/Geometric/Sphere.cpp
+    src/engine/Models/MeshGeneration/GenMesh.cpp
 
     src/main.cpp
     src/core/Core.cpp
@@ -39,7 +40,8 @@ include_directories(
     src/error/
     src/engine/
     src/engine/Shape
-    src/engine/Models
+    src/engine/Models/Geometric
+    src/engine/Models/MeshGeneration
     src/game/
     src/core/
 )

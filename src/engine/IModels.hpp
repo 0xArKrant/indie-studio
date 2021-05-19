@@ -15,8 +15,9 @@ namespace IModels {
         public:
             virtual ~Models() = default;
             virtual void DrawModels() = 0;
-            virtual Color GetColor() = 0;
-            virtual void SetColor(Color) = 0;
+            virtual ::Mesh GenerateMesh() = 0;
+            virtual ::Color GetColor() = 0;
+            virtual void SetColor(::Color) = 0;
     };
 }
 
