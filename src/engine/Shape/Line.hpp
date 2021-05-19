@@ -10,7 +10,7 @@
 #ifndef LINE_HPP_
 #define LINE_HPP_
 
-namespace shape {
+namespace IShape {
     class Line : public Shape {
         public:
             Line(int, int, int, int, ::Color);

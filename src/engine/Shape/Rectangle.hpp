@@ -10,7 +10,7 @@
 #ifndef RECTANGLE_HPP_
 #define RECTANGLE_HPP_
 
-namespace shape {
+namespace IShape {
     class Rectangle : public Shape {
         public:
             Rectangle(int, int, int, int, ::Color);

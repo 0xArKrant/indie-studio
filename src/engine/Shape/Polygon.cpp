@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-shape::Polygon::Polygon(::Vector2 center, int sides, float radius, float rotation, ::Color color)
+IShape::Polygon::Polygon(::Vector2 center, int sides, float radius, float rotation, ::Color color)
 {
     this->_center = center;
     this->_sides = sides;
@@ -16,13 +16,13 @@ shape::Polygon::Polygon(::Vector2 center, int sides, float radius, float rotatio
     this->_color = color;
 }
 
-void shape::Polygon::DrawShape()
+void IShape::Polygon::DrawShape()
 {
     ::DrawPoly(this->_center, this->_sides, this->_radius, this->_rotation, this->_color);
 }
 
 
-shape::PolygonLines::PolygonLines(::Vector2 center, int sides, float radius, float rotation, ::Color color)
+IShape::PolygonLines::PolygonLines(::Vector2 center, int sides, float radius, float rotation, ::Color color)
 {
     this->_center = center;
     this->_sides = sides;
@@ -31,12 +31,12 @@ shape::PolygonLines::PolygonLines(::Vector2 center, int sides, float radius, flo
     this->_color = color;
 }
 
-void shape::PolygonLines::DrawShape()
+void IShape::PolygonLines::DrawShape()
 {
     ::DrawPolyLines(this->_center, this->_sides, this->_radius, this->_rotation, this->_color);
 }
 
-shape::PolygonLinesEx::PolygonLinesEx(::Vector2 center, int sides, float radius, float rotation, float linethick, ::Color color)
+IShape::PolygonLinesEx::PolygonLinesEx(::Vector2 center, int sides, float radius, float rotation, float linethick, ::Color color)
 {
     this->_center = center;
     this->_sides = sides;
@@ -46,7 +46,7 @@ shape::PolygonLinesEx::PolygonLinesEx(::Vector2 center, int sides, float radius,
     this->_color = color;
 }
 
-void shape::PolygonLinesEx::DrawShape()
+void IShape::PolygonLinesEx::DrawShape()
 {
     ::DrawPolyLinesEx(this->_center, this->_sides, this->_radius, this->_rotation, this->_linethick, this->_color);
 }

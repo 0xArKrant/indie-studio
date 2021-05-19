@@ -10,7 +10,7 @@
 #ifndef PIXEL_HPP_
 #define PIXEL_HPP_
 
-namespace shape {
+namespace IShape {
     class Pixel : public Shape {
         public:
             Pixel(int, int, ::Color);

@@ -10,7 +10,7 @@
 #ifndef RING_HPP_
 #define RING_HPP_
 
-namespace shape {
+namespace IShape {
     class Ring : public Shape {
             Ring(::Vector2, float, float, float, float, int, ::Color);
             ~Ring() = default;

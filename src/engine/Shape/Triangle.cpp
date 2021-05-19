@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-shape::Triangle::Triangle(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::Color color)
+IShape::Triangle::Triangle(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::Color color)
 {
     this->_point1 = p1;
     this->_point2 = p2;
@@ -15,12 +15,12 @@ shape::Triangle::Triangle(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::Color colo
     this->_color = color;
 }
 
-void shape::Triangle::DrawShape()
+void IShape::Triangle::DrawShape()
 {
     ::DrawTriangle(this->_point1, this->_point2, this->_point3, this->_color);
 }
 
-shape::TriangleLines::TriangleLines(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::Color color)
+IShape::TriangleLines::TriangleLines(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::Color color)
 {
     this->_point1 = p1;
     this->_point2 = p2;
@@ -28,32 +28,32 @@ shape::TriangleLines::TriangleLines(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::
     this->_color = color;
 }
 
-void shape::TriangleLines::DrawShape()
+void IShape::TriangleLines::DrawShape()
 {
     ::DrawTriangleLines(this->_point1, this->_point2, this->_point3, this->_color);
 }
 
-shape::TriangleFan::TriangleFan(::Vector2 *p1, int pointsCount, ::Color color)
+IShape::TriangleFan::TriangleFan(::Vector2 *p1, int pointsCount, ::Color color)
 {
     this->_point1 = p1;
     this->_pointsCount = pointsCount;
     this->_color = color;
 }
 
-void shape::TriangleFan::DrawShape()
+void IShape::TriangleFan::DrawShape()
 {
     ::DrawTriangleFan(this->_point1, this->_pointsCount, this->_color);
 
 }
 
-shape::TriangleStrip::TriangleStrip(::Vector2 *p1, int pointsCount, ::Color color)
+IShape::TriangleStrip::TriangleStrip(::Vector2 *p1, int pointsCount, ::Color color)
 {
     this->_point1 = p1;
     this->_pointsCount = pointsCount;
     this->_color = color;
 }
 
-void shape::TriangleStrip::DrawShape()
+void IShape::TriangleStrip::DrawShape()
 {
     ::DrawTriangleStrip(this->_point1, this->_pointsCount, this->_color);
 }

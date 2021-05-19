@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-shape::Ring::Ring(::Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, ::Color color)
+IShape::Ring::Ring(::Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, ::Color color)
 {
     this->_center = center;
     this->_innerRadius = innerRadius;
@@ -18,13 +18,13 @@ shape::Ring::Ring(::Vector2 center, float innerRadius, float outerRadius, float 
     this->_color = color;
 }
 
-void shape::Ring::DrawShape()
+void IShape::Ring::DrawShape()
 {
     ::DrawRing(this->_center, this->_innerRadius, this->_outerRadius, this->_startAngle, this->_endAngle, this->_segments, this->_color);
 }
 
 
-shape::RingLines::RingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color)
+IShape::RingLines::RingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color)
 {
     this->_center = center;
     this->_innerRadius = innerRadius;
@@ -35,7 +35,7 @@ shape::RingLines::RingLines(Vector2 center, float innerRadius, float outerRadius
     this->_color = color;
 }
 
-void shape::RingLines::DrawShape()
+void IShape::RingLines::DrawShape()
 {
     ::DrawRingLines(this->_center, this->_innerRadius, this->_outerRadius, this->_startAngle, this->_endAngle, this->_segments, this->_color);
 }

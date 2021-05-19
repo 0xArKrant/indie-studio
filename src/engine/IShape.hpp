@@ -10,7 +10,7 @@
 #ifndef SHAPE_HPP_
 #define SHAPE_HPP_
 
-namespace shape {
+namespace IShape {
     class Shape {
         public:
             virtual ~Shape() = default;

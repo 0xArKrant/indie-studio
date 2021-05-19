@@ -10,7 +10,7 @@
 #ifndef TRIANGLE_HPP_
 #define TRIANGLE_HPP_
 
-namespace shape {
+namespace IShape {
     class Triangle : public Shape {
             Triangle(::Vector2, ::Vector2, Vector2, ::Color);
             ~Triangle() = default;

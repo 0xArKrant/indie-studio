@@ -10,7 +10,7 @@
 #ifndef CIRCLE_HPP_
 #define CIRCLE_HPP_
 
-namespace shape {
+namespace IShape {
     class Circle : public Shape {
         public:
             Circle(int, int, float, ::Color);

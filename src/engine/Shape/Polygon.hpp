@@ -10,7 +10,7 @@
 #ifndef POLYGON_HPP_
 #define POLYGON_HPP_
 
-namespace shape {
+namespace IShape {
     class Polygon : public Shape {
         public:
             Polygon(::Vector2, int, float, float, ::Color);

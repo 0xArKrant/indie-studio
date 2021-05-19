@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-shape::Ellipse::Ellipse(int centerX, int centerY, float radiusH, float radiusV, ::Color color)
+IShape::Ellipse::Ellipse(int centerX, int centerY, float radiusH, float radiusV, ::Color color)
 {
     this->_centerX = centerX;
     this->_centerY = centerY;
@@ -16,13 +16,13 @@ shape::Ellipse::Ellipse(int centerX, int centerY, float radiusH, float radiusV, 
     this->_color = color;
 }
 
-void shape::Ellipse::DrawShape()
+void IShape::Ellipse::DrawShape()
 {
     ::DrawEllipse(this->_centerX, this->_centerY, this->_radiusH, this->_radiusV, this->_color);
 }
 
 
-shape::EllipseLines::EllipseLines(int centerX, int centerY, float radiusH, float radiusV, ::Color color)
+IShape::EllipseLines::EllipseLines(int centerX, int centerY, float radiusH, float radiusV, ::Color color)
 {
     this->_centerX = centerX;
     this->_centerY = centerY;
@@ -31,7 +31,7 @@ shape::EllipseLines::EllipseLines(int centerX, int centerY, float radiusH, float
     this->_color = color;
 }
 
-void shape::EllipseLines::DrawShape()
+void IShape::EllipseLines::DrawShape()
 {
     ::DrawEllipseLines(this->_centerX, this->_centerY, this->_radiusH, this->_radiusV, this->_color);
 }

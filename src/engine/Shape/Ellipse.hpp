@@ -10,7 +10,7 @@
 #ifndef ELLIPSE_HPP_
 #define ELLIPSE_HPP_
 
-namespace shape {
+namespace IShape {
     class Ellipse : public Shape {
         public:
             Ellipse(int, int, float, float, ::Color);
