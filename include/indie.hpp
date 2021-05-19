@@ -49,4 +49,5 @@
 #include "GenMesh.hpp"
 #include "MeshManipulation.hpp"
 #include "DrawBoundingBox.hpp"
+#include "DrawBillboard.hpp"
 #endif /* !INDIE_HPP_ */
