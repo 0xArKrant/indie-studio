@@ -43,4 +43,5 @@
 #include "Triangle3D.hpp"
 #include "Ray.hpp"
 #include "Plane.hpp"
+#include "Grid.hpp"
 #endif /* !INDIE_HPP_ */

@@ -22,6 +22,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Triangle3D.cpp
     src/engine/Models/Ray.cpp
     src/engine/Models/Plane.cpp
+    src/engine/Models/Grid.cpp
 
     src/main.cpp
     src/core/Core.cpp
