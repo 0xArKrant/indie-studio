@@ -21,6 +21,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Circle3D.cpp
     src/engine/Models/Triangle3D.cpp
     src/engine/Models/Ray.cpp
+    src/engine/Models/Plane.cpp
 
     src/main.cpp
     src/core/Core.cpp
