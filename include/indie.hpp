@@ -47,4 +47,5 @@
 #include "Cylinder.hpp"
 #include "Sphere.hpp"
 #include "GenMesh.hpp"
+#include "MeshManipulation.hpp"
 #endif /* !INDIE_HPP_ */

@@ -26,6 +26,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Cylinder.cpp
     src/engine/Models/Geometric/Sphere.cpp
     src/engine/Models/MeshGeneration/GenMesh.cpp
+    src/engine/Models/MeshManipulation/MeshManipulation.cpp
 
     src/main.cpp
     src/core/Core.cpp
@@ -42,6 +43,7 @@ include_directories(
     src/engine/Shape
     src/engine/Models/Geometric
     src/engine/Models/MeshGeneration
+    src/engine/Models/MeshManipulation
     src/game/
     src/core/
 )
