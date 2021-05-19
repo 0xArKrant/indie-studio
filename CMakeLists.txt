@@ -24,6 +24,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Plane.cpp
     src/engine/Models/Grid.cpp
     src/engine/Models/Cylinder.cpp
+    src/engine/Models/Sphere.cpp
 
     src/main.cpp
     src/core/Core.cpp
