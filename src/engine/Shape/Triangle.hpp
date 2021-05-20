@@ -12,57 +12,84 @@
 
 namespace IShape {
     class Triangle : public Shape {
-            Triangle(::Vector2, ::Vector2, Vector2, ::Color);
+            Triangle(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, Misc::Colors &);
             ~Triangle() = default;
-            void DrawShape();
-            void SetPosition(::Vector2 p1, ::Vector2 p2, ::Vector2 p3) { this->_point1 = p1; this->_point2 = p2; this->_point3 = p3; };
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
-        private:
-            ::Vector2 _point1;
-            ::Vector2 _point2;
-            ::Vector2 _point3;
-            ::Color _color;
-    };
 
-    class TriangleLines : public Shape {
-            TriangleLines(::Vector2, ::Vector2, Vector2, ::Color);
-            ~TriangleLines() = default;
+            inline Misc::Vector<2> GetVector1() { return this->_point1; };
+            inline Misc::Vector<2> GetVector2() { return this->_point2; };
+            inline Misc::Vector<2> GetVector3() { return this->_point3; };
+            inline Misc::Colors    GetColors()  { return this->_colors; };
+
+            inline void SetVector1(Misc::Vector<2> point1) { this->_point1 = point1; };
+            inline void SetVector2(Misc::Vector<2> point2) { this->_point2 = point2; };
+            inline void SetVector3(Misc::Vector<2> point3) { this->_point3 = point3; };
+            inline void SetColors(Misc::Colors colors)     { this->_colors = colors; };
+
             void DrawShape();
-            void SetPosition(::Vector2 p1, ::Vector2 p2, ::Vector2 p3) { this->_point1 = p1; this->_point2 = p2; this->_point3 = p3; };
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Vector2 _point1;
-            ::Vector2 _point2;
-            ::Vector2 _point3;
-            ::Color _color;
+            Misc::Vector<2> _point1;
+            Misc::Vector<2> _point2;
+            Misc::Vector<2> _point3;
+            Misc::Colors _colors;
+    };
+    class TriangleLines : public Shape {
+        public:
+            TriangleLines(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, Misc::Colors &);
+            ~TriangleLines() = default;
+
+            inline Misc::Vector<2> GetVector1() { return this->_point1; };
+            inline Misc::Vector<2> GetVector2() { return this->_point2; };
+            inline Misc::Vector<2> GetVector3() { return this->_point3; };
+            inline Misc::Colors    GetColors()  { return this->_colors; };
+
+            inline void SetVector1(Misc::Vector<2> point1) { this->_point1 = point1; };
+            inline void SetVector2(Misc::Vector<2> point2) { this->_point2 = point2; };
+            inline void SetVector3(Misc::Vector<2> point3) { this->_point3 = point3; };
+            inline void SetColors(Misc::Colors colors)     { this->_colors = colors; };
+
+            void DrawShape();
+        private:
+            Misc::Vector<2> _point1;
+            Misc::Vector<2> _point2;
+            Misc::Vector<2> _point3;
+            Misc::Colors _colors;
     };
 
     class TriangleFan : public Shape {
-            TriangleFan(::Vector2 *, int, ::Color);
+            TriangleFan(const Misc::Vector<2>, const int, Misc::Colors &);
             ~TriangleFan() = default;
+            inline int              GetPointsCount()                   { return this->_pointsCount;        };
+            inline Misc::Vector<2>  GetVector1()                       { return this->_point1;             };
+            inline Misc::Colors     GetColors()                        { return this->_colors;             };
+
+            inline void             SetPointsCount(int pointsCount)    { this->_pointsCount = pointsCount; };
+            inline void             SetVector1(Misc::Vector<2> point1) { this->_point1 = point1;           };
+            inline void             SetColors(Misc::Colors colors)     { this->_colors = colors;           };
+
             void DrawShape();
-            void SetPosition(::Vector2 *p1, int pointsCount) { this->_point1 = p1; this->_pointsCount = pointsCount; };
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Vector2 *_point1;
             int _pointsCount;
-            ::Color _color;
+            Misc::Vector<2> _point1;
+            Misc::Colors _colors;
     };
 
     class TriangleStrip : public Shape {
-            TriangleStrip(::Vector2 *, int, ::Color);
+            TriangleStrip(const Misc::Vector<2>, const int, Misc::Colors &);
             ~TriangleStrip() = default;
+
+            inline int              GetPointsCount()                   { return this->_pointsCount;        };
+            inline Misc::Vector<2>  GetVector1()                       { return this->_point1;             };
+            inline Misc::Colors     GetColors()                        { return this->_colors;             };
+
+            inline void             SetPointsCount(int pointsCount)    { this->_pointsCount = pointsCount; };
+            inline void             SetVector1(Misc::Vector<2> point1) { this->_point1 = point1;           };
+            inline void             SetColors(Misc::Colors colors)     { this->_colors = colors;           };
+
             void DrawShape();
-            void SetPosition(::Vector2 *p1, int pointsCount) { this->_point1 = p1; this->_pointsCount = pointsCount; };
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Vector2 *_point1;
             int _pointsCount;
-            ::Color _color;
+            Misc::Vector<2> _point1;
+            Misc::Colors _colors;
     };
 }
 

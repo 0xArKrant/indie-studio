@@ -28,6 +28,9 @@
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
 
+#include "Vector.hpp"
+#include "Colors.hpp"
+
 #include "IShape.hpp"
 #include "Rectangle.hpp"
 #include "Pixel.hpp"
@@ -55,5 +58,4 @@
 #include "DrawBillboard.hpp"
 #include "DrawModel.hpp"
 
-#include "Vector.hpp"
 #endif /* !INDIE_HPP_ */

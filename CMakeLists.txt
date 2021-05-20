@@ -6,7 +6,7 @@ find_package(raylib 2.5.0 REQUIRED)
 set(BIN_NAME bomberman)
 
 file(GLOB SRC_FILES
-    src/engine/Misc/Vector.hpp
+    src/engine/Misc/Colors.cpp
 
     src/engine/Shape/Rectangle.cpp
     src/engine/Shape/Pixel.cpp

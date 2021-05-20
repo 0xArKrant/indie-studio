@@ -7,53 +7,70 @@
 
 #include "indie.hpp"
 
-IShape::Triangle::Triangle(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::Color color)
-{
+IShape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, Misc::Colors &values) : _colors(values)
+{ 
     this->_point1 = p1;
     this->_point2 = p2;
     this->_point3 = p3;
-    this->_color = color;
 }
 
 void IShape::Triangle::DrawShape()
 {
-    ::DrawTriangle(this->_point1, this->_point2, this->_point3, this->_color);
+    ::DrawTriangle(
+        Vector2 { this->_point1.getX(), this->_point1.getY() },
+        Vector2 { this->_point2.getX(), this->_point2.getY() },
+        Vector2 { this->_point3.getX(), this->_point3.getY() },
+        Color   { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::TriangleLines::TriangleLines(::Vector2 p1, ::Vector2 p2, ::Vector2 p3, ::Color color)
+IShape::TriangleLines::TriangleLines(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, Misc::Colors &values) : _colors(values)
 {
     this->_point1 = p1;
     this->_point2 = p2;
     this->_point3 = p3;
-    this->_color = color;
 }
 
 void IShape::TriangleLines::DrawShape()
 {
-    ::DrawTriangleLines(this->_point1, this->_point2, this->_point3, this->_color);
+    ::DrawTriangleLines(
+        Vector2 { this->_point1.getX(), this->_point1.getY() },
+        Vector2 { this->_point2.getX(), this->_point2.getY() },
+        Vector2 { this->_point3.getX(), this->_point3.getY() },
+        Color   { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::TriangleFan::TriangleFan(::Vector2 *p1, int pointsCount, ::Color color)
+IShape::TriangleFan::TriangleFan(const Misc::Vector<2> p1, const int pointsCount, Misc::Colors &values) : _colors(values)
 {
     this->_point1 = p1;
     this->_pointsCount = pointsCount;
-    this->_color = color;
 }
 
 void IShape::TriangleFan::DrawShape()
 {
-    ::DrawTriangleFan(this->_point1, this->_pointsCount, this->_color);
+    ::Vector2 points = { this->_point1.getX(), this->_point1.getY() };
 
+    ::DrawTriangleFan(
+        &points,
+        this->_pointsCount,
+        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::TriangleStrip::TriangleStrip(::Vector2 *p1, int pointsCount, ::Color color)
+IShape::TriangleStrip::TriangleStrip(const Misc::Vector<2> p1, const int pointsCount, Misc::Colors &values) : _colors(values)
 {
     this->_point1 = p1;
     this->_pointsCount = pointsCount;
-    this->_color = color;
 }
 
 void IShape::TriangleStrip::DrawShape()
 {
-    ::DrawTriangleStrip(this->_point1, this->_pointsCount, this->_color);
+    ::Vector2 points = { this->_point1.getX(), this->_point1.getY() };
+
+    ::DrawTriangleStrip(
+        &points,
+        this->_pointsCount,
+        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
