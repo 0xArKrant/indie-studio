@@ -17,21 +17,21 @@ file(GLOB SRC_FILES
     src/engine/Shape/Line.cpp
     src/engine/Shape/Circle.cpp
 
-    src/engine/Models/Geometric/Cube.cpp
-    src/engine/Models/Geometric/Line3D.cpp
-    src/engine/Models/Geometric/Point3D.cpp
-    src/engine/Models/Geometric/Circle3D.cpp
-    src/engine/Models/Geometric/Triangle3D.cpp
-    src/engine/Models/Geometric/Ray.cpp
-    src/engine/Models/Geometric/Plane.cpp
-    src/engine/Models/Geometric/Grid.cpp
-    src/engine/Models/Geometric/Cylinder.cpp
-    src/engine/Models/Geometric/Sphere.cpp
-    src/engine/Models/MeshGeneration/GenMesh.cpp
-    src/engine/Models/MeshManipulation/MeshManipulation.cpp
-    src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
-    src/engine/Models/ModelDrawing/DrawBillboard.cpp
-    src/engine/Models/ModelDrawing/DrawModel.cpp
+    #src/engine/Models/Geometric/Cube.cpp
+    #src/engine/Models/Geometric/Line3D.cpp
+    #src/engine/Models/Geometric/Point3D.cpp
+    #src/engine/Models/Geometric/Circle3D.cpp
+    #src/engine/Models/Geometric/Triangle3D.cpp
+    #src/engine/Models/Geometric/Ray.cpp
+    #src/engine/Models/Geometric/Plane.cpp
+    #src/engine/Models/Geometric/Grid.cpp
+    #src/engine/Models/Geometric/Cylinder.cpp
+    #src/engine/Models/Geometric/Sphere.cpp
+    #src/engine/Models/MeshGeneration/GenMesh.cpp
+    #src/engine/Models/MeshManipulation/MeshManipulation.cpp
+    #src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
+    #src/engine/Models/ModelDrawing/DrawBillboard.cpp
+    #src/engine/Models/ModelDrawing/DrawModel.cpp
 
     src/main.cpp
     src/core/Core.cpp
