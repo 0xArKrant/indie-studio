@@ -21,7 +21,7 @@ Errors::Exception::Exception(const char *err, std::string errplus, std::string c
 {
     if (errplus == "")
         errplus = "No Error Code Specified";
-    this->_message = "\nError\t>\t" + std::string(err) + "\nCode\t>\t" + "\nFile\t>\t" + currentfile + "\nLine\t>\t" + std::to_string(currentline);
+    this->_message = "\nError\t>\t" + std::string(err) + "\nCode\t>\t" + errplus + "\nFile\t>\t" + currentfile + "\nLine\t>\t" + std::to_string(currentline);
 }
 
 const char *Errors::Exception::what() const noexcept
