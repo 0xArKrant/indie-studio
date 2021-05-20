@@ -6,6 +6,8 @@ find_package(raylib 2.5.0 REQUIRED)
 set(BIN_NAME bomberman)
 
 file(GLOB SRC_FILES
+    src/engine/Misc/Vector.hpp
+
     src/engine/Shape/Rectangle.cpp
     src/engine/Shape/Pixel.cpp
     src/engine/Shape/Ellipse.cpp
@@ -48,6 +50,7 @@ include_directories(
     src/engine/Models/MeshGeneration
     src/engine/Models/MeshManipulation
     src/engine/Models/ModelDrawing
+    src/engine/Misc/
     src/game/
     src/core/
 )

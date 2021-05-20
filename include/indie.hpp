@@ -20,6 +20,9 @@
 #include <list>
 #include <filesystem>
 #include <raylib.h>
+#include <array>
+#include <cstdint>
+#include <cstring>
 
 #include "Core.hpp"
 #include "LibraryLoader.hpp"
@@ -51,4 +54,6 @@
 #include "DrawBoundingBox.hpp"
 #include "DrawBillboard.hpp"
 #include "DrawModel.hpp"
+
+#include "Vector.hpp"
 #endif /* !INDIE_HPP_ */
