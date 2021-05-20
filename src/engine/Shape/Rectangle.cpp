@@ -7,150 +7,193 @@
 
 #include "indie.hpp"
 
-IShape::Rectangle::Rectangle(int posX, int posY, int width, int height, ::Color color)
+IShape::Rectangle::Rectangle(const int posX, const int posY, const int width, const int height, Misc::Colors &values) : _colors(values)
 {
     this->_posX = posX;
     this->_posY = posY;
     this->_width = width;
     this->_height = height;
-    this->_color = color;
 }
 
 void IShape::Rectangle::DrawShape()
 {
-    ::DrawRectangle(this->_posX, this->_posY, this->_width, this->_height, this->_color);
+    ::DrawRectangle(
+        this->_posX, 
+        this->_posY, 
+        this->_width, 
+        this->_height, 
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::RectangleV::RectangleV(Vector2 position, Vector2 size, Color color)
+IShape::RectangleV::RectangleV(const Misc::Vector<2> position, const Misc::Vector<2> size, Misc::Colors &values) : _colors(values)
 {
     this->_position = position;
     this->_size = size;
-    this->_color = color;
 }
 
 void IShape::RectangleV::DrawShape()
 {
-   ::DrawRectangleV(this->_position, this->_size, this->_color);
+   ::DrawRectangleV(
+        ::Vector2 { this->_position.getX(), this->_position.getY() },
+        ::Vector2 { this->_size.getX(), this->_size.getY() },
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::RectangleRec::RectangleRec(::Rectangle rec, ::Color color)
+IShape::RectangleRec::RectangleRec(const Misc::Vector<4> rectangle, Misc::Colors &values) : _colors(values)
 {
-    this->_rec = rec;
-    this->_color = color;
+    this->_rectangle = rectangle;
 }
 
 void IShape::RectangleRec::DrawShape()
 {
-    ::DrawRectangleRec(this->_rec, this->_color);
+    ::DrawRectangleRec(
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::RectanglePro::RectanglePro(::Rectangle rec, ::Vector2 origin, float rotation, ::Color color)
+IShape::RectanglePro::RectanglePro(const Misc::Vector<4> rectangle, const Misc::Vector<2> origin, float rotation, Misc::Colors &values) : _colors(values)
 {
-    this->_rec = rec;
+    this->_rectangle = rectangle;
     this->_origin = origin;
     this->_rotation = rotation;
-    this->_color = color;
 }
 
 void IShape::RectanglePro::DrawShape()
 {
-    ::DrawRectanglePro(this->_rec, this->_origin, this->_rotation, this->_color);
+    ::DrawRectanglePro(
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Vector2 { this->_origin.getX(), this->_origin.getY() },
+        this->_rotation,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::RectangleGradientV::RectangleGradientV(int posX, int posY, int width, int height, ::Color color, ::Color color2)
+IShape::RectangleGradientV::RectangleGradientV(const int posX,const int posY,const int width,const int height, Misc::Colors &values1, Misc::Colors &values2) : _colors1(values1), _colors2(values2)
 {
     this->_posX = posX;
     this->_posY = posY;
     this->_width = width;
     this->_height = height;
-    this->_color = color;
-    this->_color2 = color2;
 }
 
 void IShape::RectangleGradientV::DrawShape()
 {
-    ::DrawRectangleGradientV(this->_posX, this->_posY, this->_width, this->_height, this->_color, this->_color2);
+    ::DrawRectangleGradientV(
+        this->_posX, 
+        this->_posY, 
+        this->_width, 
+        this->_height, 
+        ::Color { this->_colors1.getR(), this->_colors1.getG(), this->_colors1.getB(), this->_colors1.getA() },
+        ::Color { this->_colors2.getR(), this->_colors2.getG(), this->_colors2.getB(), this->_colors2.getA() }
+    );
 }
 
-IShape::RectangleGradientH::RectangleGradientH(int posX, int posY, int width, int height, ::Color color, ::Color color2)
+IShape::RectangleGradientH::RectangleGradientH(const int posX,const int posY,const int width,const int height, Misc::Colors &values1, Misc::Colors &values2) : _colors1(values1), _colors2(values2)
 {
     this->_posX = posX;
     this->_posY = posY;
     this->_width = width;
     this->_height = height;
-    this->_color = color;
-    this->_color2 = color2;
 }
 
 void IShape::RectangleGradientH::DrawShape()
 {
-    ::DrawRectangleGradientH(this->_posX, this->_posY, this->_width, this->_height, this->_color, this->_color2);
+    ::DrawRectangleGradientH(
+        this->_posX, 
+        this->_posY, 
+        this->_width, 
+        this->_height, 
+        ::Color { this->_colors1.getR(), this->_colors1.getG(), this->_colors1.getB(), this->_colors1.getA() },
+        ::Color { this->_colors2.getR(), this->_colors2.getG(), this->_colors2.getB(), this->_colors2.getA() }
+    );
 }
 
-IShape::RectangleGradientEx::RectangleGradientEx(::Rectangle rec, ::Color color1, ::Color color2, ::Color color3, ::Color color4)
+IShape::RectangleGradientEx::RectangleGradientEx(const Misc::Vector<4> rectangle, Misc::Colors &values1, Misc::Colors &values2, Misc::Colors &values3, Misc::Colors &values4) : _colors1(values1), _colors2(values2), _colors3(values3), _colors4(values4)
 {
-    this->_rec = rec;
-    this->_color1 = color1;
-    this->_color2 = color2;
-    this->_color3 = color3;
-    this->_color4 = color4;
+    this->_rectangle = rectangle;
 }
 
 void IShape::RectangleGradientEx::DrawShape()
 {
-    ::DrawRectangleGradientEx(this->_rec, this->_color1, this->_color2, this->_color3, this->_color4);
+    ::DrawRectangleGradientEx(
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Color { this->_colors1.getR(), this->_colors1.getG(), this->_colors1.getB(), this->_colors1.getA() },
+        ::Color { this->_colors2.getR(), this->_colors2.getG(), this->_colors2.getB(), this->_colors2.getA() },
+        ::Color { this->_colors3.getR(), this->_colors3.getG(), this->_colors3.getB(), this->_colors3.getA() },
+        ::Color { this->_colors4.getR(), this->_colors4.getG(), this->_colors4.getB(), this->_colors4.getA() }
+    );
 }
 
-IShape::RectangleLines::RectangleLines(int posX, int posY, int width, int height, ::Color color)
+IShape::RectangleLines::RectangleLines(int posX, int posY, int width, int height, Misc::Colors &values) : _colors(values)
 {
     this->_posX = posX;
     this->_posY = posY;
     this->_width = width;
     this->_height = height;
-    this->_color = color;
 }
 
 void IShape::RectangleLines::DrawShape()
 {
-    ::DrawRectangleLines(this->_posX, this->_posY, this->_width, this->_height, this->_color);
+    ::DrawRectangleLines(
+        this->_posX, 
+        this->_posY, 
+        this->_width,
+        this->_height, 
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::RectangleLinesEx::RectangleLinesEx(::Rectangle rec, int linethick, ::Color color)
+IShape::RectangleLinesEx::RectangleLinesEx(const Misc::Vector<4> rectangle, const int linethick, Misc::Colors &values) : _colors(values)
 {
-    this->_rec = rec;
+    this->_rectangle = rectangle;
     this->_linethick = linethick;
-    this->_color = color;
 }
 
 void IShape::RectangleLinesEx::DrawShape()
 {
-    ::DrawRectangleLinesEx(this->_rec, this->_linethick, this->_color);
+    ::DrawRectangleLinesEx(
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        this->_linethick, 
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::RectangleRounded::RectangleRounded(::Rectangle rec, float roundness, int segments, ::Color color)
+IShape::RectangleRounded::RectangleRounded(const Misc::Vector<4> rectangle, const float roundness, const int segments, Misc::Colors &values) : _colors(values)
 {
-    this->_rec = rec;
+    this->_rectangle = rectangle;
     this->_roundness = roundness;
     this->_segments = segments;
-    this->_color = color;
 }
 
 void IShape::RectangleRounded::DrawShape()
 {
-    ::DrawRectangleRounded(this->_rec, this->_roundness, this->_segments, this->_color);
+    ::DrawRectangleRounded(
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        this->_roundness, 
+        this->_segments, 
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IShape::RectangleRoundedLines::RectangleRoundedLines(::Rectangle rec, float roundness, int segments, int linethick, ::Color color)
+IShape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Vector<4> rectangle, const float roundness, const int segments, const int linethick, Misc::Colors &values) : _colors(values)
 {
-    this->_rec = rec;
+    this->_rectangle = rectangle;
     this->_roundness = roundness;
     this->_segments = segments;
     this->_linethick = linethick;
-    this->_color = color;
 
 }
 
 void IShape::RectangleRoundedLines::DrawShape()
 {
-    ::DrawRectangleRoundedLines(this->_rec, this->_roundness, this->_segments, this->_linethick, this->_color);
+    ::DrawRectangleRoundedLines(
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        this->_roundness, 
+        this->_segments, 
+        this->_linethick,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
