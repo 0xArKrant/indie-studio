@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IShape::Ring::Ring(::Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, ::Color color)
+IShape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, Misc::Colors &values) : _colors(values)
 {
     this->_center = center;
     this->_innerRadius = innerRadius;
@@ -15,16 +15,23 @@ IShape::Ring::Ring(::Vector2 center, float innerRadius, float outerRadius, float
     this->_startAngle = startAngle;
     this->_endAngle = endAngle;
     this->_segments = segments;
-    this->_color = color;
 }
 
 void IShape::Ring::DrawShape()
 {
-    ::DrawRing(this->_center, this->_innerRadius, this->_outerRadius, this->_startAngle, this->_endAngle, this->_segments, this->_color);
+    ::DrawRing(
+        Vector2 { this->_center.getX(), this->_center.getY() },
+        this->_innerRadius, 
+        this->_outerRadius, 
+        this->_startAngle, 
+        this->_endAngle, 
+        this->_segments, 
+        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
 
-IShape::RingLines::RingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color)
+IShape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, Misc::Colors &values) : _colors(values)
 {
     this->_center = center;
     this->_innerRadius = innerRadius;
@@ -32,10 +39,17 @@ IShape::RingLines::RingLines(Vector2 center, float innerRadius, float outerRadiu
     this->_startAngle = startAngle;
     this->_endAngle = endAngle;
     this->_segments = segments;
-    this->_color = color;
 }
 
 void IShape::RingLines::DrawShape()
 {
-    ::DrawRingLines(this->_center, this->_innerRadius, this->_outerRadius, this->_startAngle, this->_endAngle, this->_segments, this->_color);
+    ::DrawRingLines(
+        Vector2 { this->_center.getX(), this->_center.getY() },
+        this->_innerRadius, 
+        this->_outerRadius, 
+        this->_startAngle, 
+        this->_endAngle, 
+        this->_segments, 
+        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
