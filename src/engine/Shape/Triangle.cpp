@@ -17,10 +17,10 @@ IShape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, c
 void IShape::Triangle::DrawShape()
 {
     ::DrawTriangle(
-        Vector2 { this->_point1.getX(), this->_point1.getY() },
-        Vector2 { this->_point2.getX(), this->_point2.getY() },
-        Vector2 { this->_point3.getX(), this->_point3.getY() },
-        Color   { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+        ::Vector2 { this->_point1.getX(), this->_point1.getY() },
+        ::Vector2 { this->_point2.getX(), this->_point2.getY() },
+        ::Vector2 { this->_point3.getX(), this->_point3.getY() },
+        ::Color   { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
 
@@ -34,10 +34,10 @@ IShape::TriangleLines::TriangleLines(const Misc::Vector<2> p1, const Misc::Vecto
 void IShape::TriangleLines::DrawShape()
 {
     ::DrawTriangleLines(
-        Vector2 { this->_point1.getX(), this->_point1.getY() },
-        Vector2 { this->_point2.getX(), this->_point2.getY() },
-        Vector2 { this->_point3.getX(), this->_point3.getY() },
-        Color   { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+        ::Vector2 { this->_point1.getX(), this->_point1.getY() },
+        ::Vector2 { this->_point2.getX(), this->_point2.getY() },
+        ::Vector2 { this->_point3.getX(), this->_point3.getY() },
+        ::Color   { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
 
@@ -54,7 +54,7 @@ void IShape::TriangleFan::DrawShape()
     ::DrawTriangleFan(
         &points,
         this->_pointsCount,
-        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
 
@@ -71,6 +71,6 @@ void IShape::TriangleStrip::DrawShape()
     ::DrawTriangleStrip(
         &points,
         this->_pointsCount,
-        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }

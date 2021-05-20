@@ -22,7 +22,7 @@ void IShape::Ellipse::DrawShape()
         this->_centerY,
         this->_radiusH,
         this->_radiusV,
-        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
 
@@ -42,6 +42,6 @@ void IShape::EllipseLines::DrawShape()
         this->_centerY,
         this->_radiusH,
         this->_radiusV,
-        Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
