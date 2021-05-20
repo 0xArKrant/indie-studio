@@ -20,30 +20,10 @@ namespace Math {
             ~Vector() = default;
 
             inline float operator()(unsigned int i) const { return this->_vector[i]; };
-            inline float getX() const { 
-                if (vSize > 0)
-                    return (*this)(0);
-                else
-                    throw std::runtime_error("vSize < 0");
-            };
-            inline float getY() const {
-                if (vSize > 1)
-                    return (*this)(1);
-                else
-                    throw std::runtime_error("vSize < 1");
-            };
-            inline float getZ() const {
-                if (vSize > 2)
-                    return (*this)(2);
-                else
-                    throw std::runtime_error("vSize < 2");
-            };
-            inline float getW() const {
-                if (vSize > 3)
-                    return (*this)(3);
-                else
-                    throw std::runtime_error("Vector Size < 3");
-            };
+            inline float getX() const { if (vSize > 0) return (*this)(0); else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 0", __FILE__, __LINE__));};
+            inline float getY() const { if (vSize > 1) return (*this)(1); else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 1", __FILE__, __LINE__));};
+            inline float getZ() const { if (vSize > 2) return (*this)(2); else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 2", __FILE__, __LINE__));};
+            inline float getW() const { if (vSize > 3) return (*this)(3); else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 3", __FILE__, __LINE__));};
         private:
             std::array<float, vSize> _vector;
     };
