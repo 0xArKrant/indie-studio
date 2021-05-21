@@ -21,11 +21,11 @@ void IShape::Ring::DrawShape()
 {
     ::DrawRing(
         ::Vector2 { this->_center.getX(), this->_center.getY() },
-        this->_innerRadius, 
-        this->_outerRadius, 
-        this->_startAngle, 
-        this->_endAngle, 
-        this->_segments, 
+        this->_innerRadius,
+        this->_outerRadius,
+        this->_startAngle,
+        this->_endAngle,
+        this->_segments,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -45,11 +45,11 @@ void IShape::RingLines::DrawShape()
 {
     ::DrawRingLines(
         ::Vector2 { this->_center.getX(), this->_center.getY() },
-        this->_innerRadius, 
-        this->_outerRadius, 
-        this->_startAngle, 
-        this->_endAngle, 
-        this->_segments, 
+        this->_innerRadius,
+        this->_outerRadius,
+        this->_startAngle,
+        this->_endAngle,
+        this->_segments,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }

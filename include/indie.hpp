@@ -40,6 +40,7 @@
 #include "Triangle.hpp"
 #include "Line.hpp"
 #include "Circle.hpp"
+#include "CheckCollision.hpp"
 
 #include "IModels.hpp"
 #include "Cube.hpp"

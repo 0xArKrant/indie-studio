@@ -8,14 +8,16 @@ set(BIN_NAME bomberman)
 file(GLOB SRC_FILES
     src/engine/Misc/Colors.cpp
 
-    src/engine/Shape/Rectangle.cpp
-    src/engine/Shape/Pixel.cpp
-    src/engine/Shape/Ellipse.cpp
-    src/engine/Shape/Polygon.cpp
-    src/engine/Shape/Ring.cpp
-    src/engine/Shape/Triangle.cpp
-    src/engine/Shape/Line.cpp
-    src/engine/Shape/Circle.cpp
+    src/engine/Shape/Geometric/Rectangle.cpp
+    src/engine/Shape/Geometric/Pixel.cpp
+    src/engine/Shape/Geometric/Ellipse.cpp
+    src/engine/Shape/Geometric/Polygon.cpp
+    src/engine/Shape/Geometric/Ring.cpp
+    src/engine/Shape/Geometric/Triangle.cpp
+    src/engine/Shape/Geometric/Line.cpp
+    src/engine/Shape/Geometric/Circle.cpp
+
+    src/engine/Shape/Collision/CheckCollision.cpp
 
     #src/engine/Models/Geometric/Cube.cpp
     #src/engine/Models/Geometric/Line3D.cpp
@@ -45,7 +47,8 @@ include_directories(
     include/
     src/error/
     src/engine/
-    src/engine/Shape
+    src/engine/Shape/Geometric
+    src/engine/Shape/Collision
     src/engine/Models/Geometric
     src/engine/Models/MeshGeneration
     src/engine/Models/MeshManipulation
@@ -60,7 +63,7 @@ target_compile_options(${BIN_NAME} PUBLIC
     -Wall
     -Wextra
     -Werror
-    -Wuninitialized 
+    -Wuninitialized
     -Wformat-security
     -std=c++17
 )
