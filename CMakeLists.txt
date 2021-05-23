@@ -19,6 +19,8 @@ file(GLOB SRC_FILES
 
     src/engine/Shape/Collision/CheckCollision.cpp
 
+    src/engine/Text/StringManagement/StringManagement.cpp
+
     #src/engine/Models/Geometric/Cube.cpp
     #src/engine/Models/Geometric/Line3D.cpp
     #src/engine/Models/Geometric/Point3D.cpp
@@ -53,6 +55,7 @@ include_directories(
     src/engine/Models/MeshGeneration
     src/engine/Models/MeshManipulation
     src/engine/Models/ModelDrawing
+    src/engine/Text/StringManagement
     src/engine/Misc/
     src/game/
     src/core/

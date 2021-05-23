@@ -59,4 +59,7 @@
 #include "DrawBillboard.hpp"
 #include "DrawModel.hpp"
 
+#include "IText.hpp"
+#include "StringManagement.hpp"
+
 #endif /* !INDIE_HPP_ */
