@@ -7,6 +7,7 @@ set(BIN_NAME bomberman)
 
 file(GLOB SRC_FILES
     src/engine/Misc/Colors.cpp
+    src/engine/Misc/Texture.cpp
 
     src/engine/Shape/Geometric/Rectangle.cpp
     src/engine/Shape/Geometric/Pixel.cpp
@@ -19,10 +20,10 @@ file(GLOB SRC_FILES
 
     src/engine/Shape/Collision/CheckCollision.cpp
 
-    #src/engine/Models/Geometric/Cube.cpp
+    src/engine/Models/Geometric/Cube.cpp
     #src/engine/Models/Geometric/Line3D.cpp
     #src/engine/Models/Geometric/Point3D.cpp
-    #src/engine/Models/Geometric/Circle3D.cpp
+    src/engine/Models/Geometric/Circle3D.cpp
     #src/engine/Models/Geometric/Triangle3D.cpp
     #src/engine/Models/Geometric/Ray.cpp
     #src/engine/Models/Geometric/Plane.cpp

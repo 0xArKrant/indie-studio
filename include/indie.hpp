@@ -31,6 +31,7 @@
 #include "Vector.hpp"
 #include "Colors.hpp"
 #include "RectangleVector.hpp"
+#include "Texture.hpp"
 
 #include "IShape.hpp"
 #include "Rectangle.hpp"
