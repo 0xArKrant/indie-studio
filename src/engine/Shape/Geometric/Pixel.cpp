@@ -7,10 +7,11 @@
 
 #include "indie.hpp"
 
-IShape::Pixel::Pixel(const int posX, const int posY, Misc::Colors &values) : _colors(values)
+IShape::Pixel::Pixel(const int posX, const int posY, const Misc::Colors &values)
 {
     this->_posX = posX;
     this->_posY = posY;
+    this->_colors = values;
 }
 
 void IShape::Pixel::DrawShape()
@@ -22,9 +23,10 @@ void IShape::Pixel::DrawShape()
     );
 }
 
-IShape::PixelV::PixelV(const Misc::Vector<2> position, Misc::Colors &values) : _colors(values)
+IShape::PixelV::PixelV(const Misc::Vector<2> position, const Misc::Colors &values)
 {
     this->_position = position;
+    this->_colors = values;
 }
 
 void IShape::PixelV::DrawShape()

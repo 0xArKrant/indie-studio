@@ -7,11 +7,12 @@
 
 #include "indie.hpp"
 
-IShape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, Misc::Colors &values) : _colors(values)
+IShape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, const Misc::Colors &values)
 {
     this->_point1 = p1;
     this->_point2 = p2;
     this->_point3 = p3;
+    this->_colors = values;
 }
 
 void IShape::Triangle::DrawShape()
@@ -24,11 +25,12 @@ void IShape::Triangle::DrawShape()
     );
 }
 
-IShape::TriangleLines::TriangleLines(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, Misc::Colors &values) : _colors(values)
+IShape::TriangleLines::TriangleLines(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, const Misc::Colors &values)
 {
     this->_point1 = p1;
     this->_point2 = p2;
     this->_point3 = p3;
+    this->_colors = values;
 }
 
 void IShape::TriangleLines::DrawShape()
@@ -41,10 +43,11 @@ void IShape::TriangleLines::DrawShape()
     );
 }
 
-IShape::TriangleFan::TriangleFan(const Misc::Vector<2> point, const int pointsCount, Misc::Colors &values) : _colors(values)
+IShape::TriangleFan::TriangleFan(const Misc::Vector<2> point, const int pointsCount, const Misc::Colors &values)
 {
     this->_point = point;
     this->_pointsCount = pointsCount;
+    this->_colors = values;
 }
 
 void IShape::TriangleFan::DrawShape()
@@ -58,10 +61,11 @@ void IShape::TriangleFan::DrawShape()
     );
 }
 
-IShape::TriangleStrip::TriangleStrip(const Misc::Vector<2> point, const int pointsCount, Misc::Colors &values) : _colors(values)
+IShape::TriangleStrip::TriangleStrip(const Misc::Vector<2> point, const int pointsCount, const Misc::Colors &values)
 {
     this->_point = point;
     this->_pointsCount = pointsCount;
+    this->_colors = values;
 }
 
 void IShape::TriangleStrip::DrawShape()

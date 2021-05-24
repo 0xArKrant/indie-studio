@@ -12,7 +12,7 @@
 
 namespace IShape {
     class Ring : public Shape {
-            Ring(const Misc::Vector<2>, const float, const float, const float, const float, const int, Misc::Colors &);
+            Ring(const Misc::Vector<2>, const float, const float, const float, const float, const int, const Misc::Colors &);
             ~Ring() = default;
 
             inline Misc::Vector<2> GetVector()      const { return this->_center;      };
@@ -44,7 +44,7 @@ namespace IShape {
 
     class RingLines : public Shape {
         public:
-            RingLines(const Misc::Vector<2>, const float, const float, const float, const float, const int, Misc::Colors &);
+            RingLines(const Misc::Vector<2>, const float, const float, const float, const float, const int, const Misc::Colors &);
             ~RingLines() = default;
 
             inline Misc::Vector<2> GetVector()      const { return this->_center;      };

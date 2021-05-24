@@ -13,7 +13,7 @@
 namespace IShape {
     class Rectangle : public Shape {
         public:
-            Rectangle(const int, const int, const int, const int, Misc::Colors &);
+            Rectangle(const int, const int, const int, const int, const Misc::Colors &);
             ~Rectangle() = default;
 
             inline int          GetPosX()   const { return this->_posX;   };
@@ -39,7 +39,7 @@ namespace IShape {
 
     class RectangleV : public Shape {
         public:
-            RectangleV(const Misc::Vector<2>, const Misc::Vector<2>, Misc::Colors&);
+            RectangleV(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~RectangleV() = default;
 
             inline Misc::Vector<2> GetVectorPosition() const { return this->_position; };
@@ -59,7 +59,7 @@ namespace IShape {
 
     class RectangleRec : public Shape {
         public:
-            RectangleRec(const Misc::Rectangle, Misc::Colors &);
+            RectangleRec(const Misc::Rectangle, const Misc::Colors &);
             ~RectangleRec() = default;
 
             inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
@@ -76,7 +76,7 @@ namespace IShape {
 
     class RectanglePro : public Shape {
         public:
-            RectanglePro(const Misc::Rectangle, const Misc::Vector<2>, const float, Misc::Colors &);
+            RectanglePro(const Misc::Rectangle, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~RectanglePro() = default;
 
             inline Misc::Rectangle GetRectangle()    const { return this->_rectangle; };
@@ -99,7 +99,7 @@ namespace IShape {
 
     class RectangleGradientV : public Shape {
         public:
-            RectangleGradientV(const int, const int, const int, const int,Misc::Colors &, Misc::Colors &);
+            RectangleGradientV(const int, const int, const int, const int,const Misc::Colors &, const Misc::Colors &);
             ~RectangleGradientV() = default;
 
             inline int          GetPosX()    const { return this->_posX;    };
@@ -128,7 +128,7 @@ namespace IShape {
 
     class RectangleGradientH : public Shape {
         public:
-            RectangleGradientH(const int, const int, const int, const int,Misc::Colors &, Misc::Colors &);
+            RectangleGradientH(const int, const int, const int, const int,const Misc::Colors &, const Misc::Colors &);
             ~RectangleGradientH() = default;
 
             inline int          GetPosX()    const { return this->_posX;    };
@@ -158,7 +158,7 @@ namespace IShape {
 
     class RectangleGradientEx : public Shape {
         public:
-            RectangleGradientEx(const Misc::Rectangle, Misc::Colors &, Misc::Colors &, Misc::Colors &, Misc::Colors &);
+            RectangleGradientEx(const Misc::Rectangle, const Misc::Colors &, const Misc::Colors &, const Misc::Colors &, const Misc::Colors &);
             ~RectangleGradientEx() = default;
 
             inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
@@ -184,7 +184,7 @@ namespace IShape {
 
     class RectangleLines : public Shape {
         public:
-            RectangleLines(const int, const int, const int, const int, Misc::Colors &);
+            RectangleLines(const int, const int, const int, const int, const Misc::Colors &);
             ~RectangleLines() = default;
 
             inline int          GetPosX()   const { return this->_posX;   };
@@ -210,7 +210,7 @@ namespace IShape {
 
     class RectangleLinesEx : public Shape {
         public:
-            RectangleLinesEx(const Misc::Rectangle, const int, Misc::Colors &);
+            RectangleLinesEx(const Misc::Rectangle, const int, const Misc::Colors &);
             ~RectangleLinesEx() = default;
 
             inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
@@ -231,7 +231,7 @@ namespace IShape {
 
     class RectangleRounded : public Shape {
         public:
-            RectangleRounded(const Misc::Rectangle, const float, const int, Misc::Colors &);
+            RectangleRounded(const Misc::Rectangle, const float, const int, const Misc::Colors &);
             ~RectangleRounded() = default;
 
             inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
@@ -254,7 +254,7 @@ namespace IShape {
 
     class RectangleRoundedLines : public Shape {
         public:
-            RectangleRoundedLines(const Misc::Rectangle, const float, const int, const int, Misc::Colors &);
+            RectangleRoundedLines(const Misc::Rectangle, const float, const int, const int, const Misc::Colors &);
             ~RectangleRoundedLines() = default;
 
             inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };

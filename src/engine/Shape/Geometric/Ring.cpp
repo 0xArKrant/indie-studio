@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IShape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, Misc::Colors &values) : _colors(values)
+IShape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, const Misc::Colors &values)
 {
     this->_center = center;
     this->_innerRadius = innerRadius;
@@ -15,6 +15,7 @@ IShape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const 
     this->_startAngle = startAngle;
     this->_endAngle = endAngle;
     this->_segments = segments;
+    this->_colors = values;
 }
 
 void IShape::Ring::DrawShape()
@@ -30,7 +31,7 @@ void IShape::Ring::DrawShape()
     );
 }
 
-IShape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, Misc::Colors &values) : _colors(values)
+IShape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, const Misc::Colors &values)
 {
     this->_center = center;
     this->_innerRadius = innerRadius;
@@ -38,6 +39,7 @@ IShape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadi
     this->_startAngle = startAngle;
     this->_endAngle = endAngle;
     this->_segments = segments;
+    this->_colors = values;
 }
 
 void IShape::RingLines::DrawShape()

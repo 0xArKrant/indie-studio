@@ -13,7 +13,7 @@
 namespace IShape {
     class Circle : public Shape {
         public:
-            Circle(const int, const int, const float, Misc::Colors &);
+            Circle(const int, const int, const float, const Misc::Colors &);
             ~Circle() = default;
 
             inline int          GetCenterX() const { return this->_centerX; };
@@ -36,7 +36,7 @@ namespace IShape {
 
     class CircleSector : public Shape {
         public:
-            CircleSector(const Misc::Vector<2>, const float, const float, const float, const int, Misc::Colors &);
+            CircleSector(const Misc::Vector<2>, const float, const float, const float, const int, const Misc::Colors &);
             ~CircleSector() = default;
 
             inline Misc::Vector<2> GetVector()     const { return this->_center;     };
@@ -65,7 +65,7 @@ namespace IShape {
 
     class CircleSectorLines : public Shape {
         public:
-            CircleSectorLines(const Misc::Vector<2>, const float, const float, const float, const int, Misc::Colors &);
+            CircleSectorLines(const Misc::Vector<2>, const float, const float, const float, const int, const Misc::Colors &);
             ~CircleSectorLines() = default;
 
             inline Misc::Vector<2> GetVector()     const { return this->_center;     };
@@ -94,7 +94,7 @@ namespace IShape {
 
     class CircleGradient : public Shape {
         public:
-            CircleGradient(const int, const int, const float, Misc::Colors &, Misc::Colors &);
+            CircleGradient(const int, const int, const float, const Misc::Colors &, const Misc::Colors &);
             ~CircleGradient() = default;
 
             inline int          GetCenterX() const { return this->_centerX; };
@@ -120,7 +120,7 @@ namespace IShape {
 
     class CircleV : public Shape {
         public:
-            CircleV(const Misc::Vector<2>, const float, Misc::Colors &);
+            CircleV(const Misc::Vector<2>, const float, const Misc::Colors &);
             ~CircleV() = default;
 
             inline Misc::Vector<2> GetVector() const { return this->_center; };
@@ -140,7 +140,7 @@ namespace IShape {
 
     class CircleLines : public Shape {
         public:
-            CircleLines(const int, const int, const float, Misc::Colors &);
+            CircleLines(const int, const int, const float, const Misc::Colors &);
             ~CircleLines() = default;
 
             inline int          GetCenterX() const { return this->_centerX; };

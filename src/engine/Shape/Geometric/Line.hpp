@@ -13,7 +13,7 @@
 namespace IShape {
     class Line : public Shape {
         public:
-            Line(const int, const int, const int, const int, Misc::Colors &);
+            Line(const int, const int, const int, const int, const Misc::Colors &);
             ~Line() = default;
 
             inline int             GetStartPosX() const { return this->_startPosX; };
@@ -39,7 +39,7 @@ namespace IShape {
 
     class LineV : public Shape {
         public:
-            LineV(const Misc::Vector<2>, const Misc::Vector<2>, Misc::Colors &);
+            LineV(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~LineV() = default;
 
             inline Misc::Vector<2> GetVectorStartPos() const { return this->_startPos; };
@@ -59,7 +59,7 @@ namespace IShape {
 
     class LineEx : public Shape {
         public:
-            LineEx(const Misc::Vector<2>, const Misc::Vector<2>, const float, Misc::Colors &);
+            LineEx(const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~LineEx() = default;
 
             inline Misc::Vector<2> GetVectorStartPos() const { return this->_startPos; };
@@ -82,7 +82,7 @@ namespace IShape {
 
     class LineBezier : public Shape {
         public:
-            LineBezier(const Misc::Vector<2>, const Misc::Vector<2>, const float, Misc::Colors &);
+            LineBezier(const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~LineBezier() = default;
 
             inline Misc::Vector<2> GetVectorStartPos() const { return this->_startPos; };
@@ -105,7 +105,7 @@ namespace IShape {
 
     class LineBezierQuad : public Shape {
         public:
-            LineBezierQuad(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const float, Misc::Colors &);
+            LineBezierQuad(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~LineBezierQuad() = default;
 
             inline Misc::Vector<2> GetVectorStartPos()   const { return this->_startPos;   };
@@ -131,7 +131,7 @@ namespace IShape {
 
     class LineStrip : public Shape {
         public:
-            LineStrip(Misc::Vector<2>, int, Misc::Colors &);
+            LineStrip(Misc::Vector<2>, int, const Misc::Colors &);
             ~LineStrip() = default;
 
             inline Misc::Vector<2> GetVectorPoints() const { return this->_points;      };

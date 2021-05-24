@@ -13,7 +13,7 @@
 namespace IShape {
     class Pixel : public Shape {
         public:
-            Pixel(const int, const int, Misc::Colors &);
+            Pixel(const int, const int, const Misc::Colors &);
             ~Pixel() = default;
 
             inline int          GetPosX()   const { return this->_posX;   };
@@ -33,7 +33,7 @@ namespace IShape {
 
     class PixelV : public Shape {
         public:
-            PixelV(const Misc::Vector<2>, Misc::Colors &);
+            PixelV(const Misc::Vector<2>, const Misc::Colors &);
             ~PixelV() = default;
 
             inline Misc::Vector<2> GetVector() const { return this->_position; };

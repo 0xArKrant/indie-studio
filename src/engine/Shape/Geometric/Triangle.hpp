@@ -12,7 +12,7 @@
 
 namespace IShape {
     class Triangle : public Shape {
-            Triangle(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, Misc::Colors &);
+            Triangle(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~Triangle() = default;
 
             inline Misc::Vector<2> GetVector1() const { return this->_point1; };
@@ -34,7 +34,7 @@ namespace IShape {
     };
     class TriangleLines : public Shape {
         public:
-            TriangleLines(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, Misc::Colors &);
+            TriangleLines(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~TriangleLines() = default;
 
             inline Misc::Vector<2> GetVector1() const { return this->_point1; };
@@ -56,7 +56,7 @@ namespace IShape {
     };
 
     class TriangleFan : public Shape {
-            TriangleFan(const Misc::Vector<2>, const int, Misc::Colors &);
+            TriangleFan(const Misc::Vector<2>, const int, const Misc::Colors &);
             ~TriangleFan() = default;
             inline Misc::Vector<2>  GetVector()      const { return this->_point;       };
             inline int              GetPointsCount() const { return this->_pointsCount; };
@@ -74,7 +74,7 @@ namespace IShape {
     };
 
     class TriangleStrip : public Shape {
-            TriangleStrip(const Misc::Vector<2>, const int, Misc::Colors &);
+            TriangleStrip(const Misc::Vector<2>, const int, const Misc::Colors &);
             ~TriangleStrip() = default;
 
             inline Misc::Vector<2>  GetVector()      const { return this->_point;       };

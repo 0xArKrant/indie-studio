@@ -13,7 +13,7 @@
 namespace IShape {
     class Ellipse : public Shape {
         public:
-            Ellipse(const int, const int, const float, const float, Misc::Colors &);
+            Ellipse(const int, const int, const float, const float, const Misc::Colors &);
             ~Ellipse() = default;
 
             inline int          GetCenterX() const { return this->_centerX; };
@@ -39,7 +39,7 @@ namespace IShape {
 
     class EllipseLines : public Shape {
         public:
-            EllipseLines(const int, const int, const float, const float, Misc::Colors &);
+            EllipseLines(const int, const int, const float, const float, const Misc::Colors &);
             ~EllipseLines() = default;
 
             inline int          GetCenterX() const { return this->_centerX; };

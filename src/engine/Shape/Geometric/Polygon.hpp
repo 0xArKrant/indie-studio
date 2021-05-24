@@ -13,7 +13,7 @@
 namespace IShape {
     class Polygon : public Shape {
         public:
-            Polygon(const Misc::Vector<2>, const int, const float, const float, Misc::Colors &);
+            Polygon(const Misc::Vector<2>, const int, const float, const float, const Misc::Colors &);
             ~Polygon() = default;
 
             inline Misc::Vector<2> GetVector()   const { return this->_center;   };
@@ -39,7 +39,7 @@ namespace IShape {
 
     class PolygonLines : public Shape {
         public:
-            PolygonLines(const Misc::Vector<2>, const int, const float, const float, Misc::Colors &);
+            PolygonLines(const Misc::Vector<2>, const int, const float, const float, const Misc::Colors &);
             ~PolygonLines() = default;
 
             inline Misc::Vector<2> GetVector()   const { return this->_center;   };
@@ -65,7 +65,7 @@ namespace IShape {
 
     class PolygonLinesEx : public Shape {
         public:
-            PolygonLinesEx(const Misc::Vector<2>, const int, const float, const float, const float, Misc::Colors &);
+            PolygonLinesEx(const Misc::Vector<2>, const int, const float, const float, const float, const Misc::Colors &);
             ~PolygonLinesEx() = default;
 
             inline Misc::Vector<2> GetVector()    const { return this->_center;    };

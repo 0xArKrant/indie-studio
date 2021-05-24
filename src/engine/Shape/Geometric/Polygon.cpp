@@ -7,12 +7,13 @@
 
 #include "indie.hpp"
 
-IShape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, Misc::Colors &values) : _colors(values)
+IShape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
 {
     this->_center = center;
     this->_sides = sides;
     this->_radius = radius;
     this->_rotation = rotation;
+    this->_colors = values;
 }
 
 void IShape::Polygon::DrawShape()
@@ -26,12 +27,13 @@ void IShape::Polygon::DrawShape()
     );
 }
 
-IShape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, Misc::Colors &values) : _colors(values)
+IShape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
 {
     this->_center = center;
     this->_sides = sides;
     this->_radius = radius;
     this->_rotation = rotation;
+    this->_colors = values;
 }
 
 void IShape::PolygonLines::DrawShape()
@@ -45,13 +47,14 @@ void IShape::PolygonLines::DrawShape()
     );
 }
 
-IShape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const float linethick, Misc::Colors &values) : _colors(values)
+IShape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const float linethick, const Misc::Colors &values)
 {
     this->_center = center;
     this->_sides = sides;
     this->_radius = radius;
     this->_rotation = rotation;
     this->_linethick = linethick;
+    this->_colors = values;
 }
 
 void IShape::PolygonLinesEx::DrawShape()

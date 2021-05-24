@@ -7,11 +7,12 @@
 
 #include "indie.hpp"
 
-IShape::Circle::Circle(const int centerX, const int centerY, const float radius, Misc::Colors &values) : _colors(values)
+IShape::Circle::Circle(const int centerX, const int centerY, const float radius, const Misc::Colors &values)
 {
     this->_centerX = centerX;
     this->_centerY = centerY;
     this->_radius = radius;
+    this->_colors = values;
 }
 
 void IShape::Circle::DrawShape()
@@ -24,13 +25,14 @@ void IShape::Circle::DrawShape()
     );
 }
 
-IShape::CircleSector::CircleSector(const Misc::Vector<2> center, const float radius, const float startAngle, const float endAngle, const int segments, Misc::Colors &values) : _colors(values)
+IShape::CircleSector::CircleSector(const Misc::Vector<2> center, const float radius, const float startAngle, const float endAngle, const int segments, const Misc::Colors &values)
 {
     this->_center = center;
     this->_radius = radius;
     this->_startAngle = startAngle;
     this->_endAngle = endAngle;
     this->_segments = segments;
+    this->_colors = values;
 }
 
 void IShape::CircleSector::DrawShape()
@@ -45,13 +47,14 @@ void IShape::CircleSector::DrawShape()
     );
 }
 
-IShape::CircleSectorLines::CircleSectorLines(const Misc::Vector<2> center, const float radius, const float startAngle, const float endAngle, const int segments, Misc::Colors &values) : _colors(values)
+IShape::CircleSectorLines::CircleSectorLines(const Misc::Vector<2> center, const float radius, const float startAngle, const float endAngle, const int segments, const Misc::Colors &values)
 {
     this->_center = center;
     this->_radius = radius;
     this->_startAngle = startAngle;
     this->_endAngle = endAngle;
     this->_segments = segments;
+    this->_colors = values;
 }
 
 void IShape::CircleSectorLines::DrawShape()
@@ -66,11 +69,13 @@ void IShape::CircleSectorLines::DrawShape()
     );
 }
 
-IShape::CircleGradient::CircleGradient(const int centerX, const int centerY, const float radius, Misc::Colors &values1, Misc::Colors &values2) : _colors1(values1), _colors2(values2)
+IShape::CircleGradient::CircleGradient(const int centerX, const int centerY, const float radius, const Misc::Colors &values1, const Misc::Colors &values2)
 {
     this->_centerX = centerX;
     this->_centerY = centerY;
     this->_radius = radius;
+    this->_colors1 = values1;
+    this->_colors2 = values2;
 }
 
 void IShape::CircleGradient::DrawShape()
@@ -84,10 +89,11 @@ void IShape::CircleGradient::DrawShape()
     );
 }
 
-IShape::CircleV::CircleV(const Misc::Vector<2> center, const float radius, Misc::Colors &values) : _colors(values)
+IShape::CircleV::CircleV(const Misc::Vector<2> center, const float radius, const Misc::Colors &values)
 {
     this->_center = center;
     this->_radius = radius;
+    this->_colors = values;
 }
 
 void IShape::CircleV::DrawShape()
@@ -99,11 +105,12 @@ void IShape::CircleV::DrawShape()
     );
 }
 
-IShape::CircleLines::CircleLines(const int centerX, const int centerY, const float radius, Misc::Colors &values) : _colors(values)
+IShape::CircleLines::CircleLines(const int centerX, const int centerY, const float radius, const Misc::Colors &values)
 {
     this->_centerX = centerX;
     this->_centerY = centerY;
     this->_radius = radius;
+    this->_colors = values;
 }
 
 void IShape::CircleLines::DrawShape()
