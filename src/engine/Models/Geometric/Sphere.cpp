@@ -7,44 +7,59 @@
 
 #include "indie.hpp"
 
-IModels::Sphere::Sphere(::Vector3 centerPos, float radius, ::Color color)
+IModels::Sphere::Sphere(const Misc::Vector<3> centerPos, const float radius, const Misc::Colors &values)
 {
     this->_centerPos = centerPos;
     this->_radius = radius;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::Sphere::DrawModels()
 {
-    ::DrawSphere(this->_centerPos, this->_radius, this->_color);
+    ::DrawSphere(
+        ::Vector3 { this->_centerPos.getX(), this->_centerPos.getY(), this->_centerPos.getZ() },
+        this->_radius,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IModels::SphereEx::SphereEx(::Vector3 centerPos, float radius, int rings, int slices, ::Color color)
+IModels::SphereEx::SphereEx(const Misc::Vector<3> centerPos, const float radius, const int rings, const int slices, const Misc::Colors &values)
 {
     this->_centerPos = centerPos;
     this->_radius = radius;
     this->_rings = rings;
     this->_slices = slices;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::SphereEx::DrawModels()
 {
-    ::DrawSphereEx(this->_centerPos, this->_radius, this->_rings, this->_slices, this->_color);
+    ::DrawSphereEx(
+        ::Vector3 { this->_centerPos.getX(), this->_centerPos.getY(), this->_centerPos.getZ() },
+        this->_radius,
+        this->_rings,
+        this->_slices,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IModels::SphereWires::SphereWires(::Vector3 centerPos, float radius, int rings, int slices, ::Color color)
+IModels::SphereWires::SphereWires(const Misc::Vector<3> centerPos, const float radius, const int rings, const int slices, const Misc::Colors &values)
 {
     this->_centerPos = centerPos;
     this->_radius = radius;
     this->_rings = rings;
     this->_slices = slices;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::SphereWires::DrawModels()
 {
-    ::DrawSphereWires(this->_centerPos, this->_radius, this->_rings, this->_slices, this->_color);
-}
+    ::DrawSphereWires(
+        ::Vector3 { this->_centerPos.getX(), this->_centerPos.getY(), this->_centerPos.getZ() },
+        this->_radius,
+        this->_rings,
+        this->_slices,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );}
 
 
