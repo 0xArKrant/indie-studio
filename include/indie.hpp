@@ -34,6 +34,7 @@
 #include "Texture.hpp"
 #include "RayVector.hpp"
 #include "RayHitInfo.hpp"
+#include "Matrix.hpp"
 
 #include "IShape.hpp"
 #include "Rectangle.hpp"

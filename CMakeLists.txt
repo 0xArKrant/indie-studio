@@ -10,6 +10,7 @@ file(GLOB SRC_FILES
     src/engine/Misc/Texture.cpp
     src/engine/Misc/RayVector.cpp
     src/engine/Misc/RayHitInfo.cpp
+    src/engine/Misc/Matrix.cpp
 
     src/engine/Shape/Geometric/Rectangle.cpp
     src/engine/Shape/Geometric/Pixel.cpp

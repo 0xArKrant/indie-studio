@@ -13,8 +13,8 @@
 namespace Misc {
     class Rectangle {
         public:
-            Rectangle(std::array<float, 4> rectangle) { this->_rectangle = rectangle; };
-            Rectangle() { this->_rectangle = {0, 0, 0, 0}; };
+            Rectangle(const std::array<float, 4> rectangle);
+            Rectangle();
             ~Rectangle() = default;
 
             inline float getX() const      { return this->_rectangle[0]; };
