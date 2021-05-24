@@ -16,13 +16,13 @@ namespace IShape {
             Pixel(const int, const int, Misc::Colors &);
             ~Pixel() = default;
 
-            inline int          GetPosX()   { return this->_posX;   };
-            inline int          GetPosY()   { return this->_posY;   };
-            inline Misc::Colors GetColors() { return this->_colors; };
+            inline int          GetPosX()   const { return this->_posX;   };
+            inline int          GetPosY()   const { return this->_posY;   };
+            inline Misc::Colors GetColors() const { return this->_colors; };
 
-            inline void SetPosX(int posX)              { this->_posX = posX;     };
-            inline void SetPosY(int posY)              { this->_posY = posY;     };
-            inline void SetColors(Misc::Colors colors) { this->_colors = colors; };
+            inline void SetPosX(const int posX)              { this->_posX = posX;     };
+            inline void SetPosY(const int posY)              { this->_posY = posY;     };
+            inline void SetColors(const Misc::Colors colors) { this->_colors = colors; };
 
             void DrawShape();
         private:
@@ -36,11 +36,11 @@ namespace IShape {
             PixelV(const Misc::Vector<2>, Misc::Colors &);
             ~PixelV() = default;
 
-            inline Misc::Vector<2> GetVector() { return this->_position; };
-            inline Misc::Colors    GetColors() { return this->_colors;   };
+            inline Misc::Vector<2> GetVector() const { return this->_position; };
+            inline Misc::Colors    GetColors() const { return this->_colors;   };
 
-            inline void SetVector(Misc::Vector<2> position) { this->_position = position; };
-            inline void SetColors(Misc::Colors colors)      { this->_colors = colors;     };
+            inline void SetVector(const Misc::Vector<2> position) { this->_position = position; };
+            inline void SetColors(const Misc::Colors colors)      { this->_colors = colors;     };
 
             void DrawShape();
         private:

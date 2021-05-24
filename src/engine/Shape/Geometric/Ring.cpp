@@ -30,7 +30,6 @@ void IShape::Ring::DrawShape()
     );
 }
 
-
 IShape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, Misc::Colors &values) : _colors(values)
 {
     this->_center = center;

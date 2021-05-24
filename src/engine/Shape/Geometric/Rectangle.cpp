@@ -18,10 +18,10 @@ IShape::Rectangle::Rectangle(const int posX, const int posY, const int width, co
 void IShape::Rectangle::DrawShape()
 {
     ::DrawRectangle(
-        this->_posX, 
-        this->_posY, 
-        this->_width, 
-        this->_height, 
+        this->_posX,
+        this->_posY,
+        this->_width,
+        this->_height,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -82,10 +82,10 @@ IShape::RectangleGradientV::RectangleGradientV(const int posX,const int posY,con
 void IShape::RectangleGradientV::DrawShape()
 {
     ::DrawRectangleGradientV(
-        this->_posX, 
-        this->_posY, 
-        this->_width, 
-        this->_height, 
+        this->_posX,
+        this->_posY,
+        this->_width,
+        this->_height,
         ::Color { this->_colors1.getR(), this->_colors1.getG(), this->_colors1.getB(), this->_colors1.getA() },
         ::Color { this->_colors2.getR(), this->_colors2.getG(), this->_colors2.getB(), this->_colors2.getA() }
     );
@@ -102,10 +102,10 @@ IShape::RectangleGradientH::RectangleGradientH(const int posX,const int posY,con
 void IShape::RectangleGradientH::DrawShape()
 {
     ::DrawRectangleGradientH(
-        this->_posX, 
-        this->_posY, 
-        this->_width, 
-        this->_height, 
+        this->_posX,
+        this->_posY,
+        this->_width,
+        this->_height,
         ::Color { this->_colors1.getR(), this->_colors1.getG(), this->_colors1.getB(), this->_colors1.getA() },
         ::Color { this->_colors2.getR(), this->_colors2.getG(), this->_colors2.getB(), this->_colors2.getA() }
     );
@@ -138,10 +138,10 @@ IShape::RectangleLines::RectangleLines(int posX, int posY, int width, int height
 void IShape::RectangleLines::DrawShape()
 {
     ::DrawRectangleLines(
-        this->_posX, 
-        this->_posY, 
+        this->_posX,
+        this->_posY,
         this->_width,
-        this->_height, 
+        this->_height,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -156,7 +156,7 @@ void IShape::RectangleLinesEx::DrawShape()
 {
     ::DrawRectangleLinesEx(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
-        this->_linethick, 
+        this->_linethick,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -172,8 +172,8 @@ void IShape::RectangleRounded::DrawShape()
 {
     ::DrawRectangleRounded(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
-        this->_roundness, 
-        this->_segments, 
+        this->_roundness,
+        this->_segments,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -191,8 +191,8 @@ void IShape::RectangleRoundedLines::DrawShape()
 {
     ::DrawRectangleRoundedLines(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
-        this->_roundness, 
-        this->_segments, 
+        this->_roundness,
+        this->_segments,
         this->_linethick,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );

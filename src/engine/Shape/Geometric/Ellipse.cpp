@@ -26,7 +26,6 @@ void IShape::Ellipse::DrawShape()
     );
 }
 
-
 IShape::EllipseLines::EllipseLines(const int centerX, const int centerY, const float radiusH, const float radiusV, Misc::Colors &values) : _colors(values)
 {
     this->_centerX = centerX;

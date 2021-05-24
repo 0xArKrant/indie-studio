@@ -14,22 +14,22 @@ namespace IShape {
     class Ring : public Shape {
             Ring(const Misc::Vector<2>, const float, const float, const float, const float, const int, Misc::Colors &);
             ~Ring() = default;
-            
-            inline Misc::Vector<2> GetVector()      { return this->_center;      };
-            inline float           GetInnerRadius() { return this->_innerRadius; };
-            inline float           GetOuterRadius() { return this->_outerRadius; };
-            inline float           GetStartAngle()  { return this->_startAngle;  };
-            inline float           GetEndAngle()    { return this->_endAngle;    };
-            inline int             GetSegments()    { return this->_segments;    };
-            inline Misc::Colors    GetColors()      { return this->_colors;      };
 
-            inline void SetVector(Misc::Vector<2> center) { this->_center = center;           };
-            inline void SetInnerRadius(float innerRadius) { this->_innerRadius = innerRadius; };
-            inline void SetOuterRadius(float outerRadius) { this->_outerRadius = outerRadius; };
-            inline void SetStartAngle(float startAngle)   { this->_startAngle = startAngle;   };
-            inline void SetEndAngle(float endAngle)       { this->_endAngle = endAngle;       };
-            inline void SetSegments(int segments)         { this->_segments = segments;       };
-            inline void SetColors(Misc::Colors colors)    { this->_colors = colors;           };
+            inline Misc::Vector<2> GetVector()      const { return this->_center;      };
+            inline float           GetInnerRadius() const { return this->_innerRadius; };
+            inline float           GetOuterRadius() const { return this->_outerRadius; };
+            inline float           GetStartAngle()  const { return this->_startAngle;  };
+            inline float           GetEndAngle()    const { return this->_endAngle;    };
+            inline int             GetSegments()    const { return this->_segments;    };
+            inline Misc::Colors    GetColors()      const { return this->_colors;      };
+
+            inline void SetVector(const Misc::Vector<2> center) { this->_center = center;           };
+            inline void SetInnerRadius(const float innerRadius) { this->_innerRadius = innerRadius; };
+            inline void SetOuterRadius(const float outerRadius) { this->_outerRadius = outerRadius; };
+            inline void SetStartAngle(const float startAngle)   { this->_startAngle = startAngle;   };
+            inline void SetEndAngle(const float endAngle)       { this->_endAngle = endAngle;       };
+            inline void SetSegments(const int segments)         { this->_segments = segments;       };
+            inline void SetColors(const Misc::Colors colors)    { this->_colors = colors;           };
 
             void DrawShape();
         private:
@@ -47,21 +47,21 @@ namespace IShape {
             RingLines(const Misc::Vector<2>, const float, const float, const float, const float, const int, Misc::Colors &);
             ~RingLines() = default;
 
-            inline Misc::Vector<2> GetVector()      { return this->_center;      };
-            inline float           GetInnerRadius() { return this->_innerRadius; };
-            inline float           GetOuterRadius() { return this->_outerRadius; };
-            inline float           GetStartAngle()  { return this->_startAngle;  };
-            inline float           GetEndAngle()    { return this->_endAngle;    };
-            inline int             GetSegments()    { return this->_segments;    };
-            inline Misc::Colors    GetColors()      { return this->_colors;      };
+            inline Misc::Vector<2> GetVector()      const { return this->_center;      };
+            inline float           GetInnerRadius() const { return this->_innerRadius; };
+            inline float           GetOuterRadius() const { return this->_outerRadius; };
+            inline float           GetStartAngle()  const { return this->_startAngle;  };
+            inline float           GetEndAngle()    const { return this->_endAngle;    };
+            inline int             GetSegments()    const { return this->_segments;    };
+            inline Misc::Colors    GetColors()      const { return this->_colors;      };
 
-            inline void SetVector(Misc::Vector<2> center) { this->_center = center;           };
-            inline void SetInnerRadius(float innerRadius) { this->_innerRadius = innerRadius; };
-            inline void SetOuterRadius(float outerRadius) { this->_outerRadius = outerRadius; };
-            inline void SetStartAngle(float startAngle)   { this->_startAngle = startAngle;   };
-            inline void SetEndAngle(float endAngle)       { this->_endAngle = endAngle;       };
-            inline void SetSegments(int segments)         { this->_segments = segments;       };
-            inline void SetColors(Misc::Colors colors)    { this->_colors = colors;           };
+            inline void SetVector(const Misc::Vector<2> center) { this->_center = center;           };
+            inline void SetInnerRadius(const float innerRadius) { this->_innerRadius = innerRadius; };
+            inline void SetOuterRadius(const float outerRadius) { this->_outerRadius = outerRadius; };
+            inline void SetStartAngle(const float startAngle)   { this->_startAngle = startAngle;   };
+            inline void SetEndAngle(const float endAngle)       { this->_endAngle = endAngle;       };
+            inline void SetSegments(const int segments)         { this->_segments = segments;       };
+            inline void SetColors(const Misc::Colors colors)    { this->_colors = colors;           };
 
             void DrawShape();
         private:

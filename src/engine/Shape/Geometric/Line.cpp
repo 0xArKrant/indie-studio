@@ -18,10 +18,10 @@ IShape::Line::Line( const int startPosX, const int startPosY, const int endPosX,
 void IShape::Line::DrawShape()
 {
     ::DrawLine(
-        this->_startPosX, 
-        this->_startPosY, 
-        this->_endPosX, 
-        this->_endPosY, 
+        this->_startPosX,
+        this->_startPosY,
+        this->_endPosX,
+        this->_endPosY,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -106,8 +106,8 @@ void IShape::LineStrip::DrawShape()
     ::Vector2 points = { this->_points.getX(), this->_points.getY() };
 
     ::DrawLineStrip(
-        &points, 
-        this->_pointsCount, 
+        &points,
+        this->_pointsCount,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }

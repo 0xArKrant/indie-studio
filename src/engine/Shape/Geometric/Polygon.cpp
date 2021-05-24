@@ -26,7 +26,6 @@ void IShape::Polygon::DrawShape()
     );
 }
 
-
 IShape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, Misc::Colors &values) : _colors(values)
 {
     this->_center = center;

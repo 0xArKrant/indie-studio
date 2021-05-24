@@ -17,9 +17,9 @@ IShape::Circle::Circle(const int centerX, const int centerY, const float radius,
 void IShape::Circle::DrawShape()
 {
     ::DrawCircle(
-        this->_centerX, 
-        this->_centerY, 
-        this->_radius, 
+        this->_centerX,
+        this->_centerY,
+        this->_radius,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -37,10 +37,10 @@ void IShape::CircleSector::DrawShape()
 {
     ::DrawCircleSector(
         ::Vector2 { this->_center.getX(), this->_center.getY() },
-        this->_radius, 
-        this->_startAngle, 
-        this->_endAngle, 
-        this->_segments, 
+        this->_radius,
+        this->_startAngle,
+        this->_endAngle,
+        this->_segments,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -58,10 +58,10 @@ void IShape::CircleSectorLines::DrawShape()
 {
     ::DrawCircleSectorLines(
         ::Vector2 { this->_center.getX(), this->_center.getY() },
-        this->_radius, 
-        this->_startAngle, 
-        this->_endAngle, 
-        this->_segments, 
+        this->_radius,
+        this->_startAngle,
+        this->_endAngle,
+        this->_segments,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -76,9 +76,9 @@ IShape::CircleGradient::CircleGradient(const int centerX, const int centerY, con
 void IShape::CircleGradient::DrawShape()
 {
     ::DrawCircleGradient(
-        this->_centerX, 
-        this->_centerY, 
-        this->_radius, 
+        this->_centerX,
+        this->_centerY,
+        this->_radius,
         ::Color { this->_colors1.getR(), this->_colors1.getG(), this->_colors1.getB(), this->_colors1.getA() },
         ::Color { this->_colors2.getR(), this->_colors2.getG(), this->_colors2.getB(), this->_colors2.getA() }
     );
@@ -94,7 +94,7 @@ void IShape::CircleV::DrawShape()
 {
     ::DrawCircleV(
         ::Vector2 { this->_center.getX(), this->_center.getY() },
-        this->_radius, 
+        this->_radius,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
@@ -109,9 +109,9 @@ IShape::CircleLines::CircleLines(const int centerX, const int centerY, const flo
 void IShape::CircleLines::DrawShape()
 {
     ::DrawCircleLines(
-        this->_centerX, 
-        this->_centerY, 
-        this->_radius, 
+        this->_centerX,
+        this->_centerY,
+        this->_radius,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
