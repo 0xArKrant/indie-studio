@@ -26,7 +26,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Circle3D.cpp
     #src/engine/Models/Geometric/Triangle3D.cpp
     #src/engine/Models/Geometric/Ray.cpp
-    #src/engine/Models/Geometric/Plane.cpp
+    src/engine/Models/Geometric/Plane.cpp
     #src/engine/Models/Geometric/Grid.cpp
     src/engine/Models/Geometric/Cylinder.cpp
     #src/engine/Models/Geometric/Sphere.cpp
