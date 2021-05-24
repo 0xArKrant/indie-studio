@@ -70,4 +70,4 @@ namespace IModels {
     };
 }
 
-#endif /* !CIRCLE3D_HPP */
+#endif /* !CYLINDER_HPP_ */
