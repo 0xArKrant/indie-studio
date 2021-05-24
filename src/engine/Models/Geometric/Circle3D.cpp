@@ -7,16 +7,22 @@
 
 #include "indie.hpp"
 
-IModels::Circle3D::Circle3D(::Vector3 center, float radius, ::Vector3 rotationAxis, float rotationAngle, ::Color color)
+IModels::Circle3D::Circle3D(const Misc::Vector<3> center, const float radius, const Misc::Vector<3> rotationAxis, const float rotationAngle, const Misc::Colors &values)
 {
     this->_center = center;
     this->_radius = radius;
     this->_rotationAxis = rotationAxis;
     this->_rotationAngle = rotationAngle;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::Circle3D::DrawModels()
 {
-    ::DrawCircle3D(this->_center, this->_radius, this->_rotationAxis, this->_rotationAngle, this->_color);
+    ::DrawCircle3D(
+        ::Vector3 { this->_center.getX(), this->_center.getY(), this->_center.getZ() },
+        this->_radius,
+        ::Vector3 { this->_center.getX(), this->_center.getY(), this->_center.getZ() },
+        this->_rotationAngle,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
