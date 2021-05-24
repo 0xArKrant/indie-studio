@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IModels::Grid::Grid(int slices, float spacing)
+IModels::Grid::Grid(const int slices, const float spacing)
 {
     this->_slices = slices;
     this->_spacing = spacing;
