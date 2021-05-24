@@ -13,19 +13,19 @@
 namespace IShape {
     class CheckCollisionRecs : public Shape {
         public:
-            CheckCollisionRecs(const Misc::Vector<4>, const Misc::Vector<4>);
+            CheckCollisionRecs(const Misc::Rectangle, const Misc::Rectangle);
             ~CheckCollisionRecs() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle1() const { return this->_rectangle1; };
-            inline Misc::Vector<4> GetVectorRectangle2() const { return this->_rectangle2; };
+            inline Misc::Rectangle GetRectangle1() const { return this->_rectangle1; };
+            inline Misc::Rectangle GetRectangle2() const { return this->_rectangle2; };
 
-            inline void SetVectorRectangle1(const Misc::Vector<4> rectangle1) { this->_rectangle1 = rectangle1; };
-            inline void SetVectorRectangle2(const Misc::Vector<4> rectangle2) { this->_rectangle2 = rectangle2; };
+            inline void SetRectangle1(const Misc::Rectangle rectangle1) { this->_rectangle1 = rectangle1; };
+            inline void SetRectangle2(const Misc::Rectangle rectangle2) { this->_rectangle2 = rectangle2; };
 
             bool CheckCollision();
         private:
-            Misc::Vector<4> _rectangle1;
-            Misc::Vector<4> _rectangle2;
+            Misc::Rectangle _rectangle1;
+            Misc::Rectangle _rectangle2;
     };
 
     class CheckCollisionCircles : public Shape {
@@ -53,39 +53,39 @@ namespace IShape {
 
     class CheckCollisionCircleRec : public Shape {
         public:
-            CheckCollisionCircleRec(const Misc::Vector<2>, const float, const Misc::Vector<4>);
+            CheckCollisionCircleRec(const Misc::Vector<2>, const float, const Misc::Rectangle);
             ~CheckCollisionCircleRec() = default;
 
-            inline Misc::Vector<2> GetVectorCenter()    const { return this->_center;    };
-            inline float           GetRadius()          const { return this->_radius;    };
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
+            inline Misc::Vector<2> GetVectorCenter() const { return this->_center;    };
+            inline float           GetRadius()       const { return this->_radius;    };
+            inline Misc::Rectangle GetRectangle()    const { return this->_rectangle; };
 
-            inline void SetVectorCenter(const Misc::Vector<2> center)       { this->_center = center;       };
-            inline void SetVectorRadius(const float radius)                 { this->_radius = radius;       };
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
+            inline void SetVectorCenter(const Misc::Vector<2> center) { this->_center = center;       };
+            inline void SetVectorRadius(const float radius)           { this->_radius = radius;       };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
 
             bool CheckCollision();
         private:
             Misc::Vector<2> _center;
             float           _radius;
-            Misc::Vector<4> _rectangle;
+            Misc::Rectangle _rectangle;
     };
 
     class CheckCollisionPointRec : public Shape {
         public:
-            CheckCollisionPointRec(const Misc::Vector<2>, const Misc::Vector<4>);
+            CheckCollisionPointRec(const Misc::Vector<2>, const Misc::Rectangle);
             ~CheckCollisionPointRec() = default;
 
-            inline Misc::Vector<2> GetVectorPoint()     const { return this->_point;     };
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
+            inline Misc::Vector<2> GetVectorPoint() const { return this->_point;     };
+            inline Misc::Rectangle GetRectangle()   const { return this->_rectangle; };
 
-            inline void SetVectorPoint(const Misc::Vector<2> point)         { this->_point = point;         };
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
+            inline void SetVectorPoint(const Misc::Vector<2> point)   { this->_point = point;         };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
 
             bool CheckCollision();
         private:
             Misc::Vector<2> _point;
-            Misc::Vector<4> _rectangle;
+            Misc::Rectangle _rectangle;
     };
 
     class CheckCollisionPointCircle : public Shape {
@@ -159,19 +159,19 @@ namespace IShape {
 
     class GetCollisionRec : public Shape {
         public:
-            GetCollisionRec(const Misc::Vector<4>, const Misc::Vector<4>);
+            GetCollisionRec(const Misc::Rectangle, const Misc::Rectangle);
             ~GetCollisionRec() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle1() const { return this->_rectangle1; };
-            inline Misc::Vector<4> GetVectorRectangle2() const { return this->_rectangle2; };
+            inline Misc::Rectangle GetRectangle1() const { return this->_rectangle1; };
+            inline Misc::Rectangle GetRectangle2() const { return this->_rectangle2; };
 
-            inline void SetVectorRectangle1(const Misc::Vector<4> rectangle1) { this->_rectangle1 = rectangle1; };
-            inline void SetVectorRectangle2(const Misc::Vector<4> rectangle2) { this->_rectangle2 = rectangle2; };
+            inline void SetRectangle1(const Misc::Rectangle rectangle1) { this->_rectangle1 = rectangle1; };
+            inline void SetRectangle2(const Misc::Rectangle rectangle2) { this->_rectangle2 = rectangle2; };
 
-            Misc::Vector<4> GetCollision();
+            Misc::Rectangle GetCollision();
         private:
-            Misc::Vector<4> _rectangle1;
-            Misc::Vector<4> _rectangle2;
+            Misc::Rectangle _rectangle1;
+            Misc::Rectangle _rectangle2;
     };
 }
 
