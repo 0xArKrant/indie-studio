@@ -28,7 +28,7 @@ file(GLOB SRC_FILES
     #src/engine/Models/Geometric/Ray.cpp
     #src/engine/Models/Geometric/Plane.cpp
     #src/engine/Models/Geometric/Grid.cpp
-    #src/engine/Models/Geometric/Cylinder.cpp
+    src/engine/Models/Geometric/Cylinder.cpp
     #src/engine/Models/Geometric/Sphere.cpp
     #src/engine/Models/MeshGeneration/GenMesh.cpp
     #src/engine/Models/MeshManipulation/MeshManipulation.cpp

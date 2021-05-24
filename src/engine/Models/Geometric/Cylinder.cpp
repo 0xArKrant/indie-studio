@@ -7,32 +7,46 @@
 
 #include "indie.hpp"
 
-IModels::Cylinder::Cylinder(::Vector3 position, float radiusTop, float radiusBottom, float height, int slices, ::Color color)
+IModels::Cylinder::Cylinder(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
 {
     this->_position = position;
     this->_radiusTop = radiusTop;
     this->_radiusBottom = radiusBottom;
     this->_height = height;
     this->_slices = slices;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::Cylinder::DrawModels()
 {
-    ::DrawCylinder(this->_position, this->_radiusTop, this->_radiusBottom, this->_height, this->_slices, this->_color);
+    ::DrawCylinder(
+        ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        this->_radiusTop,
+        this->_radiusBottom,
+        this->_height,
+        this->_slices,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IModels::CylinderWires::CylinderWires(::Vector3 position, float radiusTop, float radiusBottom, float height, int slices, ::Color color)
+IModels::CylinderWires::CylinderWires(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
 {
     this->_position = position;
     this->_radiusTop = radiusTop;
     this->_radiusBottom = radiusBottom;
     this->_height = height;
     this->_slices = slices;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::CylinderWires::DrawModels()
 {
-    ::DrawCylinder(this->_position, this->_radiusTop, this->_radiusBottom, this->_height, this->_slices, this->_color);
+    ::DrawCylinderWires(
+        ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        this->_radiusTop,
+        this->_radiusBottom,
+        this->_height,
+        this->_slices,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
