@@ -11,6 +11,7 @@ file(GLOB SRC_FILES
     src/engine/Misc/RayVector.cpp
     src/engine/Misc/RayHitInfo.cpp
     src/engine/Misc/Matrix.cpp
+    src/engine/Misc/RectangleVector.cpp
 
     src/engine/Shape/Geometric/Rectangle.cpp
     src/engine/Shape/Geometric/Pixel.cpp
@@ -53,6 +54,7 @@ include_directories(
     src/engine/
     src/engine/Shape/Geometric
     src/engine/Shape/Collision
+    src/engine/Models/Collision
     src/engine/Models/Geometric
     src/engine/Models/MeshGeneration
     src/engine/Models/MeshManipulation

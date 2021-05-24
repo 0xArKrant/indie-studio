@@ -63,6 +63,7 @@
 #include "DrawBoundingBox.hpp"
 #include "DrawBillboard.hpp"
 #include "DrawModel.hpp"
+#include "GetCollisionRay.hpp"
 
 #include "IText.hpp"
 
