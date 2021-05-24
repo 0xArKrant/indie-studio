@@ -33,6 +33,7 @@
 #include "RectangleVector.hpp"
 #include "Texture.hpp"
 #include "RayVector.hpp"
+#include "RayHitInfo.hpp"
 
 #include "IShape.hpp"
 #include "Rectangle.hpp"
@@ -43,7 +44,7 @@
 #include "Triangle.hpp"
 #include "Line.hpp"
 #include "Circle.hpp"
-#include "CheckCollision.hpp"
+#include "CheckCollisionShape.hpp"
 
 #include "IModels.hpp"
 #include "Cube.hpp"
