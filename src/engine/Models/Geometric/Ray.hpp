@@ -13,15 +13,20 @@
 namespace IModels {
     class Ray : public Models {
         public:
-            Ray(::Ray, ::Color);
+            Ray(const Misc::Ray, const Misc::Colors &);
             ~Ray() = default;
+
+            inline Misc::Colors GetColors() const { return this->_colors; };
+            inline Misc::Ray    GetRay()    const { return this->_ray;    };
+
+            inline void SetRay(const Misc::Ray ray)          { this->_ray = ray;       };
+            inline void SetColors(const Misc::Colors colors) { this->_colors = colors; };
+
             void DrawModels();
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Ray _ray;
-            ::Color _color;
+            Misc::Ray    _ray;
+            Misc::Colors _colors;
     };
 }
 
-#endif /* !LINE3D_HPP */
+#endif /* !RAY_HPP_ */

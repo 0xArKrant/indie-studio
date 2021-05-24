@@ -16,11 +16,11 @@ namespace Misc {
         public:
             Vector() : _vector{ 0 } {};
             template<typename ... x>
-            Vector(x... args) { 
-                float vec[]{ args... };  
+            Vector(x... args) {
+                float vec[]{ args... };
                 if (vSize > 4)
                     throw (Errors::Exception("Unable to Compute Vector", "Vector Size > 4", __FILE__, __LINE__));
-                std::memcpy(this->_vector.data(), vec, this->_vector.size() * sizeof(float)); 
+                std::memcpy(this->_vector.data(), vec, this->_vector.size() * sizeof(float));
             };
             ~Vector() = default;
 

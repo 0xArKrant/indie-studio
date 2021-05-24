@@ -19,7 +19,7 @@ namespace Misc {
 
             inline float getPositionX()  const { return this->_position[0];  };
             inline float getPositionY()  const { return this->_position[1];  };
-            inline float getPostionZ()   const { return this->_position[2];  };
+            inline float getPositionZ()  const { return this->_position[2];  };
             inline float getDirectionX() const { return this->_direction[0]; };
             inline float getDirectionY() const { return this->_direction[1]; };
             inline float getDirectionZ() const { return this->_direction[2]; };
