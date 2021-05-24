@@ -16,17 +16,17 @@
 
 /**
  *  Colors constructor
- *  @param a A (alpha)
  *  @param r R (red)
  *  @param g G (green)
  *  @param b B (blue)
+ *  @param a A (alpha)
  **/
-Misc::Colors::Colors(const uchar &a, const uchar &r, const uchar &g, const uchar &b)
+Misc::Colors::Colors(const uchar &r, const uchar &g, const uchar &b, const uchar &a)
 {
-    this->_a = a;
     this->_r = r;
     this->_g = g;
     this->_b = b;
+    this->_a = a;
 }
 
 /**
@@ -35,10 +35,18 @@ Misc::Colors::Colors(const uchar &a, const uchar &r, const uchar &g, const uchar
  **/
 Misc::Colors::Colors(const Colors &cpy)
 {
-    this->_a = cpy._a;
-    this->_b = cpy._b;
-    this->_g = cpy._g;
     this->_r = cpy._r;
+    this->_g = cpy._g;
+    this->_b = cpy._b;
+    this->_a = cpy._a;
+}
+
+Misc::Colors::Colors()
+{
+    this->_r = 0;
+    this->_g = 0;
+    this->_b = 0;
+    this->_a = 0;
 }
 
 /**
@@ -47,83 +55,11 @@ Misc::Colors::Colors(const Colors &cpy)
  **/
 Misc::Colors& Misc::Colors::operator=(const Colors &other)
 {
-    this->_a = other.getA();
     this->_r = other.getR();
     this->_g = other.getG();
     this->_b = other.getB();
+    this->_a = other.getA();
     return (*this);
-}
-
-/**
- *  Alpha getter
- *  @return Alpha value (0-255)
- **/
-uchar Misc::Colors::getA() const
-{
-    return (this->_a);
-}
-
-/**
- *  Red getter
- *  @return Red value (0-255)
- **/
-uchar Misc::Colors::getR() const
-{
-    return (this->_r);
-}
-
-/**
- *  Green getter
- *  @return Green value (0-255)
- **/
-uchar Misc::Colors::getG() const
-{
-    return (this->_g);
-}
-
-/**
- *  Blue getter
- *  @return Blue value (0-255)
- **/
-uchar Misc::Colors::getB() const
-{
-    return (this->_b);
-}
-
-/**
- *  Alpha setter
- *  @param a Alpha value (0-255)
- **/
-void Misc::Colors::setA(const uchar &a)
-{
-    this->_a = a;
-}
-
-/**
- *  Red setter
- *  @param r Red value (0-255)
- **/
-void Misc::Colors::setR(const uchar &r)
-{
-    this->_r = r;
-}
-
-/**
- *  Green setter
- *  @param g Green value (0-255)
- **/
-void Misc::Colors::setG(const uchar &g)
-{
-    this->_g = g;
-}
-
-/**
- *  Blue setter
- *  @param b Blue value (0-255)
- **/
-void Misc::Colors::setB(const uchar &b)
-{
-    this->_b = b;
 }
 
 /**

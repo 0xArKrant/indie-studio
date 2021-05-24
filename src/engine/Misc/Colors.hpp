@@ -23,25 +23,27 @@ namespace Misc {
         public:
             Colors(const uchar&, const uchar&, const uchar&, const uchar&);
             Colors(const Colors &);
+            Colors();
             ~Colors() = default;
+
             Colors& operator=(const Colors &other);
             bool operator()(const Colors& c1, const Colors& c2) const;
             bool operator<(const Misc::Colors &col);
-            uchar getA() const; /*!< Alpha value getter @return alpha value */
-            uchar getR() const; /*!< Red value getter @return red value */
-            uchar getG() const; /*!< Green value getter @return green value */
-            uchar getB() const; /*!< Blue value getter @return blue value */
 
-            void setA(const uchar &); /*!< Alpha value setter @param alpha value between 0 255 */
-            void setR(const uchar &); /*!< Red value setter @param red value between 0 255 */
-            void setG(const uchar &); /*!< Green value setter @param green value between 0 255 */
-            void setB(const uchar &); /*!< Blue value setter @param blue value between 0 255 */
-        protected:
+            inline uchar getR() const { return this->_r; }; /*!< Red value getter @return red value */
+            inline uchar getG() const { return this->_g; }; /*!< Green value getter @return green value */
+            inline uchar getB() const { return this->_b; }; /*!< Blue value getter @return blue value */
+            inline uchar getA() const { return this->_a; }; /*!< Alpha value getter @return alpha value */
+
+            inline void setR(const uchar &r) { this->_r = r; }; /*!< Red value setter @param red value between 0 255 */
+            inline void setG(const uchar &g) { this->_g = g; }; /*!< Green value setter @param green value between 0 255 */
+            inline void setB(const uchar &b) { this->_b = b; }; /*!< Blue value setter @param blue value between 0 255 */
+            inline void setA(const uchar &a) { this->_a = a; }; /*!< Alpha value setter @param alpha value between 0 255 */
         private:
-            uchar _a; /*!< Alpha value of color */
             uchar _r; /*!< Red value of color */
             uchar _g; /*!< Green value of color */
             uchar _b; /*!< Blue value of color */
+            uchar _a; /*!< Alpha value of color */
     };
 }
 
