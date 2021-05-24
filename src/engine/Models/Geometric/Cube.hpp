@@ -13,70 +13,123 @@
 namespace IModels {
     class Cube : public Models {
         public:
-            Cube(::Vector3, float, float, float, ::Color);
+            Cube(const Misc::Vector<3>, const float, const float, const float, const Misc::Colors &);
             ~Cube() = default;
+
+            inline Misc::Vector<3> GetPosition() const { return this->_position; };
+            inline float           GetWidth()    const { return this->_width;    };
+            inline float           GetHeight()   const { return this->_height;   };
+            inline float           GetLength()   const { return this->_length;   };
+            inline Misc::Colors    GetColors()   const { return this->_colors;   };
+
+            inline void SetPosition(const Misc::Vector<3> position) { this->_position = position; };
+            inline void SetWidth(const float width)                 { this->_width = width;       };
+            inline void SetHeight(const float height)               { this->_height = height;     };
+            inline void SetLength(const float length)               { this->_length = length;     };
+            inline void SetColors(const Misc::Colors colors)        { this->_colors = colors;     };
+
             void DrawModels();
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Vector3 _position;
-            float _width;
-            float _height;
-            float _length;
-            ::Color _color;
+            Misc::Vector<3> _position;
+            float           _width;
+            float           _height;
+            float           _length;
+            Misc::Colors    _colors;
     };
+
     class CubeV : public Models {
         public:
-            CubeV(::Vector3, ::Vector3, ::Color);
+            CubeV(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors &);
             ~CubeV() = default;
+
+            inline Misc::Vector<3> GetPosition() const { return this->_position; };
+            inline Misc::Vector<3> GetSize() const     { return this->_size;     };
+            inline Misc::Colors    GetColors()   const { return this->_colors;   };
+
+            inline void SetPosition(const Misc::Vector<3> position) { this->_position = position; };
+            inline void SetSize(const Misc::Vector<3> size)         { this->_size = size;         };
+            inline void SetColors(const Misc::Colors colors)        { this->_colors = colors;     };
+
             void DrawModels();
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Vector3 _position;
-            ::Vector3 _size;
-            ::Color _color;
+            Misc::Vector<3> _position;
+            Misc::Vector<3> _size;
+            Misc::Colors    _colors;
     };
+
     class CubeWires : public Models {
         public:
-            CubeWires(::Vector3, float, float, float, ::Color);
+            CubeWires(const Misc::Vector<3>, const float, const float, const float, const Misc::Colors &);
             ~CubeWires() = default;
+
+            inline Misc::Vector<3> GetPosition() const { return this->_position; };
+            inline float           GetWidth()    const { return this->_width;    };
+            inline float           GetHeight()   const { return this->_height;   };
+            inline float           GetLength()   const { return this->_length;   };
+            inline Misc::Colors    GetColors()   const { return this->_colors;   };
+
+            inline void SetPosition(const Misc::Vector<3> position) { this->_position = position; };
+            inline void SetWidth(const float width)                 { this->_width = width;       };
+            inline void SetHeight(const float height)               { this->_height = height;     };
+            inline void SetLength(const float length)               { this->_length = length;     };
+            inline void SetColors(const Misc::Colors colors)        { this->_colors = colors;     };
+
             void DrawModels();
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Vector3 _position;
-            float _width;
-            float _height;
-            float _length;
-            ::Color _color;
+            Misc::Vector<3> _position;
+            float           _width;
+            float           _height;
+            float           _length;
+            Misc::Colors    _colors;
     };
+
     class CubeWiresV : public Models {
         public:
-            CubeWiresV(::Vector3, ::Vector3, ::Color);
+            CubeWiresV(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors &);
             ~CubeWiresV() = default;
+
+            inline Misc::Vector<3> GetPosition() const { return this->_position; };
+            inline Misc::Vector<3> GetSize() const     { return this->_size;     };
+            inline Misc::Colors    GetColors()   const { return this->_colors;   };
+
+            inline void SetPosition(const Misc::Vector<3> position) { this->_position = position; };
+            inline void SetSize(const Misc::Vector<3> size)         { this->_size = size;         };
+            inline void SetColors(const Misc::Colors colors)        { this->_colors = colors;     };
+
             void DrawModels();
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Vector3 _position;
-            ::Vector3 _size;
-            ::Color _color;
+            Misc::Vector<3> _position;
+            Misc::Vector<3> _size;
+            Misc::Colors    _colors;
     };
+
     class CubeTexture : public Models {
         public:
-            CubeTexture(::Texture2D, ::Vector3, float, float, float, ::Color);
+            CubeTexture(const Misc::Texture, const Misc::Vector<3>, const float, const float, const float, const Misc::Colors &);
             ~CubeTexture() = default;
+
+            inline Misc::Texture   GetTexture()  const { return this->_texture;  };
+            inline Misc::Vector<3> GetPosition() const { return this->_position; };
+            inline float           GetWidth()    const { return this->_width;    };
+            inline float           GetHeight()   const { return this->_height;   };
+            inline float           GetLength()   const { return this->_length;   };
+            inline Misc::Colors    GetColors()   const { return this->_colors;   };
+
+            inline void SetTexture(const Misc::Texture texture)     { this->_texture = texture;   };
+            inline void SetPosition(const Misc::Vector<3> position) { this->_position = position; };
+            inline void SetWidth(const float width)                 { this->_width = width;       };
+            inline void SetHeight(const float height)               { this->_height = height;     };
+            inline void SetLength(const float length)               { this->_length = length;     };
+            inline void SetColors(const Misc::Colors colors)        { this->_colors = colors;     };
+
             void DrawModels();
-            ::Color GetColor() { return this->_color; };
-            void SetColor(::Color color) { this->_color = color; };
         private:
-            ::Texture2D _texture;
-            ::Vector3 _position;
-            float _width;
-            float _height;
-            float _length;
-            ::Color _color;
+            Misc::Texture   _texture;
+            Misc::Vector<3> _position;
+            float           _width;
+            float           _height;
+            float           _length;
+            Misc::Colors    _colors;
     };
 }
 

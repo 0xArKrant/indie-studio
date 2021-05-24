@@ -7,69 +7,96 @@
 
 #include "indie.hpp"
 
-IModels::Cube::Cube(::Vector3 position, float width, float height, float length, ::Color color) 
+IModels::Cube::Cube(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
 {
     this->_position = position;
     this->_width = width;
     this->_height = height;
     this->_length = length;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::Cube::DrawModels()
 {
-    ::DrawCube(this->_position, this->_width, this->_height, this->_length, this->_color);
+    ::DrawCube(
+        ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        this->_width,
+        this->_height,
+        this->_length,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IModels::CubeV::CubeV(::Vector3 position, ::Vector3 size, ::Color color)
+IModels::CubeV::CubeV(const Misc::Vector<3> position, const Misc::Vector<3> size, const Misc::Colors &values)
 {
     this->_position = position;
     this->_size = size;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::CubeV::DrawModels()
 {
-    ::DrawCubeV(this->_position, this->_size, this->_color);
+    ::DrawCubeV(
+        ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        ::Vector3 { this->_size.getX(), this->_size.getY(), this->_size.getZ() },
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IModels::CubeWires::CubeWires(::Vector3 position, float width, float height, float length, ::Color color)
+IModels::CubeWires::CubeWires(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
 {
     this->_position = position;
     this->_width = width;
     this->_height = height;
     this->_length = length;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::CubeWires::DrawModels()
 {
-    ::DrawCubeWires(this->_position, this->_width, this->_height, this->_length, this->_color);
+    ::DrawCubeWires(
+        ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        this->_width,
+        this->_height,
+        this->_length,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IModels::CubeWiresV::CubeWiresV(::Vector3 position, ::Vector3 size, ::Color color)
+IModels::CubeWiresV::CubeWiresV(const Misc::Vector<3> position, const Misc::Vector<3> size, const Misc::Colors &values)
 {
     this->_position = position;
     this->_size = size;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::CubeWiresV::DrawModels()
 {
-    ::DrawCubeWiresV(this->_position, this->_size, this->_color);
+    ::DrawCubeWiresV(
+        ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        ::Vector3 { this->_size.getX(), this->_size.getY(), this->_size.getZ() },
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
 
-IModels::CubeTexture::CubeTexture(::Texture2D texture, ::Vector3 position, float width, float height, float length, ::Color color)
+IModels::CubeTexture::CubeTexture(const Misc::Texture texture, const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
 {
     this->_texture = texture;
     this->_position = position;
     this->_width = width;
     this->_height = height;
     this->_length = length;
-    this->_color = color;
+    this->_colors = values;
 }
 
 void IModels::CubeTexture::DrawModels()
 {
-    ::DrawCubeTexture(this->_texture, this->_position, this->_width, this->_height, this->_length, this->_color);
+    ::DrawCubeTexture(
+        ::Texture2D { this->_texture.getID(), this->_texture.getWidth(), this->_texture.getHeight(), this->_texture.getMipmaps(), this->_texture.getFormat() },
+        ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        this->_width,
+        this->_height,
+        this->_length,
+        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+    );
 }
