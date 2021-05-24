@@ -30,6 +30,7 @@
 
 #include "Vector.hpp"
 #include "Colors.hpp"
+#include "RectangleVector.hpp"
 
 #include "IShape.hpp"
 #include "Rectangle.hpp"
@@ -60,6 +61,5 @@
 #include "DrawModel.hpp"
 
 #include "IText.hpp"
-#include "StringManagement.hpp"
 
 #endif /* !INDIE_HPP_ */

@@ -59,39 +59,39 @@ namespace IShape {
 
     class RectangleRec : public Shape {
         public:
-            RectangleRec(const Misc::Vector<4>, Misc::Colors &);
+            RectangleRec(const Misc::Rectangle, Misc::Colors &);
             ~RectangleRec() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
-            inline Misc::Colors    GetColors()          const { return this->_colors;    };
+            inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
+            inline Misc::Colors    GetColors()    const { return this->_colors;    };
 
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
-            inline void SetColors(const Misc::Colors colors)                { this->_colors = colors;       };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
+            inline void SetColors(const Misc::Colors colors)          { this->_colors = colors;       };
 
             void DrawShape();
         private:
-            Misc::Vector<4> _rectangle;
+            Misc::Rectangle _rectangle;
             Misc::Colors    _colors;
     };
 
     class RectanglePro : public Shape {
         public:
-            RectanglePro(const Misc::Vector<4>, const Misc::Vector<2>, const float, Misc::Colors &);
+            RectanglePro(const Misc::Rectangle, const Misc::Vector<2>, const float, Misc::Colors &);
             ~RectanglePro() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
-            inline Misc::Vector<2> GetVectorOrigin()    const { return this->_origin;    };
-            inline float           GetRotation()        const { return this->_rotation;  };
-            inline Misc::Colors    GetColors()          const { return this->_colors;    };
+            inline Misc::Rectangle GetRectangle()    const { return this->_rectangle; };
+            inline Misc::Vector<2> GetVectorOrigin() const { return this->_origin;    };
+            inline float           GetRotation()     const { return this->_rotation;  };
+            inline Misc::Colors    GetColors()       const { return this->_colors;    };
 
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
-            inline void SetVectorOrigin(const Misc::Vector<4> rectangle)    { this->_rectangle = rectangle; };
-            inline void SetRotation(const float rotation)                   { this->_rotation = rotation;   };
-            inline void SetColors(const Misc::Colors colors)                { this->_colors = colors;       };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
+            inline void SetVectorOrigin(const Misc::Vector<2> origin) { this->_origin = origin;       };
+            inline void SetRotation(const float rotation)             { this->_rotation = rotation;   };
+            inline void SetColors(const Misc::Colors colors)          { this->_colors = colors;       };
 
             void DrawShape();
         private:
-            Misc::Vector<4> _rectangle;
+            Misc::Rectangle _rectangle;
             Misc::Vector<2> _origin;
             float           _rotation;
             Misc::Colors    _colors;
@@ -158,28 +158,28 @@ namespace IShape {
 
     class RectangleGradientEx : public Shape {
         public:
-            RectangleGradientEx(const Misc::Vector<4>, Misc::Colors &, Misc::Colors &, Misc::Colors &, Misc::Colors &);
+            RectangleGradientEx(const Misc::Rectangle, Misc::Colors &, Misc::Colors &, Misc::Colors &, Misc::Colors &);
             ~RectangleGradientEx() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
-            inline Misc::Colors GetColors1()            const { return this->_colors1;   };
-            inline Misc::Colors GetColors2()            const { return this->_colors2;   };
-            inline Misc::Colors GetColors3()            const { return this->_colors3;   };
-            inline Misc::Colors GetColors4()            const { return this->_colors4;   };
+            inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
+            inline Misc::Colors GetColors1()      const { return this->_colors1;   };
+            inline Misc::Colors GetColors2()      const { return this->_colors2;   };
+            inline Misc::Colors GetColors3()      const { return this->_colors3;   };
+            inline Misc::Colors GetColors4()      const { return this->_colors4;   };
 
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
-            inline void SetColors1(const Misc::Colors colors1)              { this->_colors1 = colors1;     };
-            inline void SetColors2(const Misc::Colors colors2)              { this->_colors2 = colors2;     };
-            inline void SetColors3(const Misc::Colors colors3)              { this->_colors3 = colors3;     };
-            inline void SetColors4(const Misc::Colors colors4)              { this->_colors4 = colors4;     };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
+            inline void SetColors1(const Misc::Colors colors1)        { this->_colors1 = colors1;     };
+            inline void SetColors2(const Misc::Colors colors2)        { this->_colors2 = colors2;     };
+            inline void SetColors3(const Misc::Colors colors3)        { this->_colors3 = colors3;     };
+            inline void SetColors4(const Misc::Colors colors4)        { this->_colors4 = colors4;     };
 
             void DrawShape();
         private:
-            Misc::Vector<4> _rectangle;
-            Misc::Colors _colors1;
-            Misc::Colors _colors2;
-            Misc::Colors _colors3;
-            Misc::Colors _colors4;
+            Misc::Rectangle _rectangle;
+            Misc::Colors    _colors1;
+            Misc::Colors    _colors2;
+            Misc::Colors    _colors3;
+            Misc::Colors    _colors4;
     };
 
     class RectangleLines : public Shape {
@@ -210,43 +210,43 @@ namespace IShape {
 
     class RectangleLinesEx : public Shape {
         public:
-            RectangleLinesEx(const Misc::Vector<4>, const int, Misc::Colors &);
+            RectangleLinesEx(const Misc::Rectangle, const int, Misc::Colors &);
             ~RectangleLinesEx() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
-            inline int             GetThickness()       const { return this->_linethick; };
-            inline Misc::Colors    GetColors()          const { return this->_colors;    };
+            inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
+            inline int             GetThickness() const { return this->_linethick; };
+            inline Misc::Colors    GetColors()    const { return this->_colors;    };
 
 
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
-            inline void SetThickness(const int thickness)                   { this->_linethick = thickness; };
-            inline void SetColors(const Misc::Colors colors)                { this->_colors = colors;       };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
+            inline void SetThickness(const int thickness)             { this->_linethick = thickness; };
+            inline void SetColors(const Misc::Colors colors)          { this->_colors = colors;       };
 
             void DrawShape();
         private:
-            Misc::Vector<4> _rectangle;
+            Misc::Rectangle _rectangle;
             int             _linethick;
             Misc::Colors    _colors;
     };
 
     class RectangleRounded : public Shape {
         public:
-            RectangleRounded(const Misc::Vector<4>, const float, const int, Misc::Colors &);
+            RectangleRounded(const Misc::Rectangle, const float, const int, Misc::Colors &);
             ~RectangleRounded() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
-            inline float           GetRoundness()       const { return this->_roundness; };
-            inline int             GetSegments()        const { return this->_segments;  };
-            inline Misc::Colors    GetColors()          const { return this->_colors;    };
+            inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
+            inline float           GetRoundness() const { return this->_roundness; };
+            inline int             GetSegments()  const { return this->_segments;  };
+            inline Misc::Colors    GetColors()    const { return this->_colors;    };
 
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
-            inline void SetRoundness(const float roundness)                 { this->_roundness = roundness; };
-            inline void SetSegments(const int segments)                     { this->_segments = segments;   };
-            inline void SetColors(const Misc::Colors colors)                { this->_colors = colors;       };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
+            inline void SetRoundness(const float roundness)           { this->_roundness = roundness; };
+            inline void SetSegments(const int segments)               { this->_segments = segments;   };
+            inline void SetColors(const Misc::Colors colors)          { this->_colors = colors;       };
 
             void DrawShape();
         private:
-            Misc::Vector<4> _rectangle;
+            Misc::Rectangle _rectangle;
             float           _roundness;
             int             _segments;
             Misc::Colors    _colors;
@@ -254,24 +254,24 @@ namespace IShape {
 
     class RectangleRoundedLines : public Shape {
         public:
-            RectangleRoundedLines(const Misc::Vector<4>, const float, const int, const int, Misc::Colors &);
+            RectangleRoundedLines(const Misc::Rectangle, const float, const int, const int, Misc::Colors &);
             ~RectangleRoundedLines() = default;
 
-            inline Misc::Vector<4> GetVectorRectangle() const { return this->_rectangle; };
-            inline float           GetRoundness()       const { return this->_roundness; };
-            inline int             GetSegments()        const { return this->_segments;  };
-            inline int             GetThickness()       const { return this->_linethick; };
-            inline Misc::Colors    GetColors()          const { return this->_colors;    };
+            inline Misc::Rectangle GetRectangle() const { return this->_rectangle; };
+            inline float           GetRoundness() const { return this->_roundness; };
+            inline int             GetSegments()  const { return this->_segments;  };
+            inline int             GetThickness() const { return this->_linethick; };
+            inline Misc::Colors    GetColors()    const { return this->_colors;    };
 
-            inline void SetVectorRectangle(const Misc::Vector<4> rectangle) { this->_rectangle = rectangle; };
-            inline void SetRoundness(const float roundness)                 { this->_roundness = roundness; };
-            inline void SetSegments(const int segments)                     { this->_segments = segments;   };
-            inline void SetThickness(const int thickness)                   { this->_linethick = thickness; };
-            inline void SetColors(const Misc::Colors colors)                { this->_colors = colors;       };
+            inline void SetRectangle(const Misc::Rectangle rectangle) { this->_rectangle = rectangle; };
+            inline void SetRoundness(const float roundness)           { this->_roundness = roundness; };
+            inline void SetSegments(const int segments)               { this->_segments = segments;   };
+            inline void SetThickness(const int thickness)             { this->_linethick = thickness; };
+            inline void SetColors(const Misc::Colors colors)          { this->_colors = colors;       };
 
             void DrawShape();
         private:
-            Misc::Vector<4> _rectangle;
+            Misc::Rectangle _rectangle;
             float           _roundness;
             int             _segments;
             int             _linethick;

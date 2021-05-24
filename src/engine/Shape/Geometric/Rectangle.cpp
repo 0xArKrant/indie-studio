@@ -41,7 +41,7 @@ void IShape::RectangleV::DrawShape()
     );
 }
 
-IShape::RectangleRec::RectangleRec(const Misc::Vector<4> rectangle, Misc::Colors &values) : _colors(values)
+IShape::RectangleRec::RectangleRec(const Misc::Rectangle rectangle, Misc::Colors &values) : _colors(values)
 {
     this->_rectangle = rectangle;
 }
@@ -49,12 +49,12 @@ IShape::RectangleRec::RectangleRec(const Misc::Vector<4> rectangle, Misc::Colors
 void IShape::RectangleRec::DrawShape()
 {
     ::DrawRectangleRec(
-        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
 
-IShape::RectanglePro::RectanglePro(const Misc::Vector<4> rectangle, const Misc::Vector<2> origin, float rotation, Misc::Colors &values) : _colors(values)
+IShape::RectanglePro::RectanglePro(const Misc::Rectangle rectangle, const Misc::Vector<2> origin, float rotation, Misc::Colors &values) : _colors(values)
 {
     this->_rectangle = rectangle;
     this->_origin = origin;
@@ -64,7 +64,7 @@ IShape::RectanglePro::RectanglePro(const Misc::Vector<4> rectangle, const Misc::
 void IShape::RectanglePro::DrawShape()
 {
     ::DrawRectanglePro(
-        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
         ::Vector2 { this->_origin.getX(), this->_origin.getY() },
         this->_rotation,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
@@ -111,7 +111,7 @@ void IShape::RectangleGradientH::DrawShape()
     );
 }
 
-IShape::RectangleGradientEx::RectangleGradientEx(const Misc::Vector<4> rectangle, Misc::Colors &values1, Misc::Colors &values2, Misc::Colors &values3, Misc::Colors &values4) : _colors1(values1), _colors2(values2), _colors3(values3), _colors4(values4)
+IShape::RectangleGradientEx::RectangleGradientEx(const Misc::Rectangle rectangle, Misc::Colors &values1, Misc::Colors &values2, Misc::Colors &values3, Misc::Colors &values4) : _colors1(values1), _colors2(values2), _colors3(values3), _colors4(values4)
 {
     this->_rectangle = rectangle;
 }
@@ -119,7 +119,7 @@ IShape::RectangleGradientEx::RectangleGradientEx(const Misc::Vector<4> rectangle
 void IShape::RectangleGradientEx::DrawShape()
 {
     ::DrawRectangleGradientEx(
-        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
         ::Color { this->_colors1.getR(), this->_colors1.getG(), this->_colors1.getB(), this->_colors1.getA() },
         ::Color { this->_colors2.getR(), this->_colors2.getG(), this->_colors2.getB(), this->_colors2.getA() },
         ::Color { this->_colors3.getR(), this->_colors3.getG(), this->_colors3.getB(), this->_colors3.getA() },
@@ -146,7 +146,7 @@ void IShape::RectangleLines::DrawShape()
     );
 }
 
-IShape::RectangleLinesEx::RectangleLinesEx(const Misc::Vector<4> rectangle, const int linethick, Misc::Colors &values) : _colors(values)
+IShape::RectangleLinesEx::RectangleLinesEx(const Misc::Rectangle rectangle, const int linethick, Misc::Colors &values) : _colors(values)
 {
     this->_rectangle = rectangle;
     this->_linethick = linethick;
@@ -155,13 +155,13 @@ IShape::RectangleLinesEx::RectangleLinesEx(const Misc::Vector<4> rectangle, cons
 void IShape::RectangleLinesEx::DrawShape()
 {
     ::DrawRectangleLinesEx(
-        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
         this->_linethick,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
 
-IShape::RectangleRounded::RectangleRounded(const Misc::Vector<4> rectangle, const float roundness, const int segments, Misc::Colors &values) : _colors(values)
+IShape::RectangleRounded::RectangleRounded(const Misc::Rectangle rectangle, const float roundness, const int segments, Misc::Colors &values) : _colors(values)
 {
     this->_rectangle = rectangle;
     this->_roundness = roundness;
@@ -171,14 +171,14 @@ IShape::RectangleRounded::RectangleRounded(const Misc::Vector<4> rectangle, cons
 void IShape::RectangleRounded::DrawShape()
 {
     ::DrawRectangleRounded(
-        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
         this->_roundness,
         this->_segments,
         ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }
 
-IShape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Vector<4> rectangle, const float roundness, const int segments, const int linethick, Misc::Colors &values) : _colors(values)
+IShape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Rectangle rectangle, const float roundness, const int segments, const int linethick, Misc::Colors &values) : _colors(values)
 {
     this->_rectangle = rectangle;
     this->_roundness = roundness;
@@ -190,7 +190,7 @@ IShape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Vector<4> recta
 void IShape::RectangleRoundedLines::DrawShape()
 {
     ::DrawRectangleRoundedLines(
-        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getZ(), this->_rectangle.getW() },
+        ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
         this->_roundness,
         this->_segments,
         this->_linethick,
