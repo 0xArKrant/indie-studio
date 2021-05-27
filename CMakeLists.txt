@@ -1,10 +1,45 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(bomberman CXX)
+find_package(raylib 2.5.0 REQUIRED)
 
 set(BIN_NAME bomberman)
 
 file(GLOB SRC_FILES
+    src/engine/Misc/Colors.cpp
+    src/engine/Misc/Texture.cpp
+    src/engine/Misc/RayVector.cpp
+    src/engine/Misc/RayHitInfo.cpp
+    src/engine/Misc/Matrix.cpp
+    src/engine/Misc/RectangleVector.cpp
+
+    src/engine/Shape/Geometric/Rectangle.cpp
+    src/engine/Shape/Geometric/Pixel.cpp
+    src/engine/Shape/Geometric/Ellipse.cpp
+    src/engine/Shape/Geometric/Polygon.cpp
+    src/engine/Shape/Geometric/Ring.cpp
+    src/engine/Shape/Geometric/Triangle.cpp
+    src/engine/Shape/Geometric/Line.cpp
+    src/engine/Shape/Geometric/Circle.cpp
+
+    src/engine/Shape/Collision/CheckCollision.cpp
+
+    src/engine/Models/Geometric/Cube.cpp
+    src/engine/Models/Geometric/Line3D.cpp
+    src/engine/Models/Geometric/Point3D.cpp
+    src/engine/Models/Geometric/Circle3D.cpp
+    src/engine/Models/Geometric/Triangle3D.cpp
+    src/engine/Models/Geometric/Ray.cpp
+    src/engine/Models/Geometric/Plane.cpp
+    src/engine/Models/Geometric/Grid.cpp
+    src/engine/Models/Geometric/Cylinder.cpp
+    src/engine/Models/Geometric/Sphere.cpp
+    #src/engine/Models/MeshGeneration/GenMesh.cpp
+    #src/engine/Models/MeshManipulation/MeshManipulation.cpp
+    #src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
+    #src/engine/Models/ModelDrawing/DrawBillboard.cpp
+    #src/engine/Models/ModelDrawing/DrawModel.cpp
+
     src/main.cpp
     src/core/Core.cpp
     src/core/LibraryLoader.cpp
@@ -17,6 +52,14 @@ include_directories(
     include/
     src/error/
     src/engine/
+    src/engine/Shape/Geometric
+    src/engine/Shape/Collision
+    src/engine/Models/Collision
+    src/engine/Models/Geometric
+    src/engine/Models/MeshGeneration
+    src/engine/Models/MeshManipulation
+    src/engine/Models/ModelDrawing
+    src/engine/Misc/
     src/game/
     src/core/
 )
@@ -26,9 +69,9 @@ target_compile_options(${BIN_NAME} PUBLIC
     -Wall
     -Wextra
     -Werror
-    -Wuninitialized 
+    -Wuninitialized
     -Wformat-security
     -std=c++17
 )
 
-target_link_libraries(${BIN_NAME} PUBLIC ${CMAKE_DL_LIBS})
+target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})

@@ -19,9 +19,52 @@
 #include <sys/types.h>
 #include <list>
 #include <filesystem>
+#include <raylib.h>
+#include <array>
+#include <cstdint>
+#include <cstring>
 
 #include "Core.hpp"
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
+
+#include "Vector.hpp"
+#include "Colors.hpp"
+#include "RectangleVector.hpp"
+#include "Texture.hpp"
+#include "RayVector.hpp"
+#include "RayHitInfo.hpp"
+#include "Matrix.hpp"
+
+#include "IShape.hpp"
+#include "Rectangle.hpp"
+#include "Pixel.hpp"
+#include "Ellipse.hpp"
+#include "Polygon.hpp"
+#include "Ring.hpp"
+#include "Triangle.hpp"
+#include "Line.hpp"
+#include "Circle.hpp"
+#include "CheckCollisionShape.hpp"
+
+#include "IModels.hpp"
+#include "Cube.hpp"
+#include "Line3D.hpp"
+#include "Point3D.hpp"
+#include "Circle3D.hpp"
+#include "Triangle3D.hpp"
+#include "Ray.hpp"
+#include "Plane.hpp"
+#include "Grid.hpp"
+#include "Cylinder.hpp"
+#include "Sphere.hpp"
+#include "GenMesh.hpp"
+#include "MeshManipulation.hpp"
+#include "DrawBoundingBox.hpp"
+#include "DrawBillboard.hpp"
+#include "DrawModel.hpp"
+#include "GetCollisionRay.hpp"
+
+#include "IText.hpp"
 
 #endif /* !INDIE_HPP_ */
