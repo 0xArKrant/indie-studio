@@ -5,8 +5,7 @@
 ** Texture
 */
 
-#ifndef TEXTURE_HPP_
-#define TEXTURE_HPP_
+#pragma once
 
 #include "indie.hpp"
 
@@ -31,4 +30,3 @@ namespace Misc {
             int          _format;
     };
 }
-#endif /* !TEXTURE_HPP_ */

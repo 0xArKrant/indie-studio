@@ -5,8 +5,7 @@
 ** Matrix.hpp
 */
 
-#ifndef MATRIX_HPP_
-#define MATRIX_HPP_
+#pragma once
 
 #include "indie.hpp"
 
@@ -41,4 +40,3 @@ namespace Misc {
             float _m3, _m7, _m11, _m15;
     };
 }
-#endif /* !MATRIX_HPP_ */
