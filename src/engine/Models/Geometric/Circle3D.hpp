@@ -5,13 +5,12 @@
 ** Circle3D
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef CIRCLE3D_HPP_
-#define CIRCLE3D_HPP_
-
-namespace IModels {
-    class Circle3D : public Models {
+namespace Models {
+    class Circle3D : public ICircle3D {
         public:
             Circle3D(const Misc::Vector<3>, const float, const Misc::Vector<3>, const float, const Misc::Colors &);
             ~Circle3D() = default;
@@ -38,5 +37,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !CIRCLE3D_HPP */

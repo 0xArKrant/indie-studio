@@ -5,13 +5,12 @@
 ** Line
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef LINE_HPP_
-#define LINE_HPP_
-
-namespace IShape {
-    class Line : public Shape {
+namespace Shape {
+    class Line : public ILine {
         public:
             Line(const int, const int, const int, const int, const Misc::Colors &);
             ~Line() = default;
@@ -37,7 +36,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class LineV : public Shape {
+    class LineV : public ILine {
         public:
             LineV(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~LineV() = default;
@@ -57,7 +56,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class LineEx : public Shape {
+    class LineEx : public ILine {
         public:
             LineEx(const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~LineEx() = default;
@@ -80,7 +79,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class LineBezier : public Shape {
+    class LineBezier : public ILine {
         public:
             LineBezier(const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~LineBezier() = default;
@@ -103,7 +102,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class LineBezierQuad : public Shape {
+    class LineBezierQuad : public ILine {
         public:
             LineBezierQuad(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~LineBezierQuad() = default;
@@ -129,7 +128,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class LineStrip : public Shape {
+    class LineStrip : public ILine {
         public:
             LineStrip(Misc::Vector<2>, int, const Misc::Colors &);
             ~LineStrip() = default;
@@ -149,5 +148,3 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 }
-
-#endif

@@ -5,13 +5,12 @@
 ** Ellipse
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef ELLIPSE_HPP_
-#define ELLIPSE_HPP_
-
-namespace IShape {
-    class Ellipse : public Shape {
+namespace Shape {
+    class Ellipse : public IEllipse {
         public:
             Ellipse(const int, const int, const float, const float, const Misc::Colors &);
             ~Ellipse() = default;
@@ -37,7 +36,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class EllipseLines : public Shape {
+    class EllipseLines : public IEllipse {
         public:
             EllipseLines(const int, const int, const float, const float, const Misc::Colors &);
             ~EllipseLines() = default;
@@ -63,5 +62,3 @@ namespace IShape {
             Misc::Colors _colors;
     };
 }
-
-#endif

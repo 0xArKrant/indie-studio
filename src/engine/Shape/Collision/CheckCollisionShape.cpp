@@ -7,13 +7,13 @@
 
 #include "indie.hpp"
 
-IShape::CheckCollisionRecs::CheckCollisionRecs(const Misc::Rectangle rectangle1, const Misc::Rectangle rectangle2)
+Shape::CheckCollisionRecs::CheckCollisionRecs(const Misc::Rectangle rectangle1, const Misc::Rectangle rectangle2)
 {
     this->_rectangle1 = rectangle1;
     this->_rectangle2 = rectangle2;
 }
 
-bool IShape::CheckCollisionRecs::CheckCollision()
+bool Shape::CheckCollisionRecs::CheckCollision()
 {
     return ::CheckCollisionRecs(
             ::Rectangle { this->_rectangle1.getX(), this->_rectangle1.getY(), this->_rectangle1.getWidth(), this->_rectangle1.getHeight() },
@@ -21,7 +21,7 @@ bool IShape::CheckCollisionRecs::CheckCollision()
     );
 }
 
-IShape::CheckCollisionCircles::CheckCollisionCircles(const Misc::Vector<2> center1, const float radius1, const Misc::Vector<2> center2, const float radius2)
+Shape::CheckCollisionCircles::CheckCollisionCircles(const Misc::Vector<2> center1, const float radius1, const Misc::Vector<2> center2, const float radius2)
 {
     this->_center1 = center1;
     this->_radius1 = radius1;
@@ -29,7 +29,7 @@ IShape::CheckCollisionCircles::CheckCollisionCircles(const Misc::Vector<2> cente
     this->_radius2 = radius2;
 }
 
-bool IShape::CheckCollisionCircles::CheckCollision()
+bool Shape::CheckCollisionCircles::CheckCollision()
 {
     return ::CheckCollisionCircles(
             ::Vector2 { this->_center1.getX(), this->_center1.getY() },
@@ -39,14 +39,14 @@ bool IShape::CheckCollisionCircles::CheckCollision()
     );
 }
 
-IShape::CheckCollisionCircleRec::CheckCollisionCircleRec(const Misc::Vector<2> center, const float radius, const Misc::Rectangle rectangle)
+Shape::CheckCollisionCircleRec::CheckCollisionCircleRec(const Misc::Vector<2> center, const float radius, const Misc::Rectangle rectangle)
 {
     this->_center = center;
     this->_radius = radius;
     this->_rectangle = rectangle;
 }
 
-bool IShape::CheckCollisionCircleRec::CheckCollision()
+bool Shape::CheckCollisionCircleRec::CheckCollision()
 {
     return ::CheckCollisionCircleRec(
             ::Vector2 { this->_center.getX(), this->_center.getY() },
@@ -55,13 +55,13 @@ bool IShape::CheckCollisionCircleRec::CheckCollision()
     );
 }
 
-IShape::CheckCollisionPointRec::CheckCollisionPointRec(const Misc::Vector<2> point, const Misc::Rectangle rectangle)
+Shape::CheckCollisionPointRec::CheckCollisionPointRec(const Misc::Vector<2> point, const Misc::Rectangle rectangle)
 {
     this->_point = point;
     this->_rectangle = rectangle;
 }
 
-bool IShape::CheckCollisionPointRec::CheckCollision()
+bool Shape::CheckCollisionPointRec::CheckCollision()
 {
     return ::CheckCollisionPointRec(
             ::Vector2 { this->_point.getX(), this->_point.getY() },
@@ -69,14 +69,14 @@ bool IShape::CheckCollisionPointRec::CheckCollision()
     );
 }
 
-IShape::CheckCollisionPointCircle::CheckCollisionPointCircle(const Misc::Vector<2> point, const Misc::Vector<2> center, float radius)
+Shape::CheckCollisionPointCircle::CheckCollisionPointCircle(const Misc::Vector<2> point, const Misc::Vector<2> center, float radius)
 {
     this->_point = point;
     this->_center = center;
     this->_radius = radius;
 }
 
-bool IShape::CheckCollisionPointCircle::CheckCollision()
+bool Shape::CheckCollisionPointCircle::CheckCollision()
 {
     return ::CheckCollisionPointCircle(
             ::Vector2 { this->_point.getX(), this->_point.getY() },
@@ -85,7 +85,7 @@ bool IShape::CheckCollisionPointCircle::CheckCollision()
     );
 }
 
-IShape::CheckCollisionPointTriangle::CheckCollisionPointTriangle(const Misc::Vector<2> point, const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3)
+Shape::CheckCollisionPointTriangle::CheckCollisionPointTriangle(const Misc::Vector<2> point, const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3)
 {
     this->_point = point;
     this->_p1 = p1;
@@ -93,7 +93,7 @@ IShape::CheckCollisionPointTriangle::CheckCollisionPointTriangle(const Misc::Vec
     this->_p3 = p3;
 }
 
-bool IShape::CheckCollisionPointTriangle::CheckCollision()
+bool Shape::CheckCollisionPointTriangle::CheckCollision()
 {
     return ::CheckCollisionPointTriangle(
             ::Vector2 { this->_point.getX(), this->_point.getY() },
@@ -103,7 +103,7 @@ bool IShape::CheckCollisionPointTriangle::CheckCollision()
     );
 }
 
-IShape::CheckCollisionLines::CheckCollisionLines(const Misc::Vector<2> startPos1, const Misc::Vector<2> endPos1, const Misc::Vector<2> startPos2, const Misc::Vector<2> endPos2, const Misc::Vector<2> collisionPoint)
+Shape::CheckCollisionLines::CheckCollisionLines(const Misc::Vector<2> startPos1, const Misc::Vector<2> endPos1, const Misc::Vector<2> startPos2, const Misc::Vector<2> endPos2, const Misc::Vector<2> collisionPoint)
 {
     this->_startPos1 = startPos1;
     this->_endPos1 = endPos1;
@@ -112,7 +112,7 @@ IShape::CheckCollisionLines::CheckCollisionLines(const Misc::Vector<2> startPos1
     this->_collisionPoint = collisionPoint;
 }
 
-bool IShape::CheckCollisionLines::CheckCollision()
+bool Shape::CheckCollisionLines::CheckCollision()
 {
     ::Vector2 points = { this->_collisionPoint.getX(), this->_collisionPoint.getY() };
 
@@ -125,13 +125,13 @@ bool IShape::CheckCollisionLines::CheckCollision()
     );
 }
 
-IShape::GetCollisionRec::GetCollisionRec(const Misc::Rectangle rectangle1, const Misc::Rectangle rectangle2)
+Shape::GetCollisionRec::GetCollisionRec(const Misc::Rectangle rectangle1, const Misc::Rectangle rectangle2)
 {
     this->_rectangle1 = rectangle1;
     this->_rectangle2 = rectangle2;
 }
 
-Misc::Rectangle IShape::GetCollisionRec::GetCollision()
+Misc::Rectangle Shape::GetCollisionRec::GetCollision()
 {
     ::Rectangle rec = ::GetCollisionRec(
             ::Rectangle { this->_rectangle1.getX(), this->_rectangle1.getY(), this->_rectangle1.getWidth(), this->_rectangle1.getHeight() },

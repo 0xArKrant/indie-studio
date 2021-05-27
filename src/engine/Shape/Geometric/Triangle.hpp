@@ -5,13 +5,12 @@
 ** Triangle
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef TRIANGLE_HPP_
-#define TRIANGLE_HPP_
-
-namespace IShape {
-    class Triangle : public Shape {
+namespace Shape {
+    class Triangle : public ITriangle {
             Triangle(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~Triangle() = default;
 
@@ -32,7 +31,8 @@ namespace IShape {
             Misc::Vector<2> _point3;
             Misc::Colors _colors;
     };
-    class TriangleLines : public Shape {
+
+    class TriangleLines : public ITriangle {
         public:
             TriangleLines(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~TriangleLines() = default;
@@ -55,7 +55,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class TriangleFan : public Shape {
+    class TriangleFan : public ITriangle {
             TriangleFan(const Misc::Vector<2>, const int, const Misc::Colors &);
             ~TriangleFan() = default;
             inline Misc::Vector<2>  GetVector()      const { return this->_point;       };
@@ -73,7 +73,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class TriangleStrip : public Shape {
+    class TriangleStrip : public ITriangle {
             TriangleStrip(const Misc::Vector<2>, const int, const Misc::Colors &);
             ~TriangleStrip() = default;
 
@@ -92,5 +92,3 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 }
-
-#endif

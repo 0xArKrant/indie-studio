@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IShape::Rectangle::Rectangle(const int posX, const int posY, const int width, const int height, const Misc::Colors &values)
+Shape::Rectangle::Rectangle(const int posX, const int posY, const int width, const int height, const Misc::Colors &values)
 {
     this->_posX = posX;
     this->_posY = posY;
@@ -16,7 +16,7 @@ IShape::Rectangle::Rectangle(const int posX, const int posY, const int width, co
     this->_colors = values;
 }
 
-void IShape::Rectangle::DrawShape()
+void Shape::Rectangle::DrawShape()
 {
     ::DrawRectangle(
         this->_posX,
@@ -27,14 +27,14 @@ void IShape::Rectangle::DrawShape()
     );
 }
 
-IShape::RectangleV::RectangleV(const Misc::Vector<2> position, const Misc::Vector<2> size, const Misc::Colors &values)
+Shape::RectangleV::RectangleV(const Misc::Vector<2> position, const Misc::Vector<2> size, const Misc::Colors &values)
 {
     this->_position = position;
     this->_size = size;
     this->_colors = values;
 }
 
-void IShape::RectangleV::DrawShape()
+void Shape::RectangleV::DrawShape()
 {
    ::DrawRectangleV(
         ::Vector2 { this->_position.getX(), this->_position.getY() },
@@ -43,13 +43,13 @@ void IShape::RectangleV::DrawShape()
     );
 }
 
-IShape::RectangleRec::RectangleRec(const Misc::Rectangle rectangle, const Misc::Colors &values)
+Shape::RectangleRec::RectangleRec(const Misc::Rectangle rectangle, const Misc::Colors &values)
 {
     this->_rectangle = rectangle;
     this->_colors = values;
 }
 
-void IShape::RectangleRec::DrawShape()
+void Shape::RectangleRec::DrawShape()
 {
     ::DrawRectangleRec(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
@@ -57,7 +57,7 @@ void IShape::RectangleRec::DrawShape()
     );
 }
 
-IShape::RectanglePro::RectanglePro(const Misc::Rectangle rectangle, const Misc::Vector<2> origin, float rotation, const Misc::Colors &values)
+Shape::RectanglePro::RectanglePro(const Misc::Rectangle rectangle, const Misc::Vector<2> origin, float rotation, const Misc::Colors &values)
 {
     this->_rectangle = rectangle;
     this->_origin = origin;
@@ -65,7 +65,7 @@ IShape::RectanglePro::RectanglePro(const Misc::Rectangle rectangle, const Misc::
     this->_colors = values;
 }
 
-void IShape::RectanglePro::DrawShape()
+void Shape::RectanglePro::DrawShape()
 {
     ::DrawRectanglePro(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
@@ -75,7 +75,7 @@ void IShape::RectanglePro::DrawShape()
     );
 }
 
-IShape::RectangleGradientV::RectangleGradientV(const int posX,const int posY,const int width,const int height, const Misc::Colors &values1, const Misc::Colors &values2)
+Shape::RectangleGradientV::RectangleGradientV(const int posX,const int posY,const int width,const int height, const Misc::Colors &values1, const Misc::Colors &values2)
 {
     this->_posX = posX;
     this->_posY = posY;
@@ -85,7 +85,7 @@ IShape::RectangleGradientV::RectangleGradientV(const int posX,const int posY,con
     this->_colors2 = values2;
 }
 
-void IShape::RectangleGradientV::DrawShape()
+void Shape::RectangleGradientV::DrawShape()
 {
     ::DrawRectangleGradientV(
         this->_posX,
@@ -97,7 +97,7 @@ void IShape::RectangleGradientV::DrawShape()
     );
 }
 
-IShape::RectangleGradientH::RectangleGradientH(const int posX,const int posY,const int width,const int height, const Misc::Colors &values1, const Misc::Colors &values2)
+Shape::RectangleGradientH::RectangleGradientH(const int posX,const int posY,const int width,const int height, const Misc::Colors &values1, const Misc::Colors &values2)
 {
     this->_posX = posX;
     this->_posY = posY;
@@ -107,7 +107,7 @@ IShape::RectangleGradientH::RectangleGradientH(const int posX,const int posY,con
     this->_colors2 = values2;
 }
 
-void IShape::RectangleGradientH::DrawShape()
+void Shape::RectangleGradientH::DrawShape()
 {
     ::DrawRectangleGradientH(
         this->_posX,
@@ -119,7 +119,7 @@ void IShape::RectangleGradientH::DrawShape()
     );
 }
 
-IShape::RectangleGradientEx::RectangleGradientEx(const Misc::Rectangle rectangle, const Misc::Colors &values1, const Misc::Colors &values2, const Misc::Colors &values3, const Misc::Colors &values4)
+Shape::RectangleGradientEx::RectangleGradientEx(const Misc::Rectangle rectangle, const Misc::Colors &values1, const Misc::Colors &values2, const Misc::Colors &values3, const Misc::Colors &values4)
 {
     this->_rectangle = rectangle;
     this->_colors1 = values1;
@@ -128,7 +128,7 @@ IShape::RectangleGradientEx::RectangleGradientEx(const Misc::Rectangle rectangle
     this->_colors4 = values4;
 }
 
-void IShape::RectangleGradientEx::DrawShape()
+void Shape::RectangleGradientEx::DrawShape()
 {
     ::DrawRectangleGradientEx(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
@@ -139,7 +139,7 @@ void IShape::RectangleGradientEx::DrawShape()
     );
 }
 
-IShape::RectangleLines::RectangleLines(int posX, int posY, int width, int height, const Misc::Colors &values)
+Shape::RectangleLines::RectangleLines(int posX, int posY, int width, int height, const Misc::Colors &values)
 {
     this->_posX = posX;
     this->_posY = posY;
@@ -148,7 +148,7 @@ IShape::RectangleLines::RectangleLines(int posX, int posY, int width, int height
     this->_colors = values;
 }
 
-void IShape::RectangleLines::DrawShape()
+void Shape::RectangleLines::DrawShape()
 {
     ::DrawRectangleLines(
         this->_posX,
@@ -159,14 +159,14 @@ void IShape::RectangleLines::DrawShape()
     );
 }
 
-IShape::RectangleLinesEx::RectangleLinesEx(const Misc::Rectangle rectangle, const int linethick, const Misc::Colors &values)
+Shape::RectangleLinesEx::RectangleLinesEx(const Misc::Rectangle rectangle, const int linethick, const Misc::Colors &values)
 {
     this->_rectangle = rectangle;
     this->_linethick = linethick;
     this->_colors = values;
 }
 
-void IShape::RectangleLinesEx::DrawShape()
+void Shape::RectangleLinesEx::DrawShape()
 {
     ::DrawRectangleLinesEx(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
@@ -175,7 +175,7 @@ void IShape::RectangleLinesEx::DrawShape()
     );
 }
 
-IShape::RectangleRounded::RectangleRounded(const Misc::Rectangle rectangle, const float roundness, const int segments, const Misc::Colors &values)
+Shape::RectangleRounded::RectangleRounded(const Misc::Rectangle rectangle, const float roundness, const int segments, const Misc::Colors &values)
 {
     this->_rectangle = rectangle;
     this->_roundness = roundness;
@@ -183,7 +183,7 @@ IShape::RectangleRounded::RectangleRounded(const Misc::Rectangle rectangle, cons
     this->_colors = values;
 }
 
-void IShape::RectangleRounded::DrawShape()
+void Shape::RectangleRounded::DrawShape()
 {
     ::DrawRectangleRounded(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },
@@ -193,7 +193,7 @@ void IShape::RectangleRounded::DrawShape()
     );
 }
 
-IShape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Rectangle rectangle, const float roundness, const int segments, const int linethick, const Misc::Colors &values)
+Shape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Rectangle rectangle, const float roundness, const int segments, const int linethick, const Misc::Colors &values)
 {
     this->_rectangle = rectangle;
     this->_roundness = roundness;
@@ -202,7 +202,7 @@ IShape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Rectangle recta
     this->_colors = values;
 }
 
-void IShape::RectangleRoundedLines::DrawShape()
+void Shape::RectangleRoundedLines::DrawShape()
 {
     ::DrawRectangleRoundedLines(
         ::Rectangle { this->_rectangle.getX(), this->_rectangle.getY(), this->_rectangle.getWidth(), this->_rectangle.getHeight() },

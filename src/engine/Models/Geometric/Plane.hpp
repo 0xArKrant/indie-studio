@@ -5,13 +5,12 @@
 ** Plane
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef PLANE_HPP_
-#define PLANE_HPP_
-
-namespace IModels {
-    class Plane : public Models {
+namespace Models {
+    class Plane : public IPlane {
         public:
             Plane(const Misc::Vector<3>, const Misc::Vector<2>, const Misc::Colors &);
             ~Plane() = default;
@@ -31,5 +30,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !PLANE_HPP */

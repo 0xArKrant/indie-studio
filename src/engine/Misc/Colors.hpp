@@ -12,8 +12,7 @@
  *  @date   2021-05-20
  **/
 
-#ifndef COLORS_HPP_
-#define COLORS_HPP_
+#pragma once
 
 typedef unsigned char uchar;
 
@@ -48,5 +47,3 @@ namespace Misc {
 }
 
 bool operator<(const Misc::Colors &c1, const Misc::Colors &c2);
-
-#endif /* !COLORS_HPP_ */

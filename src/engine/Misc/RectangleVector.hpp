@@ -5,8 +5,7 @@
 ** RectangleVector
 */
 
-#ifndef RECTANGLEVECTOR_HPP_
-#define RECTANGLEVECTOR_HPP_
+#pragma once
 
 #include "indie.hpp"
 
@@ -25,4 +24,3 @@ namespace Misc {
             std::array<float, 4> _rectangle;
     };
 }
-#endif /* !RECTANGLEVECTOR_HPP_ */

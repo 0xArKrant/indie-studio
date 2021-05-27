@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IModels::Triangle3D::Triangle3D(const Misc::Vector<3> v1, const Misc::Vector<3> v2, const Misc::Vector<3> v3, const Misc::Colors &values)
+Models::Triangle3D::Triangle3D(const Misc::Vector<3> v1, const Misc::Vector<3> v2, const Misc::Vector<3> v3, const Misc::Colors &values)
 {
     this->_v1 = v1;
     this->_v2 = v2;
@@ -15,7 +15,7 @@ IModels::Triangle3D::Triangle3D(const Misc::Vector<3> v1, const Misc::Vector<3> 
     this->_colors = values;
 }
 
-void IModels::Triangle3D::DrawModels()
+void Models::Triangle3D::DrawModels()
 {
     ::DrawTriangle3D(
         ::Vector3 { this->_v1.getX(), this->_v1.getY(), this->_v1.getZ() },
@@ -25,14 +25,14 @@ void IModels::Triangle3D::DrawModels()
     );
 }
 
-IModels::TriangleStrip3D::TriangleStrip3D(const Misc::Vector<3> points, const int pointsCount, const Misc::Colors &values)
+Models::TriangleStrip3D::TriangleStrip3D(const Misc::Vector<3> points, const int pointsCount, const Misc::Colors &values)
 {
     this->_points = points;
     this->_pointsCount = pointsCount;
     this->_colors = values;
 }
 
-void IModels::TriangleStrip3D::DrawModels()
+void Models::TriangleStrip3D::DrawModels()
 {
     ::Vector3 points = { this->_points.getX(), this->_points.getY(), this->_points.getZ() };
 

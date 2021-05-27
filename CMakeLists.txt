@@ -52,13 +52,16 @@ include_directories(
     include/
     src/error/
     src/engine/
+    src/engine/Shape
+    src/engine/Shape/Interfaces
     src/engine/Shape/Geometric
     src/engine/Shape/Collision
+    src/engine/Models/Interfaces
     src/engine/Models/Collision
     src/engine/Models/Geometric
-    src/engine/Models/MeshGeneration
-    src/engine/Models/MeshManipulation
-    src/engine/Models/ModelDrawing
+    #src/engine/Models/MeshGeneration
+    #src/engine/Models/MeshManipulation
+    #src/engine/Models/ModelDrawing
     src/engine/Misc/
     src/game/
     src/core/

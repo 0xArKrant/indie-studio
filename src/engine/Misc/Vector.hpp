@@ -5,8 +5,7 @@
 ** Vector
 */
 
-#ifndef VECTOR_HPP_
-#define VECTOR_HPP_
+#pragma once
 
 #include "indie.hpp"
 
@@ -33,5 +32,3 @@ namespace Misc {
             std::array<float, vSize> _vector;
     };
 }
-
-#endif /* !VECTOR_HPP_ */

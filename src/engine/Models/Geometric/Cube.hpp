@@ -5,13 +5,12 @@
 ** Cube
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef CUBE_HPP_
-#define CUBE_HPP_
-
-namespace IModels {
-    class Cube : public Models {
+namespace Models {
+    class Cube : public ICube {
         public:
             Cube(const Misc::Vector<3>, const float, const float, const float, const Misc::Colors &);
             ~Cube() = default;
@@ -37,7 +36,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class CubeV : public Models {
+    class CubeV : public ICube {
         public:
             CubeV(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors &);
             ~CubeV() = default;
@@ -57,7 +56,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class CubeWires : public Models {
+    class CubeWires : public ICube {
         public:
             CubeWires(const Misc::Vector<3>, const float, const float, const float, const Misc::Colors &);
             ~CubeWires() = default;
@@ -83,7 +82,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class CubeWiresV : public Models {
+    class CubeWiresV : public ICube {
         public:
             CubeWiresV(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors &);
             ~CubeWiresV() = default;
@@ -103,7 +102,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class CubeTexture : public Models {
+    class CubeTexture : public ICube {
         public:
             CubeTexture(const Misc::Texture, const Misc::Vector<3>, const float, const float, const float, const Misc::Colors &);
             ~CubeTexture() = default;
@@ -132,5 +131,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !CUBE_HPP_ */

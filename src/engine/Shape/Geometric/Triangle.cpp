@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IShape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, const Misc::Colors &values)
+Shape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, const Misc::Colors &values)
 {
     this->_point1 = p1;
     this->_point2 = p2;
@@ -15,7 +15,7 @@ IShape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, c
     this->_colors = values;
 }
 
-void IShape::Triangle::DrawShape()
+void Shape::Triangle::DrawShape()
 {
     ::DrawTriangle(
         ::Vector2 { this->_point1.getX(), this->_point1.getY() },
@@ -25,7 +25,7 @@ void IShape::Triangle::DrawShape()
     );
 }
 
-IShape::TriangleLines::TriangleLines(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, const Misc::Colors &values)
+Shape::TriangleLines::TriangleLines(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, const Misc::Colors &values)
 {
     this->_point1 = p1;
     this->_point2 = p2;
@@ -33,7 +33,7 @@ IShape::TriangleLines::TriangleLines(const Misc::Vector<2> p1, const Misc::Vecto
     this->_colors = values;
 }
 
-void IShape::TriangleLines::DrawShape()
+void Shape::TriangleLines::DrawShape()
 {
     ::DrawTriangleLines(
         ::Vector2 { this->_point1.getX(), this->_point1.getY() },
@@ -43,14 +43,14 @@ void IShape::TriangleLines::DrawShape()
     );
 }
 
-IShape::TriangleFan::TriangleFan(const Misc::Vector<2> point, const int pointsCount, const Misc::Colors &values)
+Shape::TriangleFan::TriangleFan(const Misc::Vector<2> point, const int pointsCount, const Misc::Colors &values)
 {
     this->_point = point;
     this->_pointsCount = pointsCount;
     this->_colors = values;
 }
 
-void IShape::TriangleFan::DrawShape()
+void Shape::TriangleFan::DrawShape()
 {
     ::Vector2 points = { this->_point.getX(), this->_point.getY() };
 
@@ -61,14 +61,14 @@ void IShape::TriangleFan::DrawShape()
     );
 }
 
-IShape::TriangleStrip::TriangleStrip(const Misc::Vector<2> point, const int pointsCount, const Misc::Colors &values)
+Shape::TriangleStrip::TriangleStrip(const Misc::Vector<2> point, const int pointsCount, const Misc::Colors &values)
 {
     this->_point = point;
     this->_pointsCount = pointsCount;
     this->_colors = values;
 }
 
-void IShape::TriangleStrip::DrawShape()
+void Shape::TriangleStrip::DrawShape()
 {
     ::Vector2 points = { this->_point.getX(), this->_point.getY() };
 

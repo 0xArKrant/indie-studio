@@ -5,13 +5,12 @@
 ** Rectangle
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef RECTANGLE_HPP_
-#define RECTANGLE_HPP_
-
-namespace IShape {
-    class Rectangle : public Shape {
+namespace Shape {
+    class Rectangle : public IRectangle {
         public:
             Rectangle(const int, const int, const int, const int, const Misc::Colors &);
             ~Rectangle() = default;
@@ -37,7 +36,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class RectangleV : public Shape {
+    class RectangleV : public IRectangle {
         public:
             RectangleV(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors &);
             ~RectangleV() = default;
@@ -57,7 +56,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class RectangleRec : public Shape {
+    class RectangleRec : public IRectangle {
         public:
             RectangleRec(const Misc::Rectangle, const Misc::Colors &);
             ~RectangleRec() = default;
@@ -74,7 +73,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class RectanglePro : public Shape {
+    class RectanglePro : public IRectangle {
         public:
             RectanglePro(const Misc::Rectangle, const Misc::Vector<2>, const float, const Misc::Colors &);
             ~RectanglePro() = default;
@@ -97,7 +96,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class RectangleGradientV : public Shape {
+    class RectangleGradientV : public IRectangle {
         public:
             RectangleGradientV(const int, const int, const int, const int,const Misc::Colors &, const Misc::Colors &);
             ~RectangleGradientV() = default;
@@ -126,7 +125,7 @@ namespace IShape {
             Misc::Colors _colors2;
     };
 
-    class RectangleGradientH : public Shape {
+    class RectangleGradientH : public IRectangle {
         public:
             RectangleGradientH(const int, const int, const int, const int,const Misc::Colors &, const Misc::Colors &);
             ~RectangleGradientH() = default;
@@ -156,7 +155,7 @@ namespace IShape {
             Misc::Colors _colors2;
     };
 
-    class RectangleGradientEx : public Shape {
+    class RectangleGradientEx : public IRectangle {
         public:
             RectangleGradientEx(const Misc::Rectangle, const Misc::Colors &, const Misc::Colors &, const Misc::Colors &, const Misc::Colors &);
             ~RectangleGradientEx() = default;
@@ -182,7 +181,7 @@ namespace IShape {
             Misc::Colors    _colors4;
     };
 
-    class RectangleLines : public Shape {
+    class RectangleLines : public IRectangle {
         public:
             RectangleLines(const int, const int, const int, const int, const Misc::Colors &);
             ~RectangleLines() = default;
@@ -208,7 +207,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class RectangleLinesEx : public Shape {
+    class RectangleLinesEx : public IRectangle {
         public:
             RectangleLinesEx(const Misc::Rectangle, const int, const Misc::Colors &);
             ~RectangleLinesEx() = default;
@@ -229,7 +228,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class RectangleRounded : public Shape {
+    class RectangleRounded : public IRectangle {
         public:
             RectangleRounded(const Misc::Rectangle, const float, const int, const Misc::Colors &);
             ~RectangleRounded() = default;
@@ -252,7 +251,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class RectangleRoundedLines : public Shape {
+    class RectangleRoundedLines : public IRectangle {
         public:
             RectangleRoundedLines(const Misc::Rectangle, const float, const int, const int, const Misc::Colors &);
             ~RectangleRoundedLines() = default;
@@ -278,5 +277,3 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !RECTANGLE_HPP_ */

@@ -5,27 +5,21 @@
 ** RayVector
 */
 
-#ifndef RAYVECTOR_HPP_
-#define RAYVECTOR_HPP_
+#pragma once
 
 #include "indie.hpp"
 
 namespace Misc {
     class Ray {
         public:
-            Ray(const std::array<float, 3>, const std::array<float, 3>);
+            Ray(const Misc::Vector<3>, const Misc::Vector<3>);
             Ray();
             ~Ray() = default;
 
-            inline float getPositionX()  const { return this->_position[0];  };
-            inline float getPositionY()  const { return this->_position[1];  };
-            inline float getPositionZ()  const { return this->_position[2];  };
-            inline float getDirectionX() const { return this->_direction[0]; };
-            inline float getDirectionY() const { return this->_direction[1]; };
-            inline float getDirectionZ() const { return this->_direction[2]; };
+            inline Misc::Vector<3> getPosition()  const { return this->_position;  };
+            inline Misc::Vector<3> getDirection() const { return this->_direction; };
         private:
-            std::array<float, 3> _position;
-            std::array<float, 3> _direction;
+            Misc::Vector<3> _position;
+            Misc::Vector<3> _direction;
     };
 }
-#endif /* !RAYVECTOR_HPP_ */

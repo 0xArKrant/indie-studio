@@ -5,13 +5,12 @@
 ** Cylinder
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef CYLINDER_HPP_
-#define CYLINDER_HPP_
-
-namespace IModels {
-    class Cylinder : public Models {
+namespace Models {
+    class Cylinder : public ICylinder {
         public:
             Cylinder(const Misc::Vector<3>, const float, const float, const float, const int, const Misc::Colors &);
             ~Cylinder() = default;
@@ -40,7 +39,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class CylinderWires : public Models {
+    class CylinderWires : public ICylinder {
         public:
             CylinderWires(const Misc::Vector<3>, const float, const float, const float, const int, const Misc::Colors &);
             ~CylinderWires() = default;
@@ -69,5 +68,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !CYLINDER_HPP_ */

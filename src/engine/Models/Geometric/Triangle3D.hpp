@@ -5,13 +5,12 @@
 ** Triangle3D
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef TRIANGLE3D_HPP_
-#define TRIANGLE3D_HPP_
-
-namespace IModels {
-    class Triangle3D : public Models {
+namespace Models {
+    class Triangle3D : public ITriangle3D {
         public:
             Triangle3D(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors &);
             ~Triangle3D() = default;
@@ -34,7 +33,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class TriangleStrip3D : public Models {
+    class TriangleStrip3D : public ITriangle3D {
         public:
             TriangleStrip3D(const Misc::Vector<3> , const int, const Misc::Colors &);
             ~TriangleStrip3D() = default;
@@ -54,5 +53,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !CIRCLE3D_HPP */

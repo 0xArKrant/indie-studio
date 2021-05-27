@@ -7,14 +7,14 @@
 
 #include "indie.hpp"
 
-IModels::Sphere::Sphere(const Misc::Vector<3> centerPos, const float radius, const Misc::Colors &values)
+Models::Sphere::Sphere(const Misc::Vector<3> centerPos, const float radius, const Misc::Colors &values)
 {
     this->_centerPos = centerPos;
     this->_radius = radius;
     this->_colors = values;
 }
 
-void IModels::Sphere::DrawModels()
+void Models::Sphere::DrawModels()
 {
     ::DrawSphere(
         ::Vector3 { this->_centerPos.getX(), this->_centerPos.getY(), this->_centerPos.getZ() },
@@ -23,7 +23,7 @@ void IModels::Sphere::DrawModels()
     );
 }
 
-IModels::SphereEx::SphereEx(const Misc::Vector<3> centerPos, const float radius, const int rings, const int slices, const Misc::Colors &values)
+Models::SphereEx::SphereEx(const Misc::Vector<3> centerPos, const float radius, const int rings, const int slices, const Misc::Colors &values)
 {
     this->_centerPos = centerPos;
     this->_radius = radius;
@@ -32,7 +32,7 @@ IModels::SphereEx::SphereEx(const Misc::Vector<3> centerPos, const float radius,
     this->_colors = values;
 }
 
-void IModels::SphereEx::DrawModels()
+void Models::SphereEx::DrawModels()
 {
     ::DrawSphereEx(
         ::Vector3 { this->_centerPos.getX(), this->_centerPos.getY(), this->_centerPos.getZ() },
@@ -43,7 +43,7 @@ void IModels::SphereEx::DrawModels()
     );
 }
 
-IModels::SphereWires::SphereWires(const Misc::Vector<3> centerPos, const float radius, const int rings, const int slices, const Misc::Colors &values)
+Models::SphereWires::SphereWires(const Misc::Vector<3> centerPos, const float radius, const int rings, const int slices, const Misc::Colors &values)
 {
     this->_centerPos = centerPos;
     this->_radius = radius;
@@ -52,7 +52,7 @@ IModels::SphereWires::SphereWires(const Misc::Vector<3> centerPos, const float r
     this->_colors = values;
 }
 
-void IModels::SphereWires::DrawModels()
+void Models::SphereWires::DrawModels()
 {
     ::DrawSphereWires(
         ::Vector3 { this->_centerPos.getX(), this->_centerPos.getY(), this->_centerPos.getZ() },

@@ -5,13 +5,12 @@
 ** Pixel
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef PIXEL_HPP_
-#define PIXEL_HPP_
-
-namespace IShape {
-    class Pixel : public Shape {
+namespace Shape {
+    class Pixel : public IPixel {
         public:
             Pixel(const int, const int, const Misc::Colors &);
             ~Pixel() = default;
@@ -31,7 +30,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class PixelV : public Shape {
+    class PixelV : public IPixel {
         public:
             PixelV(const Misc::Vector<2>, const Misc::Colors &);
             ~PixelV() = default;
@@ -48,5 +47,3 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 }
-
-#endif

@@ -5,13 +5,12 @@
 ** Ray
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef RAY_HPP_
-#define RAY_HPP_
-
-namespace IModels {
-    class Ray : public Models {
+namespace Models {
+    class Ray : public IRay {
         public:
             Ray(const Misc::Ray, const Misc::Colors &);
             ~Ray() = default;
@@ -28,5 +27,3 @@ namespace IModels {
             Misc::Colors _colors;
     };
 }
-
-#endif /* !RAY_HPP_ */

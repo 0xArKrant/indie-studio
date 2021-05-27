@@ -5,31 +5,25 @@
 ** RayHitInfo
 */
 
-#ifndef RAYHITINFO_HPP_
-#define RAYHITINFO_HPP_
+#pragma once
 
 #include "indie.hpp"
 
 namespace Misc {
     class RayHitInfo {
         public:
-            RayHitInfo(const bool, const float, const std::array<float, 3>, const std::array<float, 3>);
+            RayHitInfo(const bool, const float, const Misc::Vector<3>, const Misc::Vector<3>);
             RayHitInfo();
             ~RayHitInfo() = default;
 
-            inline bool  hasHit()        const { return this->_hit;          };
-            inline float getDistance()   const { return this->_distance;     };
-            inline float getPositionX()  const { return this->_position[0];  };
-            inline float getPositionY()  const { return this->_position[1];  };
-            inline float getPositionZ()  const { return this->_position[2];  };
-            inline float getDirectionX() const { return this->_direction[0]; };
-            inline float getDirectionY() const { return this->_direction[1]; };
-            inline float getDirectionZ() const { return this->_direction[2]; };
+            inline bool            hasHit()       const { return this->_hit;       };
+            inline float           getDistance()  const { return this->_distance;  };
+            inline Misc::Vector<3> getPosition()  const { return this->_position;  };
+            inline Misc::Vector<3> getDirection() const { return this->_direction; };
         private:
             bool                 _hit;
             float                _distance;
-            std::array<float, 3> _position;
-            std::array<float, 3> _direction;
+            Misc::Vector<3>      _position;
+            Misc::Vector<3>      _direction;
     };
 }
-#endif /* !RAYHITINFO_HPP_ */

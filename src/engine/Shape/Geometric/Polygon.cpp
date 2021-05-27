@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IShape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
+Shape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
 {
     this->_center = center;
     this->_sides = sides;
@@ -16,7 +16,7 @@ IShape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const fl
     this->_colors = values;
 }
 
-void IShape::Polygon::DrawShape()
+void Shape::Polygon::DrawShape()
 {
     ::DrawPoly(
         ::Vector2 { this->_center.getX(), this->_center.getY() },
@@ -27,7 +27,7 @@ void IShape::Polygon::DrawShape()
     );
 }
 
-IShape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
+Shape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
 {
     this->_center = center;
     this->_sides = sides;
@@ -36,7 +36,7 @@ IShape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides
     this->_colors = values;
 }
 
-void IShape::PolygonLines::DrawShape()
+void Shape::PolygonLines::DrawShape()
 {
     ::DrawPolyLines(
         ::Vector2 { this->_center.getX(), this->_center.getY() },
@@ -47,7 +47,7 @@ void IShape::PolygonLines::DrawShape()
     );
 }
 
-IShape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const float linethick, const Misc::Colors &values)
+Shape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const float linethick, const Misc::Colors &values)
 {
     this->_center = center;
     this->_sides = sides;
@@ -57,7 +57,7 @@ IShape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int s
     this->_colors = values;
 }
 
-void IShape::PolygonLinesEx::DrawShape()
+void Shape::PolygonLinesEx::DrawShape()
 {
     ::DrawPolyLinesEx(
         ::Vector2 { this->_center.getX(), this->_center.getY() },

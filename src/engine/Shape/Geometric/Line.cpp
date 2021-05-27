@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IShape::Line::Line( const int startPosX, const int startPosY, const int endPosX, const int endPosY, const Misc::Colors &values)
+Shape::Line::Line( const int startPosX, const int startPosY, const int endPosX, const int endPosY, const Misc::Colors &values)
 {
     this->_startPosX = startPosX;
     this->_startPosY = startPosY;
@@ -16,7 +16,7 @@ IShape::Line::Line( const int startPosX, const int startPosY, const int endPosX,
     this->_colors = values;
 }
 
-void IShape::Line::DrawShape()
+void Shape::Line::DrawShape()
 {
     ::DrawLine(
         this->_startPosX,
@@ -27,14 +27,14 @@ void IShape::Line::DrawShape()
     );
 }
 
-IShape::LineV::LineV(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const Misc::Colors &values)
+Shape::LineV::LineV(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const Misc::Colors &values)
 {
     this->_startPos = startPos;
     this->_endPos = endPos;
     this->_colors = values;
 }
 
-void IShape::LineV::DrawShape()
+void Shape::LineV::DrawShape()
 {
     ::DrawLineV(
         ::Vector2 { this->_startPos.getX(), this->_startPos.getY() },
@@ -43,7 +43,7 @@ void IShape::LineV::DrawShape()
     );
 }
 
-IShape::LineEx::LineEx(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const float thick, const Misc::Colors &values)
+Shape::LineEx::LineEx(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const float thick, const Misc::Colors &values)
 {
     this->_startPos = startPos;
     this->_endPos = endPos;
@@ -51,7 +51,7 @@ IShape::LineEx::LineEx(const Misc::Vector<2> startPos, const Misc::Vector<2> end
     this->_colors = values;
 }
 
-void IShape::LineEx::DrawShape()
+void Shape::LineEx::DrawShape()
 {
     ::DrawLineEx(
         ::Vector2 { this->_startPos.getX(), this->_startPos.getY() },
@@ -61,7 +61,7 @@ void IShape::LineEx::DrawShape()
     );
 }
 
-IShape::LineBezier::LineBezier(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const float thick, const Misc::Colors &values)
+Shape::LineBezier::LineBezier(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const float thick, const Misc::Colors &values)
 {
     this->_startPos = startPos;
     this->_endPos = endPos;
@@ -69,7 +69,7 @@ IShape::LineBezier::LineBezier(const Misc::Vector<2> startPos, const Misc::Vecto
     this->_colors = values;
 }
 
-void IShape::LineBezier::DrawShape()
+void Shape::LineBezier::DrawShape()
 {
     ::DrawLineBezier(
         ::Vector2 { this->_startPos.getX(), this->_startPos.getY() },
@@ -80,7 +80,7 @@ void IShape::LineBezier::DrawShape()
 }
 
 
-IShape::LineBezierQuad::LineBezierQuad(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const Misc::Vector<2> controlPos, const float thick, const Misc::Colors &values)
+Shape::LineBezierQuad::LineBezierQuad(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const Misc::Vector<2> controlPos, const float thick, const Misc::Colors &values)
 {
     this->_startPos = startPos;
     this->_endPos = endPos;
@@ -89,7 +89,7 @@ IShape::LineBezierQuad::LineBezierQuad(const Misc::Vector<2> startPos, const Mis
     this->_colors = values;
 }
 
-void IShape::LineBezierQuad::DrawShape()
+void Shape::LineBezierQuad::DrawShape()
 {
     ::DrawLineBezierQuad(
         ::Vector2 { this->_startPos.getX(), this->_startPos.getY() },
@@ -100,14 +100,14 @@ void IShape::LineBezierQuad::DrawShape()
     );
 }
 
-IShape::LineStrip::LineStrip(const Misc::Vector<2> points, const int pointsCount, const Misc::Colors &values)
+Shape::LineStrip::LineStrip(const Misc::Vector<2> points, const int pointsCount, const Misc::Colors &values)
 {
     this->_points = points;
     this->_pointsCount = pointsCount;
     this->_colors = values;
 }
 
-void IShape::LineStrip::DrawShape()
+void Shape::LineStrip::DrawShape()
 {
     ::Vector2 points = { this->_points.getX(), this->_points.getY() };
 
