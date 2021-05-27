@@ -13,7 +13,7 @@ Misc::Ray::Ray()
     this->_direction = { 0 };
 }
 
-Misc::Ray::Ray(const std::array<float, 3> position, const std::array<float, 3> direction)
+Misc::Ray::Ray(const Misc::Vector<3> position, const Misc::Vector<3> direction)
 {
     this->_position = position;
     this->_direction = direction;
