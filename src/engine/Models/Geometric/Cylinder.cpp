@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IModels::Cylinder::Cylinder(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
+Models::Cylinder::Cylinder(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
 {
     this->_position = position;
     this->_radiusTop = radiusTop;
@@ -17,7 +17,7 @@ IModels::Cylinder::Cylinder(const Misc::Vector<3> position, const float radiusTo
     this->_colors = values;
 }
 
-void IModels::Cylinder::DrawModels()
+void Models::Cylinder::DrawModels()
 {
     ::DrawCylinder(
         ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
@@ -29,7 +29,7 @@ void IModels::Cylinder::DrawModels()
     );
 }
 
-IModels::CylinderWires::CylinderWires(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
+Models::CylinderWires::CylinderWires(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
 {
     this->_position = position;
     this->_radiusTop = radiusTop;
@@ -39,7 +39,7 @@ IModels::CylinderWires::CylinderWires(const Misc::Vector<3> position, const floa
     this->_colors = values;
 }
 
-void IModels::CylinderWires::DrawModels()
+void Models::CylinderWires::DrawModels()
 {
     ::DrawCylinderWires(
         ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },

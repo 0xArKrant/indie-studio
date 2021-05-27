@@ -5,13 +5,12 @@
 ** Point3D
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef POINT3D_HPP_
-#define POINT3D_HPP_
-
-namespace IModels {
-    class Point3D : public Models {
+namespace Models {
+    class Point3D : public IPoint3D {
         public:
             Point3D(const Misc::Vector<3>, const Misc::Colors &);
             ~Point3D() = default;
@@ -28,5 +27,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !POINT3D_HPP */

@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IModels::Cube::Cube(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
+Models::Cube::Cube(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
 {
     this->_position = position;
     this->_width = width;
@@ -16,7 +16,7 @@ IModels::Cube::Cube(const Misc::Vector<3> position, const float width, const flo
     this->_colors = values;
 }
 
-void IModels::Cube::DrawModels()
+void Models::Cube::DrawModels()
 {
     ::DrawCube(
         ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
@@ -27,14 +27,14 @@ void IModels::Cube::DrawModels()
     );
 }
 
-IModels::CubeV::CubeV(const Misc::Vector<3> position, const Misc::Vector<3> size, const Misc::Colors &values)
+Models::CubeV::CubeV(const Misc::Vector<3> position, const Misc::Vector<3> size, const Misc::Colors &values)
 {
     this->_position = position;
     this->_size = size;
     this->_colors = values;
 }
 
-void IModels::CubeV::DrawModels()
+void Models::CubeV::DrawModels()
 {
     ::DrawCubeV(
         ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
@@ -43,7 +43,7 @@ void IModels::CubeV::DrawModels()
     );
 }
 
-IModels::CubeWires::CubeWires(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
+Models::CubeWires::CubeWires(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
 {
     this->_position = position;
     this->_width = width;
@@ -52,7 +52,7 @@ IModels::CubeWires::CubeWires(const Misc::Vector<3> position, const float width,
     this->_colors = values;
 }
 
-void IModels::CubeWires::DrawModels()
+void Models::CubeWires::DrawModels()
 {
     ::DrawCubeWires(
         ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
@@ -63,14 +63,14 @@ void IModels::CubeWires::DrawModels()
     );
 }
 
-IModels::CubeWiresV::CubeWiresV(const Misc::Vector<3> position, const Misc::Vector<3> size, const Misc::Colors &values)
+Models::CubeWiresV::CubeWiresV(const Misc::Vector<3> position, const Misc::Vector<3> size, const Misc::Colors &values)
 {
     this->_position = position;
     this->_size = size;
     this->_colors = values;
 }
 
-void IModels::CubeWiresV::DrawModels()
+void Models::CubeWiresV::DrawModels()
 {
     ::DrawCubeWiresV(
         ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },
@@ -79,7 +79,7 @@ void IModels::CubeWiresV::DrawModels()
     );
 }
 
-IModels::CubeTexture::CubeTexture(const Misc::Texture texture, const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
+Models::CubeTexture::CubeTexture(const Misc::Texture texture, const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
 {
     this->_texture = texture;
     this->_position = position;
@@ -89,7 +89,7 @@ IModels::CubeTexture::CubeTexture(const Misc::Texture texture, const Misc::Vecto
     this->_colors = values;
 }
 
-void IModels::CubeTexture::DrawModels()
+void Models::CubeTexture::DrawModels()
 {
     ::DrawCubeTexture(
         ::Texture2D { this->_texture.getID(), this->_texture.getWidth(), this->_texture.getHeight(), this->_texture.getMipmaps(), this->_texture.getFormat() },

@@ -5,13 +5,12 @@
 ** Sphere
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef SPHERE_HPP_
-#define SPHERE_HPP_
-
-namespace IModels {
-    class Sphere : public Models {
+namespace Models {
+    class Sphere : public ISphere {
         public:
             Sphere(const Misc::Vector<3>, const float, const Misc::Colors &);
             ~Sphere() = default;
@@ -31,7 +30,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class SphereEx : public Models {
+    class SphereEx : public ISphere {
         public:
             SphereEx(const Misc::Vector<3>, const float, const int, const int, const Misc::Colors &);
             ~SphereEx() = default;
@@ -57,7 +56,7 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 
-    class SphereWires : public Models {
+    class SphereWires : public ISphere {
         public:
             SphereWires(const Misc::Vector<3>, const float, const int, const int, const Misc::Colors &);
             ~SphereWires() = default;
@@ -83,5 +82,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !SPHERE_HPP */

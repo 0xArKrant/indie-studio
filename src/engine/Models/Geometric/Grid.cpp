@@ -7,13 +7,13 @@
 
 #include "indie.hpp"
 
-IModels::Grid::Grid(const int slices, const float spacing)
+Models::Grid::Grid(const int slices, const float spacing)
 {
     this->_slices = slices;
     this->_spacing = spacing;
 }
 
-void IModels::Grid::DrawModels()
+void Models::Grid::DrawModels()
 {
     ::DrawGrid(this->_slices, this->_spacing);
 }

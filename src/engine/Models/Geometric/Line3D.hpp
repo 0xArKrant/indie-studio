@@ -5,13 +5,12 @@
 ** Line3D
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef LINE3D_HPP_
-#define LINE3D_HPP_
-
-namespace IModels {
-    class Line3D : public Models {
+namespace Models {
+    class Line3D : public ILine3D {
         public:
             Line3D(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors &);
             ~Line3D() = default;
@@ -31,5 +30,3 @@ namespace IModels {
             Misc::Colors    _colors;
     };
 }
-
-#endif /* !LINE3D_HPP */

@@ -7,14 +7,14 @@
 
 #include "indie.hpp"
 
-IModels::Line3D::Line3D(const Misc::Vector<3> startPos, const Misc::Vector<3> endPos, const Misc::Colors &values)
+Models::Line3D::Line3D(const Misc::Vector<3> startPos, const Misc::Vector<3> endPos, const Misc::Colors &values)
 {
     this->_startPos = startPos;
     this->_endPos = endPos;
     this->_colors = values;
 }
 
-void IModels::Line3D::DrawModels()
+void Models::Line3D::DrawModels()
 {
     ::DrawLine3D(
         ::Vector3 { this->_startPos.getX(), this->_startPos.getY(), this->_startPos.getZ() },

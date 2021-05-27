@@ -7,13 +7,13 @@
 
 #include "indie.hpp"
 
-IModels::Point3D::Point3D(const Misc::Vector<3> position, const Misc::Colors &values)
+Models::Point3D::Point3D(const Misc::Vector<3> position, const Misc::Colors &values)
 {
     this->_position = position;
     this->_colors = values;
 }
 
-void IModels::Point3D::DrawModels()
+void Models::Point3D::DrawModels()
 {
     ::DrawPoint3D(
         ::Vector3 { this->_position.getX(), this->_position.getY(), this->_position.getZ() },

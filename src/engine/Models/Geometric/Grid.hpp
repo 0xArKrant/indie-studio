@@ -5,13 +5,12 @@
 ** Grid
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef GRID_HPP_
-#define GRID_HPP_
-
-namespace IModels {
-    class Grid : public Models {
+namespace Models {
+    class Grid : public IGrid {
         public:
             Grid(const int, const float);
             ~Grid() = default;
@@ -28,5 +27,3 @@ namespace IModels {
             float _spacing;
     };
 }
-
-#endif /* !GRID_HPP_ */
