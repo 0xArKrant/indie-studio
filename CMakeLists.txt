@@ -39,6 +39,7 @@ file(GLOB SRC_FILES
     #src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
     #src/engine/Models/ModelDrawing/DrawBillboard.cpp
     #src/engine/Models/ModelDrawing/DrawModel.cpp
+    src/engine/Text/Text.cpp
 
     src/main.cpp
     src/core/Core.cpp
@@ -60,6 +61,7 @@ include_directories(
     src/engine/Models/MeshManipulation
     src/engine/Models/ModelDrawing
     src/engine/Misc/
+    src/engine/Text
     src/game/
     src/core/
 )

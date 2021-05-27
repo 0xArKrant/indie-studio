@@ -5,18 +5,13 @@
 ** IText
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef ITEXT_HPP_
-#define ITEXT_HPP_
-
-namespace IText {
-    class Text {
+namespace Text {
+    class IText {
         public:
-            virtual ~Text() = default;
-            virtual void DrawText() = 0;
-            virtual void Compute();
+            ~IText() = default;
     };
 }
-
-#endif /* !ITEXT_HPP */
