@@ -5,13 +5,12 @@
 ** CheckCollision
 */
 
-#ifndef CHECKCOLLISION_HPP_
-#define CHECKCOLLISION_HPP_
+#pragma once
 
 #include "indie.hpp"
 
-namespace IShape {
-    class CheckCollisionRecs : public Shape {
+namespace Shape {
+    class CheckCollisionRecs : public IShape {
         public:
             CheckCollisionRecs(const Misc::Rectangle, const Misc::Rectangle);
             ~CheckCollisionRecs() = default;
@@ -28,7 +27,7 @@ namespace IShape {
             Misc::Rectangle _rectangle2;
     };
 
-    class CheckCollisionCircles : public Shape {
+    class CheckCollisionCircles : public IShape {
         public:
             CheckCollisionCircles(const Misc::Vector<2>, const float, const Misc::Vector<2>, const float);
             ~CheckCollisionCircles() = default;
@@ -51,7 +50,7 @@ namespace IShape {
             float           _radius2;
     };
 
-    class CheckCollisionCircleRec : public Shape {
+    class CheckCollisionCircleRec : public IShape {
         public:
             CheckCollisionCircleRec(const Misc::Vector<2>, const float, const Misc::Rectangle);
             ~CheckCollisionCircleRec() = default;
@@ -71,7 +70,7 @@ namespace IShape {
             Misc::Rectangle _rectangle;
     };
 
-    class CheckCollisionPointRec : public Shape {
+    class CheckCollisionPointRec : public IShape {
         public:
             CheckCollisionPointRec(const Misc::Vector<2>, const Misc::Rectangle);
             ~CheckCollisionPointRec() = default;
@@ -88,7 +87,7 @@ namespace IShape {
             Misc::Rectangle _rectangle;
     };
 
-    class CheckCollisionPointCircle : public Shape {
+    class CheckCollisionPointCircle : public IShape {
         public:
             CheckCollisionPointCircle(const Misc::Vector<2>, const Misc::Vector<2>, const float);
             ~CheckCollisionPointCircle() = default;
@@ -108,7 +107,7 @@ namespace IShape {
             float           _radius;
     };
 
-    class CheckCollisionPointTriangle : public Shape {
+    class CheckCollisionPointTriangle : public IShape {
         public:
             CheckCollisionPointTriangle(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>);
             ~CheckCollisionPointTriangle() = default;
@@ -131,7 +130,7 @@ namespace IShape {
             Misc::Vector<2> _p3;
     };
 
-    class CheckCollisionLines : public Shape {
+    class CheckCollisionLines : public IShape {
         public:
             CheckCollisionLines(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>);
             ~CheckCollisionLines() = default;
@@ -157,7 +156,7 @@ namespace IShape {
             Misc::Vector<2> _collisionPoint;
     };
 
-    class GetCollisionRec : public Shape {
+    class GetCollisionRec : public IShape {
         public:
             GetCollisionRec(const Misc::Rectangle, const Misc::Rectangle);
             ~GetCollisionRec() = default;
@@ -174,5 +173,3 @@ namespace IShape {
             Misc::Rectangle _rectangle2;
     };
 }
-
-#endif /* !CHECKCOLLISION_HPP_ */

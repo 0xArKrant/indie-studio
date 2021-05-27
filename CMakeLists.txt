@@ -8,7 +8,7 @@ set(BIN_NAME bomberman)
 file(GLOB SRC_FILES
     src/engine/Misc/Colors.cpp
     src/engine/Misc/Texture.cpp
-    src/engine/Misc/RayVector.cpp
+    #src/engine/Misc/RayVector.cpp
     src/engine/Misc/RayHitInfo.cpp
     src/engine/Misc/Matrix.cpp
     src/engine/Misc/RectangleVector.cpp
@@ -24,16 +24,16 @@ file(GLOB SRC_FILES
 
     src/engine/Shape/Collision/CheckCollision.cpp
 
-    src/engine/Models/Geometric/Cube.cpp
-    src/engine/Models/Geometric/Line3D.cpp
-    src/engine/Models/Geometric/Point3D.cpp
-    src/engine/Models/Geometric/Circle3D.cpp
-    src/engine/Models/Geometric/Triangle3D.cpp
-    src/engine/Models/Geometric/Ray.cpp
-    src/engine/Models/Geometric/Plane.cpp
-    src/engine/Models/Geometric/Grid.cpp
-    src/engine/Models/Geometric/Cylinder.cpp
-    src/engine/Models/Geometric/Sphere.cpp
+    #src/engine/Models/Geometric/Cube.cpp
+    #src/engine/Models/Geometric/Line3D.cpp
+    #src/engine/Models/Geometric/Point3D.cpp
+    #src/engine/Models/Geometric/Circle3D.cpp
+    #src/engine/Models/Geometric/Triangle3D.cpp
+    #src/engine/Models/Geometric/Ray.cpp
+    #src/engine/Models/Geometric/Plane.cpp
+    #src/engine/Models/Geometric/Grid.cpp
+    #src/engine/Models/Geometric/Cylinder.cpp
+    #src/engine/Models/Geometric/Sphere.cpp
     #src/engine/Models/MeshGeneration/GenMesh.cpp
     #src/engine/Models/MeshManipulation/MeshManipulation.cpp
     #src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
@@ -52,13 +52,15 @@ include_directories(
     include/
     src/error/
     src/engine/
+    src/engine/Shape
+    src/engine/Shape/Interfaces
     src/engine/Shape/Geometric
     src/engine/Shape/Collision
-    src/engine/Models/Collision
-    src/engine/Models/Geometric
-    src/engine/Models/MeshGeneration
-    src/engine/Models/MeshManipulation
-    src/engine/Models/ModelDrawing
+    #src/engine/Models/Collision
+    #src/engine/Models/Geometric
+    #src/engine/Models/MeshGeneration
+    #src/engine/Models/MeshManipulation
+    #src/engine/Models/ModelDrawing
     src/engine/Misc/
     src/game/
     src/core/

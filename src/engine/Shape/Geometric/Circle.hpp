@@ -5,13 +5,12 @@
 ** Circle
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef CIRCLE_HPP_
-#define CIRCLE_HPP_
-
-namespace IShape {
-    class Circle : public Shape {
+namespace Shape {
+    class Circle : public ICircle {
         public:
             Circle(const int, const int, const float, const Misc::Colors &);
             ~Circle() = default;
@@ -34,7 +33,7 @@ namespace IShape {
             Misc::Colors _colors;
     };
 
-    class CircleSector : public Shape {
+    class CircleSector : public ICircle {
         public:
             CircleSector(const Misc::Vector<2>, const float, const float, const float, const int, const Misc::Colors &);
             ~CircleSector() = default;
@@ -63,7 +62,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class CircleSectorLines : public Shape {
+    class CircleSectorLines : public ICircle {
         public:
             CircleSectorLines(const Misc::Vector<2>, const float, const float, const float, const int, const Misc::Colors &);
             ~CircleSectorLines() = default;
@@ -92,7 +91,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class CircleGradient : public Shape {
+    class CircleGradient : public ICircle {
         public:
             CircleGradient(const int, const int, const float, const Misc::Colors &, const Misc::Colors &);
             ~CircleGradient() = default;
@@ -118,7 +117,7 @@ namespace IShape {
             Misc::Colors _colors2;
     };
 
-    class CircleV : public Shape {
+    class CircleV : public ICircle {
         public:
             CircleV(const Misc::Vector<2>, const float, const Misc::Colors &);
             ~CircleV() = default;
@@ -138,7 +137,7 @@ namespace IShape {
             Misc::Colors     _colors;
     };
 
-    class CircleLines : public Shape {
+    class CircleLines : public ICircle {
         public:
             CircleLines(const int, const int, const float, const Misc::Colors &);
             ~CircleLines() = default;
@@ -161,5 +160,3 @@ namespace IShape {
             Misc::Colors _colors;
     };
 }
-
-#endif

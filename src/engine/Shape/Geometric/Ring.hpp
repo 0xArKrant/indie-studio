@@ -5,13 +5,12 @@
 ** Ring
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef RING_HPP_
-#define RING_HPP_
-
-namespace IShape {
-    class Ring : public Shape {
+namespace Shape {
+    class Ring : public IRing {
             Ring(const Misc::Vector<2>, const float, const float, const float, const float, const int, const Misc::Colors &);
             ~Ring() = default;
 
@@ -42,7 +41,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class RingLines : public Shape {
+    class RingLines : public IRing {
         public:
             RingLines(const Misc::Vector<2>, const float, const float, const float, const float, const int, const Misc::Colors &);
             ~RingLines() = default;
@@ -74,5 +73,3 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 }
-
-#endif

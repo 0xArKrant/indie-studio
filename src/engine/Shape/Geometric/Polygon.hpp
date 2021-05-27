@@ -5,13 +5,12 @@
 ** Polygon
 */
 
+#pragma once
+
 #include "indie.hpp"
 
-#ifndef POLYGON_HPP_
-#define POLYGON_HPP_
-
-namespace IShape {
-    class Polygon : public Shape {
+namespace Shape {
+    class Polygon : public IPolygon {
         public:
             Polygon(const Misc::Vector<2>, const int, const float, const float, const Misc::Colors &);
             ~Polygon() = default;
@@ -37,7 +36,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class PolygonLines : public Shape {
+    class PolygonLines : public IPolygon {
         public:
             PolygonLines(const Misc::Vector<2>, const int, const float, const float, const Misc::Colors &);
             ~PolygonLines() = default;
@@ -63,7 +62,7 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 
-    class PolygonLinesEx : public Shape {
+    class PolygonLinesEx : public IPolygon {
         public:
             PolygonLinesEx(const Misc::Vector<2>, const int, const float, const float, const float, const Misc::Colors &);
             ~PolygonLinesEx() = default;
@@ -92,5 +91,3 @@ namespace IShape {
             Misc::Colors    _colors;
     };
 }
-
-#endif

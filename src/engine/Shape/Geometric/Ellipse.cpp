@@ -7,7 +7,7 @@
 
 #include "indie.hpp"
 
-IShape::Ellipse::Ellipse(const int centerX, const int centerY, const float radiusH, const float radiusV, const Misc::Colors &values)
+Shape::Ellipse::Ellipse(const int centerX, const int centerY, const float radiusH, const float radiusV, const Misc::Colors &values)
 {
     this->_centerX = centerX;
     this->_centerY = centerY;
@@ -16,7 +16,7 @@ IShape::Ellipse::Ellipse(const int centerX, const int centerY, const float radiu
     this->_colors = values;
 }
 
-void IShape::Ellipse::DrawShape()
+void Shape::Ellipse::DrawShape()
 {
     ::DrawEllipse(
         this->_centerX,
@@ -27,7 +27,7 @@ void IShape::Ellipse::DrawShape()
     );
 }
 
-IShape::EllipseLines::EllipseLines(const int centerX, const int centerY, const float radiusH, const float radiusV, const Misc::Colors &values)
+Shape::EllipseLines::EllipseLines(const int centerX, const int centerY, const float radiusH, const float radiusV, const Misc::Colors &values)
 {
     this->_centerX = centerX;
     this->_centerY = centerY;
@@ -36,7 +36,7 @@ IShape::EllipseLines::EllipseLines(const int centerX, const int centerY, const f
     this->_colors = values;
 }
 
-void IShape::EllipseLines::DrawShape()
+void Shape::EllipseLines::DrawShape()
 {
     ::DrawEllipseLines(
         this->_centerX,
