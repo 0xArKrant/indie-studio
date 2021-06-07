@@ -23,9 +23,11 @@
 #include <array>
 #include <cstdint>
 #include <cstring>
+#include <stack>
 
 #include "Core.hpp"
 #include "IScene.hpp"
+#include "SceneManagement.hpp"
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
 
