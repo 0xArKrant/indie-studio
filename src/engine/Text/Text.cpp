@@ -12,21 +12,12 @@ Text::Text::Text()
     this->font = ::GetFontDefault();
 }
 
-Text::Text::~Text()
-{
-    ::UnloadFont(this->font);
-    ::UnloadFontData(
-        this->charInfo.first,
-        this->charInfo.second
-    );
-}
-
-void Text::Text::LoadFont(const std::string &fileName)
+Text::Text::Text(const std::string &fileName)
 {
     this->font = ::LoadFont(fileName.c_str());
 }
 
-void Text::Text::LoadFontEx(const std::string &fileName, int fontSize, int *fontChars, int charsCount)
+Text::Text::Text(const std::string &fileName, int fontSize, int *fontChars, int charsCount)
 {
     this->font = ::LoadFontEx(
         fileName.c_str(),
@@ -36,58 +27,9 @@ void Text::Text::LoadFontEx(const std::string &fileName, int fontSize, int *font
     );
 }
 
-void Text::Text::LoadFontFromImage(::Image image, Misc::Colors key, int firstChar)
+Text::Text::~Text()
 {
-    this->font = ::LoadFontFromImage(
-        image,
-        ::Color { key.getR(), key.getG(), key.getB(), key.getA() },
-        firstChar
-    );
-}
-
-void Text::Text::LoadFontFromMemory(const std::string &fileType, const std::string &fileData, int dataSize, int fontSize, int *fontChars, int charsCount)
-{
-    this->font = ::LoadFontFromMemory(
-        fileType.c_str(),
-        (const unsigned char *)fileData.c_str(),
-        dataSize,
-        fontSize,
-        fontChars,
-        charsCount
-    );
-}
-
-void Text::Text::LoadFontData(const std::string &fileData, int dataSize, int fontSize, int *fontChars, int charsCount, int type)
-{
-    this->charInfo.first = ::LoadFontData(
-        (const unsigned char *)fileData.c_str(),
-        dataSize,
-        fontSize,
-        fontChars,
-        charsCount,
-        type
-    );
-    this->charInfo.second = charsCount;
-}
-
-void Text::Text::GenImageFontAtlas(const ::CharInfo *chars, ::Rectangle **recs, int charsCount, int fontSize, int padding, int packMethod)
-{
-    this->image = ::GenImageFontAtlas(
-        chars,
-        recs,
-        charsCount,
-        fontSize,
-        padding,
-        packMethod
-    );
-}
-
-void Text::Text::DrawFPS(int posX, int posY)
-{
-    ::DrawFPS(
-        posX,
-        posY
-    );
+    ::UnloadFont(this->font);
 }
 
 void Text::Text::DrawText(const std::string &text, int posX, int posY, int fontSize, Misc::Colors color)
