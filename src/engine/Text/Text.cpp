@@ -9,17 +9,17 @@
 
 Text::Text::Text()
 {
-    this->font = ::GetFontDefault();
+    this->_font = ::GetFontDefault();
 }
 
 Text::Text::Text(const std::string &fileName)
 {
-    this->font = ::LoadFont(fileName.c_str());
+    this->_font = ::LoadFont(fileName.c_str());
 }
 
 Text::Text::Text(const std::string &fileName, int fontSize, int *fontChars, int charsCount)
 {
-    this->font = ::LoadFontEx(
+    this->_font = ::LoadFontEx(
         fileName.c_str(),
         fontSize,
         fontChars,
@@ -29,7 +29,7 @@ Text::Text::Text(const std::string &fileName, int fontSize, int *fontChars, int 
 
 Text::Text::~Text()
 {
-    ::UnloadFont(this->font);
+    ::UnloadFont(this->_font);
 }
 
 void Text::Text::DrawText(const std::string &text, int posX, int posY, int fontSize, Misc::Colors color)
@@ -46,7 +46,7 @@ void Text::Text::DrawText(const std::string &text, int posX, int posY, int fontS
 void Text::Text::DrawTextEx(const std::string &text, Misc::Vector<2> position, float fontSize, float spacing, Misc::Colors tint)
 {
     ::DrawTextEx(
-        this->font,
+        this->_font,
         text.c_str(),
         ::Vector2 { position.getX(), position.getY() },
         fontSize,
@@ -58,7 +58,7 @@ void Text::Text::DrawTextEx(const std::string &text, Misc::Vector<2> position, f
 void Text::Text::DrawTextRec(const std::string &text, Misc::Rectangle rec, float fontSize, float spacing, bool wordWrap, Misc::Colors tint)
 {
     ::DrawTextRec(
-        this->font,
+        this->_font,
         text.c_str(),
         ::Rectangle { rec.getX(), rec.getY(), rec.getWidth(), rec.getHeight() },
         fontSize,
@@ -71,7 +71,7 @@ void Text::Text::DrawTextRec(const std::string &text, Misc::Rectangle rec, float
 void Text::Text::DrawTextRecEx(const std::string &text, Misc::Rectangle rec, float fontSize, float spacing, bool wordWrap, Misc::Colors tint, int selectStart, int selectLength, Misc::Colors selectTint, Misc::Colors selectBackTint)
 {
     ::DrawTextRecEx(
-        this->font,
+        this->_font,
         text.c_str(),
         ::Rectangle { rec.getX(), rec.getY(), rec.getWidth(), rec.getHeight() },
         fontSize,
@@ -88,7 +88,7 @@ void Text::Text::DrawTextRecEx(const std::string &text, Misc::Rectangle rec, flo
 void Text::Text::DrawTextCodepoint(int codepoint, Misc::Vector<2> position, float fontSize, Misc::Colors tint)
 {
     ::DrawTextCodepoint(
-        this->font,
+        this->_font,
         codepoint,
         ::Vector2 { position.getX(), position.getY() },
         fontSize,
@@ -106,7 +106,7 @@ int Text::Text::MeasureText(const std::string &text, int fontSize)
 
 Misc::Vector<2> Text::Text::MeasureTextEx(const std::string &text, float fontSize, float spacing)
 {
-    ::Vector2 ray_vector = ::MeasureTextEx(this->font, text.c_str(), fontSize, spacing);
+    ::Vector2 ray_vector = ::MeasureTextEx(this->_font, text.c_str(), fontSize, spacing);
     Misc::Vector<2> vector = {ray_vector.x, ray_vector.y};
     return vector;
 }
@@ -114,7 +114,7 @@ Misc::Vector<2> Text::Text::MeasureTextEx(const std::string &text, float fontSiz
 int Text::Text::GetGlyphIndex(int codepoint)
 {
     return ::GetGlyphIndex(
-        this->font,
+        this->_font,
         codepoint
     );
 }
