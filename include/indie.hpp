@@ -25,6 +25,7 @@
 #include <cstring>
 
 #include "Core.hpp"
+#include "IScene.hpp"
 #include "LibraryLoader.hpp"
 #include "Exception.hpp"
 
