@@ -40,6 +40,7 @@ file(GLOB SRC_FILES
     #src/engine/Models/ModelDrawing/DrawBillboard.cpp
     #src/engine/Models/ModelDrawing/DrawModel.cpp
     src/engine/Text/Text.cpp
+    src/engine/Audio/Audio.cpp
 
     src/engine/Core/CoreRaylib.cpp
     src/engine/Core/InputMouse.cpp
@@ -67,6 +68,7 @@ include_directories(
     src/engine/Models/Collision
     src/engine/Models/Geometric
     src/engine/Core
+    src/engine/Audio
     #src/engine/Models/MeshGeneration
     #src/engine/Models/MeshManipulation
     #src/engine/Models/ModelDrawing
