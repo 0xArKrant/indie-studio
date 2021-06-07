@@ -5,7 +5,7 @@
 ** Texture
 */
 
-#include "indie.hpp"
+#include "Texture.hpp"
 
 Misc::Texture::Texture()
 {

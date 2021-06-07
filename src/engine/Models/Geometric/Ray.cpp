@@ -5,7 +5,7 @@
 ** Ray
 */
 
-#include "indie.hpp"
+#include "Ray.hpp"
 
 Models::Ray::Ray(const Misc::Ray ray, const Misc::Colors &values)
 {

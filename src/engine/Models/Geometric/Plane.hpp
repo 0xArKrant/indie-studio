@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IPlane.hpp"
 
 namespace Models {
     class Plane : public IPlane {

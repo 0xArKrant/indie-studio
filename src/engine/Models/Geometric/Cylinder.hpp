@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ICylinder.hpp"
 
 namespace Models {
     class Cylinder : public ICylinder {

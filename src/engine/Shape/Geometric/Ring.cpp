@@ -5,7 +5,7 @@
 ** Ring
 */
 
-#include "indie.hpp"
+#include "Ring.hpp"
 
 Shape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, const Misc::Colors &values)
 {

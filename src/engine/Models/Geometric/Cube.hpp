@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ICube.hpp"
 
 namespace Models {
     class Cube : public ICube {

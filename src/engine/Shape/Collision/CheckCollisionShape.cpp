@@ -5,7 +5,7 @@
 ** CheckCollision
 */
 
-#include "indie.hpp"
+#include "CheckCollisionShape.hpp"
 
 Shape::CheckCollisionRecs::CheckCollisionRecs(const Misc::Rectangle rectangle1, const Misc::Rectangle rectangle2)
 {

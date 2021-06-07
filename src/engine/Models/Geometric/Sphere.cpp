@@ -5,7 +5,7 @@
 ** Sphere
 */
 
-#include "indie.hpp"
+#include "Sphere.hpp"
 
 Models::Sphere::Sphere(const Misc::Vector<3> centerPos, const float radius, const Misc::Colors &values)
 {

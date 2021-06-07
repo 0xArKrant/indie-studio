@@ -5,7 +5,7 @@
 ** Triangle3D
 */
 
-#include "indie.hpp"
+#include "Triangle3D.hpp"
 
 Models::Triangle3D::Triangle3D(const Misc::Vector<3> v1, const Misc::Vector<3> v2, const Misc::Vector<3> v3, const Misc::Colors &values)
 {

@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IShape.hpp"
 
 namespace Shape {
     class IEllipse : public IShape {

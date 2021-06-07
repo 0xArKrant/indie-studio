@@ -5,7 +5,7 @@
 ** Plane
 */
 
-#include "indie.hpp"
+#include "Plane.hpp"
 
 Models::Plane::Plane(const Misc::Vector<3> centerPos, const Misc::Vector<2> size, const Misc::Colors &values)
 {

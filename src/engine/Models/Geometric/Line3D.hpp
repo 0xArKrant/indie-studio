@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ILine3D.hpp"
 
 namespace Models {
     class Line3D : public ILine3D {

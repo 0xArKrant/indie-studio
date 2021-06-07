@@ -8,6 +8,9 @@
 #pragma once
 
 #include "indie.hpp"
+#include "Vector.hpp"
+#include "Colors.hpp"
+#include "RectangleVector.hpp"
 
 namespace Text {
     class IText {

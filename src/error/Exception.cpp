@@ -5,7 +5,7 @@
 ** Exception
 */
 
-#include "indie.hpp"
+#include "Exception.hpp"
 
 Errors::Exception::Exception()
 {

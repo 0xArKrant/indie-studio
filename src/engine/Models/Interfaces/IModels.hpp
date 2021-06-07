@@ -8,6 +8,8 @@
 #pragma once
 
 #include "indie.hpp"
+#include "Colors.hpp"
+#include "Vector.hpp"
 
 namespace Models {
     class IModels {

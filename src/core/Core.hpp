@@ -5,19 +5,15 @@
 ** Core
 */
 
-#include "indie.hpp"
+#pragma once
 
-#ifndef CORE_HPP_
-#define CORE_HPP_
+#include "indie.hpp"
 
 namespace indie {
     class Core {
         public:
             Core();
             ~Core();
-        protected:
         private:
     };
 }
-
-#endif /* !CORE_HPP_ */

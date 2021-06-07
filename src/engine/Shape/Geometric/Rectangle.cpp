@@ -5,7 +5,7 @@
 ** Rectangle
 */
 
-#include "indie.hpp"
+#include "Rectangle.hpp"
 
 Shape::Rectangle::Rectangle(const int posX, const int posY, const int width, const int height, const Misc::Colors &values)
 {

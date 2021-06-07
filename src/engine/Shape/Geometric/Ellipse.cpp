@@ -5,7 +5,7 @@
 ** Ellipse
 */
 
-#include "indie.hpp"
+#include "Ellipse.hpp"
 
 Shape::Ellipse::Ellipse(const int centerX, const int centerY, const float radiusH, const float radiusV, const Misc::Colors &values)
 {

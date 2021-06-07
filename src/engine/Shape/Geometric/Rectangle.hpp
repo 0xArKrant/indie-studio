@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IRectangle.hpp"
 
 namespace Shape {
     class Rectangle : public IRectangle {

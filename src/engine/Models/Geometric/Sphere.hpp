@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ISphere.hpp"
 
 namespace Models {
     class Sphere : public ISphere {

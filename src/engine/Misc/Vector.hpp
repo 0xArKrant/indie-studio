@@ -8,6 +8,7 @@
 #pragma once
 
 #include "indie.hpp"
+#include "Exception.hpp"
 
 namespace Misc {
     template<unsigned int vSize>
