@@ -41,6 +41,12 @@ file(GLOB SRC_FILES
     #src/engine/Models/ModelDrawing/DrawModel.cpp
     src/engine/Text/Text.cpp
 
+    src/engine/Core/CoreRaylib.cpp
+    src/engine/Core/InputMouse.cpp
+    src/engine/Core/InputKeyboard.cpp
+    src/engine/Core/InputGamepads.cpp
+    src/engine/Core/Cursor.cpp
+
     src/main.cpp
     src/core/Core.cpp
     src/core/LibraryLoader.cpp
@@ -60,6 +66,7 @@ include_directories(
     src/engine/Models/Interfaces
     src/engine/Models/Collision
     src/engine/Models/Geometric
+    src/engine/Core
     #src/engine/Models/MeshGeneration
     #src/engine/Models/MeshManipulation
     #src/engine/Models/ModelDrawing
