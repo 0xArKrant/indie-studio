@@ -5,7 +5,7 @@
 ** Line3D
 */
 
-#include "indie.hpp"
+#include "Line3D.hpp"
 
 Models::Line3D::Line3D(const Misc::Vector<3> startPos, const Misc::Vector<3> endPos, const Misc::Colors &values)
 {

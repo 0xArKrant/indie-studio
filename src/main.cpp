@@ -6,6 +6,8 @@
 */
 
 #include "indie.hpp"
+#include "Exception.hpp"
+#include "Core.hpp"
 
 int main(int argc, char const **argv)
 {

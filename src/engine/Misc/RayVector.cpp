@@ -5,7 +5,7 @@
 ** Ray
 */
 
-#include "indie.hpp"
+#include "RayVector.hpp"
 
 Misc::Ray::Ray()
 {

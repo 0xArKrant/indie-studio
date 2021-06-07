@@ -5,7 +5,7 @@
 ** Matrix
 */
 
-#include "indie.hpp"
+#include "Matrix.hpp"
 
 Misc::Matrix::Matrix()
 {

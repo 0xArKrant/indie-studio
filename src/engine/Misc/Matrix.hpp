@@ -7,8 +7,6 @@
 
 #pragma once
 
-#include "indie.hpp"
-
 namespace Misc {
     class Matrix {
         public:

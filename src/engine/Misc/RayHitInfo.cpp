@@ -5,7 +5,7 @@
 ** RayHitInfo
 */
 
-#include "indie.hpp"
+#include "RayHitInfo.hpp"
 
 Misc::RayHitInfo::RayHitInfo()
 {

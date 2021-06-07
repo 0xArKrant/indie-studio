@@ -8,6 +8,7 @@
 #pragma once
 
 #include "indie.hpp"
+#include "Vector.hpp"
 
 namespace Misc {
     class RayHitInfo {

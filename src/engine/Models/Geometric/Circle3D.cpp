@@ -5,7 +5,7 @@
 ** Circle3D
 */
 
-#include "indie.hpp"
+#include "Circle3D.hpp"
 
 Models::Circle3D::Circle3D(const Misc::Vector<3> center, const float radius, const Misc::Vector<3> rotationAxis, const float rotationAngle, const Misc::Colors &values)
 {

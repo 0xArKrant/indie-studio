@@ -5,7 +5,7 @@
 ** RectangleVector
 */
 
-#include "indie.hpp"
+#include "RectangleVector.hpp"
 
 Misc::Rectangle::Rectangle()
 {

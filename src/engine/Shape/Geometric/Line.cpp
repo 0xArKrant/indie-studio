@@ -5,7 +5,7 @@
 ** Line
 */
 
-#include "indie.hpp"
+#include "Line.hpp"
 
 Shape::Line::Line( const int startPosX, const int startPosY, const int endPosX, const int endPosY, const Misc::Colors &values)
 {

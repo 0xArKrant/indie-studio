@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IPolygon.hpp"
 
 namespace Shape {
     class Polygon : public IPolygon {

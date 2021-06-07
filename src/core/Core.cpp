@@ -6,6 +6,8 @@
 */
 
 #include "indie.hpp"
+#include "./Core.hpp"
+#include "./LibraryLoader.hpp"
 
 indie::Core::Core()
 {

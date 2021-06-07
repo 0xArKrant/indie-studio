@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IText.hpp"
 
 namespace Text {
     class Text : public IText {

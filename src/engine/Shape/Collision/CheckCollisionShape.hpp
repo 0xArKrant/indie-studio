@@ -7,7 +7,8 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IShape.hpp"
+#include "RectangleVector.hpp"
 
 namespace Shape {
     class CheckCollisionRecs : public IShape {

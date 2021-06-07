@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ILine.hpp"
 
 namespace Shape {
     class Line : public ILine {

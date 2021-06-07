@@ -5,7 +5,7 @@
 ** Grid
 */
 
-#include "indie.hpp"
+#include "Grid.hpp"
 
 Models::Grid::Grid(const int slices, const float spacing)
 {
