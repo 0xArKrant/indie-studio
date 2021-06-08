@@ -51,6 +51,7 @@ file(GLOB SRC_FILES
 
     src/main.cpp
     src/core/Core.cpp
+    src/core/SceneManagement.cpp
     src/core/LibraryLoader.cpp
     src/error/Exception.cpp
 )
