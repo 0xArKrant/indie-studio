@@ -13,8 +13,6 @@
 #include <vector>
 #include <functional>
 #include <memory>
-#include <dlfcn.h>
-#include <dirent.h>
 #include <sys/types.h>
 #include <list>
 #include <filesystem>
