@@ -52,8 +52,8 @@ namespace Audio {
             Music(std::string, unsigned char*, int);
             ~Music();
 
-            inline bool isMusicPlaying(void)    const { return ::IsMusicPlaying(this->_music);    };
-            inline void UpdateMusicStream(void) const { ::UpdateMusicStream(this->_music);        };
+            inline bool isMusicStreamPlaying(void)    const { return ::IsMusicStreamPlaying(this->_music);    };
+            inline void UpdateMusicStream(void)       const { ::UpdateMusicStream(this->_music);              };
 
             inline void PlayMusicStream(void)   const { ::PlayMusicStream(this->_music);  };
             inline void StopMusicStream(void)   const { ::StopMusicStream(this->_music);  };
