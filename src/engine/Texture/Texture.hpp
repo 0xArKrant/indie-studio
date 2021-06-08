@@ -10,7 +10,7 @@
 #include "indie.hpp"
 #include "Colors.hpp"
 #include "Vector.hpp"
-#include "Rectangle.hpp"
+#include "RectangleVector.hpp"
 
 namespace Texture {
     class Texture {
