@@ -15,6 +15,7 @@
 #include <memory>
 #include <sys/types.h>
 #include <list>
+#include <string>
 #include <filesystem>
 #include <raylib.h>
 #include <array>

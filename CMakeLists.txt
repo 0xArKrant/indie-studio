@@ -94,6 +94,7 @@ if (UNIX)
         -Werror
         -Wuninitialized
         -Wformat-security
+        -std=c++17
     )
 endif(UNIX)
 if (WIN32)
