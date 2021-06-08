@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(bomberman CXX)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 find_package(raylib REQUIRED)
 
 CMAKE_MINIMUM_REQUIRED(VERSION 3.11)
