@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 3.10)
-
+cmake_minimum_required(VERSION 3.12)
 project(bomberman CXX)
+
+SET(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 find_package(raylib REQUIRED)
 
-CMAKE_MINIMUM_REQUIRED(VERSION 3.11)
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../)
 
 set(BIN_NAME bomberman)
 
@@ -83,14 +84,26 @@ include_directories(
     src/core/
 )
 
-target_compile_options(${BIN_NAME} PUBLIC
-    -W
-    -Wall
-    -Wextra
-    -Werror
-    -Wuninitialized
-    -Wformat-security
-    -std=c++17
-)
+if (UNIX)
+    target_compile_options(${BIN_NAME} PUBLIC
+        -W
+        -Wall
+        -Wextra
+        -Werror
+        -Wuninitialized
+        -Wformat-security
+        -std=c++17
+    )
+endif(UNIX)
+if (WIN32)
+    target_compile_options(${BIN_NAME} PUBLIC
+        -Wall
+        -Wextra
+        -Werror
+        -Wuninitialized
+        -Wformat-security
+        -std=c++17
+    )
+endif(WIN32)
 
 target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})
