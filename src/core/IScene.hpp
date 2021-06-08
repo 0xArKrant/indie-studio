@@ -15,9 +15,8 @@ namespace Core
     class IScene {
         public:
             ~IScene() = default;
-            virtual void update() = 0;
+            virtual void update(std::stack <Core::IScene *> &) = 0;
             virtual void  draw() = 0;
-            virtual std::string getName() = 0;
 
         protected:
         private:

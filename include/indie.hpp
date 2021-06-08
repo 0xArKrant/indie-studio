@@ -25,10 +25,10 @@
 #include <cstring>
 #include <stack>
 
-#include "Core.hpp"
 #include "IScene.hpp"
 #include "SceneManagement.hpp"
 #include "LibraryLoader.hpp"
+#include "Core.hpp"
 #include "Exception.hpp"
 
 #include "Vector.hpp"

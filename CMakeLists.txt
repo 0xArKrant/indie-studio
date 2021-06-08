@@ -40,9 +40,9 @@ file(GLOB SRC_FILES
     #src/engine/Models/ModelDrawing/DrawBillboard.cpp
     #src/engine/Models/ModelDrawing/DrawModel.cpp
     src/engine/Text/Text.cpp
-
     src/main.cpp
     src/core/Core.cpp
+    src/core/SceneManagement.cpp
     src/core/LibraryLoader.cpp
     src/error/Exception.cpp
 )

@@ -15,10 +15,11 @@ namespace Core {
         public:
             SceneManagement();
             ~SceneManagement();
+            void loop();
 
         protected:
         private:
-            std::stack <IScene> _stack;
+            std::stack <IScene *> _stack;
     };
 }
 
