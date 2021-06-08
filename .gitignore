@@ -4,6 +4,7 @@
 lib/
 *:Zone.Identifier
 build/
+doc/
 
 # Logs
 logs

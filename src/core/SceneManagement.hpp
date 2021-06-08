@@ -5,10 +5,10 @@
 ** SceneManagement
 */
 
-#ifndef SCENEMANAGEMENT_HPP_
-#define SCENEMANAGEMENT_HPP_
+#pragma once
 
 #include "indie.hpp"
+#include "IScene.hpp"
 
 namespace Core {
     class SceneManagement {
@@ -22,5 +22,3 @@ namespace Core {
             std::stack <IScene *> _stack;
     };
 }
-
-#endif /* !SCENEMANAGEMENT_HPP_ */

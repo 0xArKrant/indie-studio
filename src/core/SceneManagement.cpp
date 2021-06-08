@@ -5,7 +5,7 @@
 ** SceneManagement
 */
 
-#include "indie.hpp"
+#include "SceneManagement.hpp"
 
 Core::SceneManagement::SceneManagement()
 {
