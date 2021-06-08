@@ -12,6 +12,7 @@ file(GLOB SRC_FILES
     src/engine/Misc/RayHitInfo.cpp
     src/engine/Misc/Matrix.cpp
     src/engine/Misc/RectangleVector.cpp
+    src/engine/Misc/Camera.cpp
 
     src/engine/Shape/Geometric/Rectangle.cpp
     src/engine/Shape/Geometric/Pixel.cpp
