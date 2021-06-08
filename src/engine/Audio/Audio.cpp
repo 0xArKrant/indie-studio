@@ -49,10 +49,10 @@ Audio::Music::~Music()
 
 Audio::AudioStream::AudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels)
 {
-    this->_audiostream = InitAudioStream(sampleRate, sampleSize, channels);
+    this->_audiostream = ::LoadAudioStream(sampleRate, sampleSize, channels);
 }
 
 Audio::AudioStream::~AudioStream()
 {
-    ::CloseAudioStream(this->_audiostream);
+    ::UnloadAudioStream(this->_audiostream);
 }
