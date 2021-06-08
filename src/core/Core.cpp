@@ -7,18 +7,14 @@
 
 #include "indie.hpp"
 #include "./Core.hpp"
-#include "./LibraryLoader.hpp"
 
 indie::Core::Core()
 {
-    std::string path = "./lib/";
     #ifdef _WIN32
+        std::cout << "WIN32 ! " << std::endl;
     #endif
     #ifdef __linux__
-        for (const auto & file : std::filesystem::directory_iterator(path)) {
-            indie::LibraryLoader *lib = new indie::LibraryLoader(file.path());
-            (void) lib;
-        }
+        std::cout << "Linux ! " << std::endl;
     #endif
 }
 

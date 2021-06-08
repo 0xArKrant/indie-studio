@@ -4,6 +4,8 @@ project(bomberman CXX)
 SET(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 find_package(raylib REQUIRED)
+SET(CMAKE_CXX_STANDARD_17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../)
 
@@ -56,7 +58,6 @@ file(GLOB SRC_FILES
     src/main.cpp
     src/core/Core.cpp
     src/core/SceneManagement.cpp
-    src/core/LibraryLoader.cpp
     src/error/Exception.cpp
 )
 
@@ -92,17 +93,11 @@ if (UNIX)
         -Werror
         -Wuninitialized
         -Wformat-security
-        -std=c++17
     )
 endif(UNIX)
 if (WIN32)
     target_compile_options(${BIN_NAME} PUBLIC
         -Wall
-        -Wextra
-        -Werror
-        -Wuninitialized
-        -Wformat-security
-        -std=c++17
     )
 endif(WIN32)
 
