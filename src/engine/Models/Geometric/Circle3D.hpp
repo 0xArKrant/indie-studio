@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ICircle3D.hpp"
 
 namespace Models {
     class Circle3D : public ICircle3D {

@@ -5,7 +5,8 @@
 ** main
 */
 
-#include "indie.hpp"
+#include "Core.hpp"
+#include "Exception.hpp"
 
 int main(int argc, char const **argv)
 {

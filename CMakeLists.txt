@@ -12,6 +12,7 @@ file(GLOB SRC_FILES
     src/engine/Misc/RayHitInfo.cpp
     src/engine/Misc/Matrix.cpp
     src/engine/Misc/RectangleVector.cpp
+    src/engine/Misc/Camera.cpp
 
     src/engine/Shape/Geometric/Rectangle.cpp
     src/engine/Shape/Geometric/Pixel.cpp
@@ -40,6 +41,14 @@ file(GLOB SRC_FILES
     #src/engine/Models/ModelDrawing/DrawBillboard.cpp
     #src/engine/Models/ModelDrawing/DrawModel.cpp
     src/engine/Text/Text.cpp
+    src/engine/Audio/Audio.cpp
+
+    src/engine/Core/CoreRaylib.cpp
+    src/engine/Core/InputMouse.cpp
+    src/engine/Core/InputKeyboard.cpp
+    src/engine/Core/InputGamepads.cpp
+    src/engine/Core/Cursor.cpp
+
     src/main.cpp
     src/core/Core.cpp
     src/core/SceneManagement.cpp
@@ -60,6 +69,8 @@ include_directories(
     src/engine/Models/Interfaces
     src/engine/Models/Collision
     src/engine/Models/Geometric
+    src/engine/Core
+    src/engine/Audio
     #src/engine/Models/MeshGeneration
     #src/engine/Models/MeshManipulation
     #src/engine/Models/ModelDrawing

@@ -5,7 +5,8 @@
 ** LibraryLoader
 */
 
-#include "indie.hpp"
+#include "./LibraryLoader.hpp"
+#include "../error/Exception.hpp"
 
 indie::LibraryLoader::LibraryLoader(std::string name)
 {

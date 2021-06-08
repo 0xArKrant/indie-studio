@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IGrid.hpp"
 
 namespace Models {
     class Grid : public IGrid {

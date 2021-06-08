@@ -5,7 +5,7 @@
 ** Triangle
 */
 
-#include "indie.hpp"
+#include "Triangle.hpp"
 
 Shape::Triangle::Triangle(const Misc::Vector<2> p1, const Misc::Vector<2> p2, const Misc::Vector<2> p3, const Misc::Colors &values)
 {

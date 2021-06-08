@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ICircle.hpp"
 
 namespace Shape {
     class Circle : public ICircle {

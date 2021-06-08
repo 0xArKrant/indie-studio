@@ -5,7 +5,7 @@
 ** Polygon
 */
 
-#include "indie.hpp"
+#include "Polygon.hpp"
 
 Shape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
 {

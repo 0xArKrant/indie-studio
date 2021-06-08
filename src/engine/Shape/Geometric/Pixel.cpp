@@ -5,7 +5,7 @@
 ** Pixel
 */
 
-#include "indie.hpp"
+#include "Pixel.hpp"
 
 Shape::Pixel::Pixel(const int posX, const int posY, const Misc::Colors &values)
 {

@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ITriangle3D.hpp"
 
 namespace Models {
     class Triangle3D : public ITriangle3D {

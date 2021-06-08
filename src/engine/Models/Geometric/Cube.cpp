@@ -5,7 +5,7 @@
 ** Cube
 */
 
-#include "indie.hpp"
+#include "Cube.hpp"
 
 Models::Cube::Cube(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors &values)
 {

@@ -5,7 +5,7 @@
 ** Circle
 */
 
-#include "indie.hpp"
+#include "Circle.hpp"
 
 Shape::Circle::Circle(const int centerX, const int centerY, const float radius, const Misc::Colors &values)
 {

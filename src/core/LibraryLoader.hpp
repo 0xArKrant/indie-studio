@@ -5,10 +5,9 @@
 ** LibraryLoader
 */
 
-#include "indie.hpp"
+#pragma once
 
-#ifndef LIBRARYLOADER_HPP_
-#define LIBRARYLOADER_HPP_
+#include "indie.hpp"
 
 namespace indie {
     class LibraryLoader {
@@ -31,5 +30,3 @@ namespace indie {
             void *_handler;
     };
 }
-
-#endif /* !LIBRARYLOADER_HPP_ */

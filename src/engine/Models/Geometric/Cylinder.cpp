@@ -5,7 +5,7 @@
 ** Cylinder
 */
 
-#include "indie.hpp"
+#include "Cylinder.hpp"
 
 Models::Cylinder::Cylinder(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
 {

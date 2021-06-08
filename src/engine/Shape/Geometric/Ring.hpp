@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IRing.hpp"
 
 namespace Shape {
     class Ring : public IRing {

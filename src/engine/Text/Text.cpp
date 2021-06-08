@@ -9,87 +9,112 @@
 
 Text::Text::Text()
 {
-    this->font = ::GetFontDefault();
+    this->_font = ::GetFontDefault();
+}
+
+Text::Text::Text(const std::string &fileName)
+{
+    this->_font = ::LoadFont(fileName.c_str());
+}
+
+Text::Text::Text(const std::string &fileName, int fontSize, int *fontChars, int charsCount)
+{
+    this->_font = ::LoadFontEx(
+        fileName.c_str(),
+        fontSize,
+        fontChars,
+        charsCount
+    );
 }
 
 Text::Text::~Text()
 {
-    ::UnloadFont(this->font);
-    ::UnloadFontData(this->charInfo.first, this->charInfo.second);
+    ::UnloadFont(this->_font);
 }
 
-void Text::Text::LoadFont(const std::string &fileName)
+void Text::Text::DrawText(const std::string &text, int posX, int posY, int fontSize, Misc::Colors color)
 {
-    this->font = ::LoadFont(fileName.c_str());
+    ::DrawText(
+        text.c_str(),
+        posX,
+        posY,
+        fontSize,
+        ::Color { color.getR(), color.getG(), color.getB(), color.getA() }
+    );
 }
 
-void Text::Text::LoadFontEx(const std::string &fileName, int fontSize, int *fontChars, int charsCount)
+void Text::Text::DrawTextEx(const std::string &text, Misc::Vector<2> position, float fontSize, float spacing, Misc::Colors tint)
 {
-    this->font = ::LoadFontEx(fileName.c_str(), fontSize, fontChars, charsCount);
+    ::DrawTextEx(
+        this->_font,
+        text.c_str(),
+        ::Vector2 { position.getX(), position.getY() },
+        fontSize,
+        spacing,
+        ::Color { tint.getR(), tint.getG(), tint.getB(), tint.getA() }
+    );
 }
 
-void Text::Text::LoadFontFromImage(::Image image, ::Color key, int firstChar)
+void Text::Text::DrawTextRec(const std::string &text, Misc::Rectangle rec, float fontSize, float spacing, bool wordWrap, Misc::Colors tint)
 {
-    this->font = ::LoadFontFromImage(image, key, firstChar);
+    ::DrawTextRec(
+        this->_font,
+        text.c_str(),
+        ::Rectangle { rec.getX(), rec.getY(), rec.getWidth(), rec.getHeight() },
+        fontSize,
+        spacing,
+        wordWrap,
+        ::Color { tint.getR(), tint.getG(), tint.getB(), tint.getA() }
+    );
 }
 
-void Text::Text::LoadFontFromMemory(const std::string &fileType, const std::string &fileData, int dataSize, int fontSize, int *fontChars, int charsCount)
+void Text::Text::DrawTextRecEx(const std::string &text, Misc::Rectangle rec, float fontSize, float spacing, bool wordWrap, Misc::Colors tint, int selectStart, int selectLength, Misc::Colors selectTint, Misc::Colors selectBackTint)
 {
-    this->font = ::LoadFontFromMemory(fileType.c_str(), (const unsigned char *)fileData.c_str(), dataSize, fontSize, fontChars, charsCount);
+    ::DrawTextRecEx(
+        this->_font,
+        text.c_str(),
+        ::Rectangle { rec.getX(), rec.getY(), rec.getWidth(), rec.getHeight() },
+        fontSize,
+        spacing,
+        wordWrap,
+        ::Color { tint.getR(), tint.getG(), tint.getB(), tint.getA() },
+        selectStart,
+        selectLength,
+        ::Color { selectTint.getR(), selectTint.getG(), selectTint.getB(), selectTint.getA() },
+        ::Color { selectBackTint.getR(), selectBackTint.getG(), selectBackTint.getB(), selectBackTint.getA() }
+    );
 }
 
-void Text::Text::LoadFontData(const std::string &fileData, int dataSize, int fontSize, int *fontChars, int charsCount, int type)
+void Text::Text::DrawTextCodepoint(int codepoint, Misc::Vector<2> position, float fontSize, Misc::Colors tint)
 {
-    this->charInfo.first = ::LoadFontData((const unsigned char *)fileData.c_str(), dataSize, fontSize, fontChars, charsCount, type);
-    this->charInfo.second = charsCount;
-}
-
-void Text::Text::GenImageFontAtlas(const ::CharInfo *chars, ::Rectangle **recs, int charsCount, int fontSize, int padding, int packMethod)
-{
-    this->image = ::GenImageFontAtlas(chars, recs, charsCount, fontSize, padding, packMethod);
-}
-
-void Text::Text::DrawFPS(int posX, int posY)
-{
-    ::DrawFPS(posX, posY);
-}
-
-void Text::Text::DrawText(const std::string &text, int posX, int posY, int fontSize, ::Color color)
-{
-    ::DrawText(text.c_str(), posX, posY, fontSize, color);
-}
-
-void Text::Text::DrawTextEx(const std::string &text, ::Vector2 position, float fontSize, float spacing, ::Color tint)
-{
-    ::DrawTextEx(this->font, text.c_str(), position, fontSize, spacing, tint);
-}
-
-void Text::Text::DrawTextRec(const std::string &text, ::Rectangle rec, float fontSize, float spacing, bool wordWrap, ::Color tint)
-{
-    ::DrawTextRec(this->font, text.c_str(), rec, fontSize, spacing, wordWrap, tint);
-}
-
-void Text::Text::DrawTextRecEx(const std::string &text, ::Rectangle rec, float fontSize, float spacing, bool wordWrap, ::Color tint, int selectStart, int selectLength, ::Color selectTint, ::Color selectBackTint)
-{
-    ::DrawTextRecEx(this->font, text.c_str(), rec, fontSize, spacing, wordWrap, tint, selectStart, selectLength, selectTint, selectBackTint);
-}
-
-void Text::Text::DrawTextCodepoint(int codepoint, ::Vector2 position, float fontSize, ::Color tint)
-{
-    ::DrawTextCodepoint(this->font, codepoint, position, fontSize, tint);
+    ::DrawTextCodepoint(
+        this->_font,
+        codepoint,
+        ::Vector2 { position.getX(), position.getY() },
+        fontSize,
+        ::Color { tint.getR(), tint.getG(), tint.getB(), tint.getA() }
+    );
 }
 
 int Text::Text::MeasureText(const std::string &text, int fontSize)
 {
-    return ::MeasureText(text.c_str(), fontSize);
+    return ::MeasureText(
+        text.c_str(),
+        fontSize
+    );
 }
 
-::Vector2 Text::Text::MeasureTextEx(const std::string &text, float fontSize, float spacing)
+Misc::Vector<2> Text::Text::MeasureTextEx(const std::string &text, float fontSize, float spacing)
 {
-    return ::MeasureTextEx(this->font, text.c_str(), fontSize, spacing);
+    ::Vector2 ray_vector = ::MeasureTextEx(this->_font, text.c_str(), fontSize, spacing);
+    Misc::Vector<2> vector = {ray_vector.x, ray_vector.y};
+    return vector;
 }
 
 int Text::Text::GetGlyphIndex(int codepoint)
 {
-    return ::GetGlyphIndex(this->font, codepoint);
+    return ::GetGlyphIndex(
+        this->_font,
+        codepoint
+    );
 }

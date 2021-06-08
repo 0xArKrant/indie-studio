@@ -5,7 +5,7 @@
 ** Point3D
 */
 
-#include "indie.hpp"
+#include "Point3D.hpp"
 
 Models::Point3D::Point3D(const Misc::Vector<3> position, const Misc::Colors &values)
 {

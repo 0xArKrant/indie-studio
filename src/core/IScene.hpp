@@ -5,22 +5,18 @@
 ** IScene
 */
 
-#ifndef ISCENE_HPP_
-#define ISCENE_HPP_
+#pragma once
 
 #include "indie.hpp"
 
-namespace Core
-{
+namespace Core {
     class IScene {
         public:
             ~IScene() = default;
             virtual void update(std::stack <Core::IScene *> &) = 0;
             virtual void  draw() = 0;
-
         protected:
+            virtual std::string getName() = 0;
         private:
     };
 }
-
-#endif /* !ISCENE_HPP_ */

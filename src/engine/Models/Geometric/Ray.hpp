@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IRay.hpp"
 
 namespace Models {
     class Ray : public IRay {

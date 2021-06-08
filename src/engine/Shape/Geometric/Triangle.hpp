@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "ITriangle.hpp"
 
 namespace Shape {
     class Triangle : public ITriangle {

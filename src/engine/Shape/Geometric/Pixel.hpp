@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include "IPixel.hpp"
 
 namespace Shape {
     class Pixel : public IPixel {
