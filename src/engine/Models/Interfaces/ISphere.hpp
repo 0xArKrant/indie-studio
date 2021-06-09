@@ -9,6 +9,7 @@
 
 #include "IModels.hpp"
 
+namespace Raylib {
 namespace Models {
     class ISphere : public IModels {
         public:
@@ -24,4 +25,5 @@ namespace Models {
             virtual void SetRings(const int) = 0;
             virtual void SetSlices(const int) = 0;
     };
+};
 }

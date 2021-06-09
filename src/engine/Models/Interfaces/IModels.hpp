@@ -11,8 +11,12 @@
 #include "Colors.hpp"
 #include "Vector.hpp"
 
-namespace Models {
-    class IModels {
+namespace Raylib
+{
+    namespace Models
+    {
+        class IModels
+        {
         public:
             virtual ~IModels() = default;
 
@@ -20,7 +24,8 @@ namespace Models {
             virtual void ComputeMesh() = 0;
             virtual ::Mesh GenerateMesh() = 0;
 
-            virtual Misc::Colors    GetColors()      const = 0;
+            virtual Misc::Colors GetColors() const = 0;
             virtual void SetColors(const Misc::Colors) = 0;
-    };
-}
+        };
+    } // namespace Models
+} // namespace Raylib

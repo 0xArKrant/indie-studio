@@ -7,7 +7,7 @@
 
 #include "Circle3D.hpp"
 
-Models::Circle3D::Circle3D(const Misc::Vector<3> center, const float radius, const Misc::Vector<3> rotationAxis, const float rotationAngle, const Misc::Colors &values)
+Raylib::Models::Circle3D::Circle3D(const Misc::Vector<3> center, const float radius, const Misc::Vector<3> rotationAxis, const float rotationAngle, const Misc::Colors &values)
 {
     this->_center = center;
     this->_radius = radius;
@@ -16,13 +16,12 @@ Models::Circle3D::Circle3D(const Misc::Vector<3> center, const float radius, con
     this->_colors = values;
 }
 
-void Models::Circle3D::DrawModels()
+void Raylib::Models::Circle3D::DrawModels()
 {
     ::DrawCircle3D(
-        ::Vector3 { this->_center.getX(), this->_center.getY(), this->_center.getZ() },
+        ::Vector3{this->_center.getX(), this->_center.getY(), this->_center.getZ()},
         this->_radius,
-        ::Vector3 { this->_center.getX(), this->_center.getY(), this->_center.getZ() },
+        ::Vector3{this->_center.getX(), this->_center.getY(), this->_center.getZ()},
         this->_rotationAngle,
-        ::Color { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
-    );
+        ::Color{this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA()});
 }
