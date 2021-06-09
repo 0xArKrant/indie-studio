@@ -2,8 +2,11 @@ cmake_minimum_required(VERSION 3.12)
 project(bomberman CXX)
 
 SET(CMAKE_BUILD_TYPE Debug)
+set(OpenGL_GL_PREFERENCE GLVND)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 find_package(raylib REQUIRED)
+find_package(Boost 1.75 COMPONENTS program_options regex filesystem REQUIRED)
+include_directories(${BOOST_INCLUDE_DIRS})
 SET(CMAKE_CXX_STANDARD_17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -49,6 +52,7 @@ file(GLOB SRC_FILES
     #src/engine/Models/ModelDrawing/DrawModel.cpp
     src/engine/Text/Text.cpp
     src/engine/Audio/Audio.cpp
+    src/engine/Models/ModelRaylib.cpp
 
     src/engine/Core/CoreRaylib.cpp
     src/engine/Core/InputMouse.cpp
@@ -104,4 +108,4 @@ if (WIN32)
     )
 endif(WIN32)
 
-target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})
+target_link_libraries(${BIN_NAME} PUBLIC raylib ${Boost_LIBRARIES} ${CMAKE_DL_LIBS})

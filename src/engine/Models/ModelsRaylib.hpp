@@ -11,18 +11,17 @@
 #include "Vector.hpp"
 #include "Colors.hpp"
 
-namespace Model {
-    class ModelRaylib {
+namespace Models {
+    class ModelsRaylib {
         public:
-            ModelRaylib();
-            ModelRaylib(std::string filename);
+            ModelsRaylib();
+            ModelsRaylib(std::string filename);
             void DrawModel(Misc::Vector<3> position, float scale, Misc::Colors tint);
             void DrawModelEx(Misc::Vector<3> position, Misc::Vector<3> rotationAxis, float rotationAngle, Misc::Vector<3> scale, Misc::Colors tint);
             void DrawModelWires(Misc::Vector<3> position, float scale, Misc::Colors tint);
             void DrawModelWiresEx(Misc::Vector<3> position, Misc::Vector<3> rotationAxis, float rotationAngle, Misc::Vector<3> scale, Misc::Colors tint);
             void DrawBoundingBox(Misc::Colors color);
-            ~ModelRaylib();
-
+            ~ModelsRaylib();
         protected:
         private:
             ::Model _model;

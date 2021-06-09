@@ -13,25 +13,17 @@ fi
 # Checking if arguments are below 1
 
 function check_args() {
-    if [[ ${GET_OPTIONS} == "build" ]]; then
+    if [[ ${GET_OPTIONS} == "config" ]]; then
         rm -rf build/
         rm bomberman
-        mkdir build/
-        cd build/
-        cmake ..
-        make
-        mv ./bomberman ..
+        cmake -B ./build -DCMAKE_BUILD_TYPE=DEBUG
     fi
-    if [[ ${GET_OPTIONS} == "run" ]]; then
-        rm -rf build/
-        rm bomberman
-        mkdir build/
-        cd build/
-        cmake ..
-        make
-        mv bomberman ../
-        cd ..
-        ./bomberman
+    if [[ ${GET_OPTIONS} == "build" ]]; then
+        cmake --build ./build --config DEBUG
+    fi
+    if [[ ${GET_OPTIONS} == "all" ]]; then
+        ./setup config
+        ./setup build
     fi
     if [[ ${GET_OPTIONS} == "clean" ]]; then
         rm -rf build/

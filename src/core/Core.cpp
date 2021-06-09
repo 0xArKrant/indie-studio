@@ -7,6 +7,7 @@
 
 #include "indie.hpp"
 #include "./Core.hpp"
+#include "Exception.hpp"
 
 indie::Core::Core()
 {
