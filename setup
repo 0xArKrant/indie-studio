@@ -6,7 +6,10 @@ GET_OPTIONS=$1
 if [ -z "$1" ]
   then
     echo "No argument supplied"
-    echo "Choose: build, run or clean"
+    echo "./setup config : Configure CMAKE & /build directory"
+    echo "./setup build : build whole libraries & project"
+    echo "./setup all : config & build project"
+    echo "./setup clean : remove bomberman & ./build directory"
     exit 84
 fi
 
