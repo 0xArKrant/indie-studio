@@ -13,8 +13,9 @@
 namespace Core {
     class Core : public ICore {
         public:
-            Core(int width, int height, const std::string &title);
-            ~Core();
+            static Core &getInstance(int width, int height, const std::string &title);
+            // Core(Core &) = delete;
+            //void operator=(const Core &) = delete;
 
             //Getter
             inline Cursor getCursor()               const { return this->_cursor;        };
@@ -86,6 +87,8 @@ namespace Core {
             inline float GetFrameTime(void)   const { return ::GetFrameTime(); };
             inline double GetTime(void)       const { return ::GetTime();      };
         private:
+            Core (int width, int height, const std::string &title);
+            ~Core();
             Cursor _cursor;
             InputGamepads _inputGamepas;
             InputKeyboard _inputKeyboard;

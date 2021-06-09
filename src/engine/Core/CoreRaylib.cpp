@@ -12,8 +12,14 @@ Core::Core::Core(int width, int height, const std::string &title)
     ::InitWindow(width, height, title.c_str());
 }
 
-Core::Core::~Core()
+Core::Core &Core::Core::getInstance(int width, int height, const std::string &title)
 {
+    static Core _core = Core(width, height, title);
+    return _core;
+}
+
+Core::Core::~Core()
+{ 
     ::CloseWindow();
 }
 
