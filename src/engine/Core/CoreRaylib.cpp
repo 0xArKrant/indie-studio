@@ -12,9 +12,17 @@ Core::Core::Core(int width, int height, const std::string &title)
     ::InitWindow(width, height, title.c_str());
 }
 
+Core::Core *Core::Core::getInstance(int width, int height, const std::string &title)
+{
+    if (Core::_core == nullptr)
+        Core::_core = new Core(width, height, title.c_str());
+    return Core::_core;
+}
+
 Core::Core::~Core()
 {
     ::CloseWindow();
+    Core::_core = nullptr;
 }
 
 Misc::Vector<2> Core::Core::GetMonitorPosition(int monitor)
