@@ -7,6 +7,14 @@
 
 #pragma once
 
+#define ASIO_STANDALONE
+
+#include <boost/asio.hpp>
+#include <boost/asio/ts/buffer.hpp>
+#include <boost/asio/ts/internet.hpp>
+
+using namespace boost;
+
 namespace Server {
     class Server {
         public:
@@ -15,5 +23,8 @@ namespace Server {
 
         protected:
         private:
+            asio::io_context context;
+            asio::ip::udp::endpoint endPoint;
+            asio::ip::udp::socket socket;
     };
 }
