@@ -13,9 +13,9 @@
 namespace Core {
     class Core : public ICore {
         public:
-            static Core *getInstance(int width, int height, const std::string &title);
-            Core(Core &) = delete;
-            void operator=(const Core &) = delete;
+            static Core &getInstance(int width, int height, const std::string &title);
+            // Core(Core &) = delete;
+            //void operator=(const Core &) = delete;
 
             //Getter
             inline Cursor getCursor()               const { return this->_cursor;        };
@@ -89,11 +89,9 @@ namespace Core {
         private:
             Core (int width, int height, const std::string &title);
             ~Core();
-            static Core *_core;
             Cursor _cursor;
             InputGamepads _inputGamepas;
             InputKeyboard _inputKeyboard;
             InputMouse _inputMouse;
     };
-    Core *Core::_core = nullptr;
 }
