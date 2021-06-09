@@ -77,6 +77,7 @@ include_directories(
     src/engine/Models/Geometric
     src/engine/Core
     src/engine/Audio
+    src/engine/Models
     #src/engine/Models/MeshGeneration
     #src/engine/Models/MeshManipulation
     #src/engine/Models/ModelDrawing
