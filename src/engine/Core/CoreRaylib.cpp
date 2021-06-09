@@ -7,37 +7,37 @@
 
 #include "CoreRaylib.hpp"
 
-Core::Core::Core(int width, int height, const std::string &title)
+Raylib::Core::Core::Core(int width, int height, const std::string &title)
 {
     ::InitWindow(width, height, title.c_str());
 }
 
-Core::Core &Core::Core::getInstance(int width, int height, const std::string &title)
+Raylib::Core::Core &Raylib::Core::Core::getInstance(int width, int height, const std::string &title)
 {
     static Core _core = Core(width, height, title);
     return _core;
 }
 
-Core::Core::~Core()
-{ 
+Raylib::Core::Core::~Core()
+{
     ::CloseWindow();
 }
 
-Misc::Vector<2> Core::Core::GetMonitorPosition(int monitor)
+Misc::Vector<2> Raylib::Core::Core::GetMonitorPosition(int monitor)
 {
     ::Vector2 monipos = ::GetMonitorPosition(monitor);
     Misc::Vector<2> pos(monipos.x, monipos.y);
     return pos;
 }
 
-Misc::Vector<2> Core::Core::GetWindowPosition(void)
+Misc::Vector<2> Raylib::Core::Core::GetWindowPosition(void)
 {
     ::Vector2 winpos = ::GetWindowPosition();
     Misc::Vector<2> pos(winpos.x, winpos.y);
     return pos;
 }
 
-Misc::Vector<2> Core::Core::GetWindowScaleDPI(void)
+Misc::Vector<2> Raylib::Core::Core::GetWindowScaleDPI(void)
 {
     ::Vector2 dpi = ::GetWindowScaleDPI();
     Misc::Vector<2> mdpi(dpi.x, dpi.y);

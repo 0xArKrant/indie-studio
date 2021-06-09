@@ -8,9 +8,12 @@
 #pragma once
 
 #include "indie.hpp"
-
-namespace Core {
-    class Cursor {
+namespace Raylib
+{
+    namespace Core
+    {
+        class Cursor
+        {
         public:
             Cursor();
             ~Cursor();
@@ -21,5 +24,6 @@ namespace Core {
             void EnableCursor(void);
             void DisableCursor(void);
             bool IsCursorOnScreen(void);
-    };
-}
+        };
+    } // namespace Core
+} // namespace Raylib

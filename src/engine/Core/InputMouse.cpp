@@ -7,72 +7,72 @@
 
 #include "InputMouse.hpp"
 
-Core::InputMouse::InputMouse()
+Raylib::Core::InputMouse::InputMouse()
 {
 }
 
-Core::InputMouse::~InputMouse()
+Raylib::Core::InputMouse::~InputMouse()
 {
 }
 
-bool Core::InputMouse::IsMouseButtonPressed(int button)
+bool Raylib::Core::InputMouse::IsMouseButtonPressed(int button)
 {
     return ::IsMouseButtonPressed(button);
 }
 
-bool Core::InputMouse::IsMouseButtonDown(int button)
+bool Raylib::Core::InputMouse::IsMouseButtonDown(int button)
 {
     return ::IsMouseButtonDown(button);
 }
 
-bool Core::InputMouse::IsMouseButtonReleased(int button)
+bool Raylib::Core::InputMouse::IsMouseButtonReleased(int button)
 {
     return ::IsMouseButtonReleased(button);
 }
 
-bool Core::InputMouse::IsMouseButtonUp(int button)
+bool Raylib::Core::InputMouse::IsMouseButtonUp(int button)
 {
     return ::IsMouseButtonUp(button);
 }
 
-int Core::InputMouse::GetMouseX(void)
+int Raylib::Core::InputMouse::GetMouseX(void)
 {
     return ::GetMouseX();
 }
 
-int Core::InputMouse::GetMouseY(void)
+int Raylib::Core::InputMouse::GetMouseY(void)
 {
     return ::GetMouseY();
 }
 
-Misc::Vector<2> Core::InputMouse::GetMousePosition(void)
+Misc::Vector<2> Raylib::Core::InputMouse::GetMousePosition(void)
 {
     ::Vector2 vec = ::GetMousePosition();
     Misc::Vector<2> pos(vec.x, vec.y);
     return pos;
 }
 
-void Core::InputMouse::SetMousePosition(int x, int y)
+void Raylib::Core::InputMouse::SetMousePosition(int x, int y)
 {
     ::SetMousePosition(x, y);
 }
 
-void Core::InputMouse::SetMouseOffset(int offsetX, int offsetY)
+void Raylib::Core::InputMouse::SetMouseOffset(int offsetX, int offsetY)
 {
     ::SetMouseOffset(offsetX, offsetY);
 }
 
-void Core::InputMouse::SetMouseScale(float scaleX, float scaleY)
+void Raylib::Core::InputMouse::SetMouseScale(float scaleX, float scaleY)
 {
     ::SetMouseScale(scaleX, scaleY);
 }
 
-float Core::InputMouse::GetMouseWheelMove(void)
+float Raylib::Core::InputMouse::GetMouseWheelMove(void)
 {
     return ::GetMouseWheelMove();
 }
 
-void Core::InputMouse::SetMouseCursor(int cursor)
+void Raylib::Core::InputMouse::SetMouseCursor(int cursor)
 {
     ::SetMouseCursor(cursor);
 }

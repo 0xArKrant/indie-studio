@@ -9,8 +9,12 @@
 
 #include "indie.hpp"
 
-namespace Core {
-    class InputGamepads {
+namespace Raylib
+{
+    namespace Core
+    {
+        class InputGamepads
+        {
         public:
             InputGamepads();
             ~InputGamepads();
@@ -29,5 +33,6 @@ namespace Core {
             int GetGamepadAxisCount(int gamepad);
             float GetGamepadAxisMovement(int gamepad, int axis);
             int SetGamepadMappings(const std::string &mappings);
-    };
-}
+        };
+    }; // namespace Core
+} // namespace Raylib

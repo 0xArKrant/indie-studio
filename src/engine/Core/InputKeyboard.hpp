@@ -9,8 +9,12 @@
 
 #include "indie.hpp"
 
-namespace Core {
-    class InputKeyboard {
+namespace Raylib
+{
+    namespace Core
+    {
+        class InputKeyboard
+        {
         public:
             InputKeyboard();
             ~InputKeyboard();
@@ -22,7 +26,9 @@ namespace Core {
             void SetExitKey(int key);
             int GetKeyPressed(void);
             int GetCharPressed(void);
+
         protected:
         private:
-    };
-}
+        };
+    }; // namespace Core
+} // namespace Raylib

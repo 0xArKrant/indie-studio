@@ -10,8 +10,12 @@
 #include "indie.hpp"
 #include "Vector.hpp"
 
-namespace Core {
-    class InputMouse {
+namespace Raylib
+{
+    namespace Core
+    {
+        class InputMouse
+        {
         public:
             InputMouse();
             ~InputMouse();
@@ -28,7 +32,9 @@ namespace Core {
             void SetMouseScale(float scaleX, float scaleY);
             float GetMouseWheelMove(void);
             void SetMouseCursor(int cursor);
+
         protected:
         private:
-    };
-}
+        };
+    } // namespace Core
+} // namespace Raylib
