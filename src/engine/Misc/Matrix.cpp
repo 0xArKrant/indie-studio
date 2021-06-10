@@ -40,7 +40,7 @@ Misc::Matrix::Matrix() {
 /**
  * @brief Construct a new Misc:: Matrix:: Matrix object
  *
- * @param mX
+ *
  */
 
 Misc::Matrix::Matrix(const float m0, const float m1, const float m2, const float m3, const float m4, const float m5, const float m6,
