@@ -13,7 +13,7 @@ int main(int argc, char const **argv)
     try {
         (void) argc;
         Indie::Core test;
-    } catch (Errors::Exception &exception) {
+    } catch (Indie::Errors::Exception &exception) {
         std::cerr << "Unexpected error during runtime: " << argv[0] << exception.what() << std::endl;
     }
     return 0;

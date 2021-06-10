@@ -19,15 +19,15 @@ namespace Misc {
             Vector(x... args) {
                 float vec[]{ args... };
                 if (vSize > 4)
-                    throw (Errors::Exception("Unable to Compute Vector", "Vector Size > 4", __FILE__, __LINE__));
+                    throw (Indie::Errors::Exception("Unable to Compute Vector", "Vector Size > 4", __FILE__, __LINE__));
                 std::memcpy(this->_vector.data(), vec, this->_vector.size() * sizeof(float));
             };
             ~Vector() = default;
 
-            inline float getX() const { if (vSize > 0) return this->_vector[0]; else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 0", __FILE__, __LINE__));};
-            inline float getY() const { if (vSize > 1) return this->_vector[1]; else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 1", __FILE__, __LINE__));};
-            inline float getZ() const { if (vSize > 2) return this->_vector[2]; else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 2", __FILE__, __LINE__));};
-            inline float getW() const { if (vSize > 3) return this->_vector[3]; else throw (Errors::Exception("Unable to Compute Vector", "Vector Size < 3", __FILE__, __LINE__));};
+            inline float getX() const { if (vSize > 0) return this->_vector[0]; else throw (Indie::Errors::Exception("Unable to Compute Vector", "Vector Size < 0", __FILE__, __LINE__));};
+            inline float getY() const { if (vSize > 1) return this->_vector[1]; else throw (Indie::Errors::Exception("Unable to Compute Vector", "Vector Size < 1", __FILE__, __LINE__));};
+            inline float getZ() const { if (vSize > 2) return this->_vector[2]; else throw (Indie::Errors::Exception("Unable to Compute Vector", "Vector Size < 2", __FILE__, __LINE__));};
+            inline float getW() const { if (vSize > 3) return this->_vector[3]; else throw (Indie::Errors::Exception("Unable to Compute Vector", "Vector Size < 3", __FILE__, __LINE__));};
             inline std::array<float, vSize> getVector() const { return this->_vector; };
         private:
             std::array<float, vSize> _vector;

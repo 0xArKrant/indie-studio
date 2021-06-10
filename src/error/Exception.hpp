@@ -5,23 +5,22 @@
 ** Exception
 */
 
-#ifndef EXCEPTION_HPP_
-#define EXCEPTION_HPP_
+#pragma once
 
 #include "indie.hpp"
 
-namespace Errors {
-    class Exception : public std::exception {
-        public:
-            explicit Exception();
-            explicit Exception(const char *err, std::string currentfile, int currentline);
-            explicit Exception(const char *err, std::string errplus, std::string currentfile, int currentline);
+namespace Indie {
+    namespace Errors {
+        class Exception : public std::exception {
+            public:
+                explicit Exception();
+                explicit Exception(const char* err, std::string currentfile, int currentline);
+                explicit Exception(const char* err, std::string errplus, std::string currentfile, int currentline);
 
-            virtual const char *what() const noexcept;
-        protected:
-            std::string _message;
-        private:
-    };
+                virtual const char* what() const noexcept;
+            protected:
+                std::string _message;
+        };
+    }
 }
 
-#endif /* !EXCEPTION_HPP_ */
