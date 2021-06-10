@@ -1,9 +1,17 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio
-** File description:
-** Core
-*/
+/**
+ * @file CoreRaylib.hpp
+ * @author QuentinMarchand1
+ * @author RaphMandica
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Encapsulation of the core module from raylib
+ * @version 0.1
+ * @date 2021-06-10
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 
