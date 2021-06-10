@@ -1,11 +1,22 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** Matrix
-*/
+/**
+ * @file Matrix.cpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief
+ * @version 0.1
+ * @date 10-06-2021
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie Studio
+ * Epitech Nancy 2021
+ */
 
 #include "Matrix.hpp"
+
+/**
+ * @brief Construct a new Misc:: Matrix:: Matrix object
+ *
+ */
 
 Misc::Matrix::Matrix() {
     this->_m0 = 0;
@@ -25,6 +36,12 @@ Misc::Matrix::Matrix() {
     this->_m14 = 0;
     this->_m15 = 0;
 }
+
+/**
+ * @brief Construct a new Misc:: Matrix:: Matrix object
+ *
+ * @param mX
+ */
 
 Misc::Matrix::Matrix(const float m0, const float m1, const float m2, const float m3, const float m4, const float m5, const float m6,
     const float m7, const float m8, const float m9, const float m10, const float m11, const float m12, const float m13, const float m14, const float m15) {

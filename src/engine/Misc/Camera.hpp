@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** Camera
-*/
+/**
+ * @file Camera.hpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Camera class substitution to raylib structure
+ * @version 0.1
+ * @date 10-06-2021
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 

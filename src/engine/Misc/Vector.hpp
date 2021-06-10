@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** Vector
-*/
+/**
+ * @file Vector.hpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Vector2/3/4 substitution class to raylib structure
+ * @version 0.1
+ * @date 10-06-2021
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 
