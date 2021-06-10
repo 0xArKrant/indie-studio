@@ -1,13 +1,13 @@
 /**
  * @file Audio.hpp
  * @author 0xArKrant (contact@arkrant.us)
- * @brief Encapsulation of audio module from raylib
+ * @brief Encapsulation of the audio module from raylib
  * @version 0.1
  * @date 2021-06-10
  *
  * @copyright Copyright (c) 2021
  *
- * Indie Studio
+ * Indie-Studio
  * Epitech Nancy 2021
  */
 
