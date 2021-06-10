@@ -9,6 +9,7 @@
 
 #include "indie.hpp"
 #include "IScene.hpp"
+#include "scene.hpp"
 
 namespace Indie {
     namespace Core     {
@@ -18,7 +19,7 @@ namespace Indie {
                 ~SceneManagement();
                 void loop();
             private:
-                std::stack<IScene*> _stack;
+                std::stack<IScene *> _stack;
         };
     } // namespace Core
 } // namespace Indie

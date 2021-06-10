@@ -7,7 +7,10 @@
 
 #include "SceneManagement.hpp"
 
-Indie::Core::SceneManagement::SceneManagement() {
+Indie::Core::SceneManagement::SceneManagement() 
+{
+    Indie::Scene::MainMenu *menu = new Indie::Scene::MainMenu();
+    this->_stack.push(menu);
 }
 
 Indie::Core::SceneManagement::~SceneManagement() {

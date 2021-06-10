@@ -67,6 +67,7 @@ file(GLOB SRC_FILES
     src/core/Core.cpp
     src/core/SceneManagement.cpp
     src/error/Exception.cpp
+    src/scene/MainMenu.cpp
 )
 
 add_executable(${BIN_NAME} ${SRC_FILES})
@@ -93,6 +94,7 @@ include_directories(
     src/engine/Texture
     src/game/
     src/core/
+    src/scene/
 )
 
 if (UNIX)

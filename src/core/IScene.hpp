@@ -14,11 +14,10 @@ namespace Indie {
         class IScene         {
             public:
                 ~IScene() = default;
-                virtual void update(std::stack<Core::IScene*>&) = 0;
+                virtual void update(std::stack<Core::IScene *>&) = 0;
                 virtual void draw() = 0;
 
             protected:
-                virtual std::string getName() = 0;
         };
     } // namespace Core
 } // namespace Indie
