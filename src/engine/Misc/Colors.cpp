@@ -6,11 +6,17 @@
 */
 
 /**
- *  @file   Colors.cpp
- *  @brief  Generic color file
- *  @author Benjamin Lafouge
- *  @date   2021-05-20
- **/
+ * @file Colors.cpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Colors class substitution to raylib structure
+ * @version 0.1
+ * @date 2021-06-10
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #include "Colors.hpp"
 

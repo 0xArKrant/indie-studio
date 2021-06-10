@@ -7,7 +7,7 @@
  *
  * @copyright Copyright (c) 2021
  *
- * Indie Studio
+ * Indie-Studio
  * Epitech Nancy 2021
  */
 
