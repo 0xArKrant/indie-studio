@@ -7,8 +7,7 @@
 
 #include "Matrix.hpp"
 
-Misc::Matrix::Matrix()
-{
+Misc::Matrix::Matrix() {
     this->_m0 = 0;
     this->_m1 = 0;
     this->_m2 = 0;
@@ -28,8 +27,7 @@ Misc::Matrix::Matrix()
 }
 
 Misc::Matrix::Matrix(const float m0, const float m1, const float m2, const float m3, const float m4, const float m5, const float m6,
-            const float m7, const float m8, const float m9, const float m10, const float m11, const float m12, const float m13, const float m14, const float m15)
-{
+    const float m7, const float m8, const float m9, const float m10, const float m11, const float m12, const float m13, const float m14, const float m15) {
     this->_m0 = m0;
     this->_m1 = m1;
     this->_m2 = m2;

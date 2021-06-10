@@ -7,15 +7,13 @@
 
 #include "Point3D.hpp"
 
-Raylib::Models::Point3D::Point3D(const Misc::Vector<3> position, const Misc::Colors &values)
-{
+Indie::Raylib::Models::Point3D::Point3D(const Misc::Vector<3> position, const Misc::Colors& values) {
     this->_position = position;
     this->_colors = values;
 }
 
-void Raylib::Models::Point3D::DrawModels()
-{
+void Indie::Raylib::Models::Point3D::DrawModels() {
     ::DrawPoint3D(
-        ::Vector3{this->_position.getX(), this->_position.getY(), this->_position.getZ()},
-        ::Color{this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA()});
+        ::Vector3{ this->_position.getX(), this->_position.getY(), this->_position.getZ() },
+        ::Color{ this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() });
 }

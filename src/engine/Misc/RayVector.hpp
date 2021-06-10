@@ -17,7 +17,7 @@ namespace Misc {
             Ray();
             ~Ray() = default;
 
-            inline Misc::Vector<3> getPosition()  const { return this->_position;  };
+            inline Misc::Vector<3> getPosition()  const { return this->_position; };
             inline Misc::Vector<3> getDirection() const { return this->_direction; };
         private:
             Misc::Vector<3> _position;

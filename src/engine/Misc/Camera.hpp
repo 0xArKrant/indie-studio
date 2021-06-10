@@ -17,10 +17,10 @@ namespace Misc {
             Camera2D();
             ~Camera2D() = default;
 
-            inline Misc::Vector<2> getOffset()    const { return this->_offset;   };
-            inline Misc::Vector<2> getTarget()    const { return this->_target;   };
+            inline Misc::Vector<2> getOffset()    const { return this->_offset; };
+            inline Misc::Vector<2> getTarget()    const { return this->_target; };
             inline float           getRotation()  const { return this->_rotation; };
-            inline float           getZoom()      const { return this->_zoom;     };
+            inline float           getZoom()      const { return this->_zoom; };
         private:
             Misc::Vector<2> _offset;
             Misc::Vector<2> _target;

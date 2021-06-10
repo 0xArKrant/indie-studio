@@ -17,9 +17,9 @@ namespace Misc {
             RayHitInfo();
             ~RayHitInfo() = default;
 
-            inline bool            hasHit()       const { return this->_hit;       };
-            inline float           getDistance()  const { return this->_distance;  };
-            inline Misc::Vector<3> getPosition()  const { return this->_position;  };
+            inline bool            hasHit()       const { return this->_hit; };
+            inline float           getDistance()  const { return this->_distance; };
+            inline Misc::Vector<3> getPosition()  const { return this->_position; };
             inline Misc::Vector<3> getDirection() const { return this->_direction; };
         private:
             bool                 _hit;

@@ -11,20 +11,20 @@ namespace Misc {
     class Matrix {
         public:
             Matrix(const float, const float, const float, const float, const float, const float, const float,
-            const float, const float, const float, const float, const float, const float, const float, const float, const float);
+                const float, const float, const float, const float, const float, const float, const float, const float, const float);
             Matrix();
             ~Matrix() = default;
 
-            inline float getMatrix0()  const { return this->_m0;  };
-            inline float getMatrix1()  const { return this->_m1;  };
-            inline float getMatrix2()  const { return this->_m2;  };
-            inline float getMatrix3()  const { return this->_m3;  };
-            inline float getMatrix4()  const { return this->_m4;  };
-            inline float getMatrix5()  const { return this->_m5;  };
-            inline float getMatrix6()  const { return this->_m6;  };
-            inline float getMatrix7()  const { return this->_m7;  };
-            inline float getMatrix8()  const { return this->_m8;  };
-            inline float getMatrix9()  const { return this->_m9;  };
+            inline float getMatrix0()  const { return this->_m0; };
+            inline float getMatrix1()  const { return this->_m1; };
+            inline float getMatrix2()  const { return this->_m2; };
+            inline float getMatrix3()  const { return this->_m3; };
+            inline float getMatrix4()  const { return this->_m4; };
+            inline float getMatrix5()  const { return this->_m5; };
+            inline float getMatrix6()  const { return this->_m6; };
+            inline float getMatrix7()  const { return this->_m7; };
+            inline float getMatrix8()  const { return this->_m8; };
+            inline float getMatrix9()  const { return this->_m9; };
             inline float getMatrix10() const { return this->_m10; };
             inline float getMatrix11() const { return this->_m11; };
             inline float getMatrix12() const { return this->_m12; };

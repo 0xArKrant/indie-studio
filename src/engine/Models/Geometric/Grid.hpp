@@ -9,27 +9,26 @@
 
 #include "IGrid.hpp"
 
-namespace Raylib
-{
-    namespace Models
-    {
-        class Grid : public IGrid
-        {
-        public:
-            Grid(const int, const float);
-            ~Grid() = default;
+namespace Indie {
+    namespace Raylib {
+        namespace Models {
+            class Grid : public IGrid {
+                public:
+                    Grid(const int, const float);
+                    ~Grid() = default;
 
-            inline int GetSlices() const { return this->_slices; };
-            inline float GetSpacing() const { return this->_spacing; };
+                    inline int GetSlices() const { return this->_slices; };
+                    inline float GetSpacing() const { return this->_spacing; };
 
-            inline void SetSlices(const int slices) { this->_slices = slices; };
-            inline void SetSpacing(const float spacing) { this->_spacing = spacing; };
+                    inline void SetSlices(const int slices) { this->_slices = slices; };
+                    inline void SetSpacing(const float spacing) { this->_spacing = spacing; };
 
-            void DrawModels();
+                    void DrawModels();
 
-        private:
-            int _slices;
-            float _spacing;
-        };
-    }; // namespace Models
-} // namespace Raylib
+                private:
+                    int _slices;
+                    float _spacing;
+            };
+        } // namespace Models
+    } // namespace Raylib
+} // namespace Indie

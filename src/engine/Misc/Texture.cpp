@@ -7,8 +7,7 @@
 
 #include "Texture.hpp"
 
-Misc::Texture::Texture()
-{
+Misc::Texture::Texture() {
     this->_id = 0;
     this->_width = 0;
     this->_height = 0;
@@ -16,8 +15,7 @@ Misc::Texture::Texture()
     this->_format = 0;
 }
 
-Misc::Texture::Texture(const unsigned int id, const int width, const int height, const int format)
-{
+Misc::Texture::Texture(const unsigned int id, const int width, const int height, const int format) {
     this->_id = id;
     this->_width = width;
     this->_height = height;
@@ -25,8 +23,7 @@ Misc::Texture::Texture(const unsigned int id, const int width, const int height,
     this->_format = format;
 }
 
-Misc::Texture::Texture(const unsigned int id, const int width, const int height, const int mipmaps, const int format)
-{
+Misc::Texture::Texture(const unsigned int id, const int width, const int height, const int mipmaps, const int format) {
     this->_id = id;
     this->_width = width;
     this->_height = height;

@@ -7,8 +7,7 @@
 
 #include "Circle3D.hpp"
 
-Raylib::Models::Circle3D::Circle3D(const Misc::Vector<3> center, const float radius, const Misc::Vector<3> rotationAxis, const float rotationAngle, const Misc::Colors &values)
-{
+Indie::Raylib::Models::Circle3D::Circle3D(const Misc::Vector<3> center, const float radius, const Misc::Vector<3> rotationAxis, const float rotationAngle, const Misc::Colors& values) {
     this->_center = center;
     this->_radius = radius;
     this->_rotationAxis = rotationAxis;
@@ -16,10 +15,9 @@ Raylib::Models::Circle3D::Circle3D(const Misc::Vector<3> center, const float rad
     this->_colors = values;
 }
 
-void Raylib::Models::Circle3D::DrawModels()
-{
+void Indie::Raylib::Models::Circle3D::DrawModels() {
     ::DrawCircle3D(
-        ::Vector3{this->_center.getX(), this->_center.getY(), this->_center.getZ()},
+        ::Vector3{ this->_center.getX(), this->_center.getY(), this->_center.getZ() },
         this->_radius,
         ::Vector3{this->_center.getX(), this->_center.getY(), this->_center.getZ()},
         this->_rotationAngle,

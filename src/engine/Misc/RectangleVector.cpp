@@ -7,12 +7,10 @@
 
 #include "RectangleVector.hpp"
 
-Misc::Rectangle::Rectangle()
-{
-    this->_rectangle = {0, 0, 0, 0};
+Misc::Rectangle::Rectangle() {
+    this->_rectangle = { 0, 0, 0, 0 };
 }
 
-Misc::Rectangle::Rectangle(const std::array<float, 4> rectangle)
-{
+Misc::Rectangle::Rectangle(const std::array<float, 4> rectangle) {
     this->_rectangle = rectangle;
 }

@@ -7,40 +7,32 @@
 
 #include "Cursor.hpp"
 
-Raylib::Core::Cursor::Cursor()
-{
+Indie::Raylib::Core::Cursor::Cursor() {
 }
 
-Raylib::Core::Cursor::~Cursor()
-{
+Indie::Raylib::Core::Cursor::~Cursor() {
 }
 
-void Raylib::Core::Cursor::ShowCursor(void)
-{
+void Indie::Raylib::Core::Cursor::ShowCursor(void) {
     ::ShowCursor();
 }
 
-void Raylib::Core::Cursor::HideCursor(void)
-{
+void Indie::Raylib::Core::Cursor::HideCursor(void) {
     ::HideCursor();
 }
 
-bool Raylib::Core::Cursor::IsCursorHidden(void)
-{
+bool Indie::Raylib::Core::Cursor::IsCursorHidden(void) {
     return ::IsCursorHidden();
 }
 
-void Raylib::Core::Cursor::EnableCursor(void)
-{
+void Indie::Raylib::Core::Cursor::EnableCursor(void) {
     ::EnableCursor();
 }
 
-void Raylib::Core::Cursor::DisableCursor(void)
-{
+void Indie::Raylib::Core::Cursor::DisableCursor(void) {
     ::DisableCursor();
 }
 
-bool Raylib::Core::Cursor::IsCursorOnScreen(void)
-{
+bool Indie::Raylib::Core::Cursor::IsCursorOnScreen(void) {
     return ::IsCursorOnScreen();
 }

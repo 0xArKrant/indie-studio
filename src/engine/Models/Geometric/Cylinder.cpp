@@ -7,8 +7,7 @@
 
 #include "Cylinder.hpp"
 
-Raylib::Models::Cylinder::Cylinder(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
-{
+Indie::Raylib::Models::Cylinder::Cylinder(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors& values) {
     this->_position = position;
     this->_radiusTop = radiusTop;
     this->_radiusBottom = radiusBottom;
@@ -17,10 +16,9 @@ Raylib::Models::Cylinder::Cylinder(const Misc::Vector<3> position, const float r
     this->_colors = values;
 }
 
-void Raylib::Models::Cylinder::DrawModels()
-{
+void Indie::Raylib::Models::Cylinder::DrawModels() {
     ::DrawCylinder(
-        ::Vector3{this->_position.getX(), this->_position.getY(), this->_position.getZ()},
+        ::Vector3{ this->_position.getX(), this->_position.getY(), this->_position.getZ() },
         this->_radiusTop,
         this->_radiusBottom,
         this->_height,
@@ -28,8 +26,7 @@ void Raylib::Models::Cylinder::DrawModels()
         ::Color{this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA()});
 }
 
-Raylib::Models::CylinderWires::CylinderWires(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors &values)
-{
+Indie::Raylib::Models::CylinderWires::CylinderWires(const Misc::Vector<3> position, const float radiusTop, const float radiusBottom, const float height, const int slices, const Misc::Colors& values) {
     this->_position = position;
     this->_radiusTop = radiusTop;
     this->_radiusBottom = radiusBottom;
@@ -38,10 +35,9 @@ Raylib::Models::CylinderWires::CylinderWires(const Misc::Vector<3> position, con
     this->_colors = values;
 }
 
-void Raylib::Models::CylinderWires::DrawModels()
-{
+void Indie::Raylib::Models::CylinderWires::DrawModels() {
     ::DrawCylinderWires(
-        ::Vector3{this->_position.getX(), this->_position.getY(), this->_position.getZ()},
+        ::Vector3{ this->_position.getX(), this->_position.getY(), this->_position.getZ() },
         this->_radiusTop,
         this->_radiusBottom,
         this->_height,

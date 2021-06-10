@@ -8,22 +8,22 @@
 #pragma once
 
 #include "indie.hpp"
-namespace Raylib
-{
-    namespace Core
-    {
-        class Cursor
-        {
-        public:
-            Cursor();
-            ~Cursor();
 
-            void ShowCursor(void);
-            void HideCursor(void);
-            bool IsCursorHidden(void);
-            void EnableCursor(void);
-            void DisableCursor(void);
-            bool IsCursorOnScreen(void);
-        };
-    } // namespace Core
-} // namespace Raylib
+namespace Indie {
+    namespace Raylib {
+        namespace Core {
+            class Cursor {
+                public:
+                    Cursor();
+                    ~Cursor();
+
+                    void ShowCursor(void);
+                    void HideCursor(void);
+                    bool IsCursorHidden(void);
+                    void EnableCursor(void);
+                    void DisableCursor(void);
+                    bool IsCursorOnScreen(void);
+            };
+        } // namespace Core
+    } // namespace Raylib
+} // namespace Indie

@@ -9,18 +9,17 @@
 
 #include "IModels.hpp"
 
-namespace Raylib
-{
-    namespace Models
-    {
-        class IPoint3D : public IModels
-        {
-        public:
-            virtual ~IPoint3D() = default;
+namespace Indie {
+    namespace Raylib {
+        namespace Models {
+            class IPoint3D : public IModels {
+                public:
+                virtual ~IPoint3D() = default;
 
-            virtual Misc::Vector<3> GetPosition() const = 0;
+                virtual Misc::Vector<3> GetPosition() const = 0;
 
-            virtual void SetPosition(const Misc::Vector<3>) = 0;
-        };
-    }; // namespace Models
-} // namespace Raylib
+                virtual void SetPosition(const Misc::Vector<3>) = 0;
+            };
+        } // namespace Models
+    } // namespace Raylib
+} // namespace Indie

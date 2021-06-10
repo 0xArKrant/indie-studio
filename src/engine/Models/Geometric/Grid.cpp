@@ -7,13 +7,11 @@
 
 #include "Grid.hpp"
 
-Raylib::Models::Grid::Grid(const int slices, const float spacing)
-{
+Indie::Raylib::Models::Grid::Grid(const int slices, const float spacing) {
     this->_slices = slices;
     this->_spacing = spacing;
 }
 
-void Raylib::Models::Grid::DrawModels()
-{
+void Indie::Raylib::Models::Grid::DrawModels() {
     ::DrawGrid(this->_slices, this->_spacing);
 }

@@ -17,11 +17,11 @@ namespace Misc {
             Texture();
             ~Texture() = default;
 
-            inline unsigned int getID() const { return this->_id;      };
-            inline int getWidth()       const { return this->_width;   };
-            inline int getHeight()      const { return this->_height;  };
+            inline unsigned int getID() const { return this->_id; };
+            inline int getWidth()       const { return this->_width; };
+            inline int getHeight()      const { return this->_height; };
             inline int getMipmaps()     const { return this->_mipmaps; };
-            inline int getFormat()      const { return this->_format;  };
+            inline int getFormat()      const { return this->_format; };
         private:
             unsigned int _id;
             int          _width;

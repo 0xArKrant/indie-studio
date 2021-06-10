@@ -9,26 +9,22 @@
 
 #include "indie.hpp"
 
-namespace Raylib
-{
-    namespace Core
-    {
-        class InputKeyboard
-        {
-        public:
-            InputKeyboard();
-            ~InputKeyboard();
+namespace Indie {
+    namespace Raylib {
+        namespace Core     {
+            class InputKeyboard         {
+                public:
+                InputKeyboard();
+                ~InputKeyboard();
 
-            bool IsKeyPressed(int key);
-            bool IsKeyDown(int key);
-            bool IsKeyReleased(int key);
-            bool IsKeyUp(int key);
-            void SetExitKey(int key);
-            int GetKeyPressed(void);
-            int GetCharPressed(void);
-
-        protected:
-        private:
-        };
-    }; // namespace Core
-} // namespace Raylib
+                bool IsKeyPressed(int key);
+                bool IsKeyDown(int key);
+                bool IsKeyReleased(int key);
+                bool IsKeyUp(int key);
+                void SetExitKey(int key);
+                int GetKeyPressed(void);
+                int GetCharPressed(void);
+            };
+        } // namespace Core
+    } // namespace Raylib
+} // namespace Indie
