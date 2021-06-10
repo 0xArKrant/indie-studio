@@ -14,6 +14,41 @@ Indie::Game::GameObject::GameObject(std::string id, Misc::Vector<3> pos, TypeObj
     this->_display = display;
 }
 
+std::string Indie::Game::GameObject::getId() const
+{
+    return this->_id;
+}
+
+Misc::Vector<3> Indie::Game::GameObject::getPos() const
+{
+    return this->_pos;
+}
+
+bool Indie::Game::GameObject::getDisplay() const
+{
+    return this->_display;
+}
+
+void Indie::Game::GameObject::setPosition(Misc::Vector<3> pos)
+{
+    this->_pos = pos;
+}
+
+void Indie::Game::GameObject::setDisplay(bool display)
+{
+    this->_display = display;
+}
+
+void update(float elapsedTimes)
+{
+
+}
+
+void draw()
+{
+
+}
+
 Indie::Game::GameObject::~GameObject()
 {
 }

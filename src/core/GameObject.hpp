@@ -27,13 +27,13 @@ namespace Indie {
                 GameObject &operator =(const GameObject &cpy) = delete;
                 ~GameObject();
                 //TODO
-                //getId() const;
-                //getPos() const;
-                //getDisplay() const;
-                //setDisplay();
-                //setPosition();
-                //update(float elaspedTimes)
-                //draw() const;
+                std::string getId() const;
+                Misc::Vector<3> getPos() const;
+                bool getDisplay() const;
+                void setDisplay(bool display);
+                void setPosition(Misc::Vector<3> pos);
+                void update(float elapsedTimes);
+                void draw() const;
 
             protected:
             private:
