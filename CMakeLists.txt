@@ -53,7 +53,7 @@ file(GLOB SRC_FILES
     #src/engine/Models/ModelDrawing/DrawModel.cpp
     src/engine/Text/Text.cpp
     src/engine/Audio/Audio.cpp
-    src/engine/Models/ModelRaylib.cpp
+    src/engine/Models/ModelsRaylib.cpp
 
     src/engine/Core/CoreRaylib.cpp
     src/engine/Core/InputMouse.cpp

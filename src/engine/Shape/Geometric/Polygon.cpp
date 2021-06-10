@@ -7,8 +7,7 @@
 
 #include "Polygon.hpp"
 
-Shape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
-{
+Indie::Raylib::Shape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors& values) {
     this->_center = center;
     this->_sides = sides;
     this->_radius = radius;
@@ -16,10 +15,9 @@ Shape::Polygon::Polygon(const Misc::Vector<2> center, const int sides, const flo
     this->_colors = values;
 }
 
-void Shape::Polygon::DrawShape()
-{
+void Indie::Raylib::Shape::Polygon::DrawShape() {
     ::DrawPoly(
-        ::Vector2 { this->_center.getX(), this->_center.getY() },
+        ::Vector2{ this->_center.getX(), this->_center.getY() },
         this->_sides,
         this->_radius,
         this->_rotation,
@@ -27,8 +25,7 @@ void Shape::Polygon::DrawShape()
     );
 }
 
-Shape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors &values)
-{
+Indie::Raylib::Shape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const Misc::Colors& values) {
     this->_center = center;
     this->_sides = sides;
     this->_radius = radius;
@@ -36,10 +33,9 @@ Shape::PolygonLines::PolygonLines(const Misc::Vector<2> center, const int sides,
     this->_colors = values;
 }
 
-void Shape::PolygonLines::DrawShape()
-{
+void Indie::Raylib::Shape::PolygonLines::DrawShape() {
     ::DrawPolyLines(
-        ::Vector2 { this->_center.getX(), this->_center.getY() },
+        ::Vector2{ this->_center.getX(), this->_center.getY() },
         this->_sides,
         this->_radius,
         this->_rotation,
@@ -47,8 +43,7 @@ void Shape::PolygonLines::DrawShape()
     );
 }
 
-Shape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const float linethick, const Misc::Colors &values)
-{
+Indie::Raylib::Shape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int sides, const float radius, const float rotation, const float linethick, const Misc::Colors& values) {
     this->_center = center;
     this->_sides = sides;
     this->_radius = radius;
@@ -57,10 +52,9 @@ Shape::PolygonLinesEx::PolygonLinesEx(const Misc::Vector<2> center, const int si
     this->_colors = values;
 }
 
-void Shape::PolygonLinesEx::DrawShape()
-{
+void Indie::Raylib::Shape::PolygonLinesEx::DrawShape() {
     ::DrawPolyLinesEx(
-        ::Vector2 { this->_center.getX(), this->_center.getY() },
+        ::Vector2{ this->_center.getX(), this->_center.getY() },
         this->_sides,
         this->_radius,
         this->_rotation,

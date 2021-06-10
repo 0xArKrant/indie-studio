@@ -7,15 +7,13 @@
 
 #include "Pixel.hpp"
 
-Shape::Pixel::Pixel(const int posX, const int posY, const Misc::Colors &values)
-{
+Indie::Raylib::Shape::Pixel::Pixel(const int posX, const int posY, const Misc::Colors& values) {
     this->_posX = posX;
     this->_posY = posY;
     this->_colors = values;
 }
 
-void Shape::Pixel::DrawShape()
-{
+void Indie::Raylib::Shape::Pixel::DrawShape() {
     ::DrawPixel(
         this->_posX,
         this->_posY,
@@ -23,16 +21,14 @@ void Shape::Pixel::DrawShape()
     );
 }
 
-Shape::PixelV::PixelV(const Misc::Vector<2> position, const Misc::Colors &values)
-{
+Indie::Raylib::Shape::PixelV::PixelV(const Misc::Vector<2> position, const Misc::Colors& values) {
     this->_position = position;
     this->_colors = values;
 }
 
-void Shape::PixelV::DrawShape()
-{
+void Indie::Raylib::Shape::PixelV::DrawShape() {
     ::DrawPixelV(
-        ::Vector2 { this->_position.getX(), this->_position.getY() },
-        ::Color   { this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
+        ::Vector2{ this->_position.getX(), this->_position.getY() },
+        ::Color{ this->_colors.getR(), this->_colors.getG(), this->_colors.getB(), this->_colors.getA() }
     );
 }

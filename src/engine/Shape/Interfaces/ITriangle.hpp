@@ -9,19 +9,24 @@
 
 #include "IShape.hpp"
 
-namespace Shape {
-    class ITriangle : public IShape {
-        public:
-            virtual ~ITriangle() = default;
+namespace Indie {
 
-            virtual Misc::Vector<2> GetVector1()     const = 0;
-            virtual Misc::Vector<2> GetVector2()     const = 0;
-            virtual Misc::Vector<2> GetVector3()     const = 0;
-            virtual int             GetPointsCount() const = 0;
+    namespace Raylib {
+        namespace Shape {
+            class ITriangle : public IShape {
+                public:
+                    virtual ~ITriangle() = default;
 
-            virtual void SetVector1(const Misc::Vector<2>) = 0;
-            virtual void SetVector2(const Misc::Vector<2>) = 0;
-            virtual void SetVector3(const Misc::Vector<2>) = 0;
-            virtual void SetPointsCount(const int) = 0;
-    };
+                    virtual Misc::Vector<2> GetVector1()     const = 0;
+                    virtual Misc::Vector<2> GetVector2()     const = 0;
+                    virtual Misc::Vector<2> GetVector3()     const = 0;
+                    virtual int             GetPointsCount() const = 0;
+
+                    virtual void SetVector1(const Misc::Vector<2>) = 0;
+                    virtual void SetVector2(const Misc::Vector<2>) = 0;
+                    virtual void SetVector3(const Misc::Vector<2>) = 0;
+                    virtual void SetPointsCount(const int) = 0;
+            };
+        }
+    }
 }

@@ -9,15 +9,19 @@
 
 #include "IShape.hpp"
 
-namespace Shape {
-    class IPixel : public IShape {
-        public:
-            virtual ~IPixel() = default;
+namespace Indie {
+    namespace Raylib {
+        namespace Shape {
+            class IPixel : public IShape {
+                public:
+                    virtual ~IPixel() = default;
 
-            virtual int GetPosX() const = 0;
-            virtual int GetPosY() const = 0;
+                    virtual int GetPosX() const = 0;
+                    virtual int GetPosY() const = 0;
 
-            virtual void SetPosX(const int) = 0;
-            virtual void SetPosY(const int) = 0;
-    };
+                    virtual void SetPosX(const int) = 0;
+                    virtual void SetPosY(const int) = 0;
+            };
+        }
+    }
 }

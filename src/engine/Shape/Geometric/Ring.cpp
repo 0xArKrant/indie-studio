@@ -7,8 +7,7 @@
 
 #include "Ring.hpp"
 
-Shape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, const Misc::Colors &values)
-{
+Indie::Raylib::Shape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, const Misc::Colors& values) {
     this->_center = center;
     this->_innerRadius = innerRadius;
     this->_outerRadius = outerRadius;
@@ -18,10 +17,9 @@ Shape::Ring::Ring(const Misc::Vector<2> center, const float innerRadius, const f
     this->_colors = values;
 }
 
-void Shape::Ring::DrawShape()
-{
+void Indie::Raylib::Shape::Ring::DrawShape() {
     ::DrawRing(
-        ::Vector2 { this->_center.getX(), this->_center.getY() },
+        ::Vector2{ this->_center.getX(), this->_center.getY() },
         this->_innerRadius,
         this->_outerRadius,
         this->_startAngle,
@@ -31,8 +29,7 @@ void Shape::Ring::DrawShape()
     );
 }
 
-Shape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, const Misc::Colors &values)
-{
+Indie::Raylib::Shape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadius, const float outerRadius, const float startAngle, const float endAngle, const int segments, const Misc::Colors& values) {
     this->_center = center;
     this->_innerRadius = innerRadius;
     this->_outerRadius = outerRadius;
@@ -42,10 +39,9 @@ Shape::RingLines::RingLines(const Misc::Vector<2> center, const float innerRadiu
     this->_colors = values;
 }
 
-void Shape::RingLines::DrawShape()
-{
+void Indie::Raylib::Shape::RingLines::DrawShape() {
     ::DrawRingLines(
-        ::Vector2 { this->_center.getX(), this->_center.getY() },
+        ::Vector2{ this->_center.getX(), this->_center.getY() },
         this->_innerRadius,
         this->_outerRadius,
         this->_startAngle,
