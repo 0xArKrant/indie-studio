@@ -21,8 +21,8 @@ namespace Misc {
         public:
             Colors(const uchar&, const uchar&, const uchar&, const uchar&);
             Colors(const Colors &);
-            Colors();
-            ~Colors() = default;
+            Colors(); /*! < Colors default constructor */
+            ~Colors() = default; /*! < Colors destructor */
 
             Colors& operator=(const Colors &other);
             bool operator()(const Colors& c1, const Colors& c2) const;
