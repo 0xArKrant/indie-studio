@@ -21,18 +21,18 @@ namespace Misc {
             Texture(const unsigned int, const int, const int, const int, const int);
             Texture(const unsigned int, const int, const int, const int);
             Texture();
-            ~Texture() = default;
+            ~Texture() = default; /*!< Texture default destructor */
 
-            inline unsigned int getID() const { return this->_id; };
-            inline int getWidth()       const { return this->_width; };
-            inline int getHeight()      const { return this->_height; };
-            inline int getMipmaps()     const { return this->_mipmaps; };
-            inline int getFormat()      const { return this->_format; };
+            inline unsigned int getID()          const { return this->_id;      }; /*!< ID value getter @return unsigned int ID*/
+            inline int          getWidth()       const { return this->_width;   }; /*!< Width value getter @return int width */
+            inline int          getHeight()      const { return this->_height;  }; /*!< Height value getter @return int height */
+            inline int          getMipmaps()     const { return this->_mipmaps; }; /*!< Mipmaps value getter @return int mipmaps */
+            inline int          getFormat()      const { return this->_format;  }; /*!< Format value getter @return int format */
         private:
-            unsigned int _id;
-            int          _width;
-            int          _height;
-            int          _mipmaps;
-            int          _format;
+            unsigned int _id;  /*!< id value of Texture */
+            int          _width;  /*!< width value of Texture */
+            int          _height;  /*!< height value of Texture */
+            int          _mipmaps;  /*!< mimpas value of Texture */
+            int          _format;  /*!< format value of Texture */
     };
 }

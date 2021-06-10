@@ -21,12 +21,12 @@ namespace Misc {
         public:
             Ray(const Misc::Vector<3>, const Misc::Vector<3>);
             Ray();
-            ~Ray() = default;
+            ~Ray() = default; /*!< Ray default destructor */
 
-            inline Misc::Vector<3> getPosition()  const { return this->_position; };
-            inline Misc::Vector<3> getDirection() const { return this->_direction; };
+            inline Misc::Vector<3> getPosition()  const { return this->_position;  }; /*!< Position value getter @return Misc::Vector<3> position */
+            inline Misc::Vector<3> getDirection() const { return this->_direction; }; /*!< Direction value getter @return Misc::Vector<3> direction */
         private:
-            Misc::Vector<3> _position;
-            Misc::Vector<3> _direction;
+            Misc::Vector<3> _position; /*!< Position value of Ray */
+            Misc::Vector<3> _direction; /*!< Direction value of Ray */
     };
 }

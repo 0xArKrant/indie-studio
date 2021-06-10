@@ -13,6 +13,11 @@
 
 #include "Texture.hpp"
 
+/**
+ * @brief Construct a new Misc:: Texture:: Texture object
+ *
+ */
+
 Misc::Texture::Texture() {
     this->_id = 0;
     this->_width = 0;
@@ -21,6 +26,15 @@ Misc::Texture::Texture() {
     this->_format = 0;
 }
 
+/**
+ * @brief Construct a new Misc:: Texture:: Texture object
+ *
+ * @param id
+ * @param width
+ * @param height
+ * @param format
+ */
+
 Misc::Texture::Texture(const unsigned int id, const int width, const int height, const int format) {
     this->_id = id;
     this->_width = width;
@@ -28,6 +42,16 @@ Misc::Texture::Texture(const unsigned int id, const int width, const int height,
     this->_mipmaps = 1;
     this->_format = format;
 }
+
+/**
+ * @brief Construct a new Misc:: Texture:: Texture object
+ *
+ * @param id
+ * @param width
+ * @param height
+ * @param mipmaps
+ * @param format
+ */
 
 Misc::Texture::Texture(const unsigned int id, const int width, const int height, const int mipmaps, const int format) {
     this->_id = id;
