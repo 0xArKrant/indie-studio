@@ -101,10 +101,10 @@ namespace Indie {
                 private:
                     Core(int width, int height, const std::string& title);
                     ~Core();
-                    Cursor        _cursor; /*! < Cursor class for events */
-                    InputGamepads _inputGamepads; /*! < InputGamePads class for events */
-                    InputKeyboard _inputKeyboard; /*! < InputKeyboard class for events */
-                    InputMouse    _inputMouse; /*! < InputMouse class for events */
+                    Cursor        _cursor; /*! Cursor class for events */
+                    InputGamepads _inputGamepads; /*! InputGamePads class for events */
+                    InputKeyboard _inputKeyboard; /*! InputKeyboard class for events */
+                    InputMouse    _inputMouse; /*! InputMouse class for events */
             };
         } // namespace Core
     } // namespace Raylib
