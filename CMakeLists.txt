@@ -55,6 +55,8 @@ file(GLOB SRC_FILES
     src/engine/Audio/Audio.cpp
     src/engine/Models/ModelsRaylib.cpp
 
+    src/engine/Texture/Texture.cpp
+
     src/engine/Core/CoreRaylib.cpp
     src/engine/Core/InputMouse.cpp
     src/engine/Core/InputKeyboard.cpp
@@ -88,6 +90,7 @@ include_directories(
     #src/engine/Models/ModelDrawing
     src/engine/Misc/
     src/engine/Text
+    src/engine/Texture
     src/game/
     src/core/
 )
