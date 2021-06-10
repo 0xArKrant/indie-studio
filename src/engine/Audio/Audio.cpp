@@ -15,6 +15,7 @@
 
 /**
  * @brief Construct a new Indie:: Raylib:: Audio:: Wave:: Wave object
+ * @brief Load wave data from file
  *
  * @param fileName
  */
@@ -25,6 +26,7 @@ Indie::Raylib::Audio::Wave::Wave(std::string fileName) {
 
 /**
  * @brief Construct a new Indie:: Raylib:: Audio:: Wave:: Wave object
+ * @brief Load wave from memory buffer
  *
  * @param fileName
  * @param fileData
@@ -37,6 +39,7 @@ Indie::Raylib::Audio::Wave::Wave(std::string fileName, const unsigned char* file
 
 /**
  * @brief Destroy the Indie:: Raylib:: Audio:: Wave:: Wave object
+ * @brief Unload wave data
  *
  */
 
@@ -46,6 +49,7 @@ Indie::Raylib::Audio::Wave::~Wave() {
 
 /**
  * @brief Construct a new Indie:: Raylib:: Audio:: Sound:: Sound object
+ * @brief Load sound from file
  *
  * @param fileName
  */
@@ -56,6 +60,7 @@ Indie::Raylib::Audio::Sound::Sound(std::string fileName) {
 
 /**
  * @brief Destroy the Indie:: Raylib:: Audio:: Sound:: Sound object
+ * @brief Unload sound
  *
  */
 
@@ -65,6 +70,7 @@ Indie::Raylib::Audio::Sound::~Sound() {
 
 /**
  * @brief Construct a new Indie:: Raylib:: Audio:: Music:: Music object
+ * @brief Load music stream from file
  *
  * @param fileName
  */
@@ -75,6 +81,7 @@ Indie::Raylib::Audio::Music::Music(std::string fileName) {
 
 /**
  * @brief Construct a new Indie:: Raylib:: Audio:: Music:: Music object
+ * @brief Load music stream from data
  *
  * @param fileType
  * @param data
@@ -87,6 +94,7 @@ Indie::Raylib::Audio::Music::Music(std::string fileType, unsigned char* data, in
 
 /**
  * @brief Destroy the Indie:: Raylib:: Audio:: Music:: Music object
+ * @brief Unload music stream
  *
  */
 
@@ -96,6 +104,7 @@ Indie::Raylib::Audio::Music::~Music() {
 
 /**
  * @brief Construct a new Indie:: Raylib:: Audio:: Audio Stream:: Audio Stream object
+ * @brief Init audio stream (to stream raw audio pcm data)
  *
  * @param sampleRate
  * @param sampleSize
@@ -108,6 +117,7 @@ Indie::Raylib::Audio::AudioStream::AudioStream(unsigned int sampleRate, unsigned
 
 /**
  * @brief Destroy the Indie:: Raylib:: Audio:: Audio Stream:: Audio Stream object
+ * @brief Unload audio stream and free memory
  *
  */
 
