@@ -6,6 +6,7 @@
 */
 
 #include "SceneManagement.hpp"
+#include "Colors.hpp"
 
 Indie::Core::SceneManagement::SceneManagement(int width, int height, std::string &name) 
 {
@@ -21,9 +22,12 @@ Indie::Core::SceneManagement::~SceneManagement() {
 }
 
 void Indie::Core::SceneManagement::loop() {
-    while (!WindowShouldClose()) {
+    while (!this->_window.WindowShouldClose()) {
         this->_stack.top()->update(this->_stack);
+        this->_window.BeginDrawing();
+        this->_window.ClearBackground(Misc::Colors(0, 0, 0, 0));
         // Ajout de tick //
         this->_stack.top()->draw();
+        this->_window.EndDrawing();
     }
 }

@@ -6,6 +6,7 @@
 */
 
 #include "MainMenu.hpp"
+#include "Cube.hpp"
 
 Indie::Scene::MainMenu::MainMenu()
 {
