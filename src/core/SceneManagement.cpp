@@ -7,17 +7,13 @@
 
 #include "SceneManagement.hpp"
 
-Core::SceneManagement::SceneManagement()
-{
+Indie::Core::SceneManagement::SceneManagement() {
 }
 
-Core::SceneManagement::~SceneManagement()
-{
-
+Indie::Core::SceneManagement::~SceneManagement() {
 }
 
-void Core::SceneManagement::loop()
-{
+void Indie::Core::SceneManagement::loop() {
     while (!WindowShouldClose()) {
         this->_stack.top()->update(this->_stack);
         // Ajout de tick //

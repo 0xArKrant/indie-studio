@@ -9,11 +9,11 @@
 
 #include "indie.hpp"
 
-namespace indie {
-    class Core {
-        public:
-            Core();
-            ~Core();
-        private:
-    };
-}
+namespace Indie {
+   class Core {
+      public:
+         Core();
+         ~Core();
+      private:
+   };
+} // namespace Indie

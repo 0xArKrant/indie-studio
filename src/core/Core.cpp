@@ -5,20 +5,18 @@
 ** Core
 */
 
-#include "indie.hpp"
 #include "./Core.hpp"
 #include "Exception.hpp"
+#include "indie.hpp"
 
-indie::Core::Core()
-{
-    #ifdef _WIN32
-        std::cout << "WIN32 ! " << std::endl;
-    #endif
-    #ifdef __linux__
-        std::cout << "Linux ! " << std::endl;
-    #endif
+Indie::Core::Core() {
+#ifdef _WIN32
+    std::cout << "WIN32 ! " << std::endl;
+#endif
+#ifdef __linux__
+    std::cout << "Linux ! " << std::endl;
+#endif
 }
 
-indie::Core::~Core()
-{
+Indie::Core::~Core() {
 }

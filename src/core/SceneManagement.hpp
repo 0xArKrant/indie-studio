@@ -10,15 +10,15 @@
 #include "indie.hpp"
 #include "IScene.hpp"
 
-namespace Core {
-    class SceneManagement {
-        public:
-            SceneManagement();
-            ~SceneManagement();
-            void loop();
-
-        protected:
-        private:
-            std::stack <IScene *> _stack;
-    };
-}
+namespace Indie {
+    namespace Core     {
+        class SceneManagement         {
+            public:
+                SceneManagement();
+                ~SceneManagement();
+                void loop();
+            private:
+                std::stack<IScene*> _stack;
+        };
+    } // namespace Core
+} // namespace Indie
