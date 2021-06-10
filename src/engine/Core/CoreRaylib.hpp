@@ -17,7 +17,7 @@ namespace Indie {
                 public:
                     static Core& getInstance(int width, int height, const std::string& title);
                     // Core(Core &) = delete;
-                    //void operator=(const Core &) = delete;
+                    // void operator=(const Core &) = delete;
 
                     //Getter
                     inline Cursor getCursor() const { return this->_cursor; };
