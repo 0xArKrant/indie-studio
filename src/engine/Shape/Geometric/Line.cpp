@@ -13,6 +13,15 @@
 
 #include "Line.hpp"
 
+/**
+ * @brief Construct a new Indie:: Raylib:: Shape:: Line:: Line object
+ *
+ * @param startPosX
+ * @param startPosY
+ * @param endPosX
+ * @param endPosY
+ * @param values
+ */
 Indie::Raylib::Shape::Line::Line(const int startPosX, const int startPosY, const int endPosX, const int endPosY, const Misc::Colors& values) {
     this->_startPosX = startPosX;
     this->_startPosY = startPosY;
@@ -21,6 +30,10 @@ Indie::Raylib::Shape::Line::Line(const int startPosX, const int startPosY, const
     this->_colors = values;
 }
 
+/**
+ * @brief Draw a line
+ *
+ */
 void Indie::Raylib::Shape::Line::DrawShape() {
     ::DrawLine(
         this->_startPosX,
@@ -31,12 +44,23 @@ void Indie::Raylib::Shape::Line::DrawShape() {
     );
 }
 
+/**
+ * @brief Construct a new Indie:: Raylib:: Shape:: Line V:: Line V object
+ *
+ * @param startPos
+ * @param endPos
+ * @param values
+ */
 Indie::Raylib::Shape::LineV::LineV(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const Misc::Colors& values) {
     this->_startPos = startPos;
     this->_endPos = endPos;
     this->_colors = values;
 }
 
+/**
+ * @brief Draw a line (Vector version)
+ *
+ */
 void Indie::Raylib::Shape::LineV::DrawShape() {
     ::DrawLineV(
         ::Vector2{ this->_startPos.getX(), this->_startPos.getY() },
@@ -45,6 +69,14 @@ void Indie::Raylib::Shape::LineV::DrawShape() {
     );
 }
 
+/**
+ * @brief Construct a new Indie:: Raylib:: Shape:: Line Ex:: Line Ex object
+ *
+ * @param startPos
+ * @param endPos
+ * @param thick
+ * @param values
+ */
 Indie::Raylib::Shape::LineEx::LineEx(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const float thick, const Misc::Colors& values) {
     this->_startPos = startPos;
     this->_endPos = endPos;
@@ -52,6 +84,10 @@ Indie::Raylib::Shape::LineEx::LineEx(const Misc::Vector<2> startPos, const Misc:
     this->_colors = values;
 }
 
+/**
+ * @brief Draw a line defining thickness
+ *
+ */
 void Indie::Raylib::Shape::LineEx::DrawShape() {
     ::DrawLineEx(
         ::Vector2{ this->_startPos.getX(), this->_startPos.getY() },
@@ -61,6 +97,14 @@ void Indie::Raylib::Shape::LineEx::DrawShape() {
     );
 }
 
+/**
+ * @brief Construct a new Indie:: Raylib:: Shape:: Line Bezier:: Line Bezier object
+ *
+ * @param startPos
+ * @param endPos
+ * @param thick
+ * @param values
+ */
 Indie::Raylib::Shape::LineBezier::LineBezier(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const float thick, const Misc::Colors& values) {
     this->_startPos = startPos;
     this->_endPos = endPos;
@@ -68,6 +112,10 @@ Indie::Raylib::Shape::LineBezier::LineBezier(const Misc::Vector<2> startPos, con
     this->_colors = values;
 }
 
+/**
+ * @brief Draw a line using cubic-bezier curves in-out
+ *
+ */
 void Indie::Raylib::Shape::LineBezier::DrawShape() {
     ::DrawLineBezier(
         ::Vector2{ this->_startPos.getX(), this->_startPos.getY() },
@@ -77,7 +125,15 @@ void Indie::Raylib::Shape::LineBezier::DrawShape() {
     );
 }
 
-
+/**
+ * @brief Construct a new Indie:: Raylib:: Shape:: Line Bezier Quad:: Line Bezier Quad object
+ *
+ * @param startPos
+ * @param endPos
+ * @param controlPos
+ * @param thick
+ * @param values
+ */
 Indie::Raylib::Shape::LineBezierQuad::LineBezierQuad(const Misc::Vector<2> startPos, const Misc::Vector<2> endPos, const Misc::Vector<2> controlPos, const float thick, const Misc::Colors& values) {
     this->_startPos = startPos;
     this->_endPos = endPos;
@@ -86,6 +142,10 @@ Indie::Raylib::Shape::LineBezierQuad::LineBezierQuad(const Misc::Vector<2> start
     this->_colors = values;
 }
 
+/**
+ * @brief Draw line using quadratic bezier curves with a control point
+ *
+ */
 void Indie::Raylib::Shape::LineBezierQuad::DrawShape() {
     ::DrawLineBezierQuad(
         ::Vector2{ this->_startPos.getX(), this->_startPos.getY() },
@@ -96,12 +156,23 @@ void Indie::Raylib::Shape::LineBezierQuad::DrawShape() {
     );
 }
 
+/**
+ * @brief Construct a new Indie:: Raylib:: Shape:: Line Strip:: Line Strip object
+ *
+ * @param points
+ * @param pointsCount
+ * @param values
+ */
 Indie::Raylib::Shape::LineStrip::LineStrip(const Misc::Vector<2> points, const int pointsCount, const Misc::Colors& values) {
     this->_points = points;
     this->_pointsCount = pointsCount;
     this->_colors = values;
 }
 
+/**
+ * @brief Draw lines sequence
+ *
+ */
 void Indie::Raylib::Shape::LineStrip::DrawShape() {
     ::Vector2 points = { this->_points.getX(), this->_points.getY() };
 
