@@ -27,7 +27,6 @@ namespace Indie {
             private:
                 boost::asio::io_context io_context;
                 udp::socket sock;
-                std::string data;
         };
     }
 }

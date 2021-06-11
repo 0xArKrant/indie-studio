@@ -19,6 +19,8 @@ void Indie::Server::Server::send(const std::string &message)
 
 std::string Indie::Server::Server::receive()
 {
+    std::string buffer;
     udp::endpoint endpoint;
-    sock.receive_from(boost::asio::buffer(this->data), endpoint);
+    sock.receive_from(boost::asio::buffer(buffer), endpoint);
+    return buffer;
 }
