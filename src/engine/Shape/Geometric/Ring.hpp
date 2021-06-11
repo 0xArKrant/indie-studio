@@ -174,7 +174,7 @@ namespace Indie {
                      *
                      * @return Misc::Colors
                      */
-                    inline Misc::Colors GetColors() { return this->_colors; };
+                    inline Misc::Colors GetColors() const { return this->_colors; };
 
                     /**
                      * @brief Set the Vector object
