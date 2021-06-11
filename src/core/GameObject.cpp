@@ -39,16 +39,6 @@ void Indie::Game::GameObject::setDisplay(bool display)
     this->_display = display;
 }
 
-void update(float elapsedTimes)
-{
-
-}
-
-void draw()
-{
-
-}
-
 Indie::Game::GameObject::~GameObject()
 {
 }

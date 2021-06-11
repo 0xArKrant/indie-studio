@@ -19,6 +19,8 @@ namespace Indie {
                     BOMB,
                     BOX,
                     TEXT,
+                    MUSIC,
+
 
                 };
                 GameObject(std::string id, Misc::Vector<3> pos, TypeObject type, bool display);
@@ -26,14 +28,13 @@ namespace Indie {
                 GameObject(const GameObject &cpy) = delete;
                 GameObject &operator =(const GameObject &cpy) = delete;
                 ~GameObject();
-                //TODO
                 std::string getId() const;
                 Misc::Vector<3> getPos() const;
                 bool getDisplay() const;
                 void setDisplay(bool display);
                 void setPosition(Misc::Vector<3> pos);
-                void update(float elapsedTimes);
-                void draw() const;
+                virtual void update(float elapsedTimes) = 0;
+                virtual void draw() = 0;
 
             protected:
             private:
