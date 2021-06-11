@@ -81,7 +81,9 @@ var menudata={children:[
 {text:"e",url:"functions_vars_e.html#index_e"},
 {text:"i",url:"functions_vars_i.html#index_i"},
 {text:"r",url:"functions_vars_r.html#index_r"},
-{text:"s",url:"functions_vars_s.html#index_s"}]}]}]},
+{text:"s",url:"functions_vars_s.html#index_s"}]},
+{text:"Enumerations",url:"functions_enum.html"},
+{text:"Enumerator",url:"functions_eval.html"}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
