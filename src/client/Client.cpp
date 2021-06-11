@@ -6,27 +6,26 @@
 */
 
 #include "Client.hpp"
-enum { max_length = 1024 };
 
-Client::Client::Client(char *argv1, char *argv2) : s(io_context, udp::endpoint(udp::v4(), 0)), resolver(io_context)
+Indie::Client::Client::Client(const std::string &ip, const std::string &port) : socket(io_context, udp::endpoint(udp::v4(), 0)), resolver(io_context)
 {
-    this->endpoints = this->resolver.resolve(udp::v4(), argv1, argv2);
+    this->endpoints = this->resolver.resolve(udp::v4(), ip, port);
 }
 
-Client::Client::~Client()
+Indie::Client::Client::~Client()
 {
 }
 
-void Client::Client::send_to(const std::string &message)
+void Indie::Client::Client::send_to(const std::string &message)
 {
-    this->s.send_to(boost::asio::buffer(message), *this->endpoints.begin());
+    this->socket.send_to(boost::asio::buffer(message), *this->endpoints.begin());
 }
 
-std::string Client::Client::receive_from()
+std::string Indie::Client::Client::receive_from()
 {
-    std::string buffer = NULL;
+    std::string buffer;
+    udp::endpoint sender_endpoint;
 
-    this->s.receive_from(boost::asio::buffer(buffer), sender_endpoint);
-
+    this->socket.receive_from(boost::asio::buffer(buffer), sender_endpoint);
     return (buffer);
 }
