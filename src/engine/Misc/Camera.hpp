@@ -21,7 +21,11 @@ namespace Misc {
         public:
             Camera2D(const Misc::Vector<2>, const Misc::Vector<2>, float, float);
             Camera2D();
-            ~Camera2D() = default; /*! Camera2D default destructor */
+            /**
+             * @brief Destroy the Camera 2D object
+             *
+             */
+            ~Camera2D() = default;
 
             /**
              * @brief Get the Offset object
@@ -58,8 +62,11 @@ namespace Misc {
         public:
             Camera3D(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Vector<3>, float, int);
             Camera3D();
-            ~Camera3D() = default; /*! Camera3D default destructor */
-
+            /**
+             * @brief Destroy the Camera 3D object
+             *
+             */
+            ~Camera3D() = default;
             /**
              * @brief Get the Position object
              *

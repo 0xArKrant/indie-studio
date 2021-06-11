@@ -21,7 +21,11 @@ namespace Misc {
             Texture(const unsigned int, const int, const int, const int, const int);
             Texture(const unsigned int, const int, const int, const int);
             Texture();
-            ~Texture() = default; /*! Texture default destructor */
+            /**
+             * @brief Destroy the Texture object
+             *
+             */
+            ~Texture() = default;
 
             /**
              * @brief Get the ID object

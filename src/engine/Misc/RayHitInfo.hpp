@@ -21,7 +21,11 @@ namespace Misc {
         public:
             RayHitInfo(const bool, const float, const Misc::Vector<3>, const Misc::Vector<3>);
             RayHitInfo();
-            ~RayHitInfo() = default; /*! RayHitInfo default destructor */
+            /**
+             * @brief Destroy the Ray Hit Info object
+             *
+             */
+            ~RayHitInfo() = default;
             /**
              * @brief Check if Ray has hit
              *

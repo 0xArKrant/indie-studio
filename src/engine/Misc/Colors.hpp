@@ -22,7 +22,11 @@ namespace Misc {
             Colors(const uchar&, const uchar&, const uchar&, const uchar&);
             Colors(const Colors &);
             Colors(); /*!  Colors default constructor */
-            ~Colors() = default; /*!  Colors destructor */
+            /**
+             * @brief Destroy the Colors object
+             *
+             */
+            ~Colors() = default;
 
             Colors& operator=(const Colors &other);
             bool operator()(const Colors& c1, const Colors& c2) const;

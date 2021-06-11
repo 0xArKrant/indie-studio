@@ -19,7 +19,11 @@ namespace Misc {
             Matrix(const float, const float, const float, const float, const float, const float, const float,
                 const float, const float, const float, const float, const float, const float, const float, const float, const float);
             Matrix();
-            ~Matrix() = default; /*! Matrix default destructor */
+            /**
+             * @brief Destroy the Matrix object
+             *
+             */
+            ~Matrix() = default;
 
             inline float getMatrix0()  const { return this->_m0;  }; /*! m0 value getter @return float m0 */
             inline float getMatrix1()  const { return this->_m1;  }; /*! m1 value getter @return float m1 */

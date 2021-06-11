@@ -20,7 +20,11 @@ namespace Misc {
         public:
             Rectangle(const std::array<float, 4> rectangle);
             Rectangle();
-            ~Rectangle() = default; /*! Rectangle default desctructor */
+            /**
+             * @brief Destroy the Rectangle object
+             *
+             */
+            ~Rectangle() = default;
 
             /**
              * @brief Get X Position object

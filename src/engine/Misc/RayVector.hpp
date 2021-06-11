@@ -21,7 +21,11 @@ namespace Misc {
         public:
             Ray(const Misc::Vector<3>, const Misc::Vector<3>);
             Ray();
-            ~Ray() = default; /*! Ray default destructor */
+            /**
+             * @brief Destroy the Ray object
+             *
+             */
+            ~Ray() = default;
 
             /**
              * @brief Get the Position object
