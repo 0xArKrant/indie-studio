@@ -1,9 +1,16 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio
-** File description:
-** InputMouse
-*/
+/**
+ * @file InputMouse.hpp
+ * @author QuentinMarchand1
+ * @author RaphMandica
+ * @brief InputMouse substitution class to raylib structure
+ * @version 0.1
+ * @date 2021-06-10
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 

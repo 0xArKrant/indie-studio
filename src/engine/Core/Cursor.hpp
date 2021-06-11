@@ -1,9 +1,17 @@
-/*
-** EPITECH PROJECT, 2021
-** indiestudio2
-** File description:
-** Cursor
-*/
+/**
+ * @file Cursor.hpp
+ * @author QuentinMarchand1
+ * @author RaphMandica
+ * @brief Cursor substitution class to raylib structure
+ * @brief
+ * @version 0.1
+ * @date 2021-06-10
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 

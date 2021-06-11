@@ -6,11 +6,17 @@
 */
 
 /**
- *  @file   Colors.cpp
- *  @brief  Generic color file
- *  @author Benjamin Lafouge
- *  @date   2021-05-20
- **/
+ * @file Colors.cpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Colors class substitution to raylib structure
+ * @version 0.1
+ * @date 2021-06-10
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #include "Colors.hpp"
 
@@ -60,7 +66,8 @@ Misc::Colors& Misc::Colors::operator=(const Colors& other) {
 
 /**
  *  Colors equals operator implementation
- *  @param other colors to copy
+ *  @param c1
+ *  @param c2
  **/
 bool Misc::Colors::operator()(const Colors& c1, const Colors& c2) const {
     return (c1.getA() + c1.getR() + c1.getG() + c1.getB() < c2.getA() + c2.getR() + c2.getG() + c2.getB());
@@ -77,6 +84,7 @@ bool Misc::Colors::operator<(const Misc::Colors& col) {
 /**
  *  Colors inferior operator implementation
  *  @param c1 c2 colors to be compared
+ *  @param c2
  **/
 bool operator<(const Misc::Colors& c1, const Misc::Colors& c2) {
     return (c1.getA() + c1.getR() + c1.getG() + c1.getB() < c2.getA() + c2.getR() + c2.getG() + c2.getB());

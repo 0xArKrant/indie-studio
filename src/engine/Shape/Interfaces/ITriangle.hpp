@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio
-** File description:
-** ITriangle
-*/
+/**
+ * @file ITriangle.hpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 

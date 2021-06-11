@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** indie
-*/
+/**
+ * @file indie.hpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Include for system libraries and raylib
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 

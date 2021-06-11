@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indiestudioclean
-** File description:
-** ModelRaylib
-*/
+/**
+ * @file ModelsRaylib.hpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 
@@ -26,8 +32,8 @@ namespace Indie {
                     void DrawBoundingBox(Misc::Colors color);
                     ~ModelsRaylib();
                 private:
-                    ::Model _model;
-                    ::BoundingBox _BoundingBox;
+                    ::Model _model; /*! Model structure from raylib */
+                    ::BoundingBox _BoundingBox; /*! BoundingBox structure from raylib*/
             };
         }
     }

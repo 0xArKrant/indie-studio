@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** IText
-*/
+/**
+ * @file IText.hpp
+ * @author QuentinMarchand1
+ * @brief Interface for the Text Module of the engine
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 
