@@ -17,10 +17,10 @@ using boost::asio::ip::udp;
 
 namespace Indie {
     namespace Server {
-        class Server {
+        class ServerConnection {
             public:
-                Server(unsigned short port);
-                ~Server();
+                ServerConnection(unsigned short port);
+                ~ServerConnection();
                 void send(const std::string &message);
                 std::string receive();
             protected:

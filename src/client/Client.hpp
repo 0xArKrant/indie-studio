@@ -16,10 +16,10 @@ using boost::asio::ip::udp;
 
 namespace Indie {
     namespace Client {
-        class Client {
+        class ClientConnection {
             public:
-                Client(const std::string &ip, const std::string &port);
-                ~Client();
+                ClientConnection(const std::string &ip, const std::string &port);
+                ~ClientConnection();
                 void send_to(const std::string &message);
                 std::string receive_from();
             protected:
