@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio
-** File description:
-** Text
-*/
+/**
+ * @file Text.hpp
+ * @author QuentinMarchand1
+ * @brief Encapsulation of the Text module from raylib
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 
@@ -32,7 +38,7 @@ namespace Indie {
                     Misc::Vector<2> MeasureTextEx(const std::string& text, float fontSize, float spacing);
                     int GetGlyphIndex(int codepoint);
                 private:
-                    ::Font _font;
+                    ::Font _font; /*!Font structure from raylib */
             };
         }
     }

@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio
-** File description:
-** Texture
-*/
+/**
+ * @file Texture.hpp
+ * @author QuentinMarchand1
+ * @brief Encapsulation of the Texture module from raylib
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 
@@ -25,7 +31,7 @@ namespace Indie {
                     void DrawTextureEx(Misc::Vector<2> position, float rotation, float scale, Misc::Colors tint);
                     void DrawTextureRec(Misc::Rectangle source, Misc::Vector<2> position, Misc::Colors tint);
                 private:
-                    ::Texture2D _texture;
+                    ::Texture2D _texture; /*!Texture2D structure from raylib */
             };
         }
     }

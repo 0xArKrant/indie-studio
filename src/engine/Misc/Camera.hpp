@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** Camera
-*/
+/**
+ * @file Camera.hpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Camera class substitution to raylib structure
+ * @version 0.1
+ * @date 10-06-2021
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #pragma once
 
@@ -15,29 +21,87 @@ namespace Misc {
         public:
             Camera2D(const Misc::Vector<2>, const Misc::Vector<2>, float, float);
             Camera2D();
+            /**
+             * @brief Destroy the Camera 2D object
+             *
+             */
             ~Camera2D() = default;
 
-            inline Misc::Vector<2> getOffset()    const { return this->_offset; };
-            inline Misc::Vector<2> getTarget()    const { return this->_target; };
+            /**
+             * @brief Get the Offset object
+             *
+             * @return Misc::Vector<2>
+             */
+            inline Misc::Vector<2> getOffset()    const { return this->_offset;   };
+            /**
+             * @brief Get the Target object
+             *
+             * @return Misc::Vector<2>
+             */
+            inline Misc::Vector<2> getTarget()    const { return this->_target;   };
+            /**
+             * @brief Get the Rotation object
+             *
+             * @return float
+             */
             inline float           getRotation()  const { return this->_rotation; };
-            inline float           getZoom()      const { return this->_zoom; };
+            /**
+             * @brief Get the Zoom object
+             *
+             * @return float
+             */
+            inline float           getZoom()      const { return this->_zoom;     };
         private:
-            Misc::Vector<2> _offset;
-            Misc::Vector<2> _target;
-            float           _rotation;
-            float           _zoom;
+            Misc::Vector<2> _offset; /*! Misc::Vector<2> offset value of Camera2D*/
+            Misc::Vector<2> _target; /*! Misc::Vector<2> target value of Camera2D*/
+            float           _rotation; /*! Float rotation value of Camera2D*/
+            float           _zoom; /*! Float zoom value of Camera2D*/
     };
 
     class Camera3D {
         public:
             Camera3D(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Vector<3>, float, int);
             Camera3D();
+            /**
+             * @brief Destroy the Camera 3D object
+             *
+             */
             ~Camera3D() = default;
+            /**
+             * @brief Get the Position object
+             *
+             * @return Misc::Vector<3>
+             */
+            inline Misc::Vector<3> getPosition()   const { return this->_position;   };
+            /**
+             * @brief Get the Target object
+             *
+             * @return Misc::Vector<3>
+             */
+            inline Misc::Vector<3> getTarget()     const { return this->_target;     };
+            /**
+             * @brief Get the Up object
+             *
+             * @return Misc::Vector<3>
+             */
+            inline Misc::Vector<3> getUp()         const { return this->_up;         };
+            /**
+             * @brief Get the Fovy object
+             *
+             * @return float
+             */
+            inline float           getFovy()       const { return this->_fovy;       };
+            /**
+             * @brief Get the Projection object
+             *
+             * @return int
+             */
+            inline int             getProjection() const { return this->_projection; };
         private:
-            Misc::Vector<3> _position;
-            Misc::Vector<3> _target;
-            Misc::Vector<3> _up;
-            float           _fovy;
-            int             _projection;
+            Misc::Vector<3> _position; /*! Misc::Vector<3> position value of Camera3D*/
+            Misc::Vector<3> _target; /*! Misc::Vector<3> target value of Camera3D*/
+            Misc::Vector<3> _up; /*! Misc::Vector<3> up value of Camera3D*/
+            float           _fovy; /*! Float fovy (y view) offset value of Camera3D*/
+            int             _projection; /*! Int projection value of Camera3D*/
     };
 }
