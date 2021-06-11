@@ -1,9 +1,15 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** Line
-*/
+/**
+ * @file Line.cpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Encapsulation of all Shape/Line module from raylib
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
 #include "Line.hpp"
 
