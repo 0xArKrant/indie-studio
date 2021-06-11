@@ -15,7 +15,7 @@
 
 /**
  * @brief Construct a new Indie:: Raylib:: Text:: Text:: Text object
- *
+ * @brief Get the default Font
  */
 Indie::Raylib::Text::Text::Text() {
     this->_font = ::GetFontDefault();
@@ -23,6 +23,7 @@ Indie::Raylib::Text::Text::Text() {
 
 /**
  * @brief Construct a new Indie:: Raylib:: Text:: Text:: Text object
+ * @brief Load font from file into GPU memory (VRAM)
  *
  * @param fileName
  */
@@ -32,6 +33,7 @@ Indie::Raylib::Text::Text::Text(const std::string& fileName) {
 
 /**
  * @brief Construct a new Indie:: Raylib:: Text:: Text:: Text object
+ * @brief Load font from file with extended parameters
  *
  * @param fileName
  * @param fontSize
@@ -49,7 +51,7 @@ Indie::Raylib::Text::Text::Text(const std::string& fileName, int fontSize, int* 
 
 /**
  * @brief Destroy the Indie:: Raylib:: Text:: Text:: Text object
- *
+ * @brief Unload Font from GPU memory (VRAM)
  */
 Indie::Raylib::Text::Text::~Text() {
     ::UnloadFont(this->_font);
