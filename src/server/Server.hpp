@@ -23,8 +23,6 @@ namespace Server {
 
         protected:
         private:
-            asio::io_context context;
-            asio::ip::udp::endpoint endPoint;
-            asio::ip::udp::socket socket;
+
     };
 }
