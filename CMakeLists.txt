@@ -67,7 +67,7 @@ file(GLOB SRC_FILES
     src/core/Core.cpp
     src/core/SceneManagement.cpp
     src/error/Exception.cpp
-
+    src/scene/MainMenu.cpp
     src/server/Server.cpp
     src/client/Client.cpp
     src/core/GameObject.cpp
@@ -97,7 +97,7 @@ include_directories(
     src/engine/Texture
     src/game/
     src/core/
-
+    src/scene/
     src/client
     src/server
 )
