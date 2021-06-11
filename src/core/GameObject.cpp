@@ -12,6 +12,7 @@ Indie::Game::GameObject::GameObject(std::string id, Misc::Vector<3> pos, TypeObj
     this->_id = id;
     this->_pos = pos;
     this->_display = display;
+    (void) type;
 }
 
 std::string Indie::Game::GameObject::getId() const
