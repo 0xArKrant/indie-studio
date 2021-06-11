@@ -9,20 +9,25 @@
 
 #define ASIO_STANDALONE
 
+#include <cstdlib>
+#include <iostream>
 #include <boost/asio.hpp>
-#include <boost/asio/ts/buffer.hpp>
-#include <boost/asio/ts/internet.hpp>
 
-using namespace boost;
+using boost::asio::ip::udp;
 
-namespace Server {
-    class Server {
-        public:
-            Server();
-            ~Server();
-
-        protected:
-        private:
-
-    };
+namespace Indie {
+    namespace Server {
+        class Server {
+            public:
+                Server(unsigned short port);
+                ~Server();
+                void send(const std::string &message);
+                std::string receive();
+            protected:
+            private:
+                boost::asio::io_context io_context;
+                udp::socket sock;
+                std::string data;
+        };
+    }
 }
