@@ -1,9 +1,9 @@
 var searchData=
 [
   ['scenemanagement_1526',['SceneManagement',['../d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#a0c4c31a29aaab4370a545528dd29db9b',1,'Indie::Core::SceneManagement']]],
-  ['send_1527',['send',['../d6/d35/classIndie_1_1Server_1_1Server.html#a505c4d61792fa5e50d377e7cb0f52216',1,'Indie::Server::Server']]],
-  ['send_5fto_1528',['send_to',['../de/da0/classIndie_1_1Client_1_1Client.html#aa3739781eef65a1cf85a96c40bbbcad0',1,'Indie::Client::Client']]],
-  ['server_1529',['Server',['../d6/d35/classIndie_1_1Server_1_1Server.html#af2428459fac51422a9ce7217852078ba',1,'Indie::Server::Server']]],
+  ['send_1527',['send',['../d3/d5e/classIndie_1_1Server_1_1ServerConnection.html#a5f74b6b279a30b24d5aeeb8718f8d1dc',1,'Indie::Server::ServerConnection']]],
+  ['send_5fto_1528',['send_to',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#a100b4163ddb8f06e21d96ec8b66dbf98',1,'Indie::Client::ClientConnection']]],
+  ['serverconnection_1529',['ServerConnection',['../d3/d5e/classIndie_1_1Server_1_1ServerConnection.html#a3a3ca8ca7460423defd55e631690e4b9',1,'Indie::Server::ServerConnection']]],
   ['seta_1530',['setA',['../d0/da2/classMisc_1_1Colors.html#aa768826f6809347ac4f78b2e94c12bb1',1,'Misc::Colors']]],
   ['setaudiostreambuffersizedefault_1531',['SetAudioStreamBufferSizeDefault',['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html#a73ce480536f00106d82d7b42fc7b3774',1,'Indie::Raylib::Audio::AudioStream']]],
   ['setaudiostreampitch_1532',['SetAudioStreamPitch',['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html#a2b9d390f86175a0bbe5d7f98528bf2be',1,'Indie::Raylib::Audio::AudioStream']]],

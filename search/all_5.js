@@ -8,7 +8,7 @@ var searchData=
   ['enddrawing_230',['EndDrawing',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a25759d4ee4a219d09218bb34f4d4c04c',1,'Indie::Raylib::Core::Core']]],
   ['endmode2d_231',['EndMode2D',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a88f64dda0b3ce2b84e7f9ba0b972849d',1,'Indie::Raylib::Core::Core']]],
   ['endmode3d_232',['EndMode3D',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a9e88e49ead20d6a4176cebb08d33753e',1,'Indie::Raylib::Core::Core']]],
-  ['endpoints_233',['endpoints',['../de/da0/classIndie_1_1Client_1_1Client.html#ae0ce34bdbbb1959c5236f781b3ccc947',1,'Indie::Client::Client']]],
+  ['endpoints_233',['endpoints',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#a9807dd6e57b9cd5aa74f757a813751f1',1,'Indie::Client::ClientConnection']]],
   ['endtexturemode_234',['EndTextureMode',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a655d05d5ce5938ee98e32d1aa702bc20',1,'Indie::Raylib::Core::Core']]],
   ['engineraylib_2ecpp_235',['EngineRaylib.cpp',['../d4/d4e/EngineRaylib_8cpp.html',1,'']]],
   ['engineraylib_2ehpp_236',['EngineRaylib.hpp',['../d2/db7/EngineRaylib_8hpp.html',1,'']]],

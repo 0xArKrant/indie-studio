@@ -16,7 +16,7 @@ var searchData=
   ['circlesector_936',['CircleSector',['../db/de6/classIndie_1_1Raylib_1_1Shape_1_1CircleSector.html',1,'Indie::Raylib::Shape']]],
   ['circlesectorlines_937',['CircleSectorLines',['../d2/d2e/classIndie_1_1Raylib_1_1Shape_1_1CircleSectorLines.html',1,'Indie::Raylib::Shape']]],
   ['circlev_938',['CircleV',['../d9/dbd/classIndie_1_1Raylib_1_1Shape_1_1CircleV.html',1,'Indie::Raylib::Shape']]],
-  ['client_939',['Client',['../de/da0/classIndie_1_1Client_1_1Client.html',1,'Indie::Client']]],
+  ['clientconnection_939',['ClientConnection',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html',1,'Indie::Client']]],
   ['colors_940',['Colors',['../d0/da2/classMisc_1_1Colors.html',1,'Misc']]],
   ['core_941',['Core',['../d5/d01/classIndie_1_1Core.html',1,'Indie::Core'],['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html',1,'Indie::Raylib::Core::Core']]],
   ['cube_942',['Cube',['../d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html',1,'Indie::Raylib::Models']]],
