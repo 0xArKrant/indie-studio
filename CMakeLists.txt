@@ -33,8 +33,8 @@ file(GLOB SRC_FILES
     src/engine/Shape/Geometric/Triangle.cpp
     src/engine/Shape/Geometric/Line.cpp
     src/engine/Shape/Geometric/Circle.cpp
-
     src/engine/Shape/Collision/CheckCollision.cpp
+
 
     src/engine/Models/Geometric/Cube.cpp
     src/engine/Models/Geometric/Line3D.cpp
@@ -46,14 +46,10 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Grid.cpp
     src/engine/Models/Geometric/Cylinder.cpp
     src/engine/Models/Geometric/Sphere.cpp
-    #src/engine/Models/MeshGeneration/GenMesh.cpp
-    #src/engine/Models/MeshManipulation/MeshManipulation.cpp
-    #src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
-    #src/engine/Models/ModelDrawing/DrawBillboard.cpp
-    #src/engine/Models/ModelDrawing/DrawModel.cpp
+    src/engine/Models/ModelsRaylib.cpp
+
     src/engine/Text/Text.cpp
     src/engine/Audio/Audio.cpp
-    src/engine/Models/ModelsRaylib.cpp
 
     src/engine/Texture/Texture.cpp
 
@@ -89,9 +85,6 @@ include_directories(
     src/engine/Core
     src/engine/Audio
     src/engine/Models
-    #src/engine/Models/MeshGeneration
-    #src/engine/Models/MeshManipulation
-    #src/engine/Models/ModelDrawing
     src/engine/Misc/
     src/engine/Text
     src/engine/Texture
