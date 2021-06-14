@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bill_1943',['bill',['../df/d9f/classIndie_1_1Scene_1_1MainMenu.html#a30a51ed620c22d40f3d1fe9ca85a5df9',1,'Indie::Scene::MainMenu']]],
-  ['billposition_1944',['billPosition',['../df/d9f/classIndie_1_1Scene_1_1MainMenu.html#af6be9f582f1b46caec79784b0d2ba3dc',1,'Indie::Scene::MainMenu']]]
+  ['endpoints_1797',['endpoints',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#a9807dd6e57b9cd5aa74f757a813751f1',1,'Indie::Client::ClientConnection']]]
 ];
