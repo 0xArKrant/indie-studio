@@ -30,10 +30,17 @@ namespace Indie {
                     void DrawModelWires(Misc::Vector<3> position, float scale, Misc::Colors tint);
                     void DrawModelWiresEx(Misc::Vector<3> position, Misc::Vector<3> rotationAxis, float rotationAngle, Misc::Vector<3> scale, Misc::Colors tint);
                     void DrawBoundingBox(Misc::Colors color);
+                    void DrawModels();
+                    void ComputeMesh();
+                    ::Mesh GenerateMesh();
+                    Misc::Colors GetColors() const;
+                    void SetColors(const Misc::Colors);
                     ~ModelsRaylib();
+
                 private:
                     ::Model _model; /*! Model structure from raylib */
                     ::BoundingBox _BoundingBox; /*! BoundingBox structure from raylib*/
+                    Misc::Colors _colors;
             };
         }
     }

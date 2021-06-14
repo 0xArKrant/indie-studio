@@ -5,9 +5,6 @@
 ** GameObject
 */
 
-#ifndef GAMEOBJECT_HPP_
-#define GAMEOBJECT_HPP_
-
 #include "Vector.hpp"
 
 namespace Indie {
@@ -20,8 +17,6 @@ namespace Indie {
                     BOX,
                     TEXT,
                     MUSIC,
-
-
                 };
                 GameObject(std::string id, Misc::Vector<3> pos, TypeObject type, bool display);
                 GameObject() = delete;
@@ -44,5 +39,3 @@ namespace Indie {
         };
     }
 }
-
-#endif /* !GAMEOBJECT_HPP_ */
