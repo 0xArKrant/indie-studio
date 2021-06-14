@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['io_5fcontext_1932',['io_context',['../de/da0/classIndie_1_1Client_1_1Client.html#a6b5a5f12086b8ba35a8f36c82be0b811',1,'Indie::Client::Client::io_context()'],['../d6/d35/classIndie_1_1Server_1_1Server.html#a6c3239536da5ae6131d1bfbc1d7ce641',1,'Indie::Server::Server::io_context()']]]
+  ['io_5fcontext_1940',['io_context',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#a04506fe2c0f5d47621a291a300a8aa08',1,'Indie::Client::ClientConnection::io_context()'],['../d3/d5e/classIndie_1_1Server_1_1ServerConnection.html#a5c371b3d75c7f3c3d98cb8ebd8872f4c',1,'Indie::Server::ServerConnection::io_context()']]]
 ];

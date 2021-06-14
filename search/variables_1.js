@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endpoints_1931',['endpoints',['../de/da0/classIndie_1_1Client_1_1Client.html#ae0ce34bdbbb1959c5236f781b3ccc947',1,'Indie::Client::Client']]]
+  ['endpoints_1939',['endpoints',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#a9807dd6e57b9cd5aa74f757a813751f1',1,'Indie::Client::ClientConnection']]]
 ];
