@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sock_1942',['sock',['../d3/d5e/classIndie_1_1Server_1_1ServerConnection.html#a66652039339f1795659dff7e17491aca',1,'Indie::Server::ServerConnection']]],
-  ['socket_1943',['socket',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#acc321dcad96078004c035201ea970e48',1,'Indie::Client::ClientConnection']]]
+  ['sock_1934',['sock',['../d6/d35/classIndie_1_1Server_1_1Server.html#a8294b7e804e1639299f3e0eed55b8e8e',1,'Indie::Server::Server']]],
+  ['socket_1935',['socket',['../de/da0/classIndie_1_1Client_1_1Client.html#ae7125dacfc27a0171a7a304d845d8055',1,'Indie::Client::Client']]]
 ];
