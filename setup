@@ -2,33 +2,44 @@
 
 NAME_SCRIPT=$0
 GET_OPTIONS=$1
+FILE=./bomberman
+DIR=./build/
 
 if [ -z "$1" ]
   then
     echo "No argument supplied"
-    echo "Choose: build, run or clean"
+    echo "./setup config : Configure CMAKE & /build directory"
+    echo "./setup build : build whole libraries & project"
+    echo "./setup all : config & build project"
+    echo "./setup clean : remove bomberman & ./build directory"
     exit 84
 fi
 
 # Checking if arguments are below 1
 
 function check_args() {
-    if [[ ${GET_OPTIONS} == "build" ]]; then
-        rm -rf build/
-        mkdir build/
-        cd build/
-        cmake ..
-    fi
-    if [[ ${GET_OPTIONS} == "run" ]]; then
-        rm -rf build/
-        mkdir build/
-        cd build/
-        cmake ..
-        make
-        ./bomberman
-    fi
-    if [[ ${GET_OPTIONS} == "clean" ]]; then
-        rm -rf build/
+    if [[ ${GET_OPTIONS} == "config" ]]; then
+        if [ -d "$DIR" ]; then
+            rm -rf build/
+        fi
+        if [ -f "$FILE" ]; then
+            rm bomberman
+        fi
+        cmake -B ./build -DCMAKE_BUILD_TYPE=DEBUG
+    elif [[ ${GET_OPTIONS} == "build" ]]; then
+        cmake --build ./build --config DEBUG
+    elif [[ ${GET_OPTIONS} == "all" ]]; then
+        ./setup config
+        ./setup build
+    elif [[ ${GET_OPTIONS} == "clean" ]]; then
+        if [ -d "$DIR" ]; then
+            rm -rf build/
+        fi
+        if [ -f "$FILE" ]; then
+            rm bomberman
+        fi
+    else
+        echo "Wrong argument provided try ./setup"
     fi
 }
 

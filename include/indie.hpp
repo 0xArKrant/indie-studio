@@ -1,12 +1,17 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio [WSL: Ubuntu]
-** File description:
-** indie
-*/
+/**
+ * @file indie.hpp
+ * @author 0xArKrant (contact@arkrant.us)
+ * @brief Include for system libraries and raylib
+ * @version 0.1
+ * @date 2021-06-11
+ *
+ * @copyright Copyright (c) 2021
+ *
+ * Indie-Studio
+ * Epitech Nancy 2021
+ */
 
-#ifndef INDIE_HPP_
-#define INDIE_HPP_
+#pragma once
 
 #include <iostream>
 #include <fstream>
@@ -14,13 +19,12 @@
 #include <vector>
 #include <functional>
 #include <memory>
-#include <dlfcn.h>
-#include <dirent.h>
 #include <sys/types.h>
 #include <list>
-
-
-#include "Core.hpp"
-#include "LibraryLoader.hpp"
-
-#endif /* !INDIE_HPP_ */
+#include <string>
+#include <filesystem>
+#include <raylib.h>
+#include <array>
+#include <cstdint>
+#include <cstring>
+#include <stack>
