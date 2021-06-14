@@ -10,6 +10,8 @@
 
 #include "indie.hpp"
 #include "../core/IScene.hpp"
+#include "Camera.hpp"
+#include "DrawBillboard.hpp"
 
 namespace Indie {
     namespace Scene {
@@ -17,11 +19,15 @@ namespace Indie {
             public:
                 MainMenu();
                 ~MainMenu();
+                void setMenu();
                 void update(std::stack<Indie::Core::IScene *> &);
                 void draw();
 
             protected:
             private:
+                ::Camera3D _camera;
+                ::Texture2D bill;
+                Misc::Vector<3> billPosition;
         };
     }
 }
