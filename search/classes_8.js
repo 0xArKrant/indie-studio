@@ -1,10 +1,18 @@
 var searchData=
 [
-  ['pixel_1021',['Pixel',['../dc/d76/classIndie_1_1Raylib_1_1Shape_1_1Pixel.html',1,'Indie::Raylib::Shape']]],
-  ['pixelv_1022',['PixelV',['../d1/d2e/classIndie_1_1Raylib_1_1Shape_1_1PixelV.html',1,'Indie::Raylib::Shape']]],
-  ['plane_1023',['Plane',['../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html',1,'Indie::Raylib::Models']]],
-  ['point3d_1024',['Point3D',['../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html',1,'Indie::Raylib::Models']]],
-  ['polygon_1025',['Polygon',['../d8/d47/classIndie_1_1Raylib_1_1Shape_1_1Polygon.html',1,'Indie::Raylib::Shape']]],
-  ['polygonlines_1026',['PolygonLines',['../d4/da2/classIndie_1_1Raylib_1_1Shape_1_1PolygonLines.html',1,'Indie::Raylib::Shape']]],
-  ['polygonlinesex_1027',['PolygonLinesEx',['../df/df5/classIndie_1_1Raylib_1_1Shape_1_1PolygonLinesEx.html',1,'Indie::Raylib::Shape']]]
+  ['ray_947',['Ray',['../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html',1,'Indie::Raylib::Models::Ray'],['../dd/d78/classMisc_1_1Ray.html',1,'Misc::Ray']]],
+  ['rayhitinfo_948',['RayHitInfo',['../d0/d8f/classMisc_1_1RayHitInfo.html',1,'Misc']]],
+  ['rectangle_949',['Rectangle',['../d0/d22/classIndie_1_1Raylib_1_1Shape_1_1Rectangle.html',1,'Indie::Raylib::Shape::Rectangle'],['../d9/d2e/classMisc_1_1Rectangle.html',1,'Misc::Rectangle']]],
+  ['rectanglegradientex_950',['RectangleGradientEx',['../dd/d5a/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientEx.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglegradienth_951',['RectangleGradientH',['../d8/d01/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientH.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglegradientv_952',['RectangleGradientV',['../da/d0c/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientV.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglelines_953',['RectangleLines',['../d1/d22/classIndie_1_1Raylib_1_1Shape_1_1RectangleLines.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglelinesex_954',['RectangleLinesEx',['../dd/d68/classIndie_1_1Raylib_1_1Shape_1_1RectangleLinesEx.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglepro_955',['RectanglePro',['../de/d11/classIndie_1_1Raylib_1_1Shape_1_1RectanglePro.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglerec_956',['RectangleRec',['../d6/dfa/classIndie_1_1Raylib_1_1Shape_1_1RectangleRec.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglerounded_957',['RectangleRounded',['../da/db8/classIndie_1_1Raylib_1_1Shape_1_1RectangleRounded.html',1,'Indie::Raylib::Shape']]],
+  ['rectangleroundedlines_958',['RectangleRoundedLines',['../d2/d87/classIndie_1_1Raylib_1_1Shape_1_1RectangleRoundedLines.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglev_959',['RectangleV',['../d8/dc9/classIndie_1_1Raylib_1_1Shape_1_1RectangleV.html',1,'Indie::Raylib::Shape']]],
+  ['ring_960',['Ring',['../d6/d87/classIndie_1_1Raylib_1_1Shape_1_1Ring.html',1,'Indie::Raylib::Shape']]],
+  ['ringlines_961',['RingLines',['../d7/d4e/classIndie_1_1Raylib_1_1Shape_1_1RingLines.html',1,'Indie::Raylib::Shape']]]
 ];
