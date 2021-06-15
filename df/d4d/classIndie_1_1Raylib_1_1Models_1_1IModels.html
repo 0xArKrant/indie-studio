@@ -100,6 +100,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab7e41c4799da485b7a2306bc2dfbf51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a693364059ca6484b2fe203d5fec07a57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a693364059ca6484b2fe203d5fec07a57">DrawModels</a> ()=0</td></tr>
 <tr class="separator:a693364059ca6484b2fe203d5fec07a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9633473c8ca58e8be74bf61e07f772d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a9633473c8ca58e8be74bf61e07f772d0">ComputeMesh</a> ()=0</td></tr>
+<tr class="separator:a9633473c8ca58e8be74bf61e07f772d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1808c23b3cdcf44e7b24d0cc94d75f11"><td class="memItemLeft" align="right" valign="top">virtual ::Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a1808c23b3cdcf44e7b24d0cc94d75f11">GenerateMesh</a> ()=0</td></tr>
+<tr class="separator:a1808c23b3cdcf44e7b24d0cc94d75f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49dd725c7d4f5f609e434da5c324fcb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#ae49dd725c7d4f5f609e434da5c324fcb">GetColors</a> () const =0</td></tr>
 <tr class="separator:ae49dd725c7d4f5f609e434da5c324fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9561b728c03bce5c51422f4079837154"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a9561b728c03bce5c51422f4079837154">SetColors</a> (const <a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a>)=0</td></tr>
@@ -132,6 +136,31 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9633473c8ca58e8be74bf61e07f772d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9633473c8ca58e8be74bf61e07f772d0">&#9670;&nbsp;</a></span>ComputeMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Indie::Raylib::Models::IModels::ComputeMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a693364059ca6484b2fe203d5fec07a57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a693364059ca6484b2fe203d5fec07a57">&#9670;&nbsp;</a></span>DrawModels()</h2>
 
@@ -156,6 +185,31 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="../../de/d6f/classIndie_1_1Raylib_1_1Models_1_1TriangleStrip3D.html#aa9003ad0106c95755e86ca551728cdb7">Indie::Raylib::Models::TriangleStrip3D</a>, <a class="el" href="../../d8/d37/classIndie_1_1Raylib_1_1Models_1_1Triangle3D.html#ad742af51d4385b44766bc6b9fba8cdeb">Indie::Raylib::Models::Triangle3D</a>, <a class="el" href="../../d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html#aa5e5dd9a56a64a69ca8c7d0074fead33">Indie::Raylib::Models::SphereWires</a>, <a class="el" href="../../dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html#adac52f08da9b137be4a6d036cf82d68a">Indie::Raylib::Models::SphereEx</a>, <a class="el" href="../../dd/d97/classIndie_1_1Raylib_1_1Models_1_1Sphere.html#ae6e6594a7f6f5908d047afb9351e9bc0">Indie::Raylib::Models::Sphere</a>, <a class="el" href="../../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html#ac1221c0062b5df3ec4c9e74a84e88610">Indie::Raylib::Models::Ray</a>, <a class="el" href="../../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html#a25a15897a37bafc30f965aa420a556f2">Indie::Raylib::Models::Point3D</a>, <a class="el" href="../../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html#a7bb8d9d96970c6d97c001a782bcb33be">Indie::Raylib::Models::Plane</a>, <a class="el" href="../../dd/d50/classIndie_1_1Raylib_1_1Models_1_1Line3D.html#a3cb935d73868cc3b84d6bf4c8dafa98f">Indie::Raylib::Models::Line3D</a>, <a class="el" href="../../dd/d41/classIndie_1_1Raylib_1_1Models_1_1Grid.html#a656b624b983bcfac82c6af0b38d6167c">Indie::Raylib::Models::Grid</a>, <a class="el" href="../../d0/d7e/classIndie_1_1Raylib_1_1Models_1_1CylinderWires.html#a9dce5d1d8caaed1081ed02ad55334bbf">Indie::Raylib::Models::CylinderWires</a>, <a class="el" href="../../d2/d83/classIndie_1_1Raylib_1_1Models_1_1Cylinder.html#a2ee9a42167b97ddcc8de49dc6f58846a">Indie::Raylib::Models::Cylinder</a>, <a class="el" href="../../d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a920cbc0afa3f919b91c0c1b607872571">Indie::Raylib::Models::CubeTexture</a>, <a class="el" href="../../d1/dc1/classIndie_1_1Raylib_1_1Models_1_1CubeWiresV.html#aa94a7bfd5ee432c116eabd311172430a">Indie::Raylib::Models::CubeWiresV</a>, <a class="el" href="../../de/d39/classIndie_1_1Raylib_1_1Models_1_1CubeWires.html#a8e0c5e33455158ffb96bfbe4fe23dd33">Indie::Raylib::Models::CubeWires</a>, <a class="el" href="../../d7/db4/classIndie_1_1Raylib_1_1Models_1_1CubeV.html#a236a716928ef916ddcffae1e59fa7470">Indie::Raylib::Models::CubeV</a>, <a class="el" href="../../d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html#a744622ab669929ee89fa71ed49e19b67">Indie::Raylib::Models::Cube</a>, and <a class="el" href="../../df/dc9/classIndie_1_1Raylib_1_1Models_1_1Circle3D.html#ad6ac22e3122aeadbb41b06749539d664">Indie::Raylib::Models::Circle3D</a>.</p>
+
+</div>
+</div>
+<a id="a1808c23b3cdcf44e7b24d0cc94d75f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1808c23b3cdcf44e7b24d0cc94d75f11">&#9670;&nbsp;</a></span>GenerateMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ::Mesh Indie::Raylib::Models::IModels::GenerateMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
