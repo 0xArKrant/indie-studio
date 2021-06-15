@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wave_979',['Wave',['../da/dbd/classIndie_1_1Raylib_1_1Audio_1_1Wave.html',1,'Indie::Raylib::Audio']]]
+  ['wave_984',['Wave',['../da/dbd/classIndie_1_1Raylib_1_1Audio_1_1Wave.html',1,'Indie::Raylib::Audio']]]
 ];
