@@ -87,3 +87,24 @@ Misc::Vector<2> Indie::Raylib::Core::Core::GetWindowScaleDPI(void) {
     Misc::Vector<2> mdpi(dpi.x, dpi.y);
     return mdpi;
 }
+
+void Indie::Raylib::Core::Core::SetCameraMode(Misc::Camera3D camera, int mode)
+{
+    this->_camera = {
+        ::Vector3 { camera.getPosition().getX(), camera.getPosition().getY(), camera.getPosition().getZ() },
+        ::Vector3 { camera.getTarget().getX(), camera.getTarget().getY(), camera.getTarget().getZ() },
+        ::Vector3 { camera.getUp().getX(), camera.getUp().getY(), camera.getUp().getZ() },
+        camera.getFovy(),
+        camera.getProjection()
+     };
+
+    ::SetCameraMode(
+        this->_camera,
+        mode
+    );
+}
+
+void Indie::Raylib::Core::Core::UpdateCamera(void)
+{
+    ::UpdateCamera(&this->_camera);
+}

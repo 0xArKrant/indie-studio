@@ -9,16 +9,20 @@
 
 #include "indie.hpp"
 #include "IScene.hpp"
+#include "scene.hpp"
+#include "../engine/Core/CoreRaylib.hpp"
+
 
 namespace Indie {
-    namespace Core     {
-        class SceneManagement         {
+    namespace Core {
+        class SceneManagement {
             public:
-                SceneManagement();
+                SceneManagement(int, int, std::string &);
                 ~SceneManagement();
                 void loop();
             private:
-                std::stack<IScene*> _stack;
+                Indie::Raylib::Core::Core &_window = Indie::Raylib::Core::Core::getInstance(1600, 900, "Bomberman");
+                std::stack<IScene *> _stack;
         };
     } // namespace Core
 } // namespace Indie

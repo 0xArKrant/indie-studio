@@ -17,6 +17,7 @@
 
 #include "ICore.hpp"
 #include "Colors.hpp"
+#include "Camera.hpp"
 
 namespace Indie {
     namespace Raylib {
@@ -25,7 +26,7 @@ namespace Indie {
                 public:
                     static Core& getInstance(int width, int height, const std::string& title);
                     // Core(Core &) = delete;
-                    //void operator=(const Core &) = delete;
+                    // void operator=(const Core &) = delete;
 
                     //Getter
                     /**
@@ -262,6 +263,9 @@ namespace Indie {
                     Misc::Vector<2> GetMonitorPosition(int monitor);
                     Misc::Vector<2> GetWindowPosition(void);
                     Misc::Vector<2> GetWindowScaleDPI(void);
+                    void SetCameraMode(Misc::Camera3D, int);
+
+                    void UpdateCamera(void);
 
                     /**
                      * @brief Get clipboard text content
@@ -360,7 +364,6 @@ namespace Indie {
                      * @return double
                      */
                     inline double GetTime(void) const { return ::GetTime(); };
-
                 private:
                     Core(int width, int height, const std::string& title);
                     ~Core();
@@ -368,6 +371,7 @@ namespace Indie {
                     InputGamepads _inputGamepads; /*! InputGamePads class for events */
                     InputKeyboard _inputKeyboard; /*! InputKeyboard class for events */
                     InputMouse    _inputMouse; /*! InputMouse class for events */
+                    ::Camera _camera;
             };
         } // namespace Core
     } // namespace Raylib

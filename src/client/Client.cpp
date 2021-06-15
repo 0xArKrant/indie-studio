@@ -7,21 +7,21 @@
 
 #include "Client.hpp"
 
-Indie::Client::Client::Client(const std::string &ip, const std::string &port) : socket(io_context, udp::endpoint(udp::v4(), 0)), resolver(io_context)
+Indie::Client::ClientConnection::ClientConnection(const std::string &ip, const std::string &port) : socket(io_context, udp::endpoint(udp::v4(), 0)), resolver(io_context)
 {
     this->endpoints = this->resolver.resolve(udp::v4(), ip, port);
 }
 
-Indie::Client::Client::~Client()
+Indie::Client::ClientConnection::~ClientConnection()
 {
 }
 
-void Indie::Client::Client::send_to(const std::string &message)
+void Indie::Client::ClientConnection::send_to(const std::string &message)
 {
     this->socket.send_to(boost::asio::buffer(message), *this->endpoints.begin());
 }
 
-std::string Indie::Client::Client::receive_from()
+std::string Indie::Client::ClientConnection::receive_from()
 {
     std::string buffer;
     udp::endpoint sender_endpoint;

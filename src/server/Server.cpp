@@ -7,17 +7,17 @@
 
 #include "Server.hpp"
 
-Indie::Server::Server::Server(unsigned short port) : sock(io_context, udp::endpoint(udp::v4(), port)) {}
+Indie::Server::ServerConnection::ServerConnection(unsigned short port) : sock(io_context, udp::endpoint(udp::v4(), port)) {}
 
-Indie::Server::Server::~Server() {}
+Indie::Server::ServerConnection::~ServerConnection() {}
 
-void Indie::Server::Server::send(const std::string &message)
+void Indie::Server::ServerConnection::send(const std::string &message)
 {
     udp::endpoint endpoint;
     this->sock.send_to(boost::asio::buffer(message), endpoint);
 }
 
-std::string Indie::Server::Server::receive()
+std::string Indie::Server::ServerConnection::receive()
 {
     std::string buffer;
     udp::endpoint endpoint;
