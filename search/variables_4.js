@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['resolver_1801',['resolver',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#ada9a02642a3c69bd3fa81b8fa0d79fd1',1,'Indie::Client::ClientConnection']]]
+  ['sock_1942',['sock',['../d3/d5e/classIndie_1_1Server_1_1ServerConnection.html#a66652039339f1795659dff7e17491aca',1,'Indie::Server::ServerConnection']]],
+  ['socket_1943',['socket',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#acc321dcad96078004c035201ea970e48',1,'Indie::Client::ClientConnection']]]
 ];
