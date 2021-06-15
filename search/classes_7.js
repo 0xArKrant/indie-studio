@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['matrix_1013',['Matrix',['../d6/d18/classMisc_1_1Matrix.html',1,'Misc']]],
-  ['meshbinormals_1014',['MeshBinormals',['../d5/d96/classIModels_1_1MeshBinormals.html',1,'IModels']]],
-  ['meshboundingbox_1015',['MeshBoundingBox',['../d3/d41/classIModels_1_1MeshBoundingBox.html',1,'IModels']]],
-  ['meshtangents_1016',['MeshTangents',['../df/d29/classIModels_1_1MeshTangents.html',1,'IModels']]],
-  ['model3d_1017',['Model3D',['../d4/d60/classIndie_1_1Game_1_1Model3D.html',1,'Indie::Game']]],
-  ['modelsraylib_1018',['ModelsRaylib',['../db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html',1,'Indie::Raylib::Models']]],
-  ['music_1019',['Music',['../d0/d2a/classIndie_1_1Raylib_1_1Audio_1_1Music.html',1,'Indie::Raylib::Audio']]]
+  ['pixel_945',['Pixel',['../dc/d76/classIndie_1_1Raylib_1_1Shape_1_1Pixel.html',1,'Indie::Raylib::Shape']]],
+  ['pixelv_946',['PixelV',['../d1/d2e/classIndie_1_1Raylib_1_1Shape_1_1PixelV.html',1,'Indie::Raylib::Shape']]],
+  ['plane_947',['Plane',['../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html',1,'Indie::Raylib::Models']]],
+  ['point3d_948',['Point3D',['../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html',1,'Indie::Raylib::Models']]],
+  ['polygon_949',['Polygon',['../d8/d47/classIndie_1_1Raylib_1_1Shape_1_1Polygon.html',1,'Indie::Raylib::Shape']]],
+  ['polygonlines_950',['PolygonLines',['../d4/da2/classIndie_1_1Raylib_1_1Shape_1_1PolygonLines.html',1,'Indie::Raylib::Shape']]],
+  ['polygonlinesex_951',['PolygonLinesEx',['../df/df5/classIndie_1_1Raylib_1_1Shape_1_1PolygonLinesEx.html',1,'Indie::Raylib::Shape']]]
 ];
