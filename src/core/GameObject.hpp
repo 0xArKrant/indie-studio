@@ -25,6 +25,7 @@ namespace Indie {
                 ~GameObject();
                 std::string getId() const;
                 Misc::Vector<3> getPos() const;
+                TypeObject getType() const;
                 bool getDisplay() const;
                 void setDisplay(bool display);
                 void setPosition(Misc::Vector<3> pos);
@@ -32,10 +33,11 @@ namespace Indie {
                 virtual void draw() = 0;
 
             protected:
-            private:
                 std::string _id;
                 Misc::Vector<3> _pos;
                 bool _display;
+                TypeObject _type;
+            private:
         };
     }
 }

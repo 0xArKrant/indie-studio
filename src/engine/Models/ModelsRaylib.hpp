@@ -1,15 +1,9 @@
-/**
- * @file ModelsRaylib.hpp
- * @author 0xArKrant (contact@arkrant.us)
- * @brief
- * @version 0.1
- * @date 2021-06-11
- *
- * @copyright Copyright (c) 2021
- *
- * Indie-Studio
- * Epitech Nancy 2021
- */
+/*
+** EPITECH PROJECT, 2021
+** indiestudioclean
+** File description:
+** ModelRaylib
+*/
 
 #pragma once
 
@@ -30,17 +24,10 @@ namespace Indie {
                     void DrawModelWires(Misc::Vector<3> position, float scale, Misc::Colors tint);
                     void DrawModelWiresEx(Misc::Vector<3> position, Misc::Vector<3> rotationAxis, float rotationAngle, Misc::Vector<3> scale, Misc::Colors tint);
                     void DrawBoundingBox(Misc::Colors color);
-                    void DrawModels();
-                    void ComputeMesh();
-                    ::Mesh GenerateMesh();
-                    Misc::Colors GetColors() const;
-                    void SetColors(const Misc::Colors);
                     ~ModelsRaylib();
-
                 private:
-                    ::Model _model; /*! Model structure from raylib */
-                    ::BoundingBox _BoundingBox; /*! BoundingBox structure from raylib*/
-                    Misc::Colors _colors;
+                    ::Model _model;
+                    ::BoundingBox _BoundingBox;
             };
         }
     }
