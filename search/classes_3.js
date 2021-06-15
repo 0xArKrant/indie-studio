@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gameobject_905',['GameObject',['../d1/de7/classIndie_1_1Game_1_1GameObject.html',1,'Indie::Game']]],
-  ['getcollisionrec_906',['GetCollisionRec',['../db/d0d/classIndie_1_1Raylib_1_1Shape_1_1GetCollisionRec.html',1,'Indie::Raylib::Shape']]],
-  ['grid_907',['Grid',['../dd/d41/classIndie_1_1Raylib_1_1Models_1_1Grid.html',1,'Indie::Raylib::Models']]]
+  ['ellipse_964',['Ellipse',['../d8/dc8/classIndie_1_1Raylib_1_1Shape_1_1Ellipse.html',1,'Indie::Raylib::Shape']]],
+  ['ellipselines_965',['EllipseLines',['../d4/dd9/classIndie_1_1Raylib_1_1Shape_1_1EllipseLines.html',1,'Indie::Raylib::Shape']]],
+  ['exception_966',['Exception',['../d7/d67/classIndie_1_1Errors_1_1Exception.html',1,'Indie::Errors']]]
 ];
