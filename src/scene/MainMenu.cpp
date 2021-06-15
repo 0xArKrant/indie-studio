@@ -44,12 +44,9 @@ void Indie::Scene::MainMenu::update(std::stack<Core::IScene *> &stack)
 
 void Indie::Scene::MainMenu::draw()
 {
-
     UpdateCamera(&this->_camera);
     BeginMode3D(this->_camera);
         DrawModel(this->_model, this->mapPosition, 1.0f, GRAY);
     EndMode3D();
     DrawFPS(10, 10);
-
-
 }
