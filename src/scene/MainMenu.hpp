@@ -5,13 +5,12 @@
 ** MainMenu
 */
 
-#ifndef MAINMENU_HPP_
-#define MAINMENU_HPP_
+#pragma once
 
 #include "indie.hpp"
 #include "../core/IScene.hpp"
-#include "Camera.hpp"
-#include "DrawBillboard.hpp"
+#include "./Camera.hpp"
+#include "../Texture/Texture.hpp"
 
 namespace Indie {
     namespace Scene {
@@ -25,11 +24,13 @@ namespace Indie {
 
             protected:
             private:
+                ::Mesh _mesh;
+                ::Model _model;
                 ::Camera3D _camera;
-                ::Texture2D bill;
-                Misc::Vector<3> billPosition;
+                ::Texture cubicmap;
+                ::Texture2D texture;
+                ::Image _img;
+                ::Vector3 mapPosition;
         };
     }
 }
-
-#endif /* !MAINMENU_HPP_ */
