@@ -9,9 +9,8 @@
 #define MAINMENU_HPP_
 
 #include "indie.hpp"
-#include "../core/IScene.hpp"
+#include "IScene.hpp"
 #include "Camera.hpp"
-#include "DrawBillboard.hpp"
 
 namespace Indie {
     namespace Scene {
