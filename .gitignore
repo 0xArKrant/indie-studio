@@ -5,6 +5,7 @@ lib/
 *:Zone.Identifier
 build/
 doc/
+vgcore.*
 
 # Logs
 logs

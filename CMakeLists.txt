@@ -67,6 +67,8 @@ file(GLOB SRC_FILES
     src/server/Server.cpp
     src/client/Client.cpp
     src/core/GameObject.cpp
+
+    src/scene/SplashScreen.cpp
 )
 
 add_executable(${BIN_NAME} ${SRC_FILES})
