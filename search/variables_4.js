@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mapposition_1822',['mapPosition',['../df/d9f/classIndie_1_1Scene_1_1MainMenu.html#a4cb54603ce2fea24479f84f6ca62180b',1,'Indie::Scene::MainMenu']]]
+  ['resolver_1802',['resolver',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#ada9a02642a3c69bd3fa81b8fa0d79fd1',1,'Indie::Client::ClientConnection']]]
 ];
