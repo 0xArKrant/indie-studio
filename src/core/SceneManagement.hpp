@@ -10,7 +10,7 @@
 #include "indie.hpp"
 #include "IScene.hpp"
 #include "scene.hpp"
-#include "../engine/Core/CoreRaylib.hpp"
+#include "CoreRaylib.hpp"
 
 
 namespace Indie {
@@ -22,7 +22,7 @@ namespace Indie {
                 void loop();
             private:
                 Indie::Raylib::Core::Core &_window = Indie::Raylib::Core::Core::getInstance(1600, 900, "Bomberman");
-                std::stack<IScene *> _stack;
+                std::stack<std::unique_ptr<IScene>> _stack;
         };
     } // namespace Core
 } // namespace Indie

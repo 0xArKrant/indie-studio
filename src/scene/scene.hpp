@@ -8,3 +8,4 @@
 #pragma once
 
 #include "MainMenu.hpp"
+#include "SplashScreen.hpp"

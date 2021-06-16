@@ -37,7 +37,7 @@ void Indie::Scene::MainMenu::setMenu()
 
 }
 
-void Indie::Scene::MainMenu::update(std::stack<Core::IScene *> &stack)
+void Indie::Scene::MainMenu::update(std::stack<std::unique_ptr<Core::IScene>> &stack)
 {
     (void) stack;
 }
