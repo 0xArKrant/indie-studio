@@ -265,7 +265,7 @@ namespace Indie {
                     Misc::Vector<2> GetWindowScaleDPI(void);
                     void SetCameraMode(Misc::Camera3D, int);
 
-                    void UpdateCamera(void);
+                    void UpdateCamera(Misc::Camera3D &);
 
                     /**
                      * @brief Get clipboard text content
@@ -371,7 +371,6 @@ namespace Indie {
                     InputGamepads _inputGamepads; /*! InputGamePads class for events */
                     InputKeyboard _inputKeyboard; /*! InputKeyboard class for events */
                     InputMouse    _inputMouse; /*! InputMouse class for events */
-                    ::Camera _camera;
             };
         } // namespace Core
     } // namespace Raylib
