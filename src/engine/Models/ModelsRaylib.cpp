@@ -99,3 +99,13 @@ void Indie::Raylib::Models::ModelsRaylib::DrawBoundingBox(Misc::Colors color) {
 Indie::Raylib::Models::ModelsRaylib::~ModelsRaylib() {
     ::UnloadModel(this->_model);
 }
+
+void Indie::Raylib::Models::ModelsRaylib::SetColors(const Misc::Colors color)
+{
+    this->_colors = color;
+}
+
+Misc::Colors Indie::Raylib::Models::ModelsRaylib::GetColors() const
+{
+    return this->_colors;
+}
