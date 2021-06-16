@@ -90,7 +90,7 @@ Misc::Vector<2> Indie::Raylib::Core::Core::GetWindowScaleDPI(void) {
 
 void Indie::Raylib::Core::Core::SetCameraMode(Misc::Camera3D camera, int mode)
 {
-    this->_camera = {
+    ::Camera3D tempCamera = {
         ::Vector3 { camera.getPosition().getX(), camera.getPosition().getY(), camera.getPosition().getZ() },
         ::Vector3 { camera.getTarget().getX(), camera.getTarget().getY(), camera.getTarget().getZ() },
         ::Vector3 { camera.getUp().getX(), camera.getUp().getY(), camera.getUp().getZ() },
@@ -99,12 +99,32 @@ void Indie::Raylib::Core::Core::SetCameraMode(Misc::Camera3D camera, int mode)
      };
 
     ::SetCameraMode(
-        this->_camera,
+        tempCamera,
         mode
     );
 }
 
-void Indie::Raylib::Core::Core::UpdateCamera(void)
+void Indie::Raylib::Core::Core::UpdateCamera(Misc::Camera3D &camera)
 {
-    ::UpdateCamera(&this->_camera);
+    ::Camera3D tempCamera = {
+        ::Vector3 { camera.getPosition().getX(), camera.getPosition().getY(), camera.getPosition().getZ() },
+        ::Vector3 { camera.getTarget().getX(), camera.getTarget().getY(), camera.getTarget().getZ() },
+        ::Vector3 { camera.getUp().getX(), camera.getUp().getY(), camera.getUp().getZ() },
+        camera.getFovy(),
+        camera.getProjection()
+     };
+
+    ::UpdateCamera(&tempCamera);
+
+    Misc::Vector<3> &position = camera.getPosition();
+    Misc::Vector<3> &target = camera.getTarget();
+    Misc::Vector<3> &up = camera.getUp();
+    float &fovy = camera.getFovy();
+    int &projection = camera.getProjection();
+
+    position = { tempCamera.position.x, tempCamera.position.y, tempCamera.position.z };
+    target = { tempCamera.target.x, tempCamera.target.y, tempCamera.target.z };
+    up = { tempCamera.up.x, tempCamera.up.y, tempCamera.up.z };
+    fovy = tempCamera.fovy;
+    projection = tempCamera.projection;
 }
