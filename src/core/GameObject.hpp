@@ -5,8 +5,7 @@
 ** GameObject
 */
 
-#ifndef GAMEOBJECT_HPP_
-#define GAMEOBJECT_HPP_
+#pragma once
 
 #include "Vector.hpp"
 
@@ -46,5 +45,3 @@ namespace Indie {
         };
     }
 }
-
-#endif /* !GAMEOBJECT_HPP_ */

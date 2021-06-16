@@ -5,8 +5,7 @@
 ** Event
 */
 
-#ifndef EVENT_HPP_
-#define EVENT_HPP_
+#pragma once
 
 namespace indie {
     enum keyEvent {
@@ -21,5 +20,3 @@ namespace indie {
         NONE
     };
 }
-
-#endif /* !EVENT_HPP_ */
