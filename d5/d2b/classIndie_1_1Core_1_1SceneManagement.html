@@ -89,8 +89,8 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a988a04d31967372dc5b8b4e816945bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html">Indie::Raylib::Core::Core</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#a988a04d31967372dc5b8b4e816945bb5">_window</a> = <a class="el" href="../../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#aecb20cad4bc5047c0a6c4fa7cc2b047f">Indie::Raylib::Core::Core::getInstance</a>(1600, 900, &quot;Bomberman&quot;)</td></tr>
 <tr class="separator:a988a04d31967372dc5b8b4e816945bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e32261d10447ec955c3ec300e0cc807"><td class="memItemLeft" align="right" valign="top">std::stack&lt; <a class="el" href="../../d7/d5c/classIndie_1_1Core_1_1IScene.html">IScene</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#a7e32261d10447ec955c3ec300e0cc807">_stack</a></td></tr>
-<tr class="separator:a7e32261d10447ec955c3ec300e0cc807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05910c80e085b202f7bb4647a5ee0f58"><td class="memItemLeft" align="right" valign="top">std::stack&lt; std::unique_ptr&lt; <a class="el" href="../../d7/d5c/classIndie_1_1Core_1_1IScene.html">IScene</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#a05910c80e085b202f7bb4647a5ee0f58">_stack</a></td></tr>
+<tr class="separator:a05910c80e085b202f7bb4647a5ee0f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a31b9f2d355cd799a41902aabb9d4f6a8"></a>
@@ -163,8 +163,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a7e32261d10447ec955c3ec300e0cc807"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e32261d10447ec955c3ec300e0cc807">&#9670;&nbsp;</a></span>_stack</h2>
+<a id="a05910c80e085b202f7bb4647a5ee0f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05910c80e085b202f7bb4647a5ee0f58">&#9670;&nbsp;</a></span>_stack</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +173,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::stack&lt;<a class="el" href="../../d7/d5c/classIndie_1_1Core_1_1IScene.html">IScene</a> *&gt; Indie::Core::SceneManagement::_stack</td>
+          <td class="memname">std::stack&lt;std::unique_ptr&lt;<a class="el" href="../../d7/d5c/classIndie_1_1Core_1_1IScene.html">IScene</a>&gt; &gt; Indie::Core::SceneManagement::_stack</td>
         </tr>
       </table>
   </td>
