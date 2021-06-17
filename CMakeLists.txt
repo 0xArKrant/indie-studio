@@ -3,17 +3,18 @@ project(bomberman CXX)
 
 SET(CMAKE_BUILD_TYPE Debug)
 set(OpenGL_GL_PREFERENCE GLVND)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
-find_package(raylib REQUIRED)
 SET(CMAKE_CXX_STANDARD_17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 if(CMAKE_COMPILER_IS_GNUCXX)
     message(STATUS "GCC detected, adding compile flags")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Werror -Wuninitialized -Wformat-security -g -Wall -Wextra")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra")
 endif(CMAKE_COMPILER_IS_GNUCXX)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../)
+
+find_package(raylib REQUIRED)
 
 set(BIN_NAME bomberman)
 
