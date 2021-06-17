@@ -37,6 +37,6 @@ void Indie::Core::SceneManagement::pop() {
     this->_stack.pop();
 }
 
-void Indie::Core::SceneManagement::push(std::unique_ptr<IScene> scene) {
-    this->_stack.push(scene);
+void Indie::Core::SceneManagement::push(std::unique_ptr<IScene> &scene) {
+    this->_stack.push(std::move(scene));
 }

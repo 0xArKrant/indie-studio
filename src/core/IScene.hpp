@@ -7,11 +7,11 @@
 
 #pragma once
 
-#include "SceneManagement.hpp"
 #include "indie.hpp"
 
 namespace Indie {
     namespace Core     {
+        class SceneManagement;
         class IScene         {
             public:
                 ~IScene() = default;
@@ -22,3 +22,5 @@ namespace Indie {
         };
     } // namespace Core
 } // namespace Indie
+
+#include "SceneManagement.hpp"

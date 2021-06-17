@@ -15,11 +15,12 @@
 
 namespace Indie {
     namespace Core {
+        class IScene;
         class SceneManagement {
             public:
                 SceneManagement(int, int, std::string &);
                 ~SceneManagement();
-                void push(std::unique_ptr<IScene>);
+                void push(std::unique_ptr<IScene> &);
                 void pop();
                 void loop();
             private:
