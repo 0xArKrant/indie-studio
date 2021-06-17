@@ -14,7 +14,7 @@ namespace Indie {
         class SceneManagement;
         class IScene         {
             public:
-                ~IScene() = default;
+                virtual ~IScene() = default;
                 virtual void update(SceneManagement &) = 0;
                 virtual void draw() = 0;
 

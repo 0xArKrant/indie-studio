@@ -8,6 +8,10 @@ find_package(raylib REQUIRED)
 SET(CMAKE_CXX_STANDARD_17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+if(CMAKE_COMPILER_IS_GNUCXX)
+    message(STATUS "GCC detected, adding compile flags")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Werror -Wuninitialized -Wformat-security -g -Wall -Wextra")
+endif(CMAKE_COMPILER_IS_GNUCXX)
 
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../)
 
@@ -89,22 +93,5 @@ include_directories(
     src/core/
     src/scene/
 )
-
-if (UNIX)
-    target_compile_options(${BIN_NAME} PUBLIC
-        -W
-        -Wall
-        -Wextra
-        -Werror
-        -Wuninitialized
-        -Wformat-security
-        -std=c++17
-    )
-endif(UNIX)
-if (WIN32)
-    target_compile_options(${BIN_NAME} PUBLIC
-        -Wall
-    )
-endif(WIN32)
 
 target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})
