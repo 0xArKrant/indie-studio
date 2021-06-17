@@ -59,6 +59,8 @@ file(GLOB SRC_FILES
     src/engine/Core/InputGamepads.cpp
     src/engine/Core/Cursor.cpp
 
+    src/engine/Map/Map.cpp
+
     src/main.cpp
     src/core/Core.cpp
     src/core/SceneManagement.cpp
@@ -90,6 +92,7 @@ include_directories(
     src/engine/Misc/
     src/engine/Text
     src/engine/Texture
+    src/engine/Map
     src/game/
     src/core/
     src/scene/
