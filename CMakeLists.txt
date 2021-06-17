@@ -95,4 +95,13 @@ include_directories(
     src/scene/
 )
 
+if (UNIX)
+    target_compile_options(${BIN_NAME} PUBLIC
+        -g
+        -Wall
+        -Wextra
+        -std=c++17
+    )
+endif(UNIX)
+
 target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})
