@@ -33,6 +33,7 @@ void Indie::Core::SceneManagement::loop() {
 }
 
 void Indie::Core::SceneManagement::pop() {
+    this->_stack.top().reset();
     this->_stack.pop();
 }
 
