@@ -23,11 +23,20 @@ Indie::Core::SceneManagement::~SceneManagement() {
 
 void Indie::Core::SceneManagement::loop() {
     while (!this->_window.WindowShouldClose()) {
-        this->_stack.top()->update(this->_stack);
+        this->_stack.top()->update(*this);
         this->_window.BeginDrawing();
         this->_window.ClearBackground(Misc::Colors(0, 0, 0, 0));
         // Ajout de tick //
         this->_stack.top()->draw();
         this->_window.EndDrawing();
     }
+}
+
+void Indie::Core::SceneManagement::pop() {
+    this->_stack.top().reset();
+    this->_stack.pop();
+}
+
+void Indie::Core::SceneManagement::push(std::unique_ptr<IScene> &scene) {
+    this->_stack.push(std::move(scene));
 }
