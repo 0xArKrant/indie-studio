@@ -24,7 +24,7 @@ namespace Indie {
             public:
                 SplashScreen();
                 ~SplashScreen();
-                void update(std::stack<std::unique_ptr<Indie::Core::IScene>> &);
+                void update(Indie::Core::SceneManagement &scenemanagement);
                 void draw();
 
             protected:

@@ -20,9 +20,9 @@ Indie::Scene::SplashScreen::~SplashScreen()
 {
 }
 
-void Indie::Scene::SplashScreen::update(std::stack<std::unique_ptr<Core::IScene>> &stack)
+void Indie::Scene::SplashScreen::update(Indie::Core::SceneManagement &scenemanagement)
 {
-    (void) stack;
+    (void) scenemanagement;
 }
 
 void Indie::Scene::SplashScreen::draw()

@@ -608,7 +608,7 @@ namespace Indie {
 
             class RectangleLinesEx : public IRectangle {
                 public:
-                    RectangleLinesEx(const Misc::Rectangle, const int, const Misc::Colors&);
+                    RectangleLinesEx(const Misc::Rectangle, const float, const Misc::Colors&);
                     /**
                      * @brief Destroy the Rectangle Lines Ex object
                      *
@@ -626,7 +626,7 @@ namespace Indie {
                      *
                      * @return int
                      */
-                    inline int GetThickness() const { return this->_linethick; };
+                    inline float GetThickness() const { return this->_linethick; };
                     /**
                      * @brief Get the Colors object
                      *
@@ -645,7 +645,7 @@ namespace Indie {
                      *
                      * @param thickness
                      */
-                    inline void SetThickness(const int thickness) { this->_linethick = thickness; };
+                    inline void SetThickness(const float thickness) { this->_linethick = thickness; };
                     /**
                      * @brief Set the Colors object
                      *
@@ -656,7 +656,7 @@ namespace Indie {
                     void DrawShape();
                 private:
                     Misc::Rectangle _rectangle; /*! Misc::Rectangle object*/
-                    int             _linethick; /*! int object*/
+                    float             _linethick; /*! int object*/
                     Misc::Colors    _colors; /*! Misc::Colors object*/
             };
 
@@ -729,7 +729,7 @@ namespace Indie {
 
             class RectangleRoundedLines : public IRectangle {
                 public:
-                    RectangleRoundedLines(const Misc::Rectangle, const float, const int, const int, const Misc::Colors&);
+                    RectangleRoundedLines(const Misc::Rectangle, const float, const int, const float, const Misc::Colors&);
                     /**
                      * @brief Destroy the Rectangle Rounded Lines object
                      *
@@ -759,7 +759,7 @@ namespace Indie {
                      *
                      * @return int
                      */
-                    inline int GetThickness() const { return this->_linethick; };
+                    inline float GetThickness() const { return this->_linethick; };
                     /**
                      * @brief Get the Colors object
                      *
@@ -790,7 +790,7 @@ namespace Indie {
                      *
                      * @param thickness
                      */
-                    inline void SetThickness(const int thickness) { this->_linethick = thickness; };
+                    inline void SetThickness(const float thickness) { this->_linethick = thickness; };
                     /**
                      * @brief Set the Colors object
                      *
@@ -803,7 +803,7 @@ namespace Indie {
                     Misc::Rectangle _rectangle; /*! Misc::Rectangle object*/
                     float           _roundness; /*! float object*/
                     int             _segments; /*! int object*/
-                    int             _linethick; /*! int object*/
+                    float             _linethick; /*! float object*/
                     Misc::Colors    _colors; /*! Misc::Colors object*/
             };
         }

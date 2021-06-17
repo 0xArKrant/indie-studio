@@ -3,16 +3,18 @@ project(bomberman CXX)
 
 SET(CMAKE_BUILD_TYPE Debug)
 set(OpenGL_GL_PREFERENCE GLVND)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
-set(BOOST_REQUESTED_VERSION 1.70)
-find_package(Boost 1.70 COMPONENTS system program_options regex filesystem REQUIRED)
-find_package(raylib REQUIRED)
 SET(CMAKE_CXX_STANDARD_17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-include_directories(${BOOST_INCLUDE_DIRS})
+if(CMAKE_COMPILER_IS_GNUCXX)
+    message(STATUS "GCC detected, adding compile flags")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra")
+endif(CMAKE_COMPILER_IS_GNUCXX)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../)
+
+find_package(raylib REQUIRED)
 
 set(BIN_NAME bomberman)
 
@@ -66,8 +68,6 @@ file(GLOB SRC_FILES
     src/core/SceneManagement.cpp
     src/error/Exception.cpp
     src/scene/MainMenu.cpp
-    src/server/Server.cpp
-    src/client/Client.cpp
     src/core/GameObject.cpp
 
     src/scene/SplashScreen.cpp
@@ -96,25 +96,19 @@ include_directories(
     src/game/
     src/core/
     src/scene/
-    src/client
-    src/server
 )
 
 if (UNIX)
     target_compile_options(${BIN_NAME} PUBLIC
-        -W
+        -g
         -Wall
         -Wextra
-        -Werror
-        -Wuninitialized
-        -Wformat-security
         -std=c++17
     )
 endif(UNIX)
-if (WIN32)
-    target_compile_options(${BIN_NAME} PUBLIC
-        -Wall
-    )
-endif(WIN32)
 
-target_link_libraries(${BIN_NAME} PUBLIC raylib ${Boost_LIBRARIES} ${CMAKE_DL_LIBS})
+if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
+endif(MSVC)
+
+target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})

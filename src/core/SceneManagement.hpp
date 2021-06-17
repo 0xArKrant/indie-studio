@@ -15,10 +15,13 @@
 
 namespace Indie {
     namespace Core {
+        class IScene;
         class SceneManagement {
             public:
                 SceneManagement(int, int, std::string &);
                 ~SceneManagement();
+                void push(std::unique_ptr<IScene> &);
+                void pop();
                 void loop();
             private:
                 Indie::Raylib::Core::Core &_window = Indie::Raylib::Core::Core::getInstance(1600, 900, "Bomberman");
