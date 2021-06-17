@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include "indie.hpp"
 #include "SceneManagement.hpp"
+#include "indie.hpp"
 
 namespace Indie {
     namespace Core     {
