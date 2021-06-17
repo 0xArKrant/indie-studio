@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sock_1820',['sock',['../d3/d5e/classIndie_1_1Server_1_1ServerConnection.html#a66652039339f1795659dff7e17491aca',1,'Indie::Server::ServerConnection']]],
-  ['socket_1821',['socket',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#acc321dcad96078004c035201ea970e48',1,'Indie::Client::ClientConnection']]]
+  ['mapposition_1836',['mapPosition',['../db/dd9/classIndie_1_1Raylib_1_1Map.html#ae661f5785f5670175b499b77e6fafc8f',1,'Indie::Raylib::Map']]]
 ];

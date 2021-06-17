@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endpoints_1817',['endpoints',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#a9807dd6e57b9cd5aa74f757a813751f1',1,'Indie::Client::ClientConnection']]]
+  ['cubicmap_1833',['cubicmap',['../db/dd9/classIndie_1_1Raylib_1_1Map.html#abb779350e2387479a56d2e9132c3542b',1,'Indie::Raylib::Map']]]
 ];
