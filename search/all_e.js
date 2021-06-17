@@ -22,5 +22,7 @@ var searchData=
   ['polygon_2ecpp_565',['Polygon.cpp',['../d0/d97/Polygon_8cpp.html',1,'']]],
   ['polygon_2ehpp_566',['Polygon.hpp',['../d8/d86/Polygon_8hpp.html',1,'']]],
   ['polygonlines_567',['PolygonLines',['../d4/da2/classIndie_1_1Raylib_1_1Shape_1_1PolygonLines.html',1,'Indie::Raylib::Shape::PolygonLines'],['../d4/da2/classIndie_1_1Raylib_1_1Shape_1_1PolygonLines.html#aeaadf75501085fbd5433d8312fbaa1cb',1,'Indie::Raylib::Shape::PolygonLines::PolygonLines()']]],
-  ['polygonlinesex_568',['PolygonLinesEx',['../df/df5/classIndie_1_1Raylib_1_1Shape_1_1PolygonLinesEx.html',1,'Indie::Raylib::Shape::PolygonLinesEx'],['../df/df5/classIndie_1_1Raylib_1_1Shape_1_1PolygonLinesEx.html#ae2bd93472dcdb44df633c86bfda3008f',1,'Indie::Raylib::Shape::PolygonLinesEx::PolygonLinesEx()']]]
+  ['polygonlinesex_568',['PolygonLinesEx',['../df/df5/classIndie_1_1Raylib_1_1Shape_1_1PolygonLinesEx.html',1,'Indie::Raylib::Shape::PolygonLinesEx'],['../df/df5/classIndie_1_1Raylib_1_1Shape_1_1PolygonLinesEx.html#ae2bd93472dcdb44df633c86bfda3008f',1,'Indie::Raylib::Shape::PolygonLinesEx::PolygonLinesEx()']]],
+  ['pop_569',['pop',['../d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#a9e13f2631d15a5cb7c85e9f58b00ae80',1,'Indie::Core::SceneManagement']]],
+  ['push_570',['push',['../d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#ae820da320d14fbf7de35f0ea2c8b998b',1,'Indie::Core::SceneManagement']]]
 ];
