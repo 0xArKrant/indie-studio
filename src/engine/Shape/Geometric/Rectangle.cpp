@@ -256,7 +256,7 @@ void Indie::Raylib::Shape::RectangleLines::DrawShape() {
  * @param linethick
  * @param values
  */
-Indie::Raylib::Shape::RectangleLinesEx::RectangleLinesEx(const Misc::Rectangle rectangle, const int linethick, const Misc::Colors& values) {
+Indie::Raylib::Shape::RectangleLinesEx::RectangleLinesEx(const Misc::Rectangle rectangle, const float linethick, const Misc::Colors& values) {
     this->_rectangle = rectangle;
     this->_linethick = linethick;
     this->_colors = values;
@@ -311,7 +311,7 @@ void Indie::Raylib::Shape::RectangleRounded::DrawShape() {
  * @param linethick
  * @param values
  */
-Indie::Raylib::Shape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Rectangle rectangle, const float roundness, const int segments, const int linethick, const Misc::Colors& values) {
+Indie::Raylib::Shape::RectangleRoundedLines::RectangleRoundedLines(const Misc::Rectangle rectangle, const float roundness, const int segments, const float linethick, const Misc::Colors& values) {
     this->_rectangle = rectangle;
     this->_roundness = roundness;
     this->_segments = segments;
