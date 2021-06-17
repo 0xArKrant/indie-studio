@@ -61,8 +61,6 @@ file(GLOB SRC_FILES
     src/core/SceneManagement.cpp
     src/error/Exception.cpp
     src/scene/MainMenu.cpp
-    src/server/Server.cpp
-    src/client/Client.cpp
     src/core/GameObject.cpp
 
     src/scene/SplashScreen.cpp
@@ -90,8 +88,6 @@ include_directories(
     src/game/
     src/core/
     src/scene/
-    src/client
-    src/server
 )
 
 if (UNIX)
