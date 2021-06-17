@@ -68,7 +68,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d7/d48/classIndie_1_1Game_1_1GameObject-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Indie::Game::GameObject Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -76,6 +76,15 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d4/db5/GameObject_8hpp_source.html">GameObject.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Indie::Game::GameObject:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/de7/classIndie_1_1Game_1_1GameObject.png" usemap="#Indie::Game::GameObject_map" alt=""/>
+  <map id="Indie::Game::GameObject_map" name="Indie::Game::GameObject_map">
+<area href="../../d4/d60/classIndie_1_1Game_1_1Model3D.html" alt="Indie::Game::Model3D" shape="rect" coords="0,56,152,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -106,6 +115,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a648653ec187491a4eb63f11af7f70de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95545f4f6961fdc28e260f63fc21a80f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a95545f4f6961fdc28e260f63fc21a80f">getPos</a> () const</td></tr>
 <tr class="separator:a95545f4f6961fdc28e260f63fc21a80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7234468c73f24449383b8fdd38f8a9d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981f">TypeObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a7234468c73f24449383b8fdd38f8a9d0">getType</a> () const</td></tr>
+<tr class="separator:a7234468c73f24449383b8fdd38f8a9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae61e94b4726deeffe76fed45da1a2538"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#ae61e94b4726deeffe76fed45da1a2538">getDisplay</a> () const</td></tr>
 <tr class="separator:ae61e94b4726deeffe76fed45da1a2538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab237d5fcfff342d52668fdecd7cd5e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#ab237d5fcfff342d52668fdecd7cd5e46">setDisplay</a> (bool display)</td></tr>
@@ -117,12 +128,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a63e7ce756868107a203f5fe49535b34c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a63e7ce756868107a203f5fe49535b34c">draw</a> ()=0</td></tr>
 <tr class="separator:a63e7ce756868107a203f5fe49535b34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:aebdb23ec8f21b1bde986b520e499831c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#aebdb23ec8f21b1bde986b520e499831c">_id</a></td></tr>
 <tr class="separator:aebdb23ec8f21b1bde986b520e499831c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaade219ffb0a367a5e50891d667ef68c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#aaade219ffb0a367a5e50891d667ef68c">_pos</a></td></tr>
 <tr class="separator:aaade219ffb0a367a5e50891d667ef68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e172586aa632f8126713ab1f71b2e9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981f">TypeObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a4e172586aa632f8126713ab1f71b2e9f">_type</a></td></tr>
+<tr class="separator:a4e172586aa632f8126713ab1f71b2e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14e2efbc4ba4554e66ea7d84ac31b15a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a14e2efbc4ba4554e66ea7d84ac31b15a">_display</a></td></tr>
 <tr class="separator:a14e2efbc4ba4554e66ea7d84ac31b15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -334,6 +347,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7234468c73f24449383b8fdd38f8a9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7234468c73f24449383b8fdd38f8a9d0">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981f">Indie::Game::GameObject::TypeObject</a> Indie::Game::GameObject::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a62cdbeafb3be19ebd856c428cc4742fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62cdbeafb3be19ebd856c428cc4742fe">&#9670;&nbsp;</a></span>operator=()</h2>
 
@@ -438,7 +468,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -460,7 +490,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -482,7 +512,29 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e172586aa632f8126713ab1f71b2e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e172586aa632f8126713ab1f71b2e9f">&#9670;&nbsp;</a></span>_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981f">TypeObject</a> Indie::Game::GameObject::_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -98,12 +98,8 @@ Inheritance diagram for Indie::Raylib::Models::IModels:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7e41c4799da485b7a2306bc2dfbf51c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#ab7e41c4799da485b7a2306bc2dfbf51c">~IModels</a> ()=default</td></tr>
 <tr class="separator:ab7e41c4799da485b7a2306bc2dfbf51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a693364059ca6484b2fe203d5fec07a57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a693364059ca6484b2fe203d5fec07a57">DrawModels</a> ()=0</td></tr>
-<tr class="separator:a693364059ca6484b2fe203d5fec07a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9633473c8ca58e8be74bf61e07f772d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a9633473c8ca58e8be74bf61e07f772d0">ComputeMesh</a> ()=0</td></tr>
-<tr class="separator:a9633473c8ca58e8be74bf61e07f772d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1808c23b3cdcf44e7b24d0cc94d75f11"><td class="memItemLeft" align="right" valign="top">virtual ::Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a1808c23b3cdcf44e7b24d0cc94d75f11">GenerateMesh</a> ()=0</td></tr>
-<tr class="separator:a1808c23b3cdcf44e7b24d0cc94d75f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717acea7878f358681a1102acad8d1a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a717acea7878f358681a1102acad8d1a5">DrawModel</a> (<a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 3 &gt;, float, <a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a>)=0</td></tr>
+<tr class="separator:a717acea7878f358681a1102acad8d1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49dd725c7d4f5f609e434da5c324fcb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#ae49dd725c7d4f5f609e434da5c324fcb">GetColors</a> () const =0</td></tr>
 <tr class="separator:ae49dd725c7d4f5f609e434da5c324fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9561b728c03bce5c51422f4079837154"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4d/classIndie_1_1Raylib_1_1Models_1_1IModels.html#a9561b728c03bce5c51422f4079837154">SetColors</a> (const <a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a>)=0</td></tr>
@@ -136,8 +132,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9633473c8ca58e8be74bf61e07f772d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9633473c8ca58e8be74bf61e07f772d0">&#9670;&nbsp;</a></span>ComputeMesh()</h2>
+<a id="a717acea7878f358681a1102acad8d1a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717acea7878f358681a1102acad8d1a5">&#9670;&nbsp;</a></span>DrawModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,10 +142,27 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Indie::Raylib::Models::IModels::ComputeMesh </td>
+          <td class="memname">virtual void Indie::Raylib::Models::IModels::DrawModel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -159,57 +172,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a693364059ca6484b2fe203d5fec07a57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a693364059ca6484b2fe203d5fec07a57">&#9670;&nbsp;</a></span>DrawModels()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Indie::Raylib::Models::IModels::DrawModels </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="../../de/d6f/classIndie_1_1Raylib_1_1Models_1_1TriangleStrip3D.html#aa9003ad0106c95755e86ca551728cdb7">Indie::Raylib::Models::TriangleStrip3D</a>, <a class="el" href="../../d8/d37/classIndie_1_1Raylib_1_1Models_1_1Triangle3D.html#ad742af51d4385b44766bc6b9fba8cdeb">Indie::Raylib::Models::Triangle3D</a>, <a class="el" href="../../d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html#aa5e5dd9a56a64a69ca8c7d0074fead33">Indie::Raylib::Models::SphereWires</a>, <a class="el" href="../../dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html#adac52f08da9b137be4a6d036cf82d68a">Indie::Raylib::Models::SphereEx</a>, <a class="el" href="../../dd/d97/classIndie_1_1Raylib_1_1Models_1_1Sphere.html#ae6e6594a7f6f5908d047afb9351e9bc0">Indie::Raylib::Models::Sphere</a>, <a class="el" href="../../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html#ac1221c0062b5df3ec4c9e74a84e88610">Indie::Raylib::Models::Ray</a>, <a class="el" href="../../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html#a25a15897a37bafc30f965aa420a556f2">Indie::Raylib::Models::Point3D</a>, <a class="el" href="../../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html#a7bb8d9d96970c6d97c001a782bcb33be">Indie::Raylib::Models::Plane</a>, <a class="el" href="../../dd/d50/classIndie_1_1Raylib_1_1Models_1_1Line3D.html#a3cb935d73868cc3b84d6bf4c8dafa98f">Indie::Raylib::Models::Line3D</a>, <a class="el" href="../../dd/d41/classIndie_1_1Raylib_1_1Models_1_1Grid.html#a656b624b983bcfac82c6af0b38d6167c">Indie::Raylib::Models::Grid</a>, <a class="el" href="../../d0/d7e/classIndie_1_1Raylib_1_1Models_1_1CylinderWires.html#a9dce5d1d8caaed1081ed02ad55334bbf">Indie::Raylib::Models::CylinderWires</a>, <a class="el" href="../../d2/d83/classIndie_1_1Raylib_1_1Models_1_1Cylinder.html#a2ee9a42167b97ddcc8de49dc6f58846a">Indie::Raylib::Models::Cylinder</a>, <a class="el" href="../../d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a920cbc0afa3f919b91c0c1b607872571">Indie::Raylib::Models::CubeTexture</a>, <a class="el" href="../../d1/dc1/classIndie_1_1Raylib_1_1Models_1_1CubeWiresV.html#aa94a7bfd5ee432c116eabd311172430a">Indie::Raylib::Models::CubeWiresV</a>, <a class="el" href="../../de/d39/classIndie_1_1Raylib_1_1Models_1_1CubeWires.html#a8e0c5e33455158ffb96bfbe4fe23dd33">Indie::Raylib::Models::CubeWires</a>, <a class="el" href="../../d7/db4/classIndie_1_1Raylib_1_1Models_1_1CubeV.html#a236a716928ef916ddcffae1e59fa7470">Indie::Raylib::Models::CubeV</a>, <a class="el" href="../../d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html#a744622ab669929ee89fa71ed49e19b67">Indie::Raylib::Models::Cube</a>, and <a class="el" href="../../df/dc9/classIndie_1_1Raylib_1_1Models_1_1Circle3D.html#ad6ac22e3122aeadbb41b06749539d664">Indie::Raylib::Models::Circle3D</a>.</p>
-
-</div>
-</div>
-<a id="a1808c23b3cdcf44e7b24d0cc94d75f11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1808c23b3cdcf44e7b24d0cc94d75f11">&#9670;&nbsp;</a></span>GenerateMesh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ::Mesh Indie::Raylib::Models::IModels::GenerateMesh </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Implemented in <a class="el" href="../../db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html#aec659f53f78168562b9adba185b5a523">Indie::Raylib::Models::ModelsRaylib</a>.</p>
 
 </div>
 </div>
@@ -236,7 +199,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../db/d9f/classIndie_1_1Raylib_1_1Models_1_1ICircle3D.html#a15fcafbb51f4f1265ca8ae4bb7da9a29">Indie::Raylib::Models::ICircle3D</a>, <a class="el" href="../../de/d6f/classIndie_1_1Raylib_1_1Models_1_1TriangleStrip3D.html#ab2fa2d9318da7ac0aebd54416b1c4aba">Indie::Raylib::Models::TriangleStrip3D</a>, <a class="el" href="../../d8/d37/classIndie_1_1Raylib_1_1Models_1_1Triangle3D.html#ac133d165852c9299a8c2b2079abf77bb">Indie::Raylib::Models::Triangle3D</a>, <a class="el" href="../../d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html#ad0f389c13ba15348ec7a8757945a292d">Indie::Raylib::Models::SphereWires</a>, <a class="el" href="../../dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html#a60d792aa73980406a9666a3c33b59b25">Indie::Raylib::Models::SphereEx</a>, <a class="el" href="../../dd/d97/classIndie_1_1Raylib_1_1Models_1_1Sphere.html#a841399e96e61cc4272cee8224035c053">Indie::Raylib::Models::Sphere</a>, <a class="el" href="../../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html#a87815a5983abc40e3bb908a3cd397515">Indie::Raylib::Models::Ray</a>, <a class="el" href="../../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html#a8159939561c0782e3d49092e957dea3c">Indie::Raylib::Models::Point3D</a>, <a class="el" href="../../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html#a3d5ae33847ce155fcb17d302de04bad2">Indie::Raylib::Models::Plane</a>, <a class="el" href="../../dd/d50/classIndie_1_1Raylib_1_1Models_1_1Line3D.html#aee0e52330e833969a4d941825e242c6b">Indie::Raylib::Models::Line3D</a>, <a class="el" href="../../d0/d7e/classIndie_1_1Raylib_1_1Models_1_1CylinderWires.html#a166471da208da530d83716caa737aaca">Indie::Raylib::Models::CylinderWires</a>, <a class="el" href="../../d2/d83/classIndie_1_1Raylib_1_1Models_1_1Cylinder.html#a5ea380f009ebb786e068179ae4bbb43c">Indie::Raylib::Models::Cylinder</a>, <a class="el" href="../../d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a3016b6702dd73f9aa55ca53ac7f3cef4">Indie::Raylib::Models::CubeTexture</a>, <a class="el" href="../../d1/dc1/classIndie_1_1Raylib_1_1Models_1_1CubeWiresV.html#a1e06f4a615811365a4907c4bc35063c4">Indie::Raylib::Models::CubeWiresV</a>, <a class="el" href="../../de/d39/classIndie_1_1Raylib_1_1Models_1_1CubeWires.html#a5e061d256db1e9724c2df8a5383df60f">Indie::Raylib::Models::CubeWires</a>, <a class="el" href="../../d7/db4/classIndie_1_1Raylib_1_1Models_1_1CubeV.html#ab40e557c41c2f16fbc4014695e32442b">Indie::Raylib::Models::CubeV</a>, <a class="el" href="../../d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html#a86d45344dc650e374b3c91cd26a38256">Indie::Raylib::Models::Cube</a>, and <a class="el" href="../../df/dc9/classIndie_1_1Raylib_1_1Models_1_1Circle3D.html#ab7f55b8a5315cebb10d72a42e4513e4a">Indie::Raylib::Models::Circle3D</a>.</p>
+<p>Implemented in <a class="el" href="../../db/d9f/classIndie_1_1Raylib_1_1Models_1_1ICircle3D.html#a15fcafbb51f4f1265ca8ae4bb7da9a29">Indie::Raylib::Models::ICircle3D</a>, <a class="el" href="../../db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html#a9a90ca9dda0c5d488f4e15bcf85e526c">Indie::Raylib::Models::ModelsRaylib</a>, <a class="el" href="../../de/d6f/classIndie_1_1Raylib_1_1Models_1_1TriangleStrip3D.html#ab2fa2d9318da7ac0aebd54416b1c4aba">Indie::Raylib::Models::TriangleStrip3D</a>, <a class="el" href="../../d8/d37/classIndie_1_1Raylib_1_1Models_1_1Triangle3D.html#ac133d165852c9299a8c2b2079abf77bb">Indie::Raylib::Models::Triangle3D</a>, <a class="el" href="../../d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html#ad0f389c13ba15348ec7a8757945a292d">Indie::Raylib::Models::SphereWires</a>, <a class="el" href="../../dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html#a60d792aa73980406a9666a3c33b59b25">Indie::Raylib::Models::SphereEx</a>, <a class="el" href="../../dd/d97/classIndie_1_1Raylib_1_1Models_1_1Sphere.html#a841399e96e61cc4272cee8224035c053">Indie::Raylib::Models::Sphere</a>, <a class="el" href="../../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html#a87815a5983abc40e3bb908a3cd397515">Indie::Raylib::Models::Ray</a>, <a class="el" href="../../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html#a8159939561c0782e3d49092e957dea3c">Indie::Raylib::Models::Point3D</a>, <a class="el" href="../../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html#a3d5ae33847ce155fcb17d302de04bad2">Indie::Raylib::Models::Plane</a>, <a class="el" href="../../dd/d50/classIndie_1_1Raylib_1_1Models_1_1Line3D.html#aee0e52330e833969a4d941825e242c6b">Indie::Raylib::Models::Line3D</a>, <a class="el" href="../../d0/d7e/classIndie_1_1Raylib_1_1Models_1_1CylinderWires.html#a166471da208da530d83716caa737aaca">Indie::Raylib::Models::CylinderWires</a>, <a class="el" href="../../d2/d83/classIndie_1_1Raylib_1_1Models_1_1Cylinder.html#a5ea380f009ebb786e068179ae4bbb43c">Indie::Raylib::Models::Cylinder</a>, <a class="el" href="../../d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a3016b6702dd73f9aa55ca53ac7f3cef4">Indie::Raylib::Models::CubeTexture</a>, <a class="el" href="../../d1/dc1/classIndie_1_1Raylib_1_1Models_1_1CubeWiresV.html#a1e06f4a615811365a4907c4bc35063c4">Indie::Raylib::Models::CubeWiresV</a>, <a class="el" href="../../de/d39/classIndie_1_1Raylib_1_1Models_1_1CubeWires.html#a5e061d256db1e9724c2df8a5383df60f">Indie::Raylib::Models::CubeWires</a>, <a class="el" href="../../d7/db4/classIndie_1_1Raylib_1_1Models_1_1CubeV.html#ab40e557c41c2f16fbc4014695e32442b">Indie::Raylib::Models::CubeV</a>, <a class="el" href="../../d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html#a86d45344dc650e374b3c91cd26a38256">Indie::Raylib::Models::Cube</a>, and <a class="el" href="../../df/dc9/classIndie_1_1Raylib_1_1Models_1_1Circle3D.html#ab7f55b8a5315cebb10d72a42e4513e4a">Indie::Raylib::Models::Circle3D</a>.</p>
 
 </div>
 </div>
@@ -264,7 +227,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../db/d9f/classIndie_1_1Raylib_1_1Models_1_1ICircle3D.html#ac720073a2630d3c09f9d363a0379ebea">Indie::Raylib::Models::ICircle3D</a>, <a class="el" href="../../de/d6f/classIndie_1_1Raylib_1_1Models_1_1TriangleStrip3D.html#aaf13f69348a353312dab3aaa83146750">Indie::Raylib::Models::TriangleStrip3D</a>, <a class="el" href="../../d8/d37/classIndie_1_1Raylib_1_1Models_1_1Triangle3D.html#abeb2709883b820ae1b2ba416c80fdbdc">Indie::Raylib::Models::Triangle3D</a>, <a class="el" href="../../d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html#a185940cd7283b42f1dfa7ce0f2f87d4a">Indie::Raylib::Models::SphereWires</a>, <a class="el" href="../../dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html#ad4083caddf35a1c0646586daf1458df5">Indie::Raylib::Models::SphereEx</a>, <a class="el" href="../../dd/d97/classIndie_1_1Raylib_1_1Models_1_1Sphere.html#a527357ea20d6a7c4b6351a5901cb4f51">Indie::Raylib::Models::Sphere</a>, <a class="el" href="../../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html#ab8253f93753322fccc795b45273e6750">Indie::Raylib::Models::Ray</a>, <a class="el" href="../../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html#a907460e172934d34d11afba890fc854c">Indie::Raylib::Models::Point3D</a>, <a class="el" href="../../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html#a308029c450ee8cd99ae649ad667ccedf">Indie::Raylib::Models::Plane</a>, <a class="el" href="../../dd/d50/classIndie_1_1Raylib_1_1Models_1_1Line3D.html#aa84a2fcd5a169047d27b166ed4470b24">Indie::Raylib::Models::Line3D</a>, <a class="el" href="../../d0/d7e/classIndie_1_1Raylib_1_1Models_1_1CylinderWires.html#a0cd402e6aae6af017ac0005e4cacab88">Indie::Raylib::Models::CylinderWires</a>, <a class="el" href="../../d2/d83/classIndie_1_1Raylib_1_1Models_1_1Cylinder.html#a0fc4c829d4aa676c738b00fac243168d">Indie::Raylib::Models::Cylinder</a>, <a class="el" href="../../d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a2500c69fed8006732c8b23180bf47842">Indie::Raylib::Models::CubeTexture</a>, <a class="el" href="../../d1/dc1/classIndie_1_1Raylib_1_1Models_1_1CubeWiresV.html#a059ba1e6b9a10ddfd5c5f79923e40d8f">Indie::Raylib::Models::CubeWiresV</a>, <a class="el" href="../../de/d39/classIndie_1_1Raylib_1_1Models_1_1CubeWires.html#a08b03b64a710d6ec9c4689a624c40898">Indie::Raylib::Models::CubeWires</a>, <a class="el" href="../../d7/db4/classIndie_1_1Raylib_1_1Models_1_1CubeV.html#a5ba19ebe7db38bcf30229ab5a8d4bbad">Indie::Raylib::Models::CubeV</a>, <a class="el" href="../../d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html#a88c3ee5e4919da6eec080514492152d5">Indie::Raylib::Models::Cube</a>, and <a class="el" href="../../df/dc9/classIndie_1_1Raylib_1_1Models_1_1Circle3D.html#a0d599a7e792eb717380f393d5f919592">Indie::Raylib::Models::Circle3D</a>.</p>
+<p>Implemented in <a class="el" href="../../db/d9f/classIndie_1_1Raylib_1_1Models_1_1ICircle3D.html#ac720073a2630d3c09f9d363a0379ebea">Indie::Raylib::Models::ICircle3D</a>, <a class="el" href="../../db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html#a8a2eb68613d60731c49080c96a736a9b">Indie::Raylib::Models::ModelsRaylib</a>, <a class="el" href="../../de/d6f/classIndie_1_1Raylib_1_1Models_1_1TriangleStrip3D.html#aaf13f69348a353312dab3aaa83146750">Indie::Raylib::Models::TriangleStrip3D</a>, <a class="el" href="../../d8/d37/classIndie_1_1Raylib_1_1Models_1_1Triangle3D.html#abeb2709883b820ae1b2ba416c80fdbdc">Indie::Raylib::Models::Triangle3D</a>, <a class="el" href="../../d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html#a185940cd7283b42f1dfa7ce0f2f87d4a">Indie::Raylib::Models::SphereWires</a>, <a class="el" href="../../dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html#ad4083caddf35a1c0646586daf1458df5">Indie::Raylib::Models::SphereEx</a>, <a class="el" href="../../dd/d97/classIndie_1_1Raylib_1_1Models_1_1Sphere.html#a527357ea20d6a7c4b6351a5901cb4f51">Indie::Raylib::Models::Sphere</a>, <a class="el" href="../../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html#ab8253f93753322fccc795b45273e6750">Indie::Raylib::Models::Ray</a>, <a class="el" href="../../da/d28/classIndie_1_1Raylib_1_1Models_1_1Point3D.html#a907460e172934d34d11afba890fc854c">Indie::Raylib::Models::Point3D</a>, <a class="el" href="../../db/d05/classIndie_1_1Raylib_1_1Models_1_1Plane.html#a308029c450ee8cd99ae649ad667ccedf">Indie::Raylib::Models::Plane</a>, <a class="el" href="../../dd/d50/classIndie_1_1Raylib_1_1Models_1_1Line3D.html#aa84a2fcd5a169047d27b166ed4470b24">Indie::Raylib::Models::Line3D</a>, <a class="el" href="../../d0/d7e/classIndie_1_1Raylib_1_1Models_1_1CylinderWires.html#a0cd402e6aae6af017ac0005e4cacab88">Indie::Raylib::Models::CylinderWires</a>, <a class="el" href="../../d2/d83/classIndie_1_1Raylib_1_1Models_1_1Cylinder.html#a0fc4c829d4aa676c738b00fac243168d">Indie::Raylib::Models::Cylinder</a>, <a class="el" href="../../d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a2500c69fed8006732c8b23180bf47842">Indie::Raylib::Models::CubeTexture</a>, <a class="el" href="../../d1/dc1/classIndie_1_1Raylib_1_1Models_1_1CubeWiresV.html#a059ba1e6b9a10ddfd5c5f79923e40d8f">Indie::Raylib::Models::CubeWiresV</a>, <a class="el" href="../../de/d39/classIndie_1_1Raylib_1_1Models_1_1CubeWires.html#a08b03b64a710d6ec9c4689a624c40898">Indie::Raylib::Models::CubeWires</a>, <a class="el" href="../../d7/db4/classIndie_1_1Raylib_1_1Models_1_1CubeV.html#a5ba19ebe7db38bcf30229ab5a8d4bbad">Indie::Raylib::Models::CubeV</a>, <a class="el" href="../../d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html#a88c3ee5e4919da6eec080514492152d5">Indie::Raylib::Models::Cube</a>, and <a class="el" href="../../df/dc9/classIndie_1_1Raylib_1_1Models_1_1Circle3D.html#a0d599a7e792eb717380f393d5f919592">Indie::Raylib::Models::Circle3D</a>.</p>
 
 </div>
 </div>
