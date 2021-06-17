@@ -15,17 +15,20 @@
 
 Indie::Scene::SplashScreen::SplashScreen()
 {
+    std::cout << "SplashScreen uwu" << std::endl;
 }
 Indie::Scene::SplashScreen::~SplashScreen()
 {
 }
 
-void Indie::Scene::SplashScreen::update(Indie::Core::SceneManagement &scenemanagement)
+void Indie::Scene::SplashScreen::update(Indie::Core::SceneManagement& scenemanagement)
 {
-    (void) scenemanagement;
+    if (IsKeyPressed(KEY_SPACE))
+        scenemanagement.push<Indie::Scene::MainMenu>();
 }
 
 void Indie::Scene::SplashScreen::draw()
 {
     DrawFPS(10, 10);
+    std::cout << "Test" << std::endl;
 }

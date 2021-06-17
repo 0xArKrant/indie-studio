@@ -12,7 +12,7 @@ Indie::Raylib::Map::Map(const std::string texturePath, const std::string cubicPa
     this->_camera = { { 16.0f, 35.0f, 0.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 1.0f, 0.0f }, 25.0f, 0 };
     this->_img = ::LoadImage(cubicPath.c_str());
     this->cubicmap = ::LoadTextureFromImage(this->_img);       // Convert image to texture to display (VRAM)
-    this->_mesh = GenMeshCubicmap(this->_img, (Vector3){ 1.0f, 1.0f, 1.0f });
+    this->_mesh = GenMeshCubicmap(this->_img, { 1.0f, 1.0f, 1.0f });
     this->_model = LoadModelFromMesh(this->_mesh);
     this->texture = ::LoadTexture(texturePath.c_str());    // Load map texture
     this->_model.materials[0].maps[MATERIAL_MAP_DIFFUSE].texture = this->texture;             // Set map diffuse texture

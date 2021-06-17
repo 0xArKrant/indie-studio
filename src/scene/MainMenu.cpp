@@ -22,7 +22,7 @@ void Indie::Scene::MainMenu::setMenu()
 
 void Indie::Scene::MainMenu::update(Indie::Core::SceneManagement &scenemanagement)
 {
-    (void) scenemanagement;
+    (void)scenemanagement;
 }
 
 void Indie::Scene::MainMenu::draw()
