@@ -1,10 +1,3 @@
-/*
-** EPITECH PROJECT, 2021
-** indie-studio
-** File description:
-** SceneManagement
-*/
-
 #include "SceneManagement.hpp"
 #include "Colors.hpp"
 

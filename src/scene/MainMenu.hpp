@@ -11,6 +11,8 @@
 #include "../core/IScene.hpp"
 #include "./Camera.hpp"
 #include "../Texture/Texture.hpp"
+#include "../engine/Map/Map.hpp"
+
 
 namespace Indie {
     namespace Scene {
@@ -24,13 +26,7 @@ namespace Indie {
 
             protected:
             private:
-                ::Mesh _mesh;
-                ::Model _model;
-                ::Camera3D _camera;
-                ::Texture cubicmap;
-                ::Texture2D texture;
-                ::Image _img;
-                ::Vector3 mapPosition;
+                Indie::Raylib::Map _map;
         };
     }
 }
