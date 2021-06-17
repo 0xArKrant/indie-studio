@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['texture_1796',['texture',['../df/d9f/classIndie_1_1Scene_1_1MainMenu.html#ad68db26165a0aa63de42975bff816b26',1,'Indie::Scene::MainMenu']]]
+  ['resolver_1821',['resolver',['../d8/d40/classIndie_1_1Client_1_1ClientConnection.html#ada9a02642a3c69bd3fa81b8fa0d79fd1',1,'Indie::Client::ClientConnection']]]
 ];

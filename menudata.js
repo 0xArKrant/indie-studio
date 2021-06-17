@@ -78,9 +78,10 @@ var menudata={children:[
 {text:"~",url:"functions_func_~.html#index__7E"}]},
 {text:"Variables",url:"functions_vars.html",children:[
 {text:"_",url:"functions_vars.html#index__5F"},
-{text:"c",url:"functions_vars_c.html#index_c"},
-{text:"m",url:"functions_vars_m.html#index_m"},
-{text:"t",url:"functions_vars_t.html#index_t"}]},
+{text:"e",url:"functions_vars_e.html#index_e"},
+{text:"i",url:"functions_vars_i.html#index_i"},
+{text:"r",url:"functions_vars_r.html#index_r"},
+{text:"s",url:"functions_vars_s.html#index_s"}]},
 {text:"Enumerations",url:"functions_enum.html"},
 {text:"Enumerator",url:"functions_eval.html"}]}]},
 {text:"Files",url:"files.html",children:[
@@ -88,4 +89,5 @@ var menudata={children:[
 {text:"File Members",url:"globals.html",children:[
 {text:"All",url:"globals.html"},
 {text:"Functions",url:"globals_func.html"},
-{text:"Typedefs",url:"globals_type.html"}]}]}]}
+{text:"Typedefs",url:"globals_type.html"},
+{text:"Macros",url:"globals_defs.html"}]}]}]}
