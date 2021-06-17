@@ -52,7 +52,7 @@ var searchData=
   ['_7eiray_1610',['~IRay',['../da/d6a/classIndie_1_1Raylib_1_1Models_1_1IRay.html#a85368fa49bd7b98117ee14294f251d81',1,'Indie::Raylib::Models::IRay']]],
   ['_7eirectangle_1611',['~IRectangle',['../d7/d06/classIndie_1_1Raylib_1_1Shape_1_1IRectangle.html#a158c5671548caa256b8eff016a938d49',1,'Indie::Raylib::Shape::IRectangle']]],
   ['_7eiring_1612',['~IRing',['../d0/d8a/classIndie_1_1Raylib_1_1Shape_1_1IRing.html#aed9208b8ae455d16133a7f146885c6f3',1,'Indie::Raylib::Shape::IRing']]],
-  ['_7eiscene_1613',['~IScene',['../d7/d5c/classIndie_1_1Core_1_1IScene.html#ae8ddddef569d41b13e13b212357757c6',1,'Indie::Core::IScene']]],
+  ['_7eiscene_1613',['~IScene',['../d7/d5c/classIndie_1_1Core_1_1IScene.html#a385a11324af50b1509155603d87a18fa',1,'Indie::Core::IScene']]],
   ['_7eishape_1614',['~IShape',['../da/d67/classIndie_1_1Raylib_1_1Shape_1_1IShape.html#a70d6b726a9d3538e766df081c3775977',1,'Indie::Raylib::Shape::IShape']]],
   ['_7eisphere_1615',['~ISphere',['../d8/d7e/classIndie_1_1Raylib_1_1Models_1_1ISphere.html#af0a391f23f8961bd520c8602ea311b7b',1,'Indie::Raylib::Models::ISphere']]],
   ['_7eitext_1616',['~IText',['../dd/dd5/classIndie_1_1Raylib_1_1Text_1_1IText.html#ac29a66e009bf447ab7dfd1918e6ac154',1,'Indie::Raylib::Text::IText']]],
