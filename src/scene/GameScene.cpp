@@ -23,6 +23,7 @@ void Indie::Scene::GameScene::setGame()
 void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed)
 {
     (void)scenemanagement;
+    (void)elapsed;
 }
 
 void Indie::Scene::GameScene::draw()

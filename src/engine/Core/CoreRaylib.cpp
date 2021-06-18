@@ -136,3 +136,25 @@ double Indie::Raylib::Core::Core::GetElapsedTime(void)
     this->_time = ::GetTime();
     return (this->_time - old);
 }
+
+void Indie::Raylib::Core::Core::BeginMode2D(Misc::Camera2D camera)
+{
+    ::Camera2D tempCamera = {
+        ::Vector2 { camera.getOffset().getX(), camera.getOffset().getY() },
+        ::Vector2 { camera.getTarget().getX(), camera.getTarget().getY() },
+        camera.getRotation(),
+        camera.getZoom()
+    };
+    ::BeginMode2D(tempCamera);
+}
+void Indie::Raylib::Core::Core::BeginMode3D(Misc::Camera3D camera)
+{
+    ::Camera3D tempCamera = {
+        ::Vector3 { camera.getPosition().getX(), camera.getPosition().getY(), camera.getPosition().getZ() },
+        ::Vector3 { camera.getTarget().getX(), camera.getTarget().getY(), camera.getTarget().getZ() },
+        ::Vector3 { camera.getUp().getX(), camera.getUp().getY(), camera.getUp().getZ() },
+        camera.getFovy(),
+        camera.getProjection()
+     };
+    ::BeginMode3D(tempCamera);
+}

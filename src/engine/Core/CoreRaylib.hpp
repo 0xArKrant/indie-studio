@@ -305,18 +305,8 @@ namespace Indie {
                      *
                      * @param camera
                      */
-                    inline void BeginMode2D(Camera2D camera) { ::BeginMode2D(camera); };
-                    /**
-                     * @brief Initializes 3D mode with custom camera (3D)
-                     *
-                     * @param camera
-                     */
-                    inline void BeginMode3D(Camera3D camera) { ::BeginMode3D(camera); };
-                    /**
-                     * @brief Initializes render texture for drawing
-                     *
-                     * @param target
-                     */
+                    void BeginMode2D(Misc::Camera2D camera);
+                    void BeginMode3D(Misc::Camera3D camera);
                     inline void BeginTextureMode(RenderTexture2D target) { ::BeginTextureMode(target); };
 
                     /**

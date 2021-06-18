@@ -32,7 +32,7 @@ namespace Indie {
                 unsigned char _alpha;
                 Indie::Raylib::Models::ModelsRaylib _model;
                 Indie::Raylib::Models::ModelsRaylib _model2;
-                ::Camera3D _camera;
+                Misc::Camera3D _camera;
                 ::Vector3 _pos;
         };
     }

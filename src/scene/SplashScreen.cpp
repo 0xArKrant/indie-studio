@@ -22,7 +22,7 @@ Indie::Scene::SplashScreen::SplashScreen() : _model("./assets/splash_logo.obj"),
 
     this->_camera = { { 0.0f, 0.0f, 75.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 10.0f, 0.0f }, 15.0f, 0 };
 
-    ::SetCameraMode(this->_camera, CAMERA_PERSPECTIVE);
+    Indie::Raylib::Core::Core::getInstance().SetCameraMode(this->_camera, CAMERA_PERSPECTIVE);
 }
 
 Indie::Scene::SplashScreen::~SplashScreen()
@@ -31,6 +31,7 @@ Indie::Scene::SplashScreen::~SplashScreen()
 
 void Indie::Scene::SplashScreen::update(Indie::Core::SceneManagement& scenemanagement, const double &elapsed)
 {
+    (void) elapsed;
     if (Indie::Raylib::Core::Core::getInstance().GetTime() > 4.f)
         scenemanagement.push<Indie::Scene::MainMenu>();
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyReleased(KEY_SPACE))
