@@ -13,22 +13,36 @@
 
 #include "SplashScreen.hpp"
 
-Indie::Scene::SplashScreen::SplashScreen()
+Indie::Scene::SplashScreen::SplashScreen() : _model("./assets/splash_logo.obj"), _model2("./assets/splash_text.obj")
 {
-    std::cout << "SplashScreen uwu" << std::endl;
+    int current_monitor = Indie::Raylib::Core::Core::getInstance().GetCurrentMonitor();
+    int refresh_rate = Indie::Raylib::Core::Core::getInstance().GetMonitorRefreshRate(current_monitor);
+    Indie::Raylib::Core::Core::getInstance().SetTargetFPS(refresh_rate);
+    this->_alpha = 0;
+
+    this->_camera = { { 0.0f, 0.0f, 75.0f }, { 0.0f, 0.0f, 0.0f }, { 0.0f, 10.0f, 0.0f }, 15.0f, 0 };
+
+    ::SetCameraMode(this->_camera, CAMERA_PERSPECTIVE);
 }
+
 Indie::Scene::SplashScreen::~SplashScreen()
 {
 }
 
 void Indie::Scene::SplashScreen::update(Indie::Core::SceneManagement& scenemanagement)
 {
-    if (IsKeyPressed(KEY_SPACE))
+    if (Indie::Raylib::Core::Core::getInstance().GetTime() > 4.f)
+        scenemanagement.push<Indie::Scene::MainMenu>();
+    if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyReleased(KEY_SPACE))
         scenemanagement.push<Indie::Scene::MainMenu>();
 }
 
 void Indie::Scene::SplashScreen::draw()
 {
-    DrawFPS(10, 10);
-    std::cout << "Test" << std::endl;
+    Indie::Raylib::Core::Core::getInstance().ClearBackground({0, 0, 0, 250});
+    ::DrawFPS(10, 10);
+    Indie::Raylib::Core::Core::getInstance().BeginMode3D(this->_camera);
+    this->_model.DrawModel({ 0.0f, 0.0f, 0.0f }, 0.01f, Misc::Colors{250, 250, 250, 250});
+    this->_model2.DrawModel({ 0.0f, -5.0f, 0.0f }, 0.01f, Misc::Colors{250, 250, 250, 250});
+    Indie::Raylib::Core::Core::getInstance().EndMode3D();
 }

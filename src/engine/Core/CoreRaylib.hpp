@@ -24,7 +24,7 @@ namespace Indie {
         namespace Core {
             class Core : public ICore {
                 public:
-                    static Core& getInstance(int width, int height, const std::string& title);
+                    static Core& getInstance(void);
                     // Core(Core &) = delete;
                     // void operator=(const Core &) = delete;
 
