@@ -7,7 +7,7 @@
 
 #include "MainMenu.hpp"
 
-Indie::Scene::MainMenu::MainMenu() : _map("./src/scene/cubicmap_atlas.png", "./src/scene/cubicmap.png", CAMERA_PERSPECTIVE)
+Indie::Scene::MainMenu::MainMenu() : _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE)
 {
 }
 
@@ -22,10 +22,11 @@ void Indie::Scene::MainMenu::setMenu()
 
 void Indie::Scene::MainMenu::update(Indie::Core::SceneManagement &scenemanagement)
 {
-    (void)scenemanagement;
+    if (IsKeyPressed(KEY_P))
+        scenemanagement.push<Indie::Scene::GameScene>();
 }
 
 void Indie::Scene::MainMenu::draw()
 {
-    _map.draw();
+    //_map.draw();
 }
