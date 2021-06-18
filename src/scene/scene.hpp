@@ -9,3 +9,4 @@
 
 #include "MainMenu.hpp"
 #include "SplashScreen.hpp"
+#include "GameScene.hpp"

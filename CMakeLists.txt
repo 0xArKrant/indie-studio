@@ -68,6 +68,7 @@ file(GLOB SRC_FILES
     src/core/SceneManagement.cpp
     src/error/Exception.cpp
     src/scene/MainMenu.cpp
+    src/scene/GameScene.cpp
     src/core/GameObject.cpp
 
     src/scene/SplashScreen.cpp
