@@ -37,8 +37,8 @@ Indie::Raylib::Core::Core::Core(int width, int height, const std::string& title)
  * @return Indie::Raylib::Core::Core&
  */
 
-Indie::Raylib::Core::Core& Indie::Raylib::Core::Core::getInstance(int width, int height, const std::string& title) {
-    static Core _core = Core(width, height, title);
+Indie::Raylib::Core::Core& Indie::Raylib::Core::Core::getInstance(void) {
+    static Core _core = Core(1920, 1080, "EPISOFT | Bomberman");
     return _core;
 }
 
