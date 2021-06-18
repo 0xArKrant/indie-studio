@@ -5,7 +5,4 @@
 ** Bomberman
 */
 
-#ifndef BOMBERMAN_HPP_
-#define BOMBERMAN_HPP_
-
-#endif /* !BOMBERMAN_HPP_ */
+#pragma once

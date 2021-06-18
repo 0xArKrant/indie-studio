@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2021
 ** tmp
 ** File description:
-** MainMenu
+** GameScene
 */
 
 #pragma once
@@ -16,11 +16,11 @@
 
 namespace Indie {
     namespace Scene {
-        class MainMenu : public Indie::Core::IScene {
+        class GameScene : public Indie::Core::IScene {
             public:
-                MainMenu();
-                ~MainMenu();
-                void setMenu();
+                GameScene();
+                ~GameScene();
+                void setGame();
                 void update(Indie::Core::SceneManagement &scenemanagement);
                 void draw();
 

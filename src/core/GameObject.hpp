@@ -5,8 +5,7 @@
 ** GameObject
 */
 
-#ifndef GAMEOBJECT_HPP_
-#define GAMEOBJECT_HPP_
+#pragma once
 
 #include "Vector.hpp"
 
@@ -30,6 +29,7 @@ namespace Indie {
                 ~GameObject();
                 std::string getId() const;
                 Misc::Vector<3> getPos() const;
+                TypeObject getType() const;
                 bool getDisplay() const;
                 void setDisplay(bool display);
                 void setPosition(Misc::Vector<3> pos);
@@ -37,12 +37,11 @@ namespace Indie {
                 virtual void draw() = 0;
 
             protected:
-            private:
                 std::string _id;
                 Misc::Vector<3> _pos;
+                TypeObject _type;
                 bool _display;
+            private:
         };
     }
 }
-
-#endif /* !GAMEOBJECT_HPP_ */

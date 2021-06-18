@@ -6,9 +6,8 @@
 */
 
 #include "MainMenu.hpp"
-#include "Cube.hpp"
 
-Indie::Scene::MainMenu::MainMenu()
+Indie::Scene::MainMenu::MainMenu() : _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE)
 {
 }
 
@@ -16,12 +15,18 @@ Indie::Scene::MainMenu::~MainMenu()
 {
 }
 
-void Indie::Scene::MainMenu::update(std::stack<Core::IScene *> &stack)
+void Indie::Scene::MainMenu::setMenu()
 {
-    (void) stack;
+
+}
+
+void Indie::Scene::MainMenu::update(Indie::Core::SceneManagement &scenemanagement)
+{
+    if (IsKeyPressed(KEY_P))
+        scenemanagement.push<Indie::Scene::GameScene>();
 }
 
 void Indie::Scene::MainMenu::draw()
 {
-
+    //_map.draw();
 }

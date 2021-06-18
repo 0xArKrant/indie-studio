@@ -1,10 +1,12 @@
 *.o
 *.so
 .vscode/
+.vs
 lib/
 *:Zone.Identifier
 build/
 doc/
+vgcore.*
 
 # Logs
 logs

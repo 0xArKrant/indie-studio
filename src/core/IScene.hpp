@@ -11,13 +11,16 @@
 
 namespace Indie {
     namespace Core     {
+        class SceneManagement;
         class IScene         {
             public:
-                ~IScene() = default;
-                virtual void update(std::stack<IScene *>&) = 0;
+                virtual ~IScene() = default;
+                virtual void update(SceneManagement &) = 0;
                 virtual void draw() = 0;
 
             protected:
         };
     } // namespace Core
 } // namespace Indie
+
+#include "SceneManagement.hpp"

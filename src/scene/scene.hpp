@@ -5,9 +5,8 @@
 ** scene
 */
 
-#ifndef SCENE_HPP_
-#define SCENE_HPP_
+#pragma once
 
 #include "MainMenu.hpp"
-
-#endif /* !SCENE_HPP_ */
+#include "SplashScreen.hpp"
+#include "GameScene.hpp"

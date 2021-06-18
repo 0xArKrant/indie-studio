@@ -28,7 +28,7 @@ namespace Indie {
                     virtual int             GetPosY()      const = 0;
                     virtual int             GetWidth()     const = 0;
                     virtual int             GetHeight()    const = 0;
-                    virtual int             GetThickness() const = 0;
+                    virtual float             GetThickness() const = 0;
                     virtual int             GetSegments()  const = 0;
                     virtual float           GetRotation()  const = 0;
                     virtual float           GetRoundness() const = 0;
@@ -45,7 +45,7 @@ namespace Indie {
                     virtual void SetPosY(const int) = 0;
                     virtual void SetWidth(const int) = 0;
                     virtual void SetHeight(const int) = 0;
-                    virtual void SetThickness(const int) = 0;
+                    virtual void SetThickness(const float) = 0;
                     virtual void SetSegments(const int) = 0;
                     virtual void SetRotation(const float) = 0;
                     virtual void SetRoundness(const float) = 0;

@@ -17,13 +17,14 @@
 
 #include "ICore.hpp"
 #include "Colors.hpp"
+#include "Camera.hpp"
 
 namespace Indie {
     namespace Raylib {
         namespace Core {
             class Core : public ICore {
                 public:
-                    static Core& getInstance(int width, int height, const std::string& title);
+                    static Core& getInstance(void);
                     // Core(Core &) = delete;
                     // void operator=(const Core &) = delete;
 
@@ -262,6 +263,9 @@ namespace Indie {
                     Misc::Vector<2> GetMonitorPosition(int monitor);
                     Misc::Vector<2> GetWindowPosition(void);
                     Misc::Vector<2> GetWindowScaleDPI(void);
+                    void SetCameraMode(Misc::Camera3D, int);
+
+                    void UpdateCamera(Misc::Camera3D &);
 
                     /**
                      * @brief Get clipboard text content
@@ -360,7 +364,6 @@ namespace Indie {
                      * @return double
                      */
                     inline double GetTime(void) const { return ::GetTime(); };
-
                 private:
                     Core(int width, int height, const std::string& title);
                     ~Core();

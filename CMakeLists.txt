@@ -3,16 +3,18 @@ project(bomberman CXX)
 
 SET(CMAKE_BUILD_TYPE Debug)
 set(OpenGL_GL_PREFERENCE GLVND)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
-set(BOOST_REQUESTED_VERSION 1.70)
-find_package(Boost 1.70 COMPONENTS system program_options regex filesystem REQUIRED)
-find_package(raylib REQUIRED)
 SET(CMAKE_CXX_STANDARD_17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-include_directories(${BOOST_INCLUDE_DIRS})
+if(CMAKE_COMPILER_IS_GNUCXX)
+    message(STATUS "GCC detected, adding compile flags")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra")
+endif(CMAKE_COMPILER_IS_GNUCXX)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../)
+
+find_package(raylib REQUIRED)
 
 set(BIN_NAME bomberman)
 
@@ -33,8 +35,8 @@ file(GLOB SRC_FILES
     src/engine/Shape/Geometric/Triangle.cpp
     src/engine/Shape/Geometric/Line.cpp
     src/engine/Shape/Geometric/Circle.cpp
-
     src/engine/Shape/Collision/CheckCollision.cpp
+
 
     src/engine/Models/Geometric/Cube.cpp
     src/engine/Models/Geometric/Line3D.cpp
@@ -46,14 +48,10 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Grid.cpp
     src/engine/Models/Geometric/Cylinder.cpp
     src/engine/Models/Geometric/Sphere.cpp
-    #src/engine/Models/MeshGeneration/GenMesh.cpp
-    #src/engine/Models/MeshManipulation/MeshManipulation.cpp
-    #src/engine/Models/ModelDrawing/DrawBoundingBox.cpp
-    #src/engine/Models/ModelDrawing/DrawBillboard.cpp
-    #src/engine/Models/ModelDrawing/DrawModel.cpp
+    src/engine/Models/ModelsRaylib.cpp
+
     src/engine/Text/Text.cpp
     src/engine/Audio/Audio.cpp
-    src/engine/Models/ModelsRaylib.cpp
 
     src/engine/Texture/Texture.cpp
 
@@ -63,14 +61,17 @@ file(GLOB SRC_FILES
     src/engine/Core/InputGamepads.cpp
     src/engine/Core/Cursor.cpp
 
+    src/engine/Map/Map.cpp
+
     src/main.cpp
     src/core/Core.cpp
     src/core/SceneManagement.cpp
     src/error/Exception.cpp
     src/scene/MainMenu.cpp
-    src/server/Server.cpp
-    src/client/Client.cpp
+    src/scene/GameScene.cpp
     src/core/GameObject.cpp
+
+    src/scene/SplashScreen.cpp
 )
 
 add_executable(${BIN_NAME} ${SRC_FILES})
@@ -89,34 +90,26 @@ include_directories(
     src/engine/Core
     src/engine/Audio
     src/engine/Models
-    #src/engine/Models/MeshGeneration
-    #src/engine/Models/MeshManipulation
-    #src/engine/Models/ModelDrawing
     src/engine/Misc/
     src/engine/Text
     src/engine/Texture
+    src/engine/Map
     src/game/
     src/core/
     src/scene/
-    src/client
-    src/server
 )
 
 if (UNIX)
     target_compile_options(${BIN_NAME} PUBLIC
-        -W
+        -g
         -Wall
         -Wextra
-        -Werror
-        -Wuninitialized
-        -Wformat-security
         -std=c++17
     )
 endif(UNIX)
-if (WIN32)
-    target_compile_options(${BIN_NAME} PUBLIC
-        -Wall
-    )
-endif(WIN32)
 
-target_link_libraries(${BIN_NAME} PUBLIC raylib ${Boost_LIBRARIES} ${CMAKE_DL_LIBS})
+if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
+endif(MSVC)
+
+target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})

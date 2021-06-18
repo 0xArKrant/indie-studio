@@ -51,6 +51,31 @@ namespace Misc {
              * @return float
              */
             inline float           getZoom()      const { return this->_zoom;     };
+
+            /**
+             * @brief Get the Offset reference object
+             *
+             * @return Misc::Vector<2>
+             */
+            inline Misc::Vector<2> &getOffset()     { return this->_offset;   };
+            /**
+             * @brief Get the Target reference object
+             *
+             * @return Misc::Vector<2>
+             */
+            inline Misc::Vector<2> &getTarget()     { return this->_target;   };
+            /**
+             * @brief Get the Rotation reference object
+             *
+             * @return float
+             */
+            inline float           &getRotation()   { return this->_rotation; };
+            /**
+             * @brief Get the Zoom reference object
+             *
+             * @return float
+             */
+            inline float           &getZoom()       { return this->_zoom;     };
         private:
             Misc::Vector<2> _offset; /*! Misc::Vector<2> offset value of Camera2D*/
             Misc::Vector<2> _target; /*! Misc::Vector<2> target value of Camera2D*/
@@ -97,6 +122,36 @@ namespace Misc {
              * @return int
              */
             inline int             getProjection() const { return this->_projection; };
+            /**
+             * @brief Get the Position object
+             *
+             * @return Misc::Vector<3>
+             */
+            inline Misc::Vector<3> &getPosition()    { return this->_position;   };
+            /**
+             * @brief Get the Target object
+             *
+             * @return Misc::Vector<3>
+             */
+            inline Misc::Vector<3> &getTarget()      { return this->_target;     };
+            /**
+             * @brief Get the Up object
+             *
+             * @return Misc::Vector<3>
+             */
+            inline Misc::Vector<3> &getUp()          { return this->_up;         };
+            /**
+             * @brief Get the Fovy object
+             *
+             * @return float
+             */
+            inline float           &getFovy()        { return this->_fovy;       };
+            /**
+             * @brief Get the Projection object
+             *
+             * @return int
+             */
+            inline int             &getProjection()  { return this->_projection; };
         private:
             Misc::Vector<3> _position; /*! Misc::Vector<3> position value of Camera3D*/
             Misc::Vector<3> _target; /*! Misc::Vector<3> target value of Camera3D*/
