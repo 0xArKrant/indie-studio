@@ -364,6 +364,8 @@ namespace Indie {
                      * @return double
                      */
                     inline double GetTime(void) const { return ::GetTime(); };
+
+                    double GetElapsedTime();
                 private:
                     Core(int width, int height, const std::string& title);
                     ~Core();
@@ -371,6 +373,7 @@ namespace Indie {
                     InputGamepads _inputGamepads; /*! InputGamePads class for events */
                     InputKeyboard _inputKeyboard; /*! InputKeyboard class for events */
                     InputMouse    _inputMouse; /*! InputMouse class for events */
+                    double        _time;
             };
         } // namespace Core
     } // namespace Raylib

@@ -26,6 +26,7 @@
 
 Indie::Raylib::Core::Core::Core(int width, int height, const std::string& title) {
     ::InitWindow(width, height, title.c_str());
+    this->_time = ::GetTime();
 }
 
 /**
@@ -127,4 +128,11 @@ void Indie::Raylib::Core::Core::UpdateCamera(Misc::Camera3D &camera)
     up = { tempCamera.up.x, tempCamera.up.y, tempCamera.up.z };
     fovy = tempCamera.fovy;
     projection = tempCamera.projection;
+}
+
+double Indie::Raylib::Core::Core::GetElapsedTime(void)
+{
+    double old = this->_time;
+    this->_time = ::GetTime();
+    return (this->_time - old);
 }

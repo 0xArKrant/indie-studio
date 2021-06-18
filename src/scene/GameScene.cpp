@@ -20,7 +20,7 @@ void Indie::Scene::GameScene::setGame()
 
 }
 
-void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanagement)
+void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed)
 {
     (void)scenemanagement;
 }

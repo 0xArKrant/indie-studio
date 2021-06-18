@@ -21,7 +21,7 @@ namespace Indie {
                 GameScene();
                 ~GameScene();
                 void setGame();
-                void update(Indie::Core::SceneManagement &scenemanagement);
+                void update(Indie::Core::SceneManagement &scenemanagement, const double &);
                 void draw();
 
             protected:

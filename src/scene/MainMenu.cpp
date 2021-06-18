@@ -20,7 +20,7 @@ void Indie::Scene::MainMenu::setMenu()
 
 }
 
-void Indie::Scene::MainMenu::update(Indie::Core::SceneManagement &scenemanagement)
+void Indie::Scene::MainMenu::update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed)
 {
     if (IsKeyPressed(KEY_P))
         scenemanagement.push<Indie::Scene::GameScene>();

@@ -29,7 +29,7 @@ Indie::Scene::SplashScreen::~SplashScreen()
 {
 }
 
-void Indie::Scene::SplashScreen::update(Indie::Core::SceneManagement& scenemanagement)
+void Indie::Scene::SplashScreen::update(Indie::Core::SceneManagement& scenemanagement, const double &elapsed)
 {
     if (Indie::Raylib::Core::Core::getInstance().GetTime() > 4.f)
         scenemanagement.push<Indie::Scene::MainMenu>();

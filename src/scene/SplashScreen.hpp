@@ -26,7 +26,7 @@ namespace Indie {
             public:
                 SplashScreen();
                 ~SplashScreen();
-                void update(Indie::Core::SceneManagement &scenemanagement);
+                void update(Indie::Core::SceneManagement &scenemanagement, const double &);
                 void draw();
             private:
                 unsigned char _alpha;
