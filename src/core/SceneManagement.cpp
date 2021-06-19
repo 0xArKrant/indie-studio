@@ -16,7 +16,7 @@ Indie::Core::SceneManagement::~SceneManagement() {
 
 void Indie::Core::SceneManagement::loop() {
     while (!this->_window.WindowShouldClose()) {
-        this->_stack.top()->update(*this);
+        this->_stack.top()->update(*this, this->_window.GetElapsedTime());
         this->_window.BeginDrawing();
         this->_window.ClearBackground(Misc::Colors(0, 0, 0, 0));
         // Ajout de tick //

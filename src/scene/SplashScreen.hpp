@@ -26,13 +26,13 @@ namespace Indie {
             public:
                 SplashScreen();
                 ~SplashScreen();
-                void update(Indie::Core::SceneManagement &scenemanagement);
+                void update(Indie::Core::SceneManagement &scenemanagement, const double &);
                 void draw();
             private:
                 unsigned char _alpha;
                 Indie::Raylib::Models::ModelsRaylib _model;
                 Indie::Raylib::Models::ModelsRaylib _model2;
-                ::Camera3D _camera;
+                Misc::Camera3D _camera;
                 ::Vector3 _pos;
         };
     }
