@@ -18,14 +18,14 @@ Indie::Game::Player::~Player()
 
 void Indie::Game::Player::update(float elapsedTimes)
 {
-    // if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_Z))
-    //     this->_pos.move(0.0f, 0.0f, (-this->_speed * elapsedTimes));
-    // if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_Q))
-    //     this->_pos.move((-this->_speed * elapsedTimes), 0.0f, 0.0f);
-    // if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_S))
-    //     this->_pos.move(0.0f, 0.0f, (this->_speed * elapsedTimes));
-    // if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_D))
-    //     this->_pos.move((this->_speed * elapsedTimes), 0.0f, 0.0f);
+    if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_W) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_UP))
+        this->_pos.move((-this->_speed * elapsedTimes), 0.0f, 0.0f);
+    if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_A) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_LEFT))
+        this->_pos.move(0.0f, 0.0f, (this->_speed * elapsedTimes));
+    if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_S) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_DOWN))
+        this->_pos.move((this->_speed * elapsedTimes), 0.0f, 0.0f);
+    if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_D) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_RIGHT))
+        this->_pos.move(0.0f, 0.0f, (-this->_speed * elapsedTimes));
     (void)elapsedTimes;
 }
 
