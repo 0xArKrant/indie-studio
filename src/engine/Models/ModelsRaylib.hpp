@@ -23,7 +23,7 @@ namespace Indie {
         namespace Models {
             class ModelsRaylib : public IModels {
                 public:
-                    ModelsRaylib();
+                    ModelsRaylib() {}
                     ModelsRaylib(std::string filename);
                     void DrawModel(Misc::Vector<3> position, float scale, Misc::Colors tint);
                     void DrawModelEx(Misc::Vector<3> position, Misc::Vector<3> rotationAxis, float rotationAngle, Misc::Vector<3> scale, Misc::Colors tint);

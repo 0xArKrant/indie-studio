@@ -97,7 +97,7 @@ void Indie::Raylib::Models::ModelsRaylib::DrawBoundingBox(Misc::Colors color) {
  * @brief Unload model (including meshes) from memory (RAM and/or VRAM)
  */
 Indie::Raylib::Models::ModelsRaylib::~ModelsRaylib() {
-    ::UnloadModel(this->_model);
+    //::UnloadModel(this->_model);
 }
 
 void Indie::Raylib::Models::ModelsRaylib::SetColors(const Misc::Colors color)
