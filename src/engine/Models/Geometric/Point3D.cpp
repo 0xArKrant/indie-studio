@@ -7,9 +7,22 @@
 
 #include "Point3D.hpp"
 
-Indie::Raylib::Models::Point3D::Point3D(const Misc::Vector<3> position, const Misc::Colors& values) {
+Indie::Raylib::Models::Point3D::Point3D(const Misc::Vector<3> position, const Misc::Colors& colors) {
     this->_position = position;
-    this->_colors = values;
+    this->_colors = colors;
+}
+
+Indie::Raylib::Models::Point3D::Point3D(const Point3D &cpy)
+{
+    this->_position = cpy._position;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Models::Point3D& Indie::Raylib::Models::Point3D::operator=(const Point3D &other)
+{
+    this->_position = other.GetPosition();
+    this->_colors = other.GetColors();
+    return (*this);
 }
 
 void Indie::Raylib::Models::Point3D::DrawModels() {

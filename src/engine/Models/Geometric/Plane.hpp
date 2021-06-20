@@ -15,6 +15,8 @@ namespace Indie {
             class Plane : public IPlane         {
                 public:
                     Plane(const Misc::Vector<3>, const Misc::Vector<2>, const Misc::Colors&);
+                    Plane(const Plane &);
+                    Plane& operator=(const Plane &);
                     ~Plane() = default;
 
                     inline Misc::Vector<3> GetCenterPos() const { return this->_centerPos; };
