@@ -26,6 +26,7 @@ file(GLOB SRC_FILES
     src/engine/Misc/Matrix.cpp
     src/engine/Misc/RectangleVector.cpp
     src/engine/Misc/Camera.cpp
+    src/engine/Misc/BoundingBox.cpp
 
     src/engine/Shape/Geometric/Rectangle.cpp
     src/engine/Shape/Geometric/Pixel.cpp
@@ -49,6 +50,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Cylinder.cpp
     src/engine/Models/Geometric/Sphere.cpp
     src/engine/Models/ModelsRaylib.cpp
+    src/engine/Models/Collison.cpp
 
     src/engine/Text/Text.cpp
     src/engine/Audio/Audio.cpp

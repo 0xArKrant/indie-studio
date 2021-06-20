@@ -13,7 +13,7 @@
 #include "../Texture/Texture.hpp"
 #include "../engine/Map/Map.hpp"
 #include "Player.hpp"
-
+#include "../engine/Models/Collision.hpp"
 
 namespace Indie {
     namespace Scene {
@@ -27,6 +27,7 @@ namespace Indie {
 
             protected:
             private:
+                bool _checkCollision();
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
                 Misc::Camera3D _cam;
