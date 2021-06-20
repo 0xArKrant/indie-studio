@@ -12,6 +12,7 @@
 #include "./Camera.hpp"
 #include "../Texture/Texture.hpp"
 #include "../engine/Map/Map.hpp"
+#include "Player.hpp"
 
 
 namespace Indie {
@@ -21,12 +22,14 @@ namespace Indie {
                 GameScene();
                 ~GameScene();
                 void setGame();
-                void update(Indie::Core::SceneManagement &scenemanagement);
+                void update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed);
                 void draw();
 
             protected:
             private:
                 Indie::Raylib::Map _map;
+                Indie::Game::Player _player;
+                Misc::Camera3D _cam;
         };
     }
 }

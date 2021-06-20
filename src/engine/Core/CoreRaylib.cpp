@@ -26,6 +26,7 @@
 
 Indie::Raylib::Core::Core::Core(int width, int height, const std::string& title) {
     ::InitWindow(width, height, title.c_str());
+    this->_time = ::GetTime();
 }
 
 /**
@@ -37,8 +38,8 @@ Indie::Raylib::Core::Core::Core(int width, int height, const std::string& title)
  * @return Indie::Raylib::Core::Core&
  */
 
-Indie::Raylib::Core::Core& Indie::Raylib::Core::Core::getInstance(int width, int height, const std::string& title) {
-    static Core _core = Core(width, height, title);
+Indie::Raylib::Core::Core& Indie::Raylib::Core::Core::getInstance(void) {
+    static Core _core = Core(1920, 1080, "EPISOFT | Bomberman");
     return _core;
 }
 
@@ -127,4 +128,33 @@ void Indie::Raylib::Core::Core::UpdateCamera(Misc::Camera3D &camera)
     up = { tempCamera.up.x, tempCamera.up.y, tempCamera.up.z };
     fovy = tempCamera.fovy;
     projection = tempCamera.projection;
+}
+
+double Indie::Raylib::Core::Core::GetElapsedTime(void)
+{
+    double old = this->_time;
+    this->_time = ::GetTime();
+    return (this->_time - old);
+}
+
+void Indie::Raylib::Core::Core::BeginMode2D(Misc::Camera2D camera)
+{
+    ::Camera2D tempCamera = {
+        ::Vector2 { camera.getOffset().getX(), camera.getOffset().getY() },
+        ::Vector2 { camera.getTarget().getX(), camera.getTarget().getY() },
+        camera.getRotation(),
+        camera.getZoom()
+    };
+    ::BeginMode2D(tempCamera);
+}
+void Indie::Raylib::Core::Core::BeginMode3D(Misc::Camera3D camera)
+{
+    ::Camera3D tempCamera = {
+        ::Vector3 { camera.getPosition().getX(), camera.getPosition().getY(), camera.getPosition().getZ() },
+        ::Vector3 { camera.getTarget().getX(), camera.getTarget().getY(), camera.getTarget().getZ() },
+        ::Vector3 { camera.getUp().getX(), camera.getUp().getY(), camera.getUp().getZ() },
+        camera.getFovy(),
+        camera.getProjection()
+     };
+    ::BeginMode3D(tempCamera);
 }

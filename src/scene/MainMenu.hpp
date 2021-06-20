@@ -21,7 +21,7 @@ namespace Indie {
                 MainMenu();
                 ~MainMenu();
                 void setMenu();
-                void update(Indie::Core::SceneManagement &scenemanagement);
+                void update(Indie::Core::SceneManagement &scenemanagement, const double &);
                 void draw();
 
             protected:

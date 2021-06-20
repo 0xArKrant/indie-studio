@@ -28,7 +28,7 @@ namespace Indie {
             void pop();
             void loop();
         private:
-            Indie::Raylib::Core::Core& _window = Indie::Raylib::Core::Core::getInstance(1600, 900, "Bomberman");
+            Indie::Raylib::Core::Core& _window = Indie::Raylib::Core::Core::getInstance();
             std::stack<std::unique_ptr<IScene>> _stack;
         };
     } // namespace Core

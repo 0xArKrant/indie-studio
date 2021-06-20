@@ -17,6 +17,8 @@
 #include "IScene.hpp"
 #include "Camera.hpp"
 #include "Texture.hpp"
+#include "CoreRaylib.hpp"
+#include "ModelsRaylib.hpp"
 
 namespace Indie {
     namespace Scene {
@@ -24,11 +26,14 @@ namespace Indie {
             public:
                 SplashScreen();
                 ~SplashScreen();
-                void update(Indie::Core::SceneManagement &scenemanagement);
+                void update(Indie::Core::SceneManagement &scenemanagement, const double &);
                 void draw();
-
-            protected:
             private:
+                unsigned char _alpha;
+                Indie::Raylib::Models::ModelsRaylib _model;
+                Indie::Raylib::Models::ModelsRaylib _model2;
+                Misc::Camera3D _camera;
+                ::Vector3 _pos;
         };
     }
 }

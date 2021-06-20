@@ -70,6 +70,8 @@ file(GLOB SRC_FILES
     src/scene/MainMenu.cpp
     src/scene/GameScene.cpp
     src/core/GameObject.cpp
+    src/core/Model3D.cpp
+    src/core/Player.cpp
 
     src/scene/SplashScreen.cpp
 )
