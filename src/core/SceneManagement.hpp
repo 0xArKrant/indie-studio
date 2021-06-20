@@ -30,6 +30,7 @@ namespace Indie {
         private:
             Indie::Raylib::Core::Core& _window = Indie::Raylib::Core::Core::getInstance();
             std::stack<std::unique_ptr<IScene>> _stack;
+            Misc::Camera3D _cam;
         };
     } // namespace Core
 } // namespace Indie
