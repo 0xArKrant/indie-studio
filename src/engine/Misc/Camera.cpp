@@ -34,6 +34,15 @@ Misc::Camera2D::Camera2D(const Camera2D &cpy)
     this->_zoom = cpy._zoom;
 }
 
+Misc::Camera2D& Misc::Camera2D::operator=(const Camera2D& other) {
+    this->_offset = other.getOffset();
+    this->_target = other.getTarget();
+    this->_rotation = other.getRotation();
+    this->_zoom = other.getZoom();
+    return (*this);
+}
+
+
 /**
  * @brief Construct a new Misc:: Camera 2D:: Camera 2D object
  *
@@ -61,6 +70,25 @@ Misc::Camera3D::Camera3D() {
     this->_up = { 0.f, 0.f, 0.f };
     this->_fovy = 0;
     this->_projection = 0;
+}
+
+Misc::Camera3D::Camera3D(const Camera3D &cpy)
+{
+    this->_position = cpy._position;
+    this->_target = cpy._target;
+    this->_up = cpy._up;
+    this->_fovy = cpy._fovy;
+    this->_projection = cpy._projection;
+}
+
+Misc::Camera3D& Misc::Camera3D::operator=(const Camera3D &other)
+{
+    this->_position = other.getPosition();
+    this->_target = other.getTarget();
+    this->_up = other.getUp();
+    this->_fovy = other.getFovy();
+    this->_projection = other.getProjection();
+    return (*this);
 }
 
 /**

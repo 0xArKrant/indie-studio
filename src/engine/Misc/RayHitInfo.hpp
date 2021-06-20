@@ -21,6 +21,7 @@ namespace Misc {
         public:
             RayHitInfo(const bool, const float, const Misc::Vector<3>, const Misc::Vector<3>);
             RayHitInfo(const RayHitInfo &);
+            RayHitInfo& operator=(const RayHitInfo &);
             RayHitInfo();
             /**
              * @brief Destroy the Ray Hit Info object

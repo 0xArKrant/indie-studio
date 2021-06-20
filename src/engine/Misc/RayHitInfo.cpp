@@ -33,6 +33,15 @@ Misc::RayHitInfo::RayHitInfo(const RayHitInfo &cpy)
     this->_direction = cpy._direction;
 }
 
+Misc::RayHitInfo& Misc::RayHitInfo::operator=(const RayHitInfo &other)
+{
+    this->_hit = other.hasHit();
+    this->_direction = other.getDistance();
+    this->_position = other.getPosition();
+    this->_direction = other.getDirection();
+    return (*this);
+}
+
 /**
  * @brief Construct a new Misc:: Ray Hit Info:: Ray Hit Info object
  *

@@ -29,6 +29,13 @@ Misc::Ray::Ray(const Ray &cpy)
     this->_direction = cpy._direction;
 }
 
+Misc::Ray& Misc::Ray::operator=(const Ray &other)
+{
+    this->_position = other.getPosition();
+    this->_direction = other.getDirection();
+    return (*this);
+}
+
 /**
  * @brief Construct a new Misc:: Ray:: Ray object
  *

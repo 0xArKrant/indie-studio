@@ -27,6 +27,11 @@ Misc::Rectangle::Rectangle(const Rectangle &cpy)
     this->_rectangle = cpy._rectangle;
 }
 
+Misc::Rectangle& Misc::Rectangle::operator=(const Rectangle &other)
+{
+    this->_rectangle = other.getRectangle();
+    return (*this);
+}
 /**
  * @brief Construct a new Misc:: Rectangle:: Rectangle object
  *

@@ -20,6 +20,7 @@ namespace Misc {
         public:
             Rectangle(const std::array<float, 4> rectangle);
             Rectangle(const Rectangle &);
+            Rectangle& operator=(const Rectangle &);
             Rectangle();
             /**
              * @brief Destroy the Rectangle object
@@ -51,6 +52,8 @@ namespace Misc {
              * @return float
              */
             inline float getHeight() const { return this->_rectangle[3]; };
+
+            inline std::array<float, 4> getRectangle() const { return this->_rectangle; };
         private:
             std::array<float, 4> _rectangle; /*! Rectangle vector(array) value of Rectangle */
     };

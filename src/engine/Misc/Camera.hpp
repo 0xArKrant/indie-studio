@@ -26,6 +26,7 @@ namespace Misc {
              * @brief Destroy the Camera 2D object
              *
              */
+            Camera2D& operator=(const Camera2D &);
             ~Camera2D() = default;
 
             /**
@@ -87,6 +88,8 @@ namespace Misc {
     class Camera3D {
         public:
             Camera3D(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Vector<3>, float, int);
+            Camera3D(const Camera3D &);
+            Camera3D& operator=(const Camera3D &);
             Camera3D();
             /**
              * @brief Destroy the Camera 3D object
