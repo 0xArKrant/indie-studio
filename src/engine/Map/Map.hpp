@@ -19,7 +19,9 @@ namespace Indie {
                 Map(const std::string texturePath, const std::string cubicPath, int mode);
                 ~Map();
                 void draw();
-                bool checkCollision(Misc::Vector<2> playerPos);
+                Misc::Vector<3> getMapPosition() const;
+                std::vector<Misc::Colors> getMapPixels();
+                inline Misc::Vector<2> getMapSize() const {return Misc::Vector<2>(this->cubicmap.width, this->cubicmap.height);}
             protected:
             private:
                 ::Mesh _mesh;
@@ -30,6 +32,8 @@ namespace Indie {
                 ::Image _img;
                 ::Vector3 mapPosition;
                 ::Color *_mapPixels;
+                int _height;
+                int _witdh;
         };
     }
 }
