@@ -20,6 +20,7 @@ namespace Misc {
     class Ray {
         public:
             Ray(const Misc::Vector<3>, const Misc::Vector<3>);
+            Ray(const Ray &);
             Ray();
             /**
              * @brief Destroy the Ray object

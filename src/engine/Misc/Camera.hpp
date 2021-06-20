@@ -20,6 +20,7 @@ namespace Misc {
     class Camera2D {
         public:
             Camera2D(const Misc::Vector<2>, const Misc::Vector<2>, float, float);
+            Camera2D(const Camera2D &);
             Camera2D();
             /**
              * @brief Destroy the Camera 2D object

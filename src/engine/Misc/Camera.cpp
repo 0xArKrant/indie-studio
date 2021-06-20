@@ -25,6 +25,15 @@ Misc::Camera2D::Camera2D() {
     this->_zoom = 0;
 }
 
+
+Misc::Camera2D::Camera2D(const Camera2D &cpy)
+{
+    this->_offset = cpy._offset;
+    this->_target = cpy._target;
+    this->_rotation = cpy._rotation;
+    this->_zoom = cpy._zoom;
+}
+
 /**
  * @brief Construct a new Misc:: Camera 2D:: Camera 2D object
  *

@@ -23,6 +23,12 @@ Misc::Ray::Ray() {
     this->_direction = { 0.f, 0.f, 0.f };
 }
 
+Misc::Ray::Ray(const Ray &cpy)
+{
+    this->_position = cpy._position;
+    this->_direction = cpy._direction;
+}
+
 /**
  * @brief Construct a new Misc:: Ray:: Ray object
  *

@@ -20,6 +20,7 @@ namespace Misc {
         public:
             Texture(const unsigned int, const int, const int, const int, const int);
             Texture(const unsigned int, const int, const int, const int);
+            Texture(const Texture &);
             Texture();
             /**
              * @brief Destroy the Texture object

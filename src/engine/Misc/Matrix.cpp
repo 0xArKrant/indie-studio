@@ -37,6 +37,26 @@ Misc::Matrix::Matrix() {
     this->_m15 = 0;
 }
 
+Misc::Matrix::Matrix(const Matrix &cpy)
+{
+    this->_m0 = cpy._m0;
+    this->_m1 = cpy._m1;
+    this->_m2 = cpy._m2;
+    this->_m3 = cpy._m3;
+    this->_m4 = cpy._m4;
+    this->_m5 = cpy._m5;
+    this->_m6 = cpy._m6;
+    this->_m7 = cpy._m7;
+    this->_m8 = cpy._m8;
+    this->_m9 = cpy._m9;
+    this->_m10 = cpy._m10;
+    this->_m11 = cpy._m11;
+    this->_m12 = cpy._m12;
+    this->_m13 = cpy._m13;
+    this->_m14 = cpy._m14;
+    this->_m15 = cpy._m15;
+}
+
 /**
  * @brief Construct a new Misc:: Matrix:: Matrix object
  *

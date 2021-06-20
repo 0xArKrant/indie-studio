@@ -43,6 +43,15 @@ Misc::Texture::Texture(const unsigned int id, const int width, const int height,
     this->_format = format;
 }
 
+Misc::Texture::Texture(const Texture &cpy)
+{
+    this->_id = cpy._id;
+    this->_width = cpy._width;
+    this->_height = cpy._height;
+    this->_mipmaps = cpy._mipmaps;
+    this->_format = cpy._format;
+}
+
 /**
  * @brief Construct a new Misc:: Texture:: Texture object
  *

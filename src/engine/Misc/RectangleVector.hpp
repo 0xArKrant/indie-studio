@@ -19,6 +19,7 @@ namespace Misc {
     class Rectangle {
         public:
             Rectangle(const std::array<float, 4> rectangle);
+            Rectangle(const Rectangle &);
             Rectangle();
             /**
              * @brief Destroy the Rectangle object

@@ -22,6 +22,11 @@ Misc::Rectangle::Rectangle() {
     this->_rectangle = { 0, 0, 0, 0 };
 }
 
+Misc::Rectangle::Rectangle(const Rectangle &cpy)
+{
+    this->_rectangle = cpy._rectangle;
+}
+
 /**
  * @brief Construct a new Misc:: Rectangle:: Rectangle object
  *
