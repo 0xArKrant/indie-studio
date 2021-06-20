@@ -21,7 +21,7 @@ namespace Indie {
                 void draw();
                 Misc::Vector<3> getMapPosition() const;
                 std::vector<Misc::Colors> getMapPixels();
-                inline Misc::Vector<2> getMapSize() const {return Misc::Vector<2>(this->cubicmap.width, this->cubicmap.height);}
+                inline Misc::Vector<2> getMapSize() const {return Misc::Vector<2>(static_cast<float>this->cubicmap.width, static_cast<float>this->cubicmap.height);}
             protected:
             private:
                 ::Mesh _mesh;
