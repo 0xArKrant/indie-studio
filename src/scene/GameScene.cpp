@@ -55,8 +55,8 @@ bool Indie::Scene::GameScene::_checkCollision()
                 //                                            this->_map.getMapPosition().getX() - 0.5f + y * 1.0f,
                 //                                            1.0f,
                 //                                            1.0f }))))
-                (::CheckCollisionCircleRec((::Vector2){playerPos.getX(), playerPos.getY()}, playerRadius,
-                                         (::Rectangle) { this->_map.getMapPosition().getZ() - 0.5f + x * 1.0f,
+                (::CheckCollisionCircleRec({playerPos.getX(), playerPos.getY()}, playerRadius,
+                                            { this->_map.getMapPosition().getZ() - 0.5f + x * 1.0f,
                                                            this->_map.getMapPosition().getX() - 0.5f + y * 1.0f,
                                                            1.0f,
                                                            1.0f })))
