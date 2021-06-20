@@ -10,7 +10,7 @@
 
 Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
-_player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), Indie::Game::GameObject::TypeObject::PLAYER, true)
+_player("./assets/modeltest/untitled_000001.obj", "./assets/modeltest/untitled_000001.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), Indie::Game::GameObject::TypeObject::PLAYER, true)
 {
     
 }

@@ -26,6 +26,7 @@ namespace Indie {
                 float _speed;
                 Misc::Vector<3> _rota;
                 Misc::Vector<3> _scale;
+                float _rotaAngle;
                 //std::vector<Model3D> _bombs;
             private:
         };
