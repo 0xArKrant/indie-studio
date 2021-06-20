@@ -10,3 +10,5 @@
 #include "MainMenu.hpp"
 #include "SplashScreen.hpp"
 #include "GameScene.hpp"
+#include "TransitionFadeIn.hpp"
+#include "TransitionFadeOut.hpp"

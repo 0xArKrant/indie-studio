@@ -34,6 +34,8 @@ namespace Indie {
                 Indie::Raylib::Models::ModelsRaylib _model2;
                 Misc::Camera3D _camera;
                 ::Vector3 _pos;
+                double _second;
+                bool _transition;
         };
     }
 }
