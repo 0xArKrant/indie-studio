@@ -36,6 +36,18 @@ namespace Misc {
             };
             ~Vector() = default; /*! Rectangle default desctructor */
 
+            template<typename ... x>
+            void move(x... args) {
+                float vec[]{args...};
+                this->_vector[0] += vec[0];
+                if (vSize > 1)
+                    this->_vector[1] += vec[1];
+                if (vSize > 2)
+                    this->_vector[2] += vec[2];
+                if (vSize > 3)
+                    this->_vector[3] += vec[3];
+            }
+
             /**
              * @brief Get X Position Object
              *

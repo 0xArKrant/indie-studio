@@ -19,14 +19,12 @@ namespace Indie {
                     BOX,
                     TEXT,
                     MUSIC,
-
-
                 };
-                GameObject(std::string id, Misc::Vector<3> pos, TypeObject type, bool display);
+                GameObject(const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display);
                 GameObject() = delete;
                 GameObject(const GameObject &cpy) = delete;
                 GameObject &operator =(const GameObject &cpy) = delete;
-                ~GameObject();
+                virtual ~GameObject();
                 std::string getId() const;
                 Misc::Vector<3> getPos() const;
                 TypeObject getType() const;
