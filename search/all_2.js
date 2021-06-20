@@ -7,5 +7,8 @@ var searchData=
   ['bomb_144',['BOMB',['../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981fa4596300e74600f484b9a29d7ed48863d',1,'Indie::Game::GameObject']]],
   ['bomberman_2ecpp_145',['Bomberman.cpp',['../de/d11/Bomberman_8cpp.html',1,'']]],
   ['bomberman_2ehpp_146',['Bomberman.hpp',['../d0/d9e/Bomberman_8hpp.html',1,'']]],
-  ['box_147',['BOX',['../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981fa93d23da3cf086672740f85b8c5fad7c1',1,'Indie::Game::GameObject']]]
+  ['boundingbox_147',['BoundingBox',['../d5/d17/classMisc_1_1BoundingBox.html#a0980455724b8c2a9432fd7501d1d536f',1,'Misc::BoundingBox::BoundingBox()'],['../d5/d17/classMisc_1_1BoundingBox.html',1,'Misc::BoundingBox']]],
+  ['boundingbox_2ecpp_148',['BoundingBox.cpp',['../d1/dfc/BoundingBox_8cpp.html',1,'']]],
+  ['boundingbox_2ehpp_149',['BoundingBox.hpp',['../d9/db6/BoundingBox_8hpp.html',1,'']]],
+  ['box_150',['BOX',['../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981fa93d23da3cf086672740f85b8c5fad7c1',1,'Indie::Game::GameObject']]]
 ];

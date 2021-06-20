@@ -69,8 +69,6 @@ $(function() {
 </li>
 <li>_alpha
 : <a class="el" href="d6/d43/classIndie_1_1Scene_1_1SplashScreen.html#ad59c7c680700ffde4f9965bd8d19fbee">Indie::Scene::SplashScreen</a>
-, <a class="el" href="d1/d10/classIndie_1_1Scene_1_1TransitionFadeIn.html#a5051d032d11de2edf5eb010f521234a4">Indie::Scene::TransitionFadeIn</a>
-, <a class="el" href="d5/dc1/classIndie_1_1Scene_1_1TransitionFadeOut.html#a8d21a14be50f93e8f73d6c1fb433be38">Indie::Scene::TransitionFadeOut</a>
 </li>
 <li>_audiostream
 : <a class="el" href="dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html#a635a580d8a2c9f269a9678b4fbd8185d">Indie::Raylib::Audio::AudioStream</a>
@@ -82,8 +80,7 @@ $(function() {
 : <a class="el" href="db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html#a608f80860f45d29fe40d6fb31f300542">Indie::Raylib::Models::ModelsRaylib</a>
 </li>
 <li>_cam
-: <a class="el" href="d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#af147500cc4e03768c333c2182dfeb9e5">Indie::Core::SceneManagement</a>
-, <a class="el" href="d2/d75/classIndie_1_1Scene_1_1GameScene.html#a49b5ee75b53958c06429bf6a5af9c55f">Indie::Scene::GameScene</a>
+: <a class="el" href="d2/d75/classIndie_1_1Scene_1_1GameScene.html#a49b5ee75b53958c06429bf6a5af9c55f">Indie::Scene::GameScene</a>
 </li>
 <li>_camera
 : <a class="el" href="db/dd9/classIndie_1_1Raylib_1_1Map.html#a1621598cf7be9b3b96dca63539c0c8e1">Indie::Raylib::Map</a>
@@ -127,6 +124,9 @@ $(function() {
 , <a class="el" href="d8/de2/classIndie_1_1Raylib_1_1Shape_1_1CircleLines.html#a07355a50894dee9ea0417b7d44a0a0f6">Indie::Raylib::Shape::CircleLines</a>
 , <a class="el" href="d8/dc8/classIndie_1_1Raylib_1_1Shape_1_1Ellipse.html#a3158f07b41dc3ab7b84f5670d5df7e87">Indie::Raylib::Shape::Ellipse</a>
 , <a class="el" href="d4/dd9/classIndie_1_1Raylib_1_1Shape_1_1EllipseLines.html#a162c87ef9148e3c234656927abe771d7">Indie::Raylib::Shape::EllipseLines</a>
+</li>
+<li>_checkCollision()
+: <a class="el" href="d2/d75/classIndie_1_1Scene_1_1GameScene.html#add27cdb1283d859a7302905ae576379e">Indie::Scene::GameScene</a>
 </li>
 <li>_collisionPoint
 : <a class="el" href="d9/d14/classIndie_1_1Raylib_1_1Shape_1_1CheckCollisionLines.html#a4ccbbc3527ab1cc79650d297590011dc">Indie::Raylib::Shape::CheckCollisionLines</a>
@@ -256,6 +256,7 @@ $(function() {
 </li>
 <li>_height
 : <a class="el" href="d3/d66/classIndie_1_1Core_1_1Core.html#a859352b02a47f47af59a5cf4e7911965">Indie::Core::Core</a>
+, <a class="el" href="db/dd9/classIndie_1_1Raylib_1_1Map.html#a2df10c62fbd99807b5dbc779e1f82b86">Indie::Raylib::Map</a>
 , <a class="el" href="d5/d32/classIndie_1_1Raylib_1_1Models_1_1Cube.html#a6e3a26940f5658240251af7e4aa62d5d">Indie::Raylib::Models::Cube</a>
 , <a class="el" href="d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a3064581e654b085f6dbbd465e295e16a">Indie::Raylib::Models::CubeTexture</a>
 , <a class="el" href="de/d39/classIndie_1_1Raylib_1_1Models_1_1CubeWires.html#aeadbb62174d2111cbb331f5e29c6b5aa">Indie::Raylib::Models::CubeWires</a>
@@ -355,11 +356,17 @@ $(function() {
 <li>_mapPixels
 : <a class="el" href="db/dd9/classIndie_1_1Raylib_1_1Map.html#a5dba6da12669b9dff71463bef4e55038">Indie::Raylib::Map</a>
 </li>
+<li>_max
+: <a class="el" href="d5/d17/classMisc_1_1BoundingBox.html#afc7d7a07dee3d4d2d6b88e7b083173da">Misc::BoundingBox</a>
+</li>
 <li>_mesh
 : <a class="el" href="db/dd9/classIndie_1_1Raylib_1_1Map.html#a0bd0bf05abf573cac2a9fe66d47bfe04">Indie::Raylib::Map</a>
 </li>
 <li>_message
 : <a class="el" href="d7/d67/classIndie_1_1Errors_1_1Exception.html#a8f356eabf5462d1dc721d11ce34ed6a9">Indie::Errors::Exception</a>
+</li>
+<li>_min
+: <a class="el" href="d5/d17/classMisc_1_1BoundingBox.html#a68a3373bff8136dcc947b82ecace6890">Misc::BoundingBox</a>
 </li>
 <li>_mipmaps
 : <a class="el" href="d4/d17/classMisc_1_1Texture.html#a1bcdfd6ffbc9e53d8c5cd91cf57730a8">Misc::Texture</a>
@@ -534,9 +541,6 @@ $(function() {
 : <a class="el" href="dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html#a6787d5b9cb314e732b842fe031796dfa">Indie::Raylib::Models::SphereEx</a>
 , <a class="el" href="d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html#a8cd6d0968f91bb7de0278eb6d2f9e631">Indie::Raylib::Models::SphereWires</a>
 </li>
-<li>_rota
-: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#a84dd578df2ef7722574e32462b69be2d">Indie::Game::Player</a>
-</li>
 <li>_rotation
 : <a class="el" href="d8/d47/classIndie_1_1Raylib_1_1Shape_1_1Polygon.html#a2c82ace4b576a9c563cca97c754936d9">Indie::Raylib::Shape::Polygon</a>
 , <a class="el" href="d4/da2/classIndie_1_1Raylib_1_1Shape_1_1PolygonLines.html#a4544f5c95c7c7e3cc7cc0904a0637539">Indie::Raylib::Shape::PolygonLines</a>
@@ -554,16 +558,8 @@ $(function() {
 : <a class="el" href="da/db8/classIndie_1_1Raylib_1_1Shape_1_1RectangleRounded.html#af0097a7294f5866b454e08e43d180e02">Indie::Raylib::Shape::RectangleRounded</a>
 , <a class="el" href="d2/d87/classIndie_1_1Raylib_1_1Shape_1_1RectangleRoundedLines.html#ac82ca21a334518cebed720af83e72837">Indie::Raylib::Shape::RectangleRoundedLines</a>
 </li>
-<li>_scale
-: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#ad017cbd6f97e08231bf8522347880ab2">Indie::Game::Player</a>
-</li>
 <li>_sceneManagement
 : <a class="el" href="d3/d66/classIndie_1_1Core_1_1Core.html#af54ae227eed22e54404a6ef5373821df">Indie::Core::Core</a>
-</li>
-<li>_second
-: <a class="el" href="d6/d43/classIndie_1_1Scene_1_1SplashScreen.html#acc684358267efe46ba59303d21a99b2b">Indie::Scene::SplashScreen</a>
-, <a class="el" href="d1/d10/classIndie_1_1Scene_1_1TransitionFadeIn.html#afe8f44f84cf9b30f3dde341c6115344c">Indie::Scene::TransitionFadeIn</a>
-, <a class="el" href="d5/dc1/classIndie_1_1Scene_1_1TransitionFadeOut.html#a6fbe734b755377190e95c421c594585e">Indie::Scene::TransitionFadeOut</a>
 </li>
 <li>_segments
 : <a class="el" href="db/de6/classIndie_1_1Raylib_1_1Shape_1_1CircleSector.html#a5c6897569188213d117936b1a96c9c79">Indie::Raylib::Shape::CircleSector</a>
@@ -634,7 +630,6 @@ $(function() {
 </li>
 <li>_texture
 : <a class="el" href="d1/da2/classIndie_1_1Raylib_1_1Models_1_1CubeTexture.html#a005c6c24c6d983c4c8368e9b12990221">Indie::Raylib::Models::CubeTexture</a>
-, <a class="el" href="db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html#a96e55c65f264006d455f356e306843c5">Indie::Raylib::Models::ModelsRaylib</a>
 , <a class="el" href="d4/d4f/classIndie_1_1Raylib_1_1Texture_1_1Texture.html#af69fabd728648882d874fb83a35d0c5f">Indie::Raylib::Texture::Texture</a>
 </li>
 <li>_thick
@@ -644,9 +639,6 @@ $(function() {
 </li>
 <li>_time
 : <a class="el" href="d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a1f37fa297b7b402381cb9d314d57308e">Indie::Raylib::Core::Core</a>
-</li>
-<li>_transition
-: <a class="el" href="d6/d43/classIndie_1_1Scene_1_1SplashScreen.html#ac6ce4a19654e1a7e0aaa818392c89ee9">Indie::Scene::SplashScreen</a>
 </li>
 <li>_type
 : <a class="el" href="d1/de7/classIndie_1_1Game_1_1GameObject.html#a4e172586aa632f8126713ab1f71b2e9f">Indie::Game::GameObject</a>
@@ -682,6 +674,9 @@ $(function() {
 </li>
 <li>_window
 : <a class="el" href="d5/d2b/classIndie_1_1Core_1_1SceneManagement.html#a988a04d31967372dc5b8b4e816945bb5">Indie::Core::SceneManagement</a>
+</li>
+<li>_witdh
+: <a class="el" href="db/dd9/classIndie_1_1Raylib_1_1Map.html#a919bd6994b31af2317b34723c750d946">Indie::Raylib::Map</a>
 </li>
 <li>_zoom
 : <a class="el" href="da/de2/classMisc_1_1Camera2D.html#a8fa8e548e943c801b49952064c0f4d46">Misc::Camera2D</a>
