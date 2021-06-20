@@ -72,6 +72,8 @@ file(GLOB SRC_FILES
     src/core/GameObject.cpp
 
     src/scene/SplashScreen.cpp
+    src/scene/TransitionFadeOut.cpp
+    src/scene/TransitionFadeIn.cpp
 )
 
 add_executable(${BIN_NAME} ${SRC_FILES})
