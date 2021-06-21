@@ -16,12 +16,15 @@ Indie::Game::Player::Player(const std::string &objPath, const std::string &id, M
     this->_type = PLAYER;
 }
 
-Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display)
+Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display),
+_anim("./assets/modeltest/BomberAnim", "./assets/Muhammer/Muhammer.png")
 {
+
     this->_speed = 2;
     this->_rota = {0.0f, 1.0f, 0.0f};
-    this->_scale = {30.0f, 30.0f, 30.0f};
+    this->_scale = {20.0f, 20.0f, 20.0f};
     this->_rotaAngle = 90.0f;
+    this->_type = PLAYER;
 }
 
 Indie::Game::Player::~Player()
@@ -34,8 +37,6 @@ void Indie::Game::Player::update(float elapsedTimes)
         this->_rotaAngle = 270.0f;
         this->_pos.move((-this->_speed * elapsedTimes), 0.0f, 0.0f);
         this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
-        //std::cout << "\nPlayer position = " << this->_pos.getX() << this->_pos.getY() << this->_pos.getZ() << std::endl;
-        //std::cout << "\nPlayer position = " << this->_pos.getX() << this->_pos.getY() << this->_pos.getZ() << std::endl;
     }
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_A) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_LEFT)) {
         this->_rotaAngle = 0.0f;
@@ -44,13 +45,12 @@ void Indie::Game::Player::update(float elapsedTimes)
     }
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_S) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_DOWN)) {
         this->_rotaAngle = 90.0f;
-        this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
         this->_pos.move((this->_speed * elapsedTimes), 0.0f, 0.0f);
+        this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
     }
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_D) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_RIGHT)) {
         this->_rotaAngle = 180.0f;
         this->_pos.move(0.0f, 0.0f, (-this->_speed * elapsedTimes));
-
         this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
     }
 }

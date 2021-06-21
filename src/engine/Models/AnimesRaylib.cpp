@@ -28,7 +28,7 @@ Indie::Raylib::AnimesRaylib::AnimesRaylib(const std::string &dirPath, const std:
     for (const auto &it : this->_pathList) {
         if (it.find(".obj")) {
             this->_objList.emplace_back(::LoadModel(it.c_str()));
-            std::cout << it << std::endl;
+            //std::cout << it << std::endl;
         }
     }
     for (const auto it : this->_objList) {
@@ -51,7 +51,7 @@ void Indie::Raylib::AnimesRaylib::update(float elapsed, Misc::Vector<3> &pos, fl
     this->_frameCount += (int)(elapsed * 60.0);
 
     if (this->_frameCount == this->_objList.size())
-        this->_frameCount = 0;
+        this->_frameCount = 1;
 
 }
 

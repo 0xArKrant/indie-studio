@@ -13,6 +13,7 @@ Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
 _player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), true)
 {
+    
     _genMap();
 }
 
@@ -97,7 +98,6 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
 
 void Indie::Scene::GameScene::draw()
 {
-    //Indie::Raylib::Core::Core::getInstance().ClearBackground({0, 0, 0, 250});
     _map.draw();
     _player.draw();
 
