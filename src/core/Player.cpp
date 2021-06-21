@@ -7,14 +7,15 @@
 
 #include "Player.hpp"
 
-Indie::Game::Player::Player(const std::string &objPath, const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display) : Model3D(objPath, id, pos, type, display)
+Indie::Game::Player::Player(const std::string &objPath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, id, pos, display)
 {
     this->_speed = 1;
     this->_rota = {1.0f, 0.0f, 0.0f};
     this->_scale = {0.5f, 0.5f, 0.5f};
+    this->_type = PLAYER;
 }
 
-Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display) : Model3D(objPath, texturePath, id, pos, type, display)
+Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display)
 {
     this->_speed = 1;
     this->_rota = {0.0f, 0.0f, 0.0f};
@@ -35,7 +36,6 @@ void Indie::Game::Player::update(float elapsedTimes)
         this->_pos.move((this->_speed * elapsedTimes), 0.0f, 0.0f);
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_D) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_RIGHT))
         this->_pos.move(0.0f, 0.0f, (-this->_speed * elapsedTimes));
-    (void)elapsedTimes;
 }
 
 void Indie::Game::Player::draw()

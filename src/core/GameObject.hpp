@@ -20,7 +20,7 @@ namespace Indie {
                     TEXT,
                     MUSIC,
                 };
-                GameObject(const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display);
+                GameObject(const std::string &id, Misc::Vector<3> pos, bool display);
                 GameObject() = delete;
                 GameObject(const GameObject &cpy) = delete;
                 GameObject &operator =(const GameObject &cpy) = delete;
