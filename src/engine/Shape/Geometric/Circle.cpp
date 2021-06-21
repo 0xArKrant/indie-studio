@@ -100,7 +100,7 @@ Indie::Raylib::Shape::CircleSector::CircleSector(const CircleSector &cpy)
     this->_radius = cpy._radius;
     this->_startAngle = cpy._startAngle;
     this->_endAngle = cpy._endAngle;
-    this->_segments = cpy._endAngle;
+    this->_segments = cpy._segments;
     this->_colors = cpy._colors;
 }
 
@@ -337,7 +337,7 @@ Indie::Raylib::Shape::CircleLines& Indie::Raylib::Shape::CircleLines::operator=(
 {
     this->_centerX = other.GetCenterX();
     this->_centerY = other.GetCenterY();
-    this->_radius = other.GetCenterY();
+    this->_radius = other.GetRadius();
     this->_colors = other.GetColors();
     return (*this);
 }
