@@ -36,7 +36,7 @@ file(GLOB SRC_FILES
     src/engine/Shape/Geometric/Triangle.cpp
     src/engine/Shape/Geometric/Line.cpp
     src/engine/Shape/Geometric/Circle.cpp
-    src/engine/Shape/Collision/CheckCollision.cpp
+    src/engine/Shape/Collision/CheckCollisionShape.cpp
 
 
     src/engine/Models/Geometric/Cube.cpp
