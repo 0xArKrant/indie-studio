@@ -84,8 +84,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2c61141c4ad6187b436198d7febc97af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc79541ad96be24e558358b5a580cc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#a3bc79541ad96be24e558358b5a580cc4">draw</a> ()</td></tr>
 <tr class="separator:a3bc79541ad96be24e558358b5a580cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8057434baff46043160193ab8734005"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#ae8057434baff46043160193ab8734005">checkCollision</a> (<a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 2 &gt; playerPos)</td></tr>
-<tr class="separator:ae8057434baff46043160193ab8734005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddcc00d7715c37d12f7803304e1702d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#a0ddcc00d7715c37d12f7803304e1702d">getMapPosition</a> () const</td></tr>
+<tr class="separator:a0ddcc00d7715c37d12f7803304e1702d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e97075f9a63e747bbc92b6fb10f3c61"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#a8e97075f9a63e747bbc92b6fb10f3c61">getMapPixels</a> ()</td></tr>
+<tr class="separator:a8e97075f9a63e747bbc92b6fb10f3c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8682115f6994d21d4e7aa87b709e2ce0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#a8682115f6994d21d4e7aa87b709e2ce0">getMapSize</a> () const</td></tr>
+<tr class="separator:a8682115f6994d21d4e7aa87b709e2ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -105,6 +109,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae661f5785f5670175b499b77e6fafc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dba6da12669b9dff71463bef4e55038"><td class="memItemLeft" align="right" valign="top">::Color *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#a5dba6da12669b9dff71463bef4e55038">_mapPixels</a></td></tr>
 <tr class="separator:a5dba6da12669b9dff71463bef4e55038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df10c62fbd99807b5dbc779e1f82b86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#a2df10c62fbd99807b5dbc779e1f82b86">_height</a></td></tr>
+<tr class="separator:a2df10c62fbd99807b5dbc779e1f82b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919bd6994b31af2317b34723c750d946"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd9/classIndie_1_1Raylib_1_1Map.html#a919bd6994b31af2317b34723c750d946">_witdh</a></td></tr>
+<tr class="separator:a919bd6994b31af2317b34723c750d946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a54bb215cf3f18308bd371137df321a46"></a>
@@ -159,24 +167,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae8057434baff46043160193ab8734005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8057434baff46043160193ab8734005">&#9670;&nbsp;</a></span>checkCollision()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Indie::Raylib::Map::checkCollision </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 2 &gt;&#160;</td>
-          <td class="paramname"><em>playerPos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3bc79541ad96be24e558358b5a580cc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bc79541ad96be24e558358b5a580cc4">&#9670;&nbsp;</a></span>draw()</h2>
 
@@ -194,6 +184,65 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8e97075f9a63e747bbc92b6fb10f3c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e97075f9a63e747bbc92b6fb10f3c61">&#9670;&nbsp;</a></span>getMapPixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d0/da2/classMisc_1_1Colors.html">Misc::Colors</a> &gt; Indie::Raylib::Map::getMapPixels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ddcc00d7715c37d12f7803304e1702d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddcc00d7715c37d12f7803304e1702d">&#9670;&nbsp;</a></span>getMapPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt; 3 &gt; Indie::Raylib::Map::getMapPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8682115f6994d21d4e7aa87b709e2ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8682115f6994d21d4e7aa87b709e2ce0">&#9670;&nbsp;</a></span>getMapSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt;2&gt; Indie::Raylib::Map::getMapSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a1621598cf7be9b3b96dca63539c0c8e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1621598cf7be9b3b96dca63539c0c8e1">&#9670;&nbsp;</a></span>_camera</h2>
@@ -206,6 +255,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">::Camera3D Indie::Raylib::Map::_camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2df10c62fbd99807b5dbc779e1f82b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df10c62fbd99807b5dbc779e1f82b86">&#9670;&nbsp;</a></span>_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Indie::Raylib::Map::_height</td>
         </tr>
       </table>
   </td>
@@ -294,6 +365,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">::Model Indie::Raylib::Map::_model</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a919bd6994b31af2317b34723c750d946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919bd6994b31af2317b34723c750d946">&#9670;&nbsp;</a></span>_witdh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Indie::Raylib::Map::_witdh</td>
         </tr>
       </table>
   </td>
