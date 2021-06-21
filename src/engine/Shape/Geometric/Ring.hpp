@@ -21,6 +21,9 @@ namespace Indie {
             class Ring : public IRing {
                 public:
                     Ring(const Misc::Vector<2>, const float, const float, const float, const float, const int, const Misc::Colors&);
+                    Ring();
+                    Ring(const Ring &);
+                    Ring& operator=(const Ring &);
                     /**
                      * @brief Destroy the Ring object
                      *
@@ -127,6 +130,9 @@ namespace Indie {
             class RingLines : public IRing {
                 public:
                     RingLines(const Misc::Vector<2>, const float, const float, const float, const float, const int, const Misc::Colors&);
+                    RingLines();
+                    RingLines(const RingLines &);
+                    RingLines& operator=(const RingLines &);
                     /**
                      * @brief Destroy the Ring Lines object
                      *

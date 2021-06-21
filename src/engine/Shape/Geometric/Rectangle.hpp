@@ -21,6 +21,9 @@ namespace Indie {
             class Rectangle : public IRectangle {
                 public:
                     Rectangle(const int, const int, const int, const int, const Misc::Colors&);
+                    Rectangle();
+                    Rectangle(const Rectangle &);
+                    Rectangle& operator=(const Rectangle &);
                     /**
                      * @brief Destroy the Rectangle object
                      *
@@ -101,6 +104,9 @@ namespace Indie {
             class RectangleV : public IRectangle {
                 public:
                     RectangleV(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors&);
+                    RectangleV();
+                    RectangleV(const RectangleV &);
+                    RectangleV& operator=(const RectangleV &);
                     /**
                      * @brief Destroy the Rectangle V object
                      *
@@ -155,6 +161,9 @@ namespace Indie {
             class RectangleRec : public IRectangle {
                 public:
                     RectangleRec(const Misc::Rectangle, const Misc::Colors&);
+                    RectangleRec();
+                    RectangleRec(const RectangleRec &);
+                    RectangleRec& operator=(const RectangleRec &);
                     /**
                      * @brief Destroy the Rectangle Rec object
                      *
@@ -196,6 +205,9 @@ namespace Indie {
             class RectanglePro : public IRectangle {
                 public:
                     RectanglePro(const Misc::Rectangle, const Misc::Vector<2>, const float, const Misc::Colors&);
+                    RectanglePro();
+                    RectanglePro(const RectanglePro &);
+                    RectanglePro& operator=(const RectanglePro &);
                     /**
                      * @brief Destroy the Rectangle Pro object
                      *
@@ -263,6 +275,9 @@ namespace Indie {
             class RectangleGradientV : public IRectangle {
                 public:
                     RectangleGradientV(const int, const int, const int, const int, const Misc::Colors&, const Misc::Colors&);
+                    RectangleGradientV();
+                    RectangleGradientV(const RectangleGradientV &);
+                    RectangleGradientV& operator=(const RectangleGradientV &);
                     /**
                      * @brief Destroy the Rectangle Gradient V object
                      *
@@ -356,6 +371,9 @@ namespace Indie {
             class RectangleGradientH : public IRectangle {
                 public:
                     RectangleGradientH(const int, const int, const int, const int, const Misc::Colors&, const Misc::Colors&);
+                    RectangleGradientH();
+                    RectangleGradientH(const RectangleGradientH &);
+                    RectangleGradientH& operator=(const RectangleGradientH &);
                     /**
                      * @brief Destroy the Rectangle Gradient H object
                      *
@@ -449,6 +467,9 @@ namespace Indie {
             class RectangleGradientEx : public IRectangle {
                 public:
                     RectangleGradientEx(const Misc::Rectangle, const Misc::Colors&, const Misc::Colors&, const Misc::Colors&, const Misc::Colors&);
+                    RectangleGradientEx();
+                    RectangleGradientEx(const RectangleGradientEx &);
+                    RectangleGradientEx& operator=(const RectangleGradientEx &);
                     /**
                      * @brief Destroy the Rectangle Gradient Ex object
                      *
@@ -529,6 +550,9 @@ namespace Indie {
             class RectangleLines : public IRectangle {
                 public:
                     RectangleLines(const int, const int, const int, const int, const Misc::Colors&);
+                    RectangleLines();
+                    RectangleLines(const RectangleLines &);
+                    RectangleLines& operator=(const RectangleLines &);
                     /**
                      * @brief Destroy the Rectangle Lines object
                      *
@@ -609,6 +633,9 @@ namespace Indie {
             class RectangleLinesEx : public IRectangle {
                 public:
                     RectangleLinesEx(const Misc::Rectangle, const float, const Misc::Colors&);
+                    RectangleLinesEx();
+                    RectangleLinesEx(const RectangleLinesEx &);
+                    RectangleLinesEx& operator=(const RectangleLinesEx &);
                     /**
                      * @brief Destroy the Rectangle Lines Ex object
                      *
@@ -663,6 +690,9 @@ namespace Indie {
             class RectangleRounded : public IRectangle {
                 public:
                     RectangleRounded(const Misc::Rectangle, const float, const int, const Misc::Colors&);
+                    RectangleRounded();
+                    RectangleRounded(const RectangleRounded &);
+                    RectangleRounded& operator=(const RectangleRounded &);
                     /**
                      * @brief Destroy the Rectangle Rounded object
                      *
@@ -730,6 +760,9 @@ namespace Indie {
             class RectangleRoundedLines : public IRectangle {
                 public:
                     RectangleRoundedLines(const Misc::Rectangle, const float, const int, const float, const Misc::Colors&);
+                    RectangleRoundedLines();
+                    RectangleRoundedLines(const RectangleRoundedLines &);
+                    RectangleRoundedLines& operator=(const RectangleRoundedLines &);
                     /**
                      * @brief Destroy the Rectangle Rounded Lines object
                      *
