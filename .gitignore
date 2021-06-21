@@ -7,6 +7,8 @@ lib/
 build/
 doc/
 vgcore.*
+out/
+bomberman.exe
 
 # Logs
 logs

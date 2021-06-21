@@ -18,14 +18,35 @@
  *
  * @param posX
  * @param posY
- * @param values
+ * @param colors
  */
-Indie::Raylib::Shape::Pixel::Pixel(const int posX, const int posY, const Misc::Colors& values) {
+Indie::Raylib::Shape::Pixel::Pixel(const int posX, const int posY, const Misc::Colors& colors) {
     this->_posX = posX;
     this->_posY = posY;
-    this->_colors = values;
+    this->_colors = colors;
 }
 
+Indie::Raylib::Shape::Pixel::Pixel()
+{
+    this->_posY = 0;
+    this->_posY = 0;
+    this->_colors = {0, 0, 0, 0};
+}
+
+Indie::Raylib::Shape::Pixel::Pixel(const Pixel &cpy)
+{
+    this->_posX = cpy._posX;
+    this->_posY = cpy._posY;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Shape::Pixel& Indie::Raylib::Shape::Pixel::operator=(const Pixel &other)
+{
+    this->_posX = other.GetPosX();
+    this->_posY = other.GetPosY();
+    this->_colors = other.GetColors();
+    return (*this);
+}
 /**
  * @brief Draw a pixel
  *
@@ -42,11 +63,30 @@ void Indie::Raylib::Shape::Pixel::DrawShape() {
  * @brief Construct a new Indie:: Raylib:: Shape:: Pixel V:: Pixel V object
  *
  * @param position
- * @param values
+ * @param colors
  */
-Indie::Raylib::Shape::PixelV::PixelV(const Misc::Vector<2> position, const Misc::Colors& values) {
+Indie::Raylib::Shape::PixelV::PixelV(const Misc::Vector<2> position, const Misc::Colors& colors) {
     this->_position = position;
-    this->_colors = values;
+    this->_colors = colors;
+}
+
+Indie::Raylib::Shape::PixelV::PixelV()
+{
+    this->_position = {0.f, 0.f};
+    this->_colors = {0, 0, 0, 0};
+}
+
+Indie::Raylib::Shape::PixelV::PixelV(const PixelV &cpy)
+{
+    this->_position = cpy._position;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Shape::PixelV& Indie::Raylib::Shape::PixelV::operator=(const PixelV &other)
+{
+    this->_position = other.GetVector();
+    this->_colors = other.GetColors();
+    return (*this);
 }
 
 /**

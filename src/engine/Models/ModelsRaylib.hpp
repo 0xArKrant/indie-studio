@@ -23,8 +23,9 @@ namespace Indie {
         namespace Models {
             class ModelsRaylib : public IModels {
                 public:
-                    ModelsRaylib();
-                    ModelsRaylib(std::string filename);
+                    ModelsRaylib() {}
+                    ModelsRaylib(const std::string &filename);
+                    ModelsRaylib(const std::string &filename, const std::string &texturePath);
                     void DrawModel(Misc::Vector<3> position, float scale, Misc::Colors tint);
                     void DrawModelEx(Misc::Vector<3> position, Misc::Vector<3> rotationAxis, float rotationAngle, Misc::Vector<3> scale, Misc::Colors tint);
                     void DrawModelWires(Misc::Vector<3> position, float scale, Misc::Colors tint);
@@ -38,6 +39,7 @@ namespace Indie {
                     ::Model _model; /*! Model structure from raylib */
                     ::BoundingBox _BoundingBox; /*! BoundingBox structure from raylib*/
                     Misc::Colors _colors;
+                    ::Texture2D _texture;
             };
         }
     }

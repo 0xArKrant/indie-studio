@@ -43,6 +43,25 @@ Misc::Texture::Texture(const unsigned int id, const int width, const int height,
     this->_format = format;
 }
 
+Misc::Texture::Texture(const Texture &cpy)
+{
+    this->_id = cpy._id;
+    this->_width = cpy._width;
+    this->_height = cpy._height;
+    this->_mipmaps = cpy._mipmaps;
+    this->_format = cpy._format;
+}
+
+Misc::Texture& Misc::Texture::operator=(const Texture &other)
+{
+    this->_id = other.getID();
+    this->_width = other.getWidth();
+    this->_height = other.getHeight();
+    this->_mipmaps = other.getMipmaps();
+    this->_format = other.getFormat();
+    return (*this);
+}
+
 /**
  * @brief Construct a new Misc:: Texture:: Texture object
  *

@@ -21,6 +21,9 @@ namespace Indie {
             class Line : public ILine {
                 public:
                     Line(const int, const int, const int, const int, const Misc::Colors&);
+                    Line();
+                    Line(const Line &);
+                    Line& operator=(const Line &);
                     /**
                      * @brief Destroy the Line object
                      *
@@ -101,6 +104,9 @@ namespace Indie {
             class LineV : public ILine {
                 public:
                     LineV(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors&);
+                    LineV();
+                    LineV(const LineV &);
+                    LineV& operator=(const LineV &);
                     /**
                      * @brief Destroy the Line V object
                      *
@@ -155,6 +161,9 @@ namespace Indie {
             class LineEx : public ILine {
                 public:
                     LineEx(const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors&);
+                    LineEx();
+                    LineEx(const LineEx &);
+                    LineEx& operator=(const LineEx &);
                     /**
                      * @brief Destroy the Line Ex object
                      *
@@ -222,6 +231,9 @@ namespace Indie {
             class LineBezier : public ILine {
                 public:
                     LineBezier(const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors&);
+                    LineBezier();
+                    LineBezier(const LineBezier &);
+                    LineBezier& operator=(const LineBezier &);
                     /**
                      * @brief Destroy the Line Bezier object
                      *
@@ -289,6 +301,9 @@ namespace Indie {
             class LineBezierQuad : public ILine {
                 public:
                     LineBezierQuad(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const float, const Misc::Colors&);
+                    LineBezierQuad();
+                    LineBezierQuad(const LineBezierQuad &);
+                    LineBezierQuad& operator=(const LineBezierQuad &);
                     /**
                      * @brief Destroy the Line Bezier Quad object
                      *
@@ -369,6 +384,9 @@ namespace Indie {
             class LineStrip : public ILine {
                 public:
                     LineStrip(Misc::Vector<2>, int, const Misc::Colors&);
+                    LineStrip();
+                    LineStrip(const LineStrip &);
+                    LineStrip& operator=(const LineStrip &);
                     /**
                      * @brief Destroy the Line Strip object
                      *

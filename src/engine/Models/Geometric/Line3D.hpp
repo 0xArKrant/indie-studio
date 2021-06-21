@@ -15,6 +15,8 @@ namespace Indie {
             class Line3D : public ILine3D         {
                 public:
                     Line3D(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors&);
+                    Line3D(const Line3D &);
+                    Line3D& operator=(const Line3D &);
                     ~Line3D() = default;
 
                     inline Misc::Vector<3> GetStartPos() const { return this->_startPos; };

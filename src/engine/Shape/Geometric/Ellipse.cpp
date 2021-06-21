@@ -30,6 +30,34 @@ Indie::Raylib::Shape::Ellipse::Ellipse(const int centerX, const int centerY, con
     this->_colors = values;
 }
 
+Indie::Raylib::Shape::Ellipse::Ellipse()
+{
+    this->_centerX = 0;
+    this->_centerY = 0;
+    this->_radiusH = 0.f;
+    this->_radiusV = 0.f;
+    this->_colors = {0, 0, 0, 0};
+}
+
+Indie::Raylib::Shape::Ellipse::Ellipse(const Ellipse &cpy)
+{
+    this->_centerX = cpy._centerX;
+    this->_centerY = cpy._centerY;
+    this->_radiusH = cpy._radiusH;
+    this->_radiusV = cpy._radiusV;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Shape::Ellipse& Indie::Raylib::Shape::Ellipse::operator=(const Ellipse &other)
+{
+    this->_centerX = other.GetCenterX();
+    this->_centerY = other.GetCenterY();
+    this->_radiusH =  other.GetRadiusH();
+    this->_radiusV = other.GetRadiusV();
+    this->_colors = other.GetColors();
+    return (*this);
+}
+
 /**
  * @brief Draw ellipse
  *
@@ -59,6 +87,34 @@ Indie::Raylib::Shape::EllipseLines::EllipseLines(const int centerX, const int ce
     this->_radiusH = radiusH;
     this->_radiusV = radiusV;
     this->_colors = values;
+}
+
+Indie::Raylib::Shape::EllipseLines::EllipseLines()
+{
+    this->_centerX = 0;
+    this->_centerY = 0;
+    this->_radiusH = 0.f;
+    this->_radiusV = 0.f;
+    this->_colors = {0, 0, 0, 0};
+}
+
+Indie::Raylib::Shape::EllipseLines::EllipseLines(const EllipseLines &cpy)
+{
+    this->_centerX = cpy._centerX;
+    this->_centerY = cpy._centerY;
+    this->_radiusH = cpy._radiusH;
+    this->_radiusV = cpy._radiusV;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Shape::EllipseLines& Indie::Raylib::Shape::EllipseLines::operator=(const EllipseLines &other)
+{
+    this->_centerX = other.GetCenterX();
+    this->_centerY = other.GetCenterY();
+    this->_radiusH = other.GetRadiusH();
+    this->_radiusV = other.GetRadiusV();
+    this->_colors = other.GetColors();
+    return (*this);
 }
 
 /**

@@ -7,9 +7,22 @@
 
 #include "Ray.hpp"
 
-Indie::Raylib::Models::Ray::Ray(const Misc::Ray ray, const Misc::Colors& values) {
+Indie::Raylib::Models::Ray::Ray(const Misc::Ray ray, const Misc::Colors& colors) {
     this->_ray = ray;
-    this->_colors = values;
+    this->_colors = colors;
+}
+
+Indie::Raylib::Models::Ray::Ray(const Ray &cpy)
+{
+    this->_ray = cpy._ray;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Models::Ray& Indie::Raylib::Models::Ray::operator=(const Ray &other)
+{
+    this->_ray = other.GetRay();
+    this->_colors = other.GetColors();
+    return (*this);
 }
 
 void Indie::Raylib::Models::Ray::DrawModels() {

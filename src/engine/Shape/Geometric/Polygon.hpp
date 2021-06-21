@@ -21,6 +21,9 @@ namespace Indie {
             class Polygon : public IPolygon {
                 public:
                     Polygon(const Misc::Vector<2>, const int, const float, const float, const Misc::Colors&);
+                    Polygon();
+                    Polygon(const Polygon &);
+                    Polygon& operator=(const Polygon &);
                     /**
                      * @brief Destroy the Polygon object
                      *
@@ -101,6 +104,9 @@ namespace Indie {
             class PolygonLines : public IPolygon {
                 public:
                     PolygonLines(const Misc::Vector<2>, const int, const float, const float, const Misc::Colors&);
+                    PolygonLines();
+                    PolygonLines(const PolygonLines &);
+                    PolygonLines& operator=(const PolygonLines &);
                     /**
                      * @brief Destroy the Polygon Lines object
                      *
@@ -181,6 +187,9 @@ namespace Indie {
             class PolygonLinesEx : public IPolygon {
                 public:
                     PolygonLinesEx(const Misc::Vector<2>, const int, const float, const float, const float, const Misc::Colors&);
+                    PolygonLinesEx();
+                    PolygonLinesEx(const PolygonLinesEx &);
+                    PolygonLinesEx& operator=(const PolygonLinesEx &);
                     /**
                      * @brief Destroy the Polygon Lines Ex object
                      *

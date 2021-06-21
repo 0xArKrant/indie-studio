@@ -20,8 +20,14 @@
  * @param filename
  */
 
-Indie::Raylib::Models::ModelsRaylib::ModelsRaylib(const std::string filename) {
+Indie::Raylib::Models::ModelsRaylib::ModelsRaylib(const std::string &filename) {
     this->_model = ::LoadModel(filename.c_str());
+}
+
+Indie::Raylib::Models::ModelsRaylib::ModelsRaylib(const std::string &filename, const std::string &texturePath) {
+    this->_model = ::LoadModel(filename.c_str());
+    this->_texture = ::LoadTexture(texturePath.c_str());
+    this->_model.materials[0].maps[MATERIAL_MAP_DIFFUSE].texture = this->_texture;
 }
 
 /**
@@ -97,7 +103,7 @@ void Indie::Raylib::Models::ModelsRaylib::DrawBoundingBox(Misc::Colors color) {
  * @brief Unload model (including meshes) from memory (RAM and/or VRAM)
  */
 Indie::Raylib::Models::ModelsRaylib::~ModelsRaylib() {
-    ::UnloadModel(this->_model);
+    //::UnloadModel(this->_model);
 }
 
 void Indie::Raylib::Models::ModelsRaylib::SetColors(const Misc::Colors color)

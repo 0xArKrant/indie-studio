@@ -21,6 +21,9 @@ namespace Indie {
             class Pixel : public IPixel {
                 public:
                     Pixel(const int, const int, const Misc::Colors&);
+                    Pixel();
+                    Pixel(const Pixel &);
+                    Pixel& operator=(const Pixel &);
                     /**
                      * @brief Destroy the Pixel object
                      *
@@ -75,6 +78,9 @@ namespace Indie {
             class PixelV : public IPixel {
                 public:
                     PixelV(const Misc::Vector<2>, const Misc::Colors&);
+                    PixelV();
+                    PixelV(const PixelV &);
+                    PixelV& operator=(const PixelV &);
                     /**
                      * @brief Destroy the Pixel V object
                      *

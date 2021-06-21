@@ -15,6 +15,8 @@ namespace Indie {
             class Triangle3D : public ITriangle3D         {
                 public:
                     Triangle3D(const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Vector<3>, const Misc::Colors&);
+                    Triangle3D(const Triangle3D &);
+                    Triangle3D& operator=(const Triangle3D &);
                     ~Triangle3D() = default;
 
                     inline Misc::Vector<3> GetV1() const { return this->_v1; };
@@ -39,6 +41,8 @@ namespace Indie {
             class TriangleStrip3D : public ITriangle3D         {
                 public:
                     TriangleStrip3D(const Misc::Vector<3>, const int, const Misc::Colors&);
+                    TriangleStrip3D(const TriangleStrip3D &);
+                    TriangleStrip3D& operator=(const TriangleStrip3D &);
                     ~TriangleStrip3D() = default;
 
                     inline Misc::Vector<3> GetPoints() const { return this->_points; };
