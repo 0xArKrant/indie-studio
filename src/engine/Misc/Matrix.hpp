@@ -18,6 +18,8 @@ namespace Misc {
         public:
             Matrix(const float, const float, const float, const float, const float, const float, const float,
                 const float, const float, const float, const float, const float, const float, const float, const float, const float);
+            Matrix(const Matrix &);
+            Matrix & operator=(const Matrix &);
             Matrix();
             /**
              * @brief Destroy the Matrix object

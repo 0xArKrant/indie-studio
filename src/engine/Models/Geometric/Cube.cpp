@@ -7,12 +7,31 @@
 
 #include "Cube.hpp"
 
-Indie::Raylib::Models::Cube::Cube(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors& values) {
+Indie::Raylib::Models::Cube::Cube(const Misc::Vector<3> position, const float width, const float height, const float length, const Misc::Colors& colors) {
     this->_position = position;
     this->_width = width;
     this->_height = height;
     this->_length = length;
-    this->_colors = values;
+    this->_colors = colors;
+}
+
+Indie::Raylib::Models::Cube::Cube(const Cube &cpy)
+{
+    this->_position = cpy._position;
+    this->_width = cpy._width;
+    this->_height = cpy._height;
+    this->_length = cpy._length;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Models::Cube& Indie::Raylib::Models::Cube::operator=(const Cube &other)
+{
+    this->_position = other.GetPosition();
+    this->_width = other.GetWidth();
+    this->_height = other.GetHeight();
+    this->_length = other.GetLength();
+    this->_colors = other.GetColors();
+    return (*this);
 }
 
 void Indie::Raylib::Models::Cube::DrawModels() {

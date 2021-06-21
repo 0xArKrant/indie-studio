@@ -15,6 +15,8 @@ namespace Indie {
             class Grid : public IGrid {
                 public:
                     Grid(const int, const float);
+                    Grid(const Grid &);
+                    Grid& operator=(const Grid &);
                     ~Grid() = default;
 
                     inline int GetSlices() const { return this->_slices; };

@@ -7,11 +7,28 @@
 
 #include "Triangle3D.hpp"
 
-Indie::Raylib::Models::Triangle3D::Triangle3D(const Misc::Vector<3> v1, const Misc::Vector<3> v2, const Misc::Vector<3> v3, const Misc::Colors& values) {
+Indie::Raylib::Models::Triangle3D::Triangle3D(const Misc::Vector<3> v1, const Misc::Vector<3> v2, const Misc::Vector<3> v3, const Misc::Colors& colors) {
     this->_v1 = v1;
     this->_v2 = v2;
     this->_v3 = v3;
-    this->_colors = values;
+    this->_colors = colors;
+}
+
+Indie::Raylib::Models::Triangle3D::Triangle3D(const Triangle3D &cpy)
+{
+    this->_v1 = cpy._v1;
+    this->_v2 = cpy._v2;
+    this->_v3 = cpy._v3;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Models::Triangle3D& Indie::Raylib::Models::Triangle3D::operator=(const Triangle3D &other)
+{
+    this->_v1 = other.GetV1();
+    this->_v2 = other.GetV2();
+    this->_v3 = other.GetV3();
+    this->_colors = other.GetColors();
+    return (*this);
 }
 
 void Indie::Raylib::Models::Triangle3D::DrawModels() {
@@ -26,6 +43,21 @@ Indie::Raylib::Models::TriangleStrip3D::TriangleStrip3D(const Misc::Vector<3> po
     this->_points = points;
     this->_pointsCount = pointsCount;
     this->_colors = values;
+}
+
+Indie::Raylib::Models::TriangleStrip3D::TriangleStrip3D(const TriangleStrip3D &cpy)
+{
+    this->_points = cpy._points;
+    this->_pointsCount = cpy._pointsCount;
+    this->_colors = cpy._colors;
+}
+
+Indie::Raylib::Models::TriangleStrip3D& Indie::Raylib::Models::TriangleStrip3D::operator=(const TriangleStrip3D &other)
+{
+    this->_points = other.GetPoints();
+    this->_pointsCount = other.GetPointsCount();
+    this->_colors = other.GetColors();
+    return (*this);
 }
 
 void Indie::Raylib::Models::TriangleStrip3D::DrawModels() {

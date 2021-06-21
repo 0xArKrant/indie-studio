@@ -16,6 +16,8 @@ namespace Indie {
             class Sphere : public ISphere         {
                 public:
                     Sphere(const Misc::Vector<3>, const float, const Misc::Colors&);
+                    Sphere(const Sphere &);
+                    Sphere& operator=(const Sphere &);
                     ~Sphere() = default;
 
                     inline Misc::Vector<3> GetCenterPos() const { return this->_centerPos; };
@@ -37,6 +39,8 @@ namespace Indie {
             class SphereEx : public ISphere         {
                 public:
                     SphereEx(const Misc::Vector<3>, const float, const int, const int, const Misc::Colors&);
+                    SphereEx(const SphereEx &);
+                    SphereEx& operator=(const SphereEx &);
                     ~SphereEx() = default;
 
                     inline Misc::Vector<3> GetCenterPos() const { return this->_centerPos; };
@@ -64,6 +68,8 @@ namespace Indie {
             class SphereWires : public ISphere         {
                 public:
                     SphereWires(const Misc::Vector<3>, const float, const int, const int, const Misc::Colors&);
+                    SphereWires(const SphereWires &);
+                    SphereWires& operator=(const SphereWires &);
                     ~SphereWires() = default;
 
                     inline Misc::Vector<3> GetCenterPos() const { return this->_centerPos; };

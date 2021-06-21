@@ -21,6 +21,9 @@ namespace Indie {
             class Ellipse : public IEllipse {
                 public:
                     Ellipse(const int, const int, const float, const float, const Misc::Colors&);
+                    Ellipse();
+                    Ellipse(const Ellipse &);
+                    Ellipse& operator=(const Ellipse &);
                     /**
                      * @brief Destroy the Ellipse object
                      *
@@ -101,6 +104,9 @@ namespace Indie {
             class EllipseLines : public IEllipse {
                 public:
                     EllipseLines(const int, const int, const float, const float, const Misc::Colors&);
+                    EllipseLines();
+                    EllipseLines(const EllipseLines &);
+                    EllipseLines& operator=(const EllipseLines &);
                     /**
                      * @brief Destroy the Ellipse Lines object
                      *

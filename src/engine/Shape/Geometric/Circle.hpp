@@ -21,6 +21,9 @@ namespace Indie {
             class Circle : public ICircle {
                 public:
                     Circle(const int, const int, const float, const Misc::Colors&);
+                    Circle();
+                    Circle(const Circle &);
+                    Circle& operator=(const Circle &);
                     /**
                      * @brief Destroy the Circle object
                      *
@@ -88,6 +91,9 @@ namespace Indie {
             class CircleSector : public ICircle {
                 public:
                     CircleSector(const Misc::Vector<2>, const float, const float, const float, const int, const Misc::Colors&);
+                    CircleSector();
+                    CircleSector(const CircleSector &);
+                    CircleSector& operator=(const CircleSector &);
                     /**
                      * @brief Destroy the Circle Sector object
                      *
@@ -181,6 +187,9 @@ namespace Indie {
             class CircleSectorLines : public ICircle {
                 public:
                     CircleSectorLines(const Misc::Vector<2>, const float, const float, const float, const int, const Misc::Colors&);
+                    CircleSectorLines();
+                    CircleSectorLines(const CircleSectorLines &);
+                    CircleSectorLines& operator=(const CircleSectorLines &);
                     /**
                      * @brief Destroy the Circle Sector Lines object
                      *
@@ -274,6 +283,9 @@ namespace Indie {
             class CircleGradient : public ICircle {
                 public:
                     CircleGradient(const int, const int, const float, const Misc::Colors&, const Misc::Colors&);
+                    CircleGradient();
+                    CircleGradient(const CircleGradient &);
+                    CircleGradient& operator=(const CircleGradient &);
                     /**
                      * @brief Destroy the Circle Gradient object
                      *
@@ -354,6 +366,9 @@ namespace Indie {
             class CircleV : public ICircle {
                 public:
                     CircleV(const Misc::Vector<2>, const float, const Misc::Colors&);
+                    CircleV();
+                    CircleV(const CircleV &);
+                    CircleV& operator=(const CircleV &);
                     /**
                      * @brief Destroy the Circle V object
                      *
@@ -408,6 +423,9 @@ namespace Indie {
             class CircleLines : public ICircle {
                 public:
                     CircleLines(const int, const int, const float, const Misc::Colors&);
+                    CircleLines();
+                    CircleLines(const CircleLines &);
+                    CircleLines& operator=(const CircleLines &);
                     /**
                      * @brief Destroy the Circle Lines object
                      *

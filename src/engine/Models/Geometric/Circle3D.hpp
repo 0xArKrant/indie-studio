@@ -15,6 +15,8 @@ namespace Indie {
             class Circle3D : public ICircle3D         {
                 public:
                     Circle3D(const Misc::Vector<3>, const float, const Misc::Vector<3>, const float, const Misc::Colors&);
+                    Circle3D(const Circle3D &);
+                    Circle3D& operator=(const Circle3D &);
                     ~Circle3D() = default;
 
                     inline Misc::Vector<3> GetCenter() const { return this->_center; };
