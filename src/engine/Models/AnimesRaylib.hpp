@@ -12,7 +12,7 @@
 #include "ModelsRaylib.hpp"
 #include "Player.hpp"
 #include "GameObject.hpp"
-#include "Core.hpp"
+#include <filesystem>
 
 namespace Indie {
     namespace Raylib {

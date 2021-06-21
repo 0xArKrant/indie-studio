@@ -6,6 +6,7 @@
 */
 
 #include "AnimesRaylib.hpp"
+#include "Core.hpp"
 
 Indie::Raylib::AnimesRaylib::AnimesRaylib()
 {

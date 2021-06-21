@@ -39,7 +39,7 @@ void Indie::Game::Player::update(float elapsedTimes)
     }
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_S) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_DOWN)) {
         this->_pos.move((this->_speed * elapsedTimes), 0.0f, 0.0f);
-        this->_rotaAngle = 90.0f;        
+        this->_rotaAngle = 90.0f;
     }
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_D) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_RIGHT)) {
         this->_pos.move(0.0f, 0.0f, (-this->_speed * elapsedTimes));

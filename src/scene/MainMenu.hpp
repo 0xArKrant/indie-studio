@@ -14,7 +14,6 @@
 #include "../engine/Map/Map.hpp"
 #include "AnimesRaylib.hpp"
 
-
 namespace Indie {
     namespace Scene {
         class MainMenu : public Indie::Core::IScene {
