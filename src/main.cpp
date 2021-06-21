@@ -14,7 +14,6 @@ int main(int argc, char const **argv)
     try {
         (void) argc;
         Indie::Config::initialize();
-        std::cout << Indie::Config::ExecutablePath << std::endl;
         Indie::Core::Core test;
         test.loop();
     } catch (Indie::Errors::Exception &exception) {

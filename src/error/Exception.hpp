@@ -13,7 +13,8 @@
 
 #pragma once
 
-#include "indie.hpp"
+#include <stdexcept>
+#include <string>
 
 namespace Indie {
     namespace Errors {

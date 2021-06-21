@@ -11,20 +11,23 @@
  * Epitech Nancy 2021
  */
 
-#include <thread>
-#include <locale>
-#include <codecvt>
 #include <iostream>
-
+#include <thread>
+#include <codecvt>
 #ifdef _WIN32
-    #include <windows.h>
+#include <windows.h>
 #elif __linux__
-    #include <unistd.h>
-    #include <linux/limits.h>
+#include <unistd.h>
+#include <linux/limits.h>
 #elif __APPLE__
-    #include <unistd.h>
-    #include <mach-o/dyld.h>
+#include <unistd.h>
+#include <mach-o/dyld.h>
 #endif
+#ifdef _MSC_VER
+#define PATH_MAX        4096   /* # chars in a path name including nul */
+#endif
+
+#define _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING 
 
 #include "Exception.hpp"
 #include "Config.hpp"
