@@ -7,8 +7,7 @@
 
 #include "GameScene.hpp"
 #include <cmath>
-
-Indie::Scene::GameScene::GameScene() :
+Indie::Scene::GameScene::GameScene() : 
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
 _player("./assets/modeltest/untitled_000001.obj", "./assets/modeltest/untitled_000001.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), Indie::Game::GameObject::TypeObject::PLAYER, true)
 {
@@ -77,4 +76,5 @@ void Indie::Scene::GameScene::draw()
     //Indie::Raylib::Core::Core::getInstance().ClearBackground({0, 0, 0, 250});
     _map.draw();
     _player.draw();
+
 }

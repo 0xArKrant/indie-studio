@@ -9,11 +9,12 @@
 
 #include "indie.hpp"
 #include "../core/IScene.hpp"
-#include "./Camera.hpp"
+#include "Camera.hpp"
 #include "../Texture/Texture.hpp"
 #include "../engine/Map/Map.hpp"
 #include "Player.hpp"
 #include "../engine/Models/Collision.hpp"
+#include "AnimesRaylib.hpp"
 
 namespace Indie {
     namespace Scene {
@@ -31,6 +32,7 @@ namespace Indie {
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
                 Misc::Camera3D _cam;
+                Indie::Raylib::AnimesRaylib _anim;
         };
     }
 }

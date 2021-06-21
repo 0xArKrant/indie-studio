@@ -50,6 +50,7 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Cylinder.cpp
     src/engine/Models/Geometric/Sphere.cpp
     src/engine/Models/ModelsRaylib.cpp
+    src/engine/Models/AnimesRaylib.cpp
     src/engine/Models/Collison.cpp
 
     src/engine/Text/Text.cpp

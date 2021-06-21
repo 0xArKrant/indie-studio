@@ -22,7 +22,7 @@ namespace Indie {
                 };
                 GameObject(const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display);
                 GameObject() = delete;
-                GameObject(const GameObject &cpy) = delete;
+                GameObject(const GameObject &cpy);
                 GameObject &operator =(const GameObject &cpy) = delete;
                 virtual ~GameObject();
                 std::string getId() const;

@@ -7,7 +7,7 @@
 
 #include "MainMenu.hpp"
 
-Indie::Scene::MainMenu::MainMenu() : _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE)
+Indie::Scene::MainMenu::MainMenu() : _anim("./assets/Muhammer/MuhammerAnim", "./assets/Muhammer/Muhammer.png");
 {
 }
 
