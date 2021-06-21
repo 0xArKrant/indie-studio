@@ -13,7 +13,6 @@
 #include "../Texture/Texture.hpp"
 #include "../engine/Map/Map.hpp"
 
-
 namespace Indie {
     namespace Scene {
         class MainMenu : public Indie::Core::IScene {
@@ -26,7 +25,7 @@ namespace Indie {
 
             protected:
             private:
-                Indie::Raylib::Map _map;
+                //Indie::Raylib::Map _map;
         };
     }
 }
