@@ -8,9 +8,7 @@
 
 #pragma once
 #include "indie.hpp"
-#include "GameObject.hpp"
 #include "ModelsRaylib.hpp"
-#include "Player.hpp"
 #include "GameObject.hpp"
 #include <filesystem>
 
@@ -26,7 +24,7 @@ namespace Indie {
                 void draw();
 
                 protected:
-                    int _frameCount = 0;
+                    float _frameCount = 0;
                     std::vector<std::string> _pathList;
                     std::vector<::Model> _objList;
                     std::vector<::Texture2D> _textureList;

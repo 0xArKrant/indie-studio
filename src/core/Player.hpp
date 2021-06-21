@@ -10,7 +10,7 @@
 #include "Model3D.hpp"
 #include "CoreRaylib.hpp"
 #include "Texture.hpp"
-#include "Camera.hpp"
+#include "AnimesRaylib.hpp"
 
 namespace Indie {
     namespace Game {
@@ -27,6 +27,7 @@ namespace Indie {
                 Misc::Vector<3> _rota;
                 Misc::Vector<3> _scale;
                 float _rotaAngle;
+                Indie::Raylib::AnimesRaylib _anim;
                 //std::vector<Model3D> _bombs;
             private:
         };

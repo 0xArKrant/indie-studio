@@ -48,9 +48,9 @@ void Indie::Raylib::AnimesRaylib::update(float elapsed, Misc::Vector<3> &pos, fl
     this->_vRotaAngle.y = vRotaAngle.getY();
     this->_vRotaAngle.z = vRotaAngle.getZ();
     this->_fRotaAngle = fRotaAngle;
-    this->_frameCount += elapsed * 60.0;
+    this->_frameCount += (int)(elapsed * 60.0);
 
-    if (this->_frameCount >= this->_objList.size())
+    if (this->_frameCount == this->_objList.size())
         this->_frameCount = 0;
 
 }

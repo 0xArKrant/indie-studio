@@ -12,7 +12,6 @@
 #include "./Camera.hpp"
 #include "../Texture/Texture.hpp"
 #include "../engine/Map/Map.hpp"
-#include "AnimesRaylib.hpp"
 
 namespace Indie {
     namespace Scene {
@@ -26,7 +25,6 @@ namespace Indie {
 
             protected:
             private:
-                Indie::Raylib::AnimesRaylib _anim;
                 //Indie::Raylib::Map _map;
         };
     }

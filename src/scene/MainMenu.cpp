@@ -7,7 +7,7 @@
 
 #include "MainMenu.hpp"
 
-Indie::Scene::MainMenu::MainMenu() : _anim("./assets/Muhammer/MuhammerAnim", "./assets/Muhammer/Muhammer.png")
+Indie::Scene::MainMenu::MainMenu()
 {
 }
 
