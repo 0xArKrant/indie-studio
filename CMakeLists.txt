@@ -75,6 +75,7 @@ file(GLOB SRC_FILES
     src/core/Model3D.cpp
     src/core/Player.cpp
     src/core/Box.cpp
+    src/core/Boost.cpp
 
     src/scene/SplashScreen.cpp
     src/scene/TransitionFadeOut.cpp

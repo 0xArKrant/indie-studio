@@ -8,6 +8,7 @@
 #include "GameScene.hpp"
 #include <cmath>
 #include "Box.hpp"
+#include "Boost.hpp"
 
 Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
@@ -49,6 +50,39 @@ void Indie::Scene::GameScene::_genMap()
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
+    }
+    std::srand(time(nullptr));
+    std::vector<Misc::Vector<3>> bonusPos = std::vector<Misc::Vector<3>>();
+    for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
+        bonusPos.emplace_back(-7.0f, 0.0f, 6.0f - i);
+        bonusPos.emplace_back(5.0f, 0.0f, 6.0f - i);
+    }
+    for (int i = 0; i < this->_map.getMapSize().getX(); i++) {
+        bonusPos.emplace_back(-5.0f, 0.0f, 6.0f - i);
+        bonusPos.emplace_back(-3.0f, 0.0f, 6.0f - i);
+        bonusPos.emplace_back(-3.0f, 0.0f, 6.0f - i);
+        bonusPos.emplace_back(-1.0f, 0.0f, 6.0f - i);
+        bonusPos.emplace_back(1.0f, 0.0f, 6.0f - i);
+        bonusPos.emplace_back(3.0f, 0.0f, 6.0f - i);
+    }
+    for (int i = 2; i < this->_map.getMapSize().getY() - 4; i++) {
+        bonusPos.emplace_back(-7.0f + i, 0.0f, 6.0f);
+        bonusPos.emplace_back(-7.0f + i, 0.0f, -6.0f);
+    }
+    for (int i = 0; i < this->_map.getMapSize().getY(); i++) {
+        bonusPos.emplace_back(-7.0f + i, 0.0f, 4.0f);
+        bonusPos.emplace_back(-7.0f + i, 0.0f, 2.0f);
+        bonusPos.emplace_back(-7.0f + i, 0.0f, 0.0f);
+        bonusPos.emplace_back(-7.0f + i, 0.0f, -2.0f);
+        bonusPos.emplace_back(-7.0f + i, 0.0f, -4.0f);
+    }
+    std::vector<Misc::Vector<3>> bonusPos2 = std::vector<Misc::Vector<3>>();
+    for (int i = 0; i < 15; i++)
+        bonusPos2.push_back(std::move(bonusPos.at(std::rand() % bonusPos.size())));
+    for (int i = 0; i < 15;) {
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostBomb>("", "boostbomb", bonusPos2.at(i++), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostFire>("", "boostfire", bonusPos2.at(i++), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostSpeed>("", "boostspeed", bonusPos2.at(i++), true));
     }
 }
 
