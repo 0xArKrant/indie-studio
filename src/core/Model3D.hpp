@@ -14,8 +14,8 @@ namespace Indie {
     namespace Game {
         class Model3D : public GameObject {
         public:
-            Model3D(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display);
-            Model3D(const std::string &fileName, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display);
+            Model3D(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
+            Model3D(const std::string &fileName, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
             virtual ~Model3D();
 
         protected:
