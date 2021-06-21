@@ -15,6 +15,8 @@ namespace Indie {
             class Cylinder : public ICylinder         {
                 public:
                     Cylinder(const Misc::Vector<3>, const float, const float, const float, const int, const Misc::Colors&);
+                    Cylinder(const Cylinder &);
+                    Cylinder& operator=(const Cylinder &);
                     ~Cylinder() = default;
 
                     inline Misc::Vector<3> GetPosition() const { return this->_position; };
@@ -45,6 +47,8 @@ namespace Indie {
             class CylinderWires : public ICylinder         {
                 public:
                     CylinderWires(const Misc::Vector<3>, const float, const float, const float, const int, const Misc::Colors&);
+                    CylinderWires(const CylinderWires &);
+                    CylinderWires& operator=(const CylinderWires &);
                     ~CylinderWires() = default;
 
                     inline Misc::Vector<3> GetPosition() const { return this->_position; };

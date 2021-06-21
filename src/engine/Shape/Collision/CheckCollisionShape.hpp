@@ -22,6 +22,9 @@ namespace Indie {
             class CheckCollisionRecs : public IShape {
                 public:
                     CheckCollisionRecs(const Misc::Rectangle, const Misc::Rectangle);
+                    CheckCollisionRecs();
+                    CheckCollisionRecs(const CheckCollisionRecs &);
+                    CheckCollisionRecs& operator=(const CheckCollisionRecs &);
                     /**
                      * @brief Destroy the Check Collision Recs object
                      *
@@ -63,6 +66,9 @@ namespace Indie {
             class CheckCollisionCircles : public IShape {
                 public:
                     CheckCollisionCircles(const Misc::Vector<2>, const float, const Misc::Vector<2>, const float);
+                    CheckCollisionCircles();
+                    CheckCollisionCircles(const CheckCollisionCircles &);
+                    CheckCollisionCircles& operator=(const CheckCollisionCircles &);
                     /**
                      * @brief Destroy the Check Collision Circles object
                      *
@@ -130,6 +136,9 @@ namespace Indie {
             class CheckCollisionCircleRec : public IShape {
                 public:
                     CheckCollisionCircleRec(const Misc::Vector<2>, const float, const Misc::Rectangle);
+                    CheckCollisionCircleRec();
+                    CheckCollisionCircleRec(const CheckCollisionCircleRec &);
+                    CheckCollisionCircleRec& operator=(const CheckCollisionCircleRec &);
                     /**
                      * @brief Destroy the Check Collision Circle Rec object
                      *
@@ -184,6 +193,9 @@ namespace Indie {
             class CheckCollisionPointRec : public IShape {
                 public:
                     CheckCollisionPointRec(const Misc::Vector<2>, const Misc::Rectangle);
+                    CheckCollisionPointRec();
+                    CheckCollisionPointRec(const CheckCollisionPointRec &);
+                    CheckCollisionPointRec& operator=(const CheckCollisionPointRec &);
                     /**
                      * @brief Destroy the Check Collision Point Rec object
                      *
@@ -225,6 +237,9 @@ namespace Indie {
             class CheckCollisionPointCircle : public IShape {
                 public:
                     CheckCollisionPointCircle(const Misc::Vector<2>, const Misc::Vector<2>, const float);
+                    CheckCollisionPointCircle();
+                    CheckCollisionPointCircle(const CheckCollisionPointCircle &);
+                    CheckCollisionPointCircle& operator=(const CheckCollisionPointCircle &);
                     /**
                      * @brief Destroy the Check Collision Point Circle object
                      *
@@ -279,6 +294,9 @@ namespace Indie {
             class CheckCollisionPointTriangle : public IShape {
                 public:
                     CheckCollisionPointTriangle(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>);
+                    CheckCollisionPointTriangle();
+                    CheckCollisionPointTriangle(const CheckCollisionPointTriangle &);
+                    CheckCollisionPointTriangle& operator=(const CheckCollisionPointTriangle &);
                     /**
                      * @brief Destroy the Check Collision Point Triangle object
                      *
@@ -346,6 +364,9 @@ namespace Indie {
             class CheckCollisionLines : public IShape {
                 public:
                     CheckCollisionLines(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>);
+                    CheckCollisionLines();
+                    CheckCollisionLines(const CheckCollisionLines &);
+                    CheckCollisionLines& operator=(const CheckCollisionLines &);
                     /**
                      * @brief Destroy the Check Collision Lines object
                      *
@@ -426,6 +447,9 @@ namespace Indie {
             class GetCollisionRec : public IShape {
                 public:
                     GetCollisionRec(const Misc::Rectangle, const Misc::Rectangle);
+                    GetCollisionRec();
+                    GetCollisionRec(const GetCollisionRec &);
+                    GetCollisionRec& operator=(const GetCollisionRec &);
                     /**
                      * @brief Destroy the Get Collision Rec object
                      *

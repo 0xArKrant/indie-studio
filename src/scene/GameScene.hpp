@@ -15,6 +15,7 @@
 #include "Player.hpp"
 #include "../engine/Models/Collision.hpp"
 
+
 namespace Indie {
     namespace Scene {
         class GameScene : public Indie::Core::IScene {
@@ -24,13 +25,14 @@ namespace Indie {
                 void setGame();
                 void update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed);
                 void draw();
-
             protected:
             private:
                 bool _checkCollision();
+                void _genMap();
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
                 Misc::Camera3D _cam;
+                std::vector<std::unique_ptr<Indie::Game::GameObject>> _gameObjectList;
         };
     }
 }

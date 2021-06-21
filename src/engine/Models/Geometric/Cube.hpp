@@ -15,6 +15,8 @@ namespace Indie {
             class Cube : public ICube         {
                 public:
                     Cube(const Misc::Vector<3>, const float, const float, const float, const Misc::Colors&);
+                    Cube(const Cube &);
+                    Cube& operator=(const Cube &);
                     ~Cube() = default;
 
                     inline Misc::Vector<3> GetPosition() const { return this->_position; };

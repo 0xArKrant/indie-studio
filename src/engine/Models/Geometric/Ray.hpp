@@ -15,6 +15,8 @@ namespace Indie {
             class Ray : public IRay         {
                 public:
                     Ray(const Misc::Ray, const Misc::Colors&);
+                    Ray(const Ray &);
+                    Ray& operator=(const Ray &);
                     ~Ray() = default;
 
                     inline Misc::Colors GetColors() const { return this->_colors; };

@@ -21,6 +21,9 @@ namespace Indie {
             class Triangle : public ITriangle {
                 public:
                     Triangle(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors&);
+                    Triangle();
+                    Triangle(const Triangle &);
+                    Triangle& operator=(const Triangle &);
                     /**
                      * @brief Destroy the Triangle object
                      *
@@ -87,6 +90,9 @@ namespace Indie {
             class TriangleLines : public ITriangle {
                 public:
                     TriangleLines(const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Vector<2>, const Misc::Colors&);
+                    TriangleLines();
+                    TriangleLines(const TriangleLines &);
+                    TriangleLines& operator=(const TriangleLines &);
                     /**
                      * @brief Destroy the Triangle Lines object
                      *
@@ -154,6 +160,9 @@ namespace Indie {
             class TriangleFan : public ITriangle {
                 public:
                     TriangleFan(const Misc::Vector<2>, const int, const Misc::Colors&);
+                    TriangleFan();
+                    TriangleFan(const TriangleFan &);
+                    TriangleFan& operator=(const TriangleFan &);
                     /**
                      * @brief Destroy the Triangle Fan object
                      *
@@ -208,6 +217,9 @@ namespace Indie {
             class TriangleStrip : public ITriangle {
                 public:
                     TriangleStrip(const Misc::Vector<2>, const int, const Misc::Colors&);
+                    TriangleStrip();
+                    TriangleStrip(const TriangleStrip &);
+                    TriangleStrip& operator=(const TriangleStrip &);
                     /**
                      * @brief Destroy the Triangle Strip object
                      *

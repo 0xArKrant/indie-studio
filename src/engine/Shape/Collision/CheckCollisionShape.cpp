@@ -24,6 +24,25 @@ Indie::Raylib::Shape::CheckCollisionRecs::CheckCollisionRecs(const Misc::Rectang
     this->_rectangle2 = rectangle2;
 }
 
+Indie::Raylib::Shape::CheckCollisionRecs::CheckCollisionRecs()
+{
+    this->_rectangle1 = Misc::Rectangle({0.f, 0.f, 0.f, 0.f});
+    this->_rectangle2 = Misc::Rectangle({0.f, 0.f, 0.f, 0.f});
+}
+
+Indie::Raylib::Shape::CheckCollisionRecs::CheckCollisionRecs(const CheckCollisionRecs &cpy)
+{
+    this->_rectangle1 = cpy._rectangle1;
+    this->_rectangle2 = cpy._rectangle2;
+}
+
+Indie::Raylib::Shape::CheckCollisionRecs& Indie::Raylib::Shape::CheckCollisionRecs::operator=(const CheckCollisionRecs &other)
+{
+    this->_rectangle1 = other.GetRectangle1();
+    this->_rectangle1 = other.GetRectangle2();
+    return (*this);
+}
+
 /**
  * @brief Check collision between two rectangles
  *
@@ -50,6 +69,31 @@ Indie::Raylib::Shape::CheckCollisionCircles::CheckCollisionCircles(const Misc::V
     this->_radius1 = radius1;
     this->_center2 = center2;
     this->_radius2 = radius2;
+}
+
+Indie::Raylib::Shape::CheckCollisionCircles::CheckCollisionCircles()
+{
+    this->_center1 = {0.f, 0.f};
+    this->_radius1 = 0.f;
+    this->_center2 = {0.f, 0.f};
+    this->_radius2 = 0.f;
+}
+
+Indie::Raylib::Shape::CheckCollisionCircles::CheckCollisionCircles(const CheckCollisionCircles &cpy)
+{
+    this->_center1 = cpy._center1;
+    this->_radius1 = cpy._radius1;
+    this->_center2 = cpy._center2;
+    this->_radius2 = cpy._radius2;
+}
+
+Indie::Raylib::Shape::CheckCollisionCircles& Indie::Raylib::Shape::CheckCollisionCircles::operator=(const CheckCollisionCircles &other)
+{
+    this->_center1 = other.GetVectorCenter1();
+    this->_radius1 = other.GetRadius1();
+    this->_center2 = other.GetVectorCenter2();
+    this->_radius2 = other.GetRadius2();
+    return (*this);
 }
 
 /**
@@ -80,6 +124,28 @@ Indie::Raylib::Shape::CheckCollisionCircleRec::CheckCollisionCircleRec(const Mis
     this->_rectangle = rectangle;
 }
 
+Indie::Raylib::Shape::CheckCollisionCircleRec::CheckCollisionCircleRec()
+{
+    this->_center = {0.f, 0.f};
+    this->_radius = 0.f;
+    this->_rectangle = Misc::Rectangle({0.f, 0.f, 0.f, 0.f});
+}
+
+Indie::Raylib::Shape::CheckCollisionCircleRec::CheckCollisionCircleRec(const CheckCollisionCircleRec &cpy)
+{
+    this->_center = cpy._center;
+    this->_radius = cpy._radius;
+    this->_rectangle = cpy._rectangle;
+}
+
+Indie::Raylib::Shape::CheckCollisionCircleRec& Indie::Raylib::Shape::CheckCollisionCircleRec::operator=(const CheckCollisionCircleRec &other)
+{
+    this->_center = other.GetVectorCenter();
+    this->_radius = other.GetRadius();
+    this->_rectangle = other.GetRectangle();
+    return (*this);
+}
+
 /**
  * @brief Check collision between circle and rectangle
  *
@@ -103,6 +169,25 @@ bool Indie::Raylib::Shape::CheckCollisionCircleRec::CheckCollision() {
 Indie::Raylib::Shape::CheckCollisionPointRec::CheckCollisionPointRec(const Misc::Vector<2> point, const Misc::Rectangle rectangle) {
     this->_point = point;
     this->_rectangle = rectangle;
+}
+
+Indie::Raylib::Shape::CheckCollisionPointRec::CheckCollisionPointRec()
+{
+    this->_point = {0.f, 0.f};
+    this->_rectangle = Misc::Rectangle({0.f, 0.f, 0.f, 0.f});
+}
+
+Indie::Raylib::Shape::CheckCollisionPointRec::CheckCollisionPointRec(const CheckCollisionPointRec &cpy)
+{
+    this->_point = cpy._point;
+    this->_rectangle = cpy._rectangle;
+}
+
+Indie::Raylib::Shape::CheckCollisionPointRec& Indie::Raylib::Shape::CheckCollisionPointRec::operator=(const CheckCollisionPointRec &other)
+{
+    this->_point = other.GetVectorPoint();
+    this->_rectangle = other.GetRectangle();
+    return (*this);
 }
 
 /**
@@ -129,6 +214,28 @@ Indie::Raylib::Shape::CheckCollisionPointCircle::CheckCollisionPointCircle(const
     this->_point = point;
     this->_center = center;
     this->_radius = radius;
+}
+
+Indie::Raylib::Shape::CheckCollisionPointCircle::CheckCollisionPointCircle()
+{
+    this->_point = {0.f, 0.f};
+    this->_center = {0.f, 0.f};
+    this->_radius = 0.f;
+}
+
+Indie::Raylib::Shape::CheckCollisionPointCircle::CheckCollisionPointCircle(const CheckCollisionPointCircle &cpy)
+{
+    this->_point = cpy._point;
+    this->_center = cpy._center;
+    this->_radius = cpy._radius;
+}
+
+Indie::Raylib::Shape::CheckCollisionPointCircle& Indie::Raylib::Shape::CheckCollisionPointCircle::operator=(const CheckCollisionPointCircle &other)
+{
+    this->_point = other.GetVectorPoint();
+    this->_center = other.GetVectorCenter();
+    this->_radius = other.GetRadius();
+    return (*this);
 }
 
 /**
@@ -158,6 +265,31 @@ Indie::Raylib::Shape::CheckCollisionPointTriangle::CheckCollisionPointTriangle(c
     this->_p1 = p1;
     this->_p2 = p2;
     this->_p3 = p3;
+}
+
+Indie::Raylib::Shape::CheckCollisionPointTriangle::CheckCollisionPointTriangle()
+{
+    this->_point = {0.f, 0.f};
+    this->_p1 = {0.f, 0.f};
+    this->_p2 = {0.f, 0.f};
+    this->_p3 = {0.f, 0.f};
+}
+
+Indie::Raylib::Shape::CheckCollisionPointTriangle::CheckCollisionPointTriangle(const CheckCollisionPointTriangle &cpy)
+{
+    this->_point = cpy._point;
+    this->_p1 = cpy._p1;
+    this->_p2 = cpy._p2;
+    this->_p3 = cpy._p3;
+}
+
+Indie::Raylib::Shape::CheckCollisionPointTriangle& Indie::Raylib::Shape::CheckCollisionPointTriangle::operator=(const CheckCollisionPointTriangle &other)
+{
+    this->_point = other.GetVectorPoint();
+    this->_p1 = other.GetVectorP1();
+    this->_p2 = other.GetVectorP2();
+    this->_p3 = other.GetVectorP3();
+    return (*this);
 }
 
 /**
@@ -192,6 +324,34 @@ Indie::Raylib::Shape::CheckCollisionLines::CheckCollisionLines(const Misc::Vecto
     this->_collisionPoint = collisionPoint;
 }
 
+Indie::Raylib::Shape::CheckCollisionLines::CheckCollisionLines()
+{
+    this->_startPos1 = {0.f, 0.f};
+    this->_endPos1 = {0.f, 0.f};
+    this->_startPos2 = {0.f, 0.f};
+    this->_endPos2 = {0.f, 0.f};
+    this->_collisionPoint = {0.f, 0.f};
+}
+
+Indie::Raylib::Shape::CheckCollisionLines::CheckCollisionLines(const CheckCollisionLines &cpy)
+{
+    this->_startPos1 = cpy._startPos1;
+    this->_endPos1 = cpy._endPos1;
+    this->_startPos2 = cpy._startPos2;
+    this->_endPos2 = cpy._endPos2;
+    this->_collisionPoint = cpy._collisionPoint;
+}
+
+Indie::Raylib::Shape::CheckCollisionLines& Indie::Raylib::Shape::CheckCollisionLines::operator=(const CheckCollisionLines &other)
+{
+    this->_startPos1 = other.GetVectorStartPos1();
+    this->_endPos1 = other.GetVectorEndPos1();
+    this->_startPos2 = other.GetVectorStartPos2();
+    this->_endPos2 = other.GetVectorEndPos2();
+    this->_collisionPoint = other.GetVectorCollisionPoint();
+    return (*this);
+}
+
 /**
  * @brief Check the collision between two lines defined by two points each, returns collision point by reference
  *
@@ -219,6 +379,25 @@ bool Indie::Raylib::Shape::CheckCollisionLines::CheckCollision() {
 Indie::Raylib::Shape::GetCollisionRec::GetCollisionRec(const Misc::Rectangle rectangle1, const Misc::Rectangle rectangle2) {
     this->_rectangle1 = rectangle1;
     this->_rectangle2 = rectangle2;
+}
+
+Indie::Raylib::Shape::GetCollisionRec::GetCollisionRec()
+{
+    this->_rectangle1 = Misc::Rectangle({0.f, 0.f, 0.f, 0.f});
+    this->_rectangle2 = Misc::Rectangle({0.f, 0.f, 0.f, 0.f});
+}
+
+Indie::Raylib::Shape::GetCollisionRec::GetCollisionRec(const GetCollisionRec &cpy)
+{
+    this->_rectangle1 = cpy._rectangle1;
+    this->_rectangle2 = cpy._rectangle2;
+}
+
+Indie::Raylib::Shape::GetCollisionRec& Indie::Raylib::Shape::GetCollisionRec::operator=(const GetCollisionRec &other)
+{
+    this->_rectangle1 = other.GetRectangle1();
+    this->_rectangle2 = other.GetRectangle2();
+    return (*this);
 }
 
 /**
