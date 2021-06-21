@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['animesraylib_1196',['AnimesRaylib',['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html#ac6e1e8795231e491934075188d7227f5',1,'Indie::Raylib::AnimesRaylib::AnimesRaylib()'],['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html#abf3e1e7c06b960fc21a087948055b883',1,'Indie::Raylib::AnimesRaylib::AnimesRaylib(const std::string &amp;dirPath, const std::string &amp;texturePath)']]],
-  ['audiostream_1197',['AudioStream',['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html#a6e2456709b955a6e5f9facada4a2041d',1,'Indie::Raylib::Audio::AudioStream']]]
+  ['begindrawing_1159',['BeginDrawing',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a219c7f2e2f2ddaa2300025ca81e44692',1,'Indie::Raylib::Core::Core']]],
+  ['beginmode2d_1160',['BeginMode2D',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#aa20854a4b1717c6cf62d5e8dfa64b81f',1,'Indie::Raylib::Core::Core']]],
+  ['beginmode3d_1161',['BeginMode3D',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a1ecbcffcac1a22f35705adbdadf648e1',1,'Indie::Raylib::Core::Core']]],
+  ['begintexturemode_1162',['BeginTextureMode',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#af992ca7cba446d2d5cd0b69c31548709',1,'Indie::Raylib::Core::Core']]]
 ];
