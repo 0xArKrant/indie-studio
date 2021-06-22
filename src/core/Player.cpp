@@ -19,7 +19,6 @@ Indie::Game::Player::Player(const std::string &objPath, const std::string &id, M
 Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display),
 _anim("./assets/modeltest/BomberAnim", "./assets/Muhammer/Muhammer.png")
 {
-
     this->_speed = 2;
     this->_rota = {0.0f, 1.0f, 0.0f};
     this->_scale = {20.0f, 20.0f, 20.0f};

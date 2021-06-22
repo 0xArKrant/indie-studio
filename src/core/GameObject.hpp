@@ -17,6 +17,9 @@ namespace Indie {
                     PLAYER,
                     BOMB,
                     BOX,
+                    BOOST_BOMB,
+                    BOOST_SPEED,
+                    BOOST_FIRE,
                     TEXT,
                     MUSIC,
                 };
