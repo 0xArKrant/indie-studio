@@ -28,6 +28,7 @@ namespace Indie {
                 Misc::Vector<3> _scale;
                 float _rotaAngle;
                 Indie::Raylib::AnimesRaylib _anim;
+                Indie::Raylib::AnimesRaylib _animIdle;
                 //std::vector<Model3D> _bombs;
             private:
         };
