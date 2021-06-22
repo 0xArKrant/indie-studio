@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['animesraylib_959',['AnimesRaylib',['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html',1,'Indie::Raylib']]],
-  ['audiostream_960',['AudioStream',['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html',1,'Indie::Raylib::Audio']]]
+  ['animesraylib_958',['AnimesRaylib',['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html',1,'Indie::Raylib']]],
+  ['audiostream_959',['AudioStream',['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html',1,'Indie::Raylib::Audio']]]
 ];

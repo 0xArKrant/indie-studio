@@ -26,7 +26,6 @@ var searchData=
   ['modelsraylib_2ecpp_597',['ModelsRaylib.cpp',['../d8/daa/ModelsRaylib_8cpp.html',1,'']]],
   ['modelsraylib_2ehpp_598',['ModelsRaylib.hpp',['../d4/d79/ModelsRaylib_8hpp.html',1,'']]],
   ['move_599',['move',['../d1/d15/classMisc_1_1Vector.html#ace10abd354969cc8a180e7ffd9eb95fd',1,'Misc::Vector']]],
-  ['music_600',['Music',['../d0/d2a/classIndie_1_1Raylib_1_1Audio_1_1Music.html',1,'Indie::Raylib::Audio']]],
-  ['music_601',['MUSIC',['../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981fa288488c36431119cfa39bfd7fad3f4ab',1,'Indie::Game::GameObject']]],
-  ['music_602',['Music',['../d0/d2a/classIndie_1_1Raylib_1_1Audio_1_1Music.html#a8b6cd9cba209c4c3769d576c7cfc0d61',1,'Indie::Raylib::Audio::Music::Music(std::string)'],['../d0/d2a/classIndie_1_1Raylib_1_1Audio_1_1Music.html#a351dc40264d417b11ecee8b47dafb93e',1,'Indie::Raylib::Audio::Music::Music(std::string, unsigned char *, int)']]]
+  ['music_600',['Music',['../d0/d2a/classIndie_1_1Raylib_1_1Audio_1_1Music.html',1,'Indie::Raylib::Audio::Music'],['../d0/d2a/classIndie_1_1Raylib_1_1Audio_1_1Music.html#a8b6cd9cba209c4c3769d576c7cfc0d61',1,'Indie::Raylib::Audio::Music::Music(std::string)'],['../d0/d2a/classIndie_1_1Raylib_1_1Audio_1_1Music.html#a351dc40264d417b11ecee8b47dafb93e',1,'Indie::Raylib::Audio::Music::Music(std::string, unsigned char *, int)']]],
+  ['music_601',['MUSIC',['../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981fa288488c36431119cfa39bfd7fad3f4ab',1,'Indie::Game::GameObject']]]
 ];
