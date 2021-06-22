@@ -12,7 +12,7 @@ Indie::Raylib::AnimesRaylib::AnimesRaylib()
 {
 
 }
- 
+
 Indie::Raylib::AnimesRaylib::AnimesRaylib(const std::string &dirPath, const std::string &texturePath)
 {
     this->_texture = ::LoadTexture(texturePath.c_str());
@@ -31,12 +31,12 @@ Indie::Raylib::AnimesRaylib::AnimesRaylib(const std::string &dirPath, const std:
             //std::cout << it << std::endl;
         }
     }
-    for (const auto it : this->_objList) {
+    for (const auto &it : this->_objList) {
         ::SetMaterialTexture(&it.materials[0], MATERIAL_MAP_DIFFUSE, this->_texture);
     }
 }
 
-void Indie::Raylib::AnimesRaylib::update(float elapsed, Misc::Vector<3> &pos, float &fRotaAngle,  Misc::Vector<3> &scale, const Misc::Vector<3> &vRotaAngle) 
+void Indie::Raylib::AnimesRaylib::update(float elapsed, Misc::Vector<3> &pos, float &fRotaAngle,  Misc::Vector<3> &scale, const Misc::Vector<3> &vRotaAngle)
 {
     this->_pos.x = pos.getX();
     this->_pos.y = pos.getY();
@@ -55,7 +55,7 @@ void Indie::Raylib::AnimesRaylib::update(float elapsed, Misc::Vector<3> &pos, fl
 
 }
 
-void Indie::Raylib::AnimesRaylib::draw() 
+void Indie::Raylib::AnimesRaylib::draw()
 {
     ::DrawModelEx(this->_objList[this->_frameCount], this->_pos, this->_vRotaAngle, this->_fRotaAngle, this->_scale, ::Color(WHITE));
 }
@@ -63,6 +63,6 @@ void Indie::Raylib::AnimesRaylib::draw()
 
 Indie::Raylib::AnimesRaylib::~AnimesRaylib()
 {
-    for (const auto it : this->_textureList)
+    for (const auto &it : this->_textureList)
         ::UnloadTexture(it);
 }
