@@ -9,7 +9,7 @@
 
 #include "indie.hpp"
 #include "../core/IScene.hpp"
-#include "./Camera.hpp"
+#include "Camera.hpp"
 #include "../Texture/Texture.hpp"
 #include "../engine/Map/Map.hpp"
 #include "Player.hpp"
