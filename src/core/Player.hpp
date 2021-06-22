@@ -31,6 +31,7 @@ namespace Indie {
                 Indie::Raylib::AnimesRaylib _animIdle;
                 //std::vector<Model3D> _bombs;
             private:
+            bool _move;
         };
     }
-} 
+}
