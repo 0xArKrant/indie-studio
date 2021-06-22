@@ -10,12 +10,6 @@
 #include "indie.hpp"
 
 Indie::Core::Core::Core() {
-    #ifdef _WIN32
-        std::cout << "WIN32 ! " << std::endl;
-    #endif
-    #ifdef __linux__
-        std::cout << "Linux ! " << std::endl;
-    #endif
     this->_height = 1600;
     this->_width = 900;
     this->_name = "Bomberman";
