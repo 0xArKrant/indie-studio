@@ -15,6 +15,7 @@ namespace Indie {
             public:
                 Boost(const std::string &objPath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, id, pos, display) {}
                 Boost(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display) {}
+                Boost(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(model, id, pos, display) {}
                 virtual ~Boost() {}
             protected:
             private:
@@ -24,6 +25,7 @@ namespace Indie {
             public:
                 BoostFire(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
                 BoostFire(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
+                BoostFire(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~BoostFire() {}
 
                 void update(float elapsedTimes);
@@ -34,6 +36,7 @@ namespace Indie {
             public:
                 BoostSpeed(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
                 BoostSpeed(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
+                BoostSpeed(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~BoostSpeed() {}
 
                 void update(float elapsedTimes);
@@ -44,6 +47,7 @@ namespace Indie {
             public:
                 BoostBomb(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
                 BoostBomb(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
+                BoostBomb(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~BoostBomb() {}
 
                 void update(float elapsedTimes);

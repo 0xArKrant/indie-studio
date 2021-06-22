@@ -28,28 +28,29 @@ void Indie::Scene::GameScene::setGame()
 
 void Indie::Scene::GameScene::_genMap()
 {
+    Indie::Raylib::Models::ModelsRaylib model("./assets/wall2/wall.obj", "./assets/Muhammer/Muhammer.png");
     for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
     }
     for (int i = 0; i < this->_map.getMapSize().getX(); i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-5.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-1.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(1.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(3.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-5.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-1.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(1.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(3.0f, 0.0f, 6.0f - i), true));
     }
     for (int i = 2; i < this->_map.getMapSize().getY() - 4; i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, 6.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, -6.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 6.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -6.0f), true));
     }
     for (int i = 0; i < this->_map.getMapSize().getY(); i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, 4.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, 2.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>("", "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 4.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 2.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
     }
     std::srand(time(nullptr));
     std::vector<Misc::Vector<3>> bonusPos = std::vector<Misc::Vector<3>>();
@@ -79,10 +80,13 @@ void Indie::Scene::GameScene::_genMap()
     std::vector<Misc::Vector<3>> bonusPos2 = std::vector<Misc::Vector<3>>();
     for (int i = 0; i < 15; i++)
         bonusPos2.push_back(std::move(bonusPos.at(std::rand() % bonusPos.size())));
+    Indie::Raylib::Models::ModelsRaylib bomb("./assets/floor/wall.obj", "./assets/floor/floor.png");
+    Indie::Raylib::Models::ModelsRaylib fire("./assets/floor/wall.obj", "./assets/floor/floor.png");
+    Indie::Raylib::Models::ModelsRaylib speed("./assets/floor/wall.obj", "./assets/floor/floor.png");
     for (int i = 0; i < 15;) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostBomb>("", "boostbomb", bonusPos2.at(i++), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostFire>("", "boostfire", bonusPos2.at(i++), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostSpeed>("", "boostspeed", bonusPos2.at(i++), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostBomb>(bomb, "boostbomb", bonusPos2.at(i++), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostFire>(fire, "boostfire", bonusPos2.at(i++), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostSpeed>(speed, "boostspeed", bonusPos2.at(i++), true));
     }
 }
 

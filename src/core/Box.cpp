@@ -17,6 +17,11 @@ Indie::Game::Box::Box(const std::string &objPath, const std::string &texturePath
     this->_type = BOX;
 }
 
+Indie::Game::Box::Box(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(model, id, pos, display)
+{
+
+}
+
 Indie::Game::Box::~Box()
 {
 }
@@ -28,5 +33,5 @@ void Indie::Game::Box::update(float elapsedTimes)
 
 void Indie::Game::Box::draw()
 {
-    this->_model.DrawModel(this->_pos, 0.5f, Misc::Colors(200, 130, 130, 255));
+    this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(88, 41, 0, 255));
 }

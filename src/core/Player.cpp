@@ -20,6 +20,7 @@ Indie::Game::Player::Player(const std::string &objPath, const std::string &textu
     this->_speed = 1;
     this->_rota = {0.0f, 0.0f, 0.0f};
     this->_scale = {1.0f, 1.0f, 1.0f};
+    this->_type = PLAYER;
 }
 
 Indie::Game::Player::~Player()

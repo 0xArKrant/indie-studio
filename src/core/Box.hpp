@@ -15,6 +15,7 @@ namespace Indie {
             public:
                 Box(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
                 Box(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
+                Box(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~Box();
 
                 void update(float elapsedTimes);
