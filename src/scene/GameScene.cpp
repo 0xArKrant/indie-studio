@@ -10,11 +10,11 @@
 #include "Box.hpp"
 #include "Boost.hpp"
 
-Indie::Scene::GameScene::GameScene() : 
+Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
 _player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), true)
 {
-    
+
     _genMap();
 }
 
@@ -29,12 +29,12 @@ void Indie::Scene::GameScene::setGame()
 
 void Indie::Scene::GameScene::_genMap()
 {
-    Indie::Raylib::Models::ModelsRaylib model("./assets/wall2/wall.obj", "./assets/Muhammer/Muhammer.png");
+    Indie::Raylib::Models::ModelsRaylib model("./assets/box/box.obj", "./assets/box/box_wood.png");
     for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
     }
-    for (int i = 0; i < this->_map.getMapSize().getX(); i++) {
+    for (int i = 0; i < this->_map.getMapSize().getX() - 2; i++) {
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-5.0f, 0.0f, 6.0f - i), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
@@ -46,7 +46,7 @@ void Indie::Scene::GameScene::_genMap()
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 6.0f), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -6.0f), true));
     }
-    for (int i = 0; i < this->_map.getMapSize().getY(); i++) {
+    for (int i = 0; i < this->_map.getMapSize().getY() - 2; i++) {
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 4.0f), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 2.0f), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
@@ -59,7 +59,7 @@ void Indie::Scene::GameScene::_genMap()
         bonusPos.emplace_back(-7.0f, 0.0f, 6.0f - i);
         bonusPos.emplace_back(5.0f, 0.0f, 6.0f - i);
     }
-    for (int i = 0; i < this->_map.getMapSize().getX(); i++) {
+    for (int i = 0; i < this->_map.getMapSize().getX() - 2; i++) {
         bonusPos.emplace_back(-5.0f, 0.0f, 6.0f - i);
         bonusPos.emplace_back(-3.0f, 0.0f, 6.0f - i);
         bonusPos.emplace_back(-3.0f, 0.0f, 6.0f - i);
@@ -71,7 +71,7 @@ void Indie::Scene::GameScene::_genMap()
         bonusPos.emplace_back(-7.0f + i, 0.0f, 6.0f);
         bonusPos.emplace_back(-7.0f + i, 0.0f, -6.0f);
     }
-    for (int i = 0; i < this->_map.getMapSize().getY(); i++) {
+    for (int i = 0; i < this->_map.getMapSize().getY() - 2; i++) {
         bonusPos.emplace_back(-7.0f + i, 0.0f, 4.0f);
         bonusPos.emplace_back(-7.0f + i, 0.0f, 2.0f);
         bonusPos.emplace_back(-7.0f + i, 0.0f, 0.0f);

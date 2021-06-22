@@ -33,5 +33,5 @@ void Indie::Game::Box::update(float elapsedTimes)
 
 void Indie::Game::Box::draw()
 {
-    this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(88, 41, 0, 255));
+    this->_model.DrawModel(this->_pos, 0.17f, Misc::Colors(88, 41, 0, 255));
 }
