@@ -7,12 +7,11 @@
 
 #include "GameObject.hpp"
 
-Indie::Game::GameObject::GameObject(const std::string &id, Misc::Vector<3> pos, TypeObject type, bool display)
+Indie::Game::GameObject::GameObject(const std::string &id, Misc::Vector<3> pos, bool display)
 {
     this->_id = id;
     this->_pos = pos;
     this->_display = display;
-    this->_type = type;
 }
 
 Indie::Game::GameObject::TypeObject Indie::Game::GameObject::getType() const

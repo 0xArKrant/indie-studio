@@ -13,6 +13,7 @@
 
 #pragma once
 
+#include <raylib.h>
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
@@ -23,7 +24,6 @@
 #include <list>
 #include <string>
 #include <filesystem>
-#include <raylib.h>
 #include <array>
 #include <cstdint>
 #include <cstring>

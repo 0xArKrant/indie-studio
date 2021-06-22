@@ -7,11 +7,13 @@
 
 #include "Core.hpp"
 #include "Exception.hpp"
+#include "Config.hpp"
 
 int main(int argc, char const **argv)
 {
     try {
         (void) argc;
+        Indie::Config::initialize();
         Indie::Core::Core test;
         test.loop();
     } catch (Indie::Errors::Exception &exception) {

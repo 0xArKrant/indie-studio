@@ -356,6 +356,9 @@ namespace Indie {
                     inline double GetTime(void) const { return ::GetTime(); };
 
                     double GetElapsedTime();
+
+                    inline void SetTraceLogLevel(int logLevel) const { ::SetTraceLogLevel(logLevel); };
+
                 private:
                     Core(int width, int height, const std::string& title);
                     ~Core();

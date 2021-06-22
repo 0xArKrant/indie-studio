@@ -34,6 +34,16 @@ namespace Misc {
                     throw (Indie::Errors::Exception("Unable to Compute Vector", "Vector Size > 4", __FILE__, __LINE__));
                 std::memcpy(this->_vector.data(), vec, this->_vector.size() * sizeof(float));
             };
+            Vector(const Vector &cpy) {
+                for (size_t size = 0; size < vSize; size++)
+                    this->_vector[size] = cpy._vector[size];
+            };
+            inline Vector<vSize> &operator = (const Vector<vSize> &cpy) {
+                for (size_t size = 0; size < vSize; size++) {
+                    this->_vector[size] = cpy._vector[size];
+                }
+                return (*this);
+            }
             ~Vector() = default; /*! Rectangle default desctructor */
 
             template<typename ... x>
@@ -41,11 +51,11 @@ namespace Misc {
                 float vec[]{args...};
                 this->_vector[0] += vec[0];
                 if (vSize > 1)
-                    this->_vector[1] += vec[1];
+                    this->_vector[0] += vec[0];
                 if (vSize > 2)
+                    this->_vector[1] += vec[1];
+                if (vSize > 3) {}
                     this->_vector[2] += vec[2];
-                if (vSize > 3)
-                    this->_vector[3] += vec[3];
             }
 
             /**

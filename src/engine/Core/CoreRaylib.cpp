@@ -25,6 +25,7 @@
  */
 
 Indie::Raylib::Core::Core::Core(int width, int height, const std::string& title) {
+    ::SetTraceLogLevel(7);
     ::InitWindow(width, height, title.c_str());
     this->_time = ::GetTime();
 }

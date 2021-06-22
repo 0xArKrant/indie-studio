@@ -26,6 +26,13 @@ namespace Indie {
                     ModelsRaylib() {}
                     ModelsRaylib(const std::string &filename);
                     ModelsRaylib(const std::string &filename, const std::string &texturePath);
+                    ModelsRaylib(const ModelsRaylib &cpy)
+                    {
+                        this->_model = cpy._model;
+                        this->_BoundingBox = cpy._BoundingBox;
+                        this->_colors = cpy._colors;
+                        this->_texture = cpy._texture;;
+                    }
                     void DrawModel(Misc::Vector<3> position, float scale, Misc::Colors tint);
                     void DrawModelEx(Misc::Vector<3> position, Misc::Vector<3> rotationAxis, float rotationAngle, Misc::Vector<3> scale, Misc::Colors tint);
                     void DrawModelWires(Misc::Vector<3> position, float scale, Misc::Colors tint);

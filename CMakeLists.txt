@@ -50,7 +50,8 @@ file(GLOB SRC_FILES
     src/engine/Models/Geometric/Cylinder.cpp
     src/engine/Models/Geometric/Sphere.cpp
     src/engine/Models/ModelsRaylib.cpp
-    src/engine/Models/Collison.cpp
+    src/engine/Models/AnimesRaylib.cpp
+    src/engine/Models/Collision.cpp
 
     src/engine/Text/Text.cpp
     src/engine/Audio/Audio.cpp
@@ -74,10 +75,13 @@ file(GLOB SRC_FILES
     src/core/GameObject.cpp
     src/core/Model3D.cpp
     src/core/Player.cpp
+    src/core/Box.cpp
+    src/core/Boost.cpp
 
     src/scene/SplashScreen.cpp
     src/scene/TransitionFadeOut.cpp
     src/scene/TransitionFadeIn.cpp
+    src/core/Config.cpp
 )
 
 add_executable(${BIN_NAME} ${SRC_FILES})
@@ -119,3 +123,5 @@ if(MSVC)
 endif(MSVC)
 
 target_link_libraries(${BIN_NAME} PUBLIC raylib ${CMAKE_DL_LIBS})
+
+ADD_CUSTOM_COMMAND(TARGET ${BIN_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/assets/ $<TARGET_FILE_DIR:${BIN_NAME}>/assets/)
