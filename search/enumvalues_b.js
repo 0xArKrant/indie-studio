@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['text_2055',['TEXT',['../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981fa6b4c3c8be637788ca17a91e3873af8bd',1,'Indie::Game::GameObject']]]
+  ['right_2065',['RIGHT',['../d0/d66/namespaceindie.html#ae786f0b6450641c68e0c8e5558d7b3a6a99deffa5d16c7064e94c97b7f5379603',1,'indie']]]
 ];

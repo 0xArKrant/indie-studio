@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['walking_2057',['WALKING',['../d5/de2/classIndie_1_1Game_1_1Player.html#a057916cbd7235298758829ea53c8a693aed7d4aac188272e2a84a763c45387a5a',1,'Indie::Game::Player']]]
+  ['up_2067',['UP',['../d0/d66/namespaceindie.html#ae786f0b6450641c68e0c8e5558d7b3a6a9361b0b355a7b2db4cbb7e058ba2ff80',1,'indie']]]
 ];

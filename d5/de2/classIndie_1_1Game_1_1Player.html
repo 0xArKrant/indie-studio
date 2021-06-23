@@ -153,6 +153,14 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aebac28258c9b45d7d5f383ef436f9041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6085c47377065c535caa139a8b6aeae9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a057916cbd7235298758829ea53c8a693">Indie::Game::Player::state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a6085c47377065c535caa139a8b6aeae9">_state</a></td></tr>
 <tr class="separator:a6085c47377065c535caa139a8b6aeae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99020187cbbcfec80725e13f44f5cd12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a302b889fdfa1f92998adfff7366f1e1b">Indie::Game::Player::allahuakbar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a99020187cbbcfec80725e13f44f5cd12">_bombstate</a></td></tr>
+<tr class="separator:a99020187cbbcfec80725e13f44f5cd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a5f6e65cb033d59c72c218b84fae4e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d4/d60/classIndie_1_1Game_1_1Model3D.html">Model3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a74a5f6e65cb033d59c72c218b84fae4e">_bombs</a></td></tr>
+<tr class="separator:a74a5f6e65cb033d59c72c218b84fae4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3695f05ece6586bb0d894a44bc3650a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d3d/classIndie_1_1Game_1_1Bomb.html">Indie::Game::Bomb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a3695f05ece6586bb0d894a44bc3650a4">_bomb</a></td></tr>
+<tr class="separator:a3695f05ece6586bb0d894a44bc3650a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8084de57c32b68de42d4abbab5eb79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a2e8084de57c32b68de42d4abbab5eb79">_seconds</a></td></tr>
+<tr class="separator:a2e8084de57c32b68de42d4abbab5eb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classIndie_1_1Game_1_1Model3D"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classIndie_1_1Game_1_1Model3D')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d4/d60/classIndie_1_1Game_1_1Model3D.html">Indie::Game::Model3D</a></td></tr>
 <tr class="memitem:a784c0482bf39c707e47d73f56d8a2dca inherit pro_attribs_classIndie_1_1Game_1_1Model3D"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html">Indie::Raylib::Models::ModelsRaylib</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d60/classIndie_1_1Game_1_1Model3D.html#a784c0482bf39c707e47d73f56d8a2dca">_model</a></td></tr>
 <tr class="separator:a784c0482bf39c707e47d73f56d8a2dca inherit pro_attribs_classIndie_1_1Game_1_1Model3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +181,11 @@ Private Types</h2></td></tr>
 , <a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a057916cbd7235298758829ea53c8a693aed7d4aac188272e2a84a763c45387a5a">WALKING</a>
  }</td></tr>
 <tr class="separator:a057916cbd7235298758829ea53c8a693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302b889fdfa1f92998adfff7366f1e1b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a302b889fdfa1f92998adfff7366f1e1b">allahuakbar</a> { <a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a302b889fdfa1f92998adfff7366f1e1ba1791554f04df2fe65dbf58ce1e8dffc5">PLACED</a>
+, <a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a302b889fdfa1f92998adfff7366f1e1ba9219b31ee9b0d67f7bc43cfac8fe9ec8">EXPLODED</a>
+, <a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a302b889fdfa1f92998adfff7366f1e1bad38cf737888ef64831699488cc638c3f">NONE</a>
+ }</td></tr>
+<tr class="separator:a302b889fdfa1f92998adfff7366f1e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -199,6 +212,33 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a0437f2b288b41616620752adae8d981f inherit pub_types_classIndie_1_1Game_1_1GameObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a302b889fdfa1f92998adfff7366f1e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302b889fdfa1f92998adfff7366f1e1b">&#9670;&nbsp;</a></span>allahuakbar</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a302b889fdfa1f92998adfff7366f1e1b">Indie::Game::Player::allahuakbar</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a302b889fdfa1f92998adfff7366f1e1ba1791554f04df2fe65dbf58ce1e8dffc5"></a>PLACED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a302b889fdfa1f92998adfff7366f1e1ba9219b31ee9b0d67f7bc43cfac8fe9ec8"></a>EXPLODED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a302b889fdfa1f92998adfff7366f1e1bad38cf737888ef64831699488cc638c3f"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a057916cbd7235298758829ea53c8a693"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a057916cbd7235298758829ea53c8a693">&#9670;&nbsp;</a></span>state</h2>
 
@@ -485,6 +525,72 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a3695f05ece6586bb0d894a44bc3650a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3695f05ece6586bb0d894a44bc3650a4">&#9670;&nbsp;</a></span>_bomb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d3d/classIndie_1_1Game_1_1Bomb.html">Indie::Game::Bomb</a> Indie::Game::Player::_bomb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74a5f6e65cb033d59c72c218b84fae4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a5f6e65cb033d59c72c218b84fae4e">&#9670;&nbsp;</a></span>_bombs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d4/d60/classIndie_1_1Game_1_1Model3D.html">Model3D</a>&gt; Indie::Game::Player::_bombs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99020187cbbcfec80725e13f44f5cd12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99020187cbbcfec80725e13f44f5cd12">&#9670;&nbsp;</a></span>_bombstate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/de2/classIndie_1_1Game_1_1Player.html#a302b889fdfa1f92998adfff7366f1e1b">Indie::Game::Player::allahuakbar</a> Indie::Game::Player::_bombstate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1f0503d27a4880b9e9d8dea674bd657a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f0503d27a4880b9e9d8dea674bd657a">&#9670;&nbsp;</a></span>_move</h2>
 
@@ -562,6 +668,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d1/d15/classMisc_1_1Vector.html">Misc::Vector</a>&lt;3&gt; Indie::Game::Player::_scale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e8084de57c32b68de42d4abbab5eb79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8084de57c32b68de42d4abbab5eb79">&#9670;&nbsp;</a></span>_seconds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Indie::Game::Player::_seconds</td>
         </tr>
       </table>
   </td>
