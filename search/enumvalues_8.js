@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['right_2018',['RIGHT',['../d0/d66/namespaceindie.html#ae786f0b6450641c68e0c8e5558d7b3a6a99deffa5d16c7064e94c97b7f5379603',1,'indie']]]
+  ['quit_2036',['QUIT',['../d0/d66/namespaceindie.html#ae786f0b6450641c68e0c8e5558d7b3a6ac0f41fd4ad97ba4197b15cf97fd5feae',1,'indie']]]
 ];
