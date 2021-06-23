@@ -17,6 +17,8 @@ namespace Indie {
                 Boost(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display) {}
                 Boost(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(model, id, pos, display) {}
                 virtual ~Boost() {}
+                inline bool isCollectable() {return true;}
+                inline bool isCollidable() {return false;}
             protected:
             private:
         };

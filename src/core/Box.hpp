@@ -20,6 +20,8 @@ namespace Indie {
 
                 void update(float elapsedTimes);
                 void draw();
+                bool isCollectable();
+                bool isCollidable();
             protected:
             private:
         };

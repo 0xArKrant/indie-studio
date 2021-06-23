@@ -14,7 +14,6 @@ Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
 _player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), true)
 {
-
     _genMap();
 }
 
@@ -91,7 +90,15 @@ void Indie::Scene::GameScene::_genMap()
     }
 }
 
-bool Indie::Scene::GameScene::_checkCollision()
+bool Indie::Scene::GameScene::_checkCollisionGO()
+{
+    for (auto &elem : this->_gameObjectList)
+        if (elem->isCollidable() && elem->getPos() == this->_player.getPos() + Misc::Vector<3>(0.3f, 0.f, -0.3f))
+            return true;
+    return false;
+}
+
+bool Indie::Scene::GameScene::_checkCollisionMap()
 {
     Misc::Vector<2> playerPos(this->_player.getPos().getZ(), this->_player.getPos().getX());
     auto cubicMap = this->_map.getMapSize();
@@ -130,7 +137,9 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
     (void)scenemanagement;
     auto oldPos = this->_player.getPos();
     this->_player.update(elapsed);
-    if (_checkCollision())
+    if (_checkCollisionMap())
+        this->_player.setPosition(oldPos);
+    if (_checkCollisionGO())
         this->_player.setPosition(oldPos);
 }
 

@@ -15,6 +15,8 @@
 
 #include "indie.hpp"
 #include "Exception.hpp"
+#include <cmath>
+
 
 namespace Misc {
     template<unsigned int vSize>
@@ -44,6 +46,21 @@ namespace Misc {
                 }
                 return (*this);
             }
+
+            inline bool operator==(const Vector<vSize> &vec) const {
+                for (size_t size = 0; size < vSize; size++)
+                    if (round(this->_vector[size]) != round(vec._vector[size]))
+                        return false;
+                return true;
+            }
+
+            inline Vector<vSize> operator+(const Vector<vSize> &vec) const {
+                Vector<vSize> res;
+                for (size_t size = 0; size < vSize; size++)
+                    res._vector[size] = vec._vector[size] + this->_vector[size];
+                return res;
+            }
+
             ~Vector() = default; /*! Rectangle default desctructor */
 
             template<typename ... x>

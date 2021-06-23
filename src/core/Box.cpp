@@ -35,3 +35,13 @@ void Indie::Game::Box::draw()
 {
     this->_model.DrawModel(this->_pos, 0.17f, Misc::Colors(88, 41, 0, 255));
 }
+
+bool Indie::Game::Box::isCollectable()
+{
+    return false;
+}
+
+bool Indie::Game::Box::isCollidable()
+{
+    return true;
+}

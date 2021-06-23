@@ -27,7 +27,8 @@ namespace Indie {
                 void draw();
             protected:
             private:
-                bool _checkCollision();
+                bool _checkCollisionMap();
+                bool _checkCollisionGO();
                 void _genMap();
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
