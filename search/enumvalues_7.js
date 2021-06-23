@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_2032',['PLAYER',['../d1/de7/classIndie_1_1Game_1_1GameObject.html#a0437f2b288b41616620752adae8d981fa7e2f35c69e952d5013ab52e8e6a76d2d',1,'Indie::Game::GameObject']]]
+  ['none_2050',['NONE',['../d0/d66/namespaceindie.html#ae786f0b6450641c68e0c8e5558d7b3a6a6b45e4cbc78391dc08524afb9d42ca2b',1,'indie']]]
 ];

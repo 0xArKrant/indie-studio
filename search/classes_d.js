@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['wave_1096',['Wave',['../da/dbd/classIndie_1_1Raylib_1_1Audio_1_1Wave.html',1,'Indie::Raylib::Audio']]]
+  ['vector_1102',['Vector',['../d1/d15/classMisc_1_1Vector.html',1,'Misc']]],
+  ['vector_3c_202_20_3e_1103',['Vector&lt; 2 &gt;',['../d1/d15/classMisc_1_1Vector.html',1,'Misc']]],
+  ['vector_3c_203_20_3e_1104',['Vector&lt; 3 &gt;',['../d1/d15/classMisc_1_1Vector.html',1,'Misc']]]
 ];
