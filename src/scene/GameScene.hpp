@@ -14,6 +14,7 @@
 #include "../engine/Map/Map.hpp"
 #include "Player.hpp"
 #include "../engine/Models/Collision.hpp"
+#include "Bomb.hpp"
 
 
 namespace Indie {
@@ -35,6 +36,7 @@ namespace Indie {
                 Indie::Game::Player _player;
                 Misc::Camera3D _cam;
                 std::vector<std::unique_ptr<Indie::Game::GameObject>> _gameObjectList;
+                std::vector<std::unique_ptr<Indie::Game::GameObject>> _bombList;
         };
     }
 }
