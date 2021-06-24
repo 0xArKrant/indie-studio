@@ -160,11 +160,21 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
     (void)scenemanagement;
     auto oldPos = this->_player.getPos();
     this->_gameObjectList.erase(std::remove_if(this->_gameObjectList.begin(), this->_gameObjectList.end(), [](std::unique_ptr<Indie::Game::GameObject> &gameObject) {return !gameObject->getDisplay();}), this->_gameObjectList.end());
+    for (auto &elem : _bombList)
+        if (!elem->getDisplay())
+            this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() - 1);
     this->_player.update(elapsed);
     if (_checkCollisionMap())
         this->_player.setPosition(oldPos);
     if (_checkCollisionGO())
         this->_player.setPosition(oldPos);
+    if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_SPACE) && this->_player.getCurrentNbBomb() < this->_player.getNbBombsMax()) {
+        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player.getPos(), true ));
+        this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
+    }
+    for (auto &elem : this->_bombList) {
+        elem->update(elapsed);
+    }
 }
 
 void Indie::Scene::GameScene::draw()
@@ -173,6 +183,10 @@ void Indie::Scene::GameScene::draw()
     _player.draw();
 
     for (auto &elem : this->_gameObjectList) {
+        elem->draw();
+    }
+
+    for (auto &elem : this->_bombList) {
         elem->draw();
     }
 }

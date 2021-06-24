@@ -19,6 +19,7 @@ Indie::Game::Player::Player(const std::string &objPath, const std::string &id, M
     this->_move = false;
     this->_state = IDLE;
     this->_direction = NONE;
+    this->_currentNbBomb = 0;
 }
 
 Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display),
@@ -35,6 +36,7 @@ _animIdle("./assets/Muhammer/MuhammerIdle", "./assets/Muhammer/Muhammer.png")
     this->_type = PLAYER;
     this->_state = IDLE;
     this->_direction = NONE;
+    this->_currentNbBomb = 0;
 }
 
 Indie::Game::Player::~Player()
@@ -121,4 +123,19 @@ void Indie::Game::Player::fireBonus()
 void Indie::Game::Player::bombBonus()
 {
     this->_nbBombs++;
+}
+
+int Indie::Game::Player::getCurrentNbBomb()
+{
+    return this->_currentNbBomb;
+}
+
+void Indie::Game::Player:: setCurrentNbBomb(int nb)
+{
+    this->_currentNbBomb = nb;
+}
+
+int Indie::Game::Player::getNbBombsMax()
+{
+    return this->_nbBombs;
 }

@@ -34,6 +34,9 @@ namespace Indie {
                 //void addBomb();
                 void update(float elapsedTimes);
                 void draw();
+                int getCurrentNbBomb();
+                int getNbBombsMax();
+                void setCurrentNbBomb(int nb);
                 bool isCollectable();
                 bool isCollidable();
                 Indie::Game::Player::direction getDirection();
@@ -44,6 +47,7 @@ namespace Indie {
                 float _speed;
                 int _fire;
                 int _nbBombs;
+                int _currentNbBomb;
                 Misc::Vector<3> _rota;
                 Misc::Vector<3> _scale;
                 float _rotaAngle;
