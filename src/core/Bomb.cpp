@@ -11,7 +11,6 @@ Indie::Game::Bomb::Bomb(const std::string &objPath, const std::string &id, Misc:
 {
     this->_type = BOMB;
     this->_bombState = PLACED;
-        std::cout << "PLACED" << std::endl;
     this->_second = 0;
 }
 
@@ -46,7 +45,7 @@ void  Indie::Game::Bomb::setState(Indie::Game::Bomb::state _bombState)
     this->_bombState = _bombState;
 }
 
-Indie::Game::Bomb::state Indie::Game::Bomb::getState() 
+Indie::Game::Bomb::state Indie::Game::Bomb::getState()
 {
     return this->_bombState;
 }
@@ -61,10 +60,6 @@ void Indie::Game::Bomb::update(float elapsedTimes)
         this->_bombState = EXPLODED;
         this->_display = false;
     }
-        if (this->_bombState == EXPLODED) {
-
-            std::cout << "salut EXPLODED" << std::endl;
-        }
 }
 
 void Indie::Game::Bomb::draw()
