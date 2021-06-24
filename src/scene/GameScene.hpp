@@ -36,7 +36,8 @@ namespace Indie {
                 Indie::Game::Player _player;
                 Misc::Camera3D _cam;
                 std::vector<std::unique_ptr<Indie::Game::GameObject>> _gameObjectList;
-                std::vector<std::unique_ptr<Indie::Game::GameObject>> _bombList;
+                std::vector<std::unique_ptr<Indie::Game::Bomb>> _bombList;
+                Indie::Raylib::Models::ModelsRaylib _bomb;
         };
     }
 }

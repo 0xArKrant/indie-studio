@@ -13,7 +13,8 @@
 
 Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
-_player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), true)
+_player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), true),
+_bomb("./assets/bomb/bomb.obj")
 {
     _genMap();
 }
@@ -160,16 +161,19 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
     (void)scenemanagement;
     auto oldPos = this->_player.getPos();
     this->_gameObjectList.erase(std::remove_if(this->_gameObjectList.begin(), this->_gameObjectList.end(), [](std::unique_ptr<Indie::Game::GameObject> &gameObject) {return !gameObject->getDisplay();}), this->_gameObjectList.end());
-    for (auto &elem : _bombList)
-        if (!elem->getDisplay())
-            this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() - 1);
+        for (auto &elem : _bombList)
+            if (!elem->getDisplay() && !elem->destroyed) {
+                this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() - 1);
+                elem->destroyed = true;
+            }
     this->_player.update(elapsed);
     if (_checkCollisionMap())
         this->_player.setPosition(oldPos);
     if (_checkCollisionGO())
         this->_player.setPosition(oldPos);
+    std::cout << this->_player.getCurrentNbBomb() << "    " << this->_player.getNbBombsMax();
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_SPACE) && this->_player.getCurrentNbBomb() < this->_player.getNbBombsMax()) {
-        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player.getPos(), true ));
+        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>(this->_bomb, "bomb", this->_player.getPos(), true ));
         this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
     }
     for (auto &elem : this->_bombList) {
