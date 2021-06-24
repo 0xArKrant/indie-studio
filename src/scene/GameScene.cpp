@@ -9,6 +9,7 @@
 #include <cmath>
 #include "Box.hpp"
 #include "Boost.hpp"
+#include <algorithm>
 
 Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
@@ -28,30 +29,30 @@ void Indie::Scene::GameScene::setGame()
 
 void Indie::Scene::GameScene::_genMap()
 {
-    Indie::Raylib::Models::ModelsRaylib model("./assets/box/box.obj", "./assets/box/box_wood.png");
-    for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
-    }
-    for (int i = 0; i < this->_map.getMapSize().getX() - 2; i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-5.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-1.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(1.0f, 0.0f, 6.0f - i), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(3.0f, 0.0f, 6.0f - i), true));
-    }
-    for (int i = 2; i < this->_map.getMapSize().getY() - 4; i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 6.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -6.0f), true));
-    }
-    for (int i = 0; i < this->_map.getMapSize().getY() - 2; i++) {
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 4.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 2.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
-        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
-    }
+    // Indie::Raylib::Models::ModelsRaylib model("./assets/box/box.obj", "./assets/box/box_wood.png");
+    // for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
+    // }
+    // for (int i = 0; i < this->_map.getMapSize().getX() - 2; i++) {
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-5.0f, 0.0f, 6.0f - i), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-1.0f, 0.0f, 6.0f - i), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(1.0f, 0.0f, 6.0f - i), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(3.0f, 0.0f, 6.0f - i), true));
+    // }
+    // for (int i = 2; i < this->_map.getMapSize().getY() - 4; i++) {
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 6.0f), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -6.0f), true));
+    // }
+    // for (int i = 0; i < this->_map.getMapSize().getY() - 2; i++) {
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 4.0f), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 2.0f), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
+    // }
     std::srand(time(nullptr));
     std::vector<Misc::Vector<3>> bonusPos = std::vector<Misc::Vector<3>>();
     for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
@@ -80,9 +81,9 @@ void Indie::Scene::GameScene::_genMap()
     std::vector<Misc::Vector<3>> bonusPos2 = std::vector<Misc::Vector<3>>();
     for (int i = 0; i < 15; i++)
         bonusPos2.push_back(std::move(bonusPos.at(std::rand() % bonusPos.size())));
-    Indie::Raylib::Models::ModelsRaylib bomb("./assets/floor/wall.obj", "./assets/floor/floor.png");
-    Indie::Raylib::Models::ModelsRaylib fire("./assets/floor/wall.obj", "./assets/floor/floor.png");
-    Indie::Raylib::Models::ModelsRaylib speed("./assets/floor/wall.obj", "./assets/floor/floor.png");
+    Indie::Raylib::Models::ModelsRaylib bomb(""/*"./assets/floor/wall.obj", "./assets/floor/floor.png"*/);
+    Indie::Raylib::Models::ModelsRaylib fire(""/*""./assets/floor/wall.obj", "./assets/floor/floor.png"*/);
+    Indie::Raylib::Models::ModelsRaylib speed(""/*"./assets/floor/wall.obj", "./assets/floor/floor.png"*/);
     for (int i = 0; i < 15;) {
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostBomb>(bomb, "boostbomb", bonusPos2.at(i++), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::BoostFire>(fire, "boostfire", bonusPos2.at(i++), true));
@@ -92,9 +93,31 @@ void Indie::Scene::GameScene::_genMap()
 
 bool Indie::Scene::GameScene::_checkCollisionGO()
 {
+    Misc::Vector<3> direction;
+    if (this->_player.getDirection() == Indie::Game::Player::RIGHT)
+        direction = Misc::Vector<3>(0.f, 0.f, -0.4f);
+    if (this->_player.getDirection() == Indie::Game::Player::DOWN)
+        direction = Misc::Vector<3>(0.4f, 0.f, 0.f);
+    if (this->_player.getDirection() == Indie::Game::Player::UP)
+        direction = Misc::Vector<3>(-0.4f, 0.f, 0.f);
+    if (this->_player.getDirection() == Indie::Game::Player::LEFT)
+        direction = Misc::Vector<3>(0.f, 0.f, 0.4f);
+    if (this->_player.getDirection() == Indie::Game::Player::NONE)
+        direction = Misc::Vector<3>(0.f, 0.f, 0.f);
     for (auto &elem : this->_gameObjectList)
-        if (elem->isCollidable() && elem->getPos() == this->_player.getPos() + Misc::Vector<3>(0.3f, 0.f, -0.3f))
+        if (elem->isCollidable() && elem->getPos() == this->_player.getPos() + direction)
             return true;
+    for (auto &elem : this->_gameObjectList) {
+        if (elem->isCollectable() && elem->getPos() == this->_player.getPos()) {
+            if (elem->getType() == Indie::Game::GameObject::TypeObject::BOOST_BOMB && elem->getDisplay())
+                this->_player.bombBonus();
+            if (elem->getType() == Indie::Game::GameObject::TypeObject::BOOST_FIRE && elem->getDisplay())
+                this->_player.fireBonus();
+            if (elem->getType() == Indie::Game::GameObject::TypeObject::BOOST_SPEED && elem->getDisplay())
+                this->_player.speedBonus();
+            elem->setDisplay(false);
+        }
+    }
     return false;
 }
 
@@ -136,6 +159,7 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
 {
     (void)scenemanagement;
     auto oldPos = this->_player.getPos();
+    this->_gameObjectList.erase(std::remove_if(this->_gameObjectList.begin(), this->_gameObjectList.end(), [](std::unique_ptr<Indie::Game::GameObject> &gameObject) {return !gameObject->getDisplay();}), this->_gameObjectList.end());
     this->_player.update(elapsed);
     if (_checkCollisionMap())
         this->_player.setPosition(oldPos);

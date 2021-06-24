@@ -29,7 +29,8 @@ void Indie::Game::BoostFire::update(float elapsedTimes)
 
 void Indie::Game::BoostFire::draw()
 {
-    this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(255, 0, 0, 255));
+    if (_display)
+        this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(255, 0, 0, 255));
 }
 
 Indie::Game::BoostSpeed::BoostSpeed(const std::string &objPath, const std::string &id, Misc::Vector<3> pos, bool display) : Boost(objPath, id, pos, display)
@@ -54,7 +55,8 @@ void Indie::Game::BoostSpeed::update(float elapsedTimes)
 
 void Indie::Game::BoostSpeed::draw()
 {
-    this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(255, 255, 255, 255));
+    if (_display)
+        this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(255, 255, 255, 255));
 }
 
 Indie::Game::BoostBomb::BoostBomb(const std::string &objPath, const std::string &id, Misc::Vector<3> pos, bool display) : Boost(objPath, id, pos, display)
@@ -79,5 +81,6 @@ void Indie::Game::BoostBomb::update(float elapsedTimes)
 
 void Indie::Game::BoostBomb::draw()
 {
-    this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(0, 0, 0, 255));
+    if (_display)
+        this->_model.DrawModel(this->_pos, 0.2f, Misc::Colors(0, 0, 0, 255));
 }

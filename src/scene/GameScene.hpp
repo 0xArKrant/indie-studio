@@ -30,6 +30,7 @@ namespace Indie {
                 bool _checkCollisionMap();
                 bool _checkCollisionGO();
                 void _genMap();
+                // Misc::Vector<3> _getDirection();
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
                 Misc::Camera3D _cam;

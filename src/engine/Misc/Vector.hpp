@@ -48,9 +48,10 @@ namespace Misc {
             }
 
             inline bool operator==(const Vector<vSize> &vec) const {
-                for (size_t size = 0; size < vSize; size++)
+                for (size_t size = 0; size < vSize; size++) {
                     if (round(this->_vector[size]) != round(vec._vector[size]))
                         return false;
+                }
                 return true;
             }
 
