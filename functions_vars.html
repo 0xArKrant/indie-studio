@@ -84,13 +84,6 @@ $(function() {
 <li>_b
 : <a class="el" href="d0/da2/classMisc_1_1Colors.html#a95f11b2ebb4f3a85d662d7a6fd96f414">Misc::Colors</a>
 </li>
-<li>_bombList
-: <a class="el" href="d2/d75/classIndie_1_1Scene_1_1GameScene.html#aa1dac3fbb406e9b9836316b5b9800d9b">Indie::Scene::GameScene</a>
-</li>
-<li>_bombState
-: <a class="el" href="dd/d3d/classIndie_1_1Game_1_1Bomb.html#af6a2e40b39506f4f7dce38ad8ab68994">Indie::Game::Bomb</a>
-, <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#ab65f677b3edebadacf96351ae500865c">Indie::Game::Player</a>
-</li>
 <li>_BoundingBox
 : <a class="el" href="db/de5/classIndie_1_1Raylib_1_1Models_1_1ModelsRaylib.html#a608f80860f45d29fe40d6fb31f300542">Indie::Raylib::Models::ModelsRaylib</a>
 </li>
@@ -221,7 +214,8 @@ $(function() {
 : <a class="el" href="d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a9ffdb67d3118e3d9468c08954bb59713">Indie::Raylib::Core::Core</a>
 </li>
 <li>_direction
-: <a class="el" href="dd/d78/classMisc_1_1Ray.html#a46309e28c3c7e895da56e0beb3e5c2a6">Misc::Ray</a>
+: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#a082a2c3873a3305c0c4a56a94598930e">Indie::Game::Player</a>
+, <a class="el" href="dd/d78/classMisc_1_1Ray.html#a46309e28c3c7e895da56e0beb3e5c2a6">Misc::Ray</a>
 , <a class="el" href="d0/d8f/classMisc_1_1RayHitInfo.html#a19efdf3a1798a4a2f0ad21e494f1aa3a">Misc::RayHitInfo</a>
 </li>
 <li>_display
@@ -254,6 +248,9 @@ $(function() {
 </li>
 <li>_endPosY
 : <a class="el" href="de/dd7/classIndie_1_1Raylib_1_1Shape_1_1Line.html#a8995daa906818f8240a8095844fdac6c">Indie::Raylib::Shape::Line</a>
+</li>
+<li>_fire
+: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#acec7d94f81f1a817704ef59ab21e03b6">Indie::Game::Player</a>
 </li>
 <li>_font
 : <a class="el" href="d7/d49/classIndie_1_1Raylib_1_1Text_1_1Text.html#a8655773b21fbdb5c4cd8ce7b21246343">Indie::Raylib::Text::Text</a>
@@ -411,6 +408,9 @@ $(function() {
 <li>_name
 : <a class="el" href="d3/d66/classIndie_1_1Core_1_1Core.html#ad1b9cd6e7fa77ab94be8b0d5c36e1b79">Indie::Core::Core</a>
 </li>
+<li>_nbBombs
+: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#a59de9bc6f076b0a929a54720617cf406">Indie::Game::Player</a>
+</li>
 <li>_objList
 : <a class="el" href="d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html#a4a3d864b96138d0675fb20ae4880ea43">Indie::Raylib::AnimesRaylib</a>
 </li>
@@ -438,12 +438,6 @@ $(function() {
 </li>
 <li>_player
 : <a class="el" href="d2/d75/classIndie_1_1Scene_1_1GameScene.html#ae2be7f3bc38896e4eea50fef9c56b83a">Indie::Scene::GameScene</a>
-</li>
-<li>_playerBombSecond
-: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#a1c2e46bb9f83bdee45810035c3cf132f">Indie::Game::Player</a>
-</li>
-<li>_playerState
-: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#ae476ee54469603a4ff155ed83220422c">Indie::Game::Player</a>
 </li>
 <li>_point
 : <a class="el" href="dc/d47/classIndie_1_1Raylib_1_1Shape_1_1CheckCollisionPointCircle.html#acabddbae5cf2edee7e2b533582b48612">Indie::Raylib::Shape::CheckCollisionPointCircle</a>
@@ -610,9 +604,7 @@ $(function() {
 : <a class="el" href="d3/d66/classIndie_1_1Core_1_1Core.html#af54ae227eed22e54404a6ef5373821df">Indie::Core::Core</a>
 </li>
 <li>_second
-: <a class="el" href="dd/d3d/classIndie_1_1Game_1_1Bomb.html#a4318fcc00bac75ba96add1089a55bffd">Indie::Game::Bomb</a>
-, <a class="el" href="d2/d75/classIndie_1_1Scene_1_1GameScene.html#afb04828213ef91f12b25ad30bb742371">Indie::Scene::GameScene</a>
-, <a class="el" href="d6/d43/classIndie_1_1Scene_1_1SplashScreen.html#acc684358267efe46ba59303d21a99b2b">Indie::Scene::SplashScreen</a>
+: <a class="el" href="d6/d43/classIndie_1_1Scene_1_1SplashScreen.html#acc684358267efe46ba59303d21a99b2b">Indie::Scene::SplashScreen</a>
 , <a class="el" href="d1/d10/classIndie_1_1Scene_1_1TransitionFadeIn.html#afe8f44f84cf9b30f3dde341c6115344c">Indie::Scene::TransitionFadeIn</a>
 , <a class="el" href="d5/dc1/classIndie_1_1Scene_1_1TransitionFadeOut.html#a6fbe734b755377190e95c421c594585e">Indie::Scene::TransitionFadeOut</a>
 </li>
@@ -680,7 +672,7 @@ $(function() {
 : <a class="el" href="de/dd7/classIndie_1_1Raylib_1_1Shape_1_1Line.html#af1335b0439b98a8f3bb8a5066bf39483">Indie::Raylib::Shape::Line</a>
 </li>
 <li>_state
-: <a class="el" href="dd/d3d/classIndie_1_1Game_1_1Bomb.html#ac8698e65125ede0cdd5a630cb62342ff">Indie::Game::Bomb</a>
+: <a class="el" href="d5/de2/classIndie_1_1Game_1_1Player.html#a6085c47377065c535caa139a8b6aeae9">Indie::Game::Player</a>
 </li>
 <li>_target
 : <a class="el" href="da/de2/classMisc_1_1Camera2D.html#a822951e85d53dd209fc7e8132a28c863">Misc::Camera2D</a>
