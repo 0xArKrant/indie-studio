@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uchar_2062',['uchar',['../dc/d8f/Colors_8hpp.html#a65f85814a8290f9797005d3b28e7e5fc',1,'Colors.hpp']]]
+  ['uchar_2001',['uchar',['../dc/d8f/Colors_8hpp.html#a65f85814a8290f9797005d3b28e7e5fc',1,'Colors.hpp']]]
 ];

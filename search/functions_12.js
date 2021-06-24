@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['vector_1775',['Vector',['../d1/d15/classMisc_1_1Vector.html#ad3a11e65e7300dd19dbc5184389ae5c1',1,'Misc::Vector::Vector()'],['../d1/d15/classMisc_1_1Vector.html#a983f3fdff1309672c3541a6582f580ed',1,'Misc::Vector::Vector(x... args)'],['../d1/d15/classMisc_1_1Vector.html#a0618ddb854d609c64f386efa9cc12420',1,'Misc::Vector::Vector(const Vector &amp;cpy)']]]
+  ['wave_1721',['Wave',['../da/dbd/classIndie_1_1Raylib_1_1Audio_1_1Wave.html#a7982fcf7ec3d599568e2c955feb80641',1,'Indie::Raylib::Audio::Wave::Wave(std::string)'],['../da/dbd/classIndie_1_1Raylib_1_1Audio_1_1Wave.html#afbf5003bf4105426d1d4eb8676c73dde',1,'Indie::Raylib::Audio::Wave::Wave(std::string, const unsigned char *, int)']]],
+  ['what_1722',['what',['../d7/d67/classIndie_1_1Errors_1_1Exception.html#ab52a3f951fc416da9be86dc0bd3c3dd4',1,'Indie::Errors::Exception']]],
+  ['windowshouldclose_1723',['WindowShouldClose',['../d5/d65/classIndie_1_1Raylib_1_1Core_1_1Core.html#a83fd766bf7c9ddb247ab687f19f95365',1,'Indie::Raylib::Core::Core']]]
 ];

@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['scenemanagement_1106',['SceneManagement',['../d5/d2b/classIndie_1_1Core_1_1SceneManagement.html',1,'Indie::Core']]],
-  ['sound_1107',['Sound',['../d5/d3a/classIndie_1_1Raylib_1_1Audio_1_1Sound.html',1,'Indie::Raylib::Audio']]],
-  ['sphere_1108',['Sphere',['../dd/d97/classIndie_1_1Raylib_1_1Models_1_1Sphere.html',1,'Indie::Raylib::Models']]],
-  ['sphereex_1109',['SphereEx',['../dd/df6/classIndie_1_1Raylib_1_1Models_1_1SphereEx.html',1,'Indie::Raylib::Models']]],
-  ['spherewires_1110',['SphereWires',['../d9/dc9/classIndie_1_1Raylib_1_1Models_1_1SphereWires.html',1,'Indie::Raylib::Models']]],
-  ['splashscreen_1111',['SplashScreen',['../d6/d43/classIndie_1_1Scene_1_1SplashScreen.html',1,'Indie::Scene']]]
+  ['text_1074',['Text',['../d7/d49/classIndie_1_1Raylib_1_1Text_1_1Text.html',1,'Indie::Raylib::Text']]],
+  ['texture_1075',['Texture',['../d4/d4f/classIndie_1_1Raylib_1_1Texture_1_1Texture.html',1,'Indie::Raylib::Texture::Texture'],['../d4/d17/classMisc_1_1Texture.html',1,'Misc::Texture']]],
+  ['transitionfadein_1076',['TransitionFadeIn',['../d1/d10/classIndie_1_1Scene_1_1TransitionFadeIn.html',1,'Indie::Scene']]],
+  ['transitionfadeout_1077',['TransitionFadeOut',['../d5/dc1/classIndie_1_1Scene_1_1TransitionFadeOut.html',1,'Indie::Scene']]],
+  ['triangle_1078',['Triangle',['../d3/dc7/classIndie_1_1Raylib_1_1Shape_1_1Triangle.html',1,'Indie::Raylib::Shape']]],
+  ['triangle3d_1079',['Triangle3D',['../d8/d37/classIndie_1_1Raylib_1_1Models_1_1Triangle3D.html',1,'Indie::Raylib::Models']]],
+  ['trianglefan_1080',['TriangleFan',['../df/ddf/classIndie_1_1Raylib_1_1Shape_1_1TriangleFan.html',1,'Indie::Raylib::Shape']]],
+  ['trianglelines_1081',['TriangleLines',['../d1/d52/classIndie_1_1Raylib_1_1Shape_1_1TriangleLines.html',1,'Indie::Raylib::Shape']]],
+  ['trianglestrip_1082',['TriangleStrip',['../d6/dce/classIndie_1_1Raylib_1_1Shape_1_1TriangleStrip.html',1,'Indie::Raylib::Shape']]],
+  ['trianglestrip3d_1083',['TriangleStrip3D',['../de/d6f/classIndie_1_1Raylib_1_1Models_1_1TriangleStrip3D.html',1,'Indie::Raylib::Models']]]
 ];

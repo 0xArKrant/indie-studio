@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['allahuakbar_159',['allahuakbar',['../dd/d3d/classIndie_1_1Game_1_1Bomb.html#a83bd0f3f965d77fcb5b42eab71fbed12',1,'Indie::Game::Bomb']]],
-  ['animesraylib_160',['AnimesRaylib',['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html#ac6e1e8795231e491934075188d7227f5',1,'Indie::Raylib::AnimesRaylib::AnimesRaylib()'],['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html#abf3e1e7c06b960fc21a087948055b883',1,'Indie::Raylib::AnimesRaylib::AnimesRaylib(const std::string &amp;dirPath, const std::string &amp;texturePath)'],['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html',1,'Indie::Raylib::AnimesRaylib']]],
-  ['animesraylib_2ecpp_161',['AnimesRaylib.cpp',['../dc/de8/AnimesRaylib_8cpp.html',1,'']]],
-  ['animesraylib_2ehpp_162',['AnimesRaylib.hpp',['../df/d57/AnimesRaylib_8hpp.html',1,'']]],
-  ['audio_2ecpp_163',['Audio.cpp',['../dc/d48/Audio_8cpp.html',1,'']]],
-  ['audio_2ehpp_164',['Audio.hpp',['../df/de5/Audio_8hpp.html',1,'']]],
-  ['audiostream_165',['AudioStream',['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html#a6e2456709b955a6e5f9facada4a2041d',1,'Indie::Raylib::Audio::AudioStream::AudioStream()'],['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html',1,'Indie::Raylib::Audio::AudioStream']]]
+  ['animesraylib_154',['AnimesRaylib',['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html#ac6e1e8795231e491934075188d7227f5',1,'Indie::Raylib::AnimesRaylib::AnimesRaylib()'],['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html#abf3e1e7c06b960fc21a087948055b883',1,'Indie::Raylib::AnimesRaylib::AnimesRaylib(const std::string &amp;dirPath, const std::string &amp;texturePath)'],['../d0/dd6/classIndie_1_1Raylib_1_1AnimesRaylib.html',1,'Indie::Raylib::AnimesRaylib']]],
+  ['animesraylib_2ecpp_155',['AnimesRaylib.cpp',['../dc/de8/AnimesRaylib_8cpp.html',1,'']]],
+  ['animesraylib_2ehpp_156',['AnimesRaylib.hpp',['../df/d57/AnimesRaylib_8hpp.html',1,'']]],
+  ['audio_2ecpp_157',['Audio.cpp',['../dc/d48/Audio_8cpp.html',1,'']]],
+  ['audio_2ehpp_158',['Audio.hpp',['../df/de5/Audio_8hpp.html',1,'']]],
+  ['audiostream_159',['AudioStream',['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html#a6e2456709b955a6e5f9facada4a2041d',1,'Indie::Raylib::Audio::AudioStream::AudioStream()'],['../dd/d0e/classIndie_1_1Raylib_1_1Audio_1_1AudioStream.html',1,'Indie::Raylib::Audio::AudioStream']]]
 ];
