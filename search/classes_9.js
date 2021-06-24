@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['ray_1083',['Ray',['../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html',1,'Indie::Raylib::Models::Ray'],['../dd/d78/classMisc_1_1Ray.html',1,'Misc::Ray']]],
-  ['rayhitinfo_1084',['RayHitInfo',['../d0/d8f/classMisc_1_1RayHitInfo.html',1,'Misc']]],
-  ['rectangle_1085',['Rectangle',['../d0/d22/classIndie_1_1Raylib_1_1Shape_1_1Rectangle.html',1,'Indie::Raylib::Shape::Rectangle'],['../d9/d2e/classMisc_1_1Rectangle.html',1,'Misc::Rectangle']]],
-  ['rectanglegradientex_1086',['RectangleGradientEx',['../dd/d5a/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientEx.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglegradienth_1087',['RectangleGradientH',['../d8/d01/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientH.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglegradientv_1088',['RectangleGradientV',['../da/d0c/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientV.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglelines_1089',['RectangleLines',['../d1/d22/classIndie_1_1Raylib_1_1Shape_1_1RectangleLines.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglelinesex_1090',['RectangleLinesEx',['../dd/d68/classIndie_1_1Raylib_1_1Shape_1_1RectangleLinesEx.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglepro_1091',['RectanglePro',['../de/d11/classIndie_1_1Raylib_1_1Shape_1_1RectanglePro.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglerec_1092',['RectangleRec',['../d6/dfa/classIndie_1_1Raylib_1_1Shape_1_1RectangleRec.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglerounded_1093',['RectangleRounded',['../da/db8/classIndie_1_1Raylib_1_1Shape_1_1RectangleRounded.html',1,'Indie::Raylib::Shape']]],
-  ['rectangleroundedlines_1094',['RectangleRoundedLines',['../d2/d87/classIndie_1_1Raylib_1_1Shape_1_1RectangleRoundedLines.html',1,'Indie::Raylib::Shape']]],
-  ['rectanglev_1095',['RectangleV',['../d8/dc9/classIndie_1_1Raylib_1_1Shape_1_1RectangleV.html',1,'Indie::Raylib::Shape']]],
-  ['ring_1096',['Ring',['../d6/d87/classIndie_1_1Raylib_1_1Shape_1_1Ring.html',1,'Indie::Raylib::Shape']]],
-  ['ringlines_1097',['RingLines',['../d7/d4e/classIndie_1_1Raylib_1_1Shape_1_1RingLines.html',1,'Indie::Raylib::Shape']]]
+  ['ray_1079',['Ray',['../df/d09/classIndie_1_1Raylib_1_1Models_1_1Ray.html',1,'Indie::Raylib::Models::Ray'],['../dd/d78/classMisc_1_1Ray.html',1,'Misc::Ray']]],
+  ['rayhitinfo_1080',['RayHitInfo',['../d0/d8f/classMisc_1_1RayHitInfo.html',1,'Misc']]],
+  ['rectangle_1081',['Rectangle',['../d0/d22/classIndie_1_1Raylib_1_1Shape_1_1Rectangle.html',1,'Indie::Raylib::Shape::Rectangle'],['../d9/d2e/classMisc_1_1Rectangle.html',1,'Misc::Rectangle']]],
+  ['rectanglegradientex_1082',['RectangleGradientEx',['../dd/d5a/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientEx.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglegradienth_1083',['RectangleGradientH',['../d8/d01/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientH.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglegradientv_1084',['RectangleGradientV',['../da/d0c/classIndie_1_1Raylib_1_1Shape_1_1RectangleGradientV.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglelines_1085',['RectangleLines',['../d1/d22/classIndie_1_1Raylib_1_1Shape_1_1RectangleLines.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglelinesex_1086',['RectangleLinesEx',['../dd/d68/classIndie_1_1Raylib_1_1Shape_1_1RectangleLinesEx.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglepro_1087',['RectanglePro',['../de/d11/classIndie_1_1Raylib_1_1Shape_1_1RectanglePro.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglerec_1088',['RectangleRec',['../d6/dfa/classIndie_1_1Raylib_1_1Shape_1_1RectangleRec.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglerounded_1089',['RectangleRounded',['../da/db8/classIndie_1_1Raylib_1_1Shape_1_1RectangleRounded.html',1,'Indie::Raylib::Shape']]],
+  ['rectangleroundedlines_1090',['RectangleRoundedLines',['../d2/d87/classIndie_1_1Raylib_1_1Shape_1_1RectangleRoundedLines.html',1,'Indie::Raylib::Shape']]],
+  ['rectanglev_1091',['RectangleV',['../d8/dc9/classIndie_1_1Raylib_1_1Shape_1_1RectangleV.html',1,'Indie::Raylib::Shape']]],
+  ['ring_1092',['Ring',['../d6/d87/classIndie_1_1Raylib_1_1Shape_1_1Ring.html',1,'Indie::Raylib::Shape']]],
+  ['ringlines_1093',['RingLines',['../d7/d4e/classIndie_1_1Raylib_1_1Shape_1_1RingLines.html',1,'Indie::Raylib::Shape']]]
 ];
