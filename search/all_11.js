@@ -32,5 +32,5 @@ var searchData=
   ['ring_2ecpp_723',['Ring.cpp',['../d3/d1f/Ring_8cpp.html',1,'']]],
   ['ring_2ehpp_724',['Ring.hpp',['../da/d0e/Ring_8hpp.html',1,'']]],
   ['ringlines_725',['RingLines',['../d7/d4e/classIndie_1_1Raylib_1_1Shape_1_1RingLines.html',1,'Indie::Raylib::Shape::RingLines'],['../d7/d4e/classIndie_1_1Raylib_1_1Shape_1_1RingLines.html#aa4fbbdb23802e41a838901fcba558f91',1,'Indie::Raylib::Shape::RingLines::RingLines(const Misc::Vector&lt; 2 &gt;, const float, const float, const float, const float, const int, const Misc::Colors &amp;)'],['../d7/d4e/classIndie_1_1Raylib_1_1Shape_1_1RingLines.html#a0dbee5f709ef6119982d9528ed348ba1',1,'Indie::Raylib::Shape::RingLines::RingLines()'],['../d7/d4e/classIndie_1_1Raylib_1_1Shape_1_1RingLines.html#a929977d54d7e777ded7301c397289611',1,'Indie::Raylib::Shape::RingLines::RingLines(const RingLines &amp;)']]],
-  ['rounded_726',['rounded',['../d1/d15/classMisc_1_1Vector.html#a72e15028b179909b519f52f7c075a9bf',1,'Misc::Vector::rounded()'],['../d1/d15/classMisc_1_1Vector.html#a72e15028b179909b519f52f7c075a9bf',1,'Misc::Vector::rounded()']]]
+  ['rounded_726',['rounded',['../d1/d15/classMisc_1_1Vector.html#a72e15028b179909b519f52f7c075a9bf',1,'Misc::Vector']]]
 ];
