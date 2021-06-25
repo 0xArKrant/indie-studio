@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mapposition_2104',['mapPosition',['../db/dd9/classIndie_1_1Raylib_1_1Map.html#ae661f5785f5670175b499b77e6fafc8f',1,'Indie::Raylib::Map']]]
+  ['firenbcase_2114',['fireNbCase',['../dd/d3d/classIndie_1_1Game_1_1Bomb.html#ad8214e71e4a5cd172e15c15cd9d4f0a9',1,'Indie::Game::Bomb']]]
 ];
