@@ -17,6 +17,7 @@ _player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bom
 _player2("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(5.0f, 0.0f, -6.0f), true, 2)
 {
     _genMap();
+    this->_camera = {{ 16.f, 35.f, 0.f}, {0.f, 0.f, 0.f}, {0.f, 1.f, 0.f}, 25.0f, 0};
 }
 
 Indie::Scene::GameScene::~GameScene()
@@ -55,7 +56,8 @@ void Indie::Scene::GameScene::_genMap()
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
     }
-    std::srand(time(nullptr));
+
+    std::srand((unsigned int)std::time(nullptr));
     std::vector<Misc::Vector<3>> bonusPos = std::vector<Misc::Vector<3>>();
     for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
         bonusPos.emplace_back(-7.0f, 0.0f, 6.0f - i);
@@ -308,6 +310,7 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
 
 void Indie::Scene::GameScene::draw()
 {
+    Indie::Raylib::Core::Core::getInstance().BeginMode3D(this->_camera);
     _map.draw();
     _player.draw();
     _player2.draw();
@@ -321,4 +324,5 @@ void Indie::Scene::GameScene::draw()
     for (auto &elem : this->_bombList2) {
             elem->draw();
     }
-};
+    Indie::Raylib::Core::Core::getInstance().EndMode3D();
+}

@@ -18,7 +18,7 @@ namespace Indie {
                 Box(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~Box();
 
-                void update(float elapsedTimes);
+                void update(const double &elapsedTimes);
                 void draw();
                 bool isCollectable();
                 bool isCollidable();

@@ -27,7 +27,7 @@ namespace Indie {
                 Bomb(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~Bomb();
 
-                void update(float elapsedTimes);
+                void update(const double &);
                 void draw();
                 Indie::Game::Bomb::state getState();
                 void setState(Indie::Game::Bomb::state);

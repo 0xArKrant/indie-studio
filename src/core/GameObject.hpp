@@ -35,7 +35,7 @@ namespace Indie {
                 bool getDisplay() const;
                 void setDisplay(bool display);
                 void setPosition(Misc::Vector<3> pos);
-                virtual void update(float elapsedTimes) = 0;
+                virtual void update(const double &) = 0;
                 virtual void draw() = 0;
                 virtual bool isCollidable() = 0;
                 virtual bool isCollectable() = 0;

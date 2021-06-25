@@ -32,7 +32,7 @@ namespace Indie {
                 Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display, int nbPlayer);
                 ~Player();
                 //void addBomb();
-                void update(float elapsedTimes);
+                void update(const double &elapsedTimes);
                 void draw();
                 int getCurrentNbBomb();
                 int getNbBombsMax();

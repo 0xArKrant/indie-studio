@@ -30,7 +30,7 @@ namespace Indie {
                 BoostFire(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~BoostFire() {}
 
-                void update(float elapsedTimes);
+                void update(const double &elapsedTimes);
                 void draw();
         };
 
@@ -41,7 +41,7 @@ namespace Indie {
                 BoostSpeed(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~BoostSpeed() {}
 
-                void update(float elapsedTimes);
+                void update(const double &elapsedTimes);
                 void draw();
         };
 
@@ -52,7 +52,7 @@ namespace Indie {
                 BoostBomb(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~BoostBomb() {}
 
-                void update(float elapsedTimes);
+                void update(const double &elapsedTimes);
                 void draw();
         };
     }

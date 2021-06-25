@@ -26,7 +26,7 @@ Indie::Game::Box::~Box()
 {
 }
 
-void Indie::Game::Box::update(float elapsedTimes)
+void Indie::Game::Box::update(const double &elapsedTimes)
 {
     (void)elapsedTimes;
 }
