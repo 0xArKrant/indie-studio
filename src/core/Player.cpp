@@ -49,7 +49,6 @@ void Indie::Game::Player::update(const double &elapsedTimes)
     if (this->_nbPlayer == 1) {
         if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_W)) {
             this->_rotaAngle = 270.0f;
-
             this->_pos.move(static_cast<float>((-this->_speed * elapsedTimes)), 0.0f, 0.0f);
             this->_state = WALKING;
             this->_direction = UP;

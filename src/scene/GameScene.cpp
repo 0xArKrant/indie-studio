@@ -56,7 +56,6 @@ void Indie::Scene::GameScene::_genMap()
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
         this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
     }
-
     std::srand((unsigned int)std::time(nullptr));
     std::vector<Misc::Vector<3>> bonusPos = std::vector<Misc::Vector<3>>();
     for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
@@ -295,16 +294,13 @@ void Indie::Scene::GameScene::draw()
     Indie::Raylib::Core::Core::getInstance().BeginMode3D(this->_camera);
     _map.draw();
     _player.draw();
-    _player2.draw();
 
     for (auto &elem : this->_gameObjectList) {
         elem->draw();
     }
+
     for (auto &elem : this->_bombList) {
-            elem->draw();
-    }
-    for (auto &elem : this->_bombList2) {
-            elem->draw();
+        elem->draw();
     }
     Indie::Raylib::Core::Core::getInstance().EndMode3D();
 }

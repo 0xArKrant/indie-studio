@@ -7,10 +7,7 @@
 
 #pragma once
 
-#include "indie.hpp"
 #include "Model3D.hpp"
-#include "Fire.hpp"
-#include "AnimesRaylib.hpp"
 
 namespace Indie {
     namespace Game {
@@ -29,24 +26,16 @@ namespace Indie {
                 void update(const double &);
                 void draw();
                 Indie::Game::Bomb::state getState();
-                void setState(Indie::Game::Bomb::state);
+                void  setState(Indie::Game::Bomb::state);
                 Indie::Game::Bomb::state _bombState;
-                void setFirePos();
+
                 bool isCollectable();
                 bool isCollidable();
                 bool destroyed = false;
             protected:
             private:
                 float _second;
-                int fireNbCase;
                 std::string _state;
-                Misc::Vector<3> _fireRota;
-                Misc::Vector<3> _fireScale;
-                std::unique_ptr<Indie::Game::Fire> _fire;
-                std::vector<std::unique_ptr<Indie::Game::Fire>> _fireList;
-                float _fireRotaAngle;
-                std::vector<std::unique_ptr<Indie::Raylib::AnimesRaylib>> _animList;
-                Indie::Raylib::AnimesRaylib _animFire;
         };
     }
 }
