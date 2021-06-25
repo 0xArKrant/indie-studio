@@ -17,7 +17,7 @@ _player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bom
 _bomb("./assets/bomb/bomb.obj")
 {
     _genMap();
-    this->_camera = {{ 16.f, 35.f, 0}, {0, 0, 0}, {0, 1, 0}, 25.0f, 0};
+    this->_camera = {{ 16.f, 35.f, 0.f}, {0.f, 0.f, 0.f}, {0.f, 1.f, 0.f}, 25.0f, 0};
 }
 
 Indie::Scene::GameScene::~GameScene()
