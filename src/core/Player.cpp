@@ -43,7 +43,7 @@ Indie::Game::Player::~Player()
 {
 }
 
-void Indie::Game::Player::update(float elapsedTimes)
+void Indie::Game::Player::update(const double &elapsedTimes)
 {
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_W) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_UP)) {
         this->_rotaAngle = 270.0f;

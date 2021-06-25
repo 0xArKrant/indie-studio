@@ -10,6 +10,7 @@
 #include "Box.hpp"
 #include "Boost.hpp"
 #include <algorithm>
+#include <ctime>
 
 Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
@@ -55,7 +56,7 @@ void Indie::Scene::GameScene::_genMap()
     //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
     //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
     // }
-    std::srand(time(nullptr));
+    std::srand((unsigned int)std::time(nullptr));
     std::vector<Misc::Vector<3>> bonusPos = std::vector<Misc::Vector<3>>();
     for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
         bonusPos.emplace_back(-7.0f, 0.0f, 6.0f - i);

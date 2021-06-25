@@ -51,7 +51,7 @@ Indie::Game::Bomb::state Indie::Game::Bomb::getState()
 }
 
 
-void Indie::Game::Bomb::update(float elapsedTimes)
+void Indie::Game::Bomb::update(const double &elapsedTimes)
 {
     this->_second += elapsedTimes;
 

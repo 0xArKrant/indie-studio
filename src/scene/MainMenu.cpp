@@ -56,6 +56,6 @@ void Indie::Scene::MainMenu::draw()
 {
     ::DrawTexture(this->_texturebg, 0, 0, {255, 255, 255, 255});
     ::DrawTexture(this->_texturetitle, 20, 20, {255, 255, 255, 255});
-    ::DrawTextureRec(this->_textureplay, this->_sourceRecPlay ,(Vector2){this->_playrec.x, this->_playrec.y }, {255, 255, 255, 255});
-    ::DrawTextureRec(this->_texturequit, this->_sourceRecQuit,(Vector2){this->_quitrec.x, this->_quitrec.y }, {255, 255, 255, 255});
+    ::DrawTextureRec(this->_textureplay, this->_sourceRecPlay ,{this->_playrec.x, this->_playrec.y }, {255, 255, 255, 255});
+    ::DrawTextureRec(this->_texturequit, this->_sourceRecQuit,{this->_quitrec.x, this->_quitrec.y }, {255, 255, 255, 255});
 }

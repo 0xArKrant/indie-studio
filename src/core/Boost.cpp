@@ -22,7 +22,7 @@ Indie::Game::BoostFire::BoostFire(const Indie::Raylib::Models::ModelsRaylib &mod
     this->_type = BOOST_FIRE;
 }
 
-void Indie::Game::BoostFire::update(float elapsedTimes)
+void Indie::Game::BoostFire::update(const double &elapsedTimes)
 {
     (void)elapsedTimes;
 }
@@ -48,7 +48,7 @@ Indie::Game::BoostSpeed::BoostSpeed(const Indie::Raylib::Models::ModelsRaylib &m
     this->_type = BOOST_SPEED;
 }
 
-void Indie::Game::BoostSpeed::update(float elapsedTimes)
+void Indie::Game::BoostSpeed::update(const double &elapsedTimes)
 {
     (void)elapsedTimes;
 }
@@ -74,7 +74,7 @@ Indie::Game::BoostBomb::BoostBomb(const Indie::Raylib::Models::ModelsRaylib &mod
     this->_type = BOOST_BOMB;
 }
 
-void Indie::Game::BoostBomb::update(float elapsedTimes)
+void Indie::Game::BoostBomb::update(const double &elapsedTimes)
 {
     (void)elapsedTimes;
 }
