@@ -34,6 +34,8 @@ namespace Indie {
                 bool _checkCollisionGO();
                 bool _checkCollisionGOPlayer2();
                 void _genMap();
+                void _destroyBoxes(Misc::Vector<3>);
+                void _destroyBoxes2(Misc::Vector<3>);
                 // Misc::Vector<3> _getDirection();
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
@@ -41,7 +43,8 @@ namespace Indie {
                 Misc::Camera3D _cam;
                 Indie::Raylib::AnimesRaylib _animFire;
                 std::vector<std::unique_ptr<Indie::Game::GameObject>> _gameObjectList;
-                std::vector<std::unique_ptr<Indie::Game::GameObject>> _bombList;
+                std::vector<std::unique_ptr<Indie::Game::Bomb>> _bombList;
+                std::vector<std::unique_ptr<Indie::Game::Bomb>> _bombList2;
 
         };
     }

@@ -164,6 +164,11 @@ bool Indie::Game::Player::isCollidable()
     return false;
 }
 
+int Indie::Game::Player::getFire()
+{
+    return this->_fire;
+}
+
 Indie::Game::Player::direction Indie::Game::Player::getDirection()
 {
     return _direction;

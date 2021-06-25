@@ -39,6 +39,7 @@ namespace Indie {
                 void setCurrentNbBomb(int nb);
                 bool isCollectable();
                 bool isCollidable();
+                int getFire();
                 Indie::Game::Player::direction getDirection();
                 void speedBonus();
                 void fireBonus();

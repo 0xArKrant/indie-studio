@@ -113,6 +113,10 @@ void Indie::Game::Bomb::update(float elapsedTimes)
         std::cout << this->_second << std::endl;
         this->_bombState = EXPLODED;
         this->_display = false;
+        this->_second = 0;
+    }
+    if (this->_second >= 1 && this->_bombState == EXPLODED) {
+        this->_bombState = NONE;
     }
 }
 

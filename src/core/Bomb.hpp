@@ -34,6 +34,7 @@ namespace Indie {
                 void setFirePos();
                 bool isCollectable();
                 bool isCollidable();
+                bool destroyed = false;
             protected:
             private:
                 float _second;

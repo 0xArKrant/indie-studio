@@ -30,31 +30,31 @@ void Indie::Scene::GameScene::setGame()
 
 void Indie::Scene::GameScene::_genMap()
 {
-    // Indie::Raylib::Models::ModelsRaylib model("./assets/box/box.obj", "./assets/box/box_wood.png");
-    // for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
-    // }
-    // for (int i = 0; i < this->_map.getMapSize().getX() - 2; i++) {
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-5.0f, 0.0f, 6.0f - i), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-1.0f, 0.0f, 6.0f - i), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(1.0f, 0.0f, 6.0f - i), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(3.0f, 0.0f, 6.0f - i), true));
-    // }
-    // for (int i = 2; i < this->_map.getMapSize().getY() - 4; i++) {
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 6.0f), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -6.0f), true));
-    // }
-    // for (int i = 0; i < this->_map.getMapSize().getY() - 2; i++) {
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 4.0f), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 2.0f), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
-    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
-    // }
+    Indie::Raylib::Models::ModelsRaylib model("./assets/box/box.obj", "./assets/box/box_wood.png");
+    for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
+    }
+    for (int i = 0; i < this->_map.getMapSize().getX() - 2; i++) {
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-5.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-3.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-1.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(1.0f, 0.0f, 6.0f - i), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(3.0f, 0.0f, 6.0f - i), true));
+    }
+    for (int i = 2; i < this->_map.getMapSize().getY() - 4; i++) {
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 6.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -6.0f), true));
+    }
+    for (int i = 0; i < this->_map.getMapSize().getY() - 2; i++) {
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 4.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 2.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, 0.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -2.0f), true));
+        this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f + i, 0.0f, -4.0f), true));
+    }
     std::srand(time(nullptr));
     std::vector<Misc::Vector<3>> bonusPos = std::vector<Misc::Vector<3>>();
     for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
@@ -221,15 +221,47 @@ bool Indie::Scene::GameScene::_checkCollisionMapPlayer2()
     return false;
 }
 
+void Indie::Scene::GameScene::_destroyBoxes(Misc::Vector<3> bombPos)
+{
+    for (auto &elem : this->_gameObjectList) {
+        for (int i = 0; i < this->_player.getFire(); i++)
+            if ((elem->getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f + i) || elem->getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f - i) || elem->getPos() == bombPos + Misc::Vector<3>(0.f + i, 0.f, 0.f) || elem->getPos() == bombPos + Misc::Vector<3>(0.f - i, 0.f, 0.f)) && elem->getType() == Indie::Game::GameObject::TypeObject::BOX) {
+                elem->setDisplay(false);
+            }
+    }
+}
+
+void Indie::Scene::GameScene::_destroyBoxes2(Misc::Vector<3> bombPos)
+{
+    for (auto &elem : this->_gameObjectList) {
+        for (int i = 0; i < this->_player2.getFire(); i++)
+            if ((elem->getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f + i) || elem->getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f - i) || elem->getPos() == bombPos + Misc::Vector<3>(0.f + i, 0.f, 0.f) || elem->getPos() == bombPos + Misc::Vector<3>(0.f - i, 0.f, 0.f)) && elem->getType() == Indie::Game::GameObject::TypeObject::BOX) {
+                elem->setDisplay(false);
+            }
+    }
+}
+
 void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed)
 {
     (void)scenemanagement;
     auto oldPos = this->_player.getPos();
     auto oldPosPlayer2 = this->_player2.getPos();
     this->_gameObjectList.erase(std::remove_if(this->_gameObjectList.begin(), this->_gameObjectList.end(), [](std::unique_ptr<Indie::Game::GameObject> &gameObject) {return !gameObject->getDisplay();}), this->_gameObjectList.end());
-    //for (auto &elem : _bombList)
-    //    if (!elem->getDisplay())
-    //        this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() - 1);
+    // this->_gameObjectList.erase(std::remove_if(this->_bombList.begin(), this->_bombList.end(), [](std::unique_ptr<Indie::Game::Bomb> &bomb) {if (bomb->getState() == Indie::Game::Bomb::state::NONE) return true; else return true;}), this->_bombList.end());
+    for (auto &elem : _bombList) {
+        if (!elem->getDisplay() && !elem->destroyed) {
+           this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() - 1);
+           elem->destroyed = true;
+           _destroyBoxes(elem->getPos());
+        }
+    }
+    for (auto &elem : _bombList2) {
+        if (!elem->getDisplay() && !elem->destroyed) {
+           this->_player2.setCurrentNbBomb(this->_player2.getCurrentNbBomb() - 1);
+           elem->destroyed = true;
+           _destroyBoxes2(elem->getPos());
+        }
+    }
     this->_player.update(elapsed);
     this->_player2.update(elapsed);
     if (_checkCollisionMap())
@@ -241,14 +273,17 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
     if (_checkCollisionGOPlayer2())
         this->_player2.setPosition(oldPosPlayer2);
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_SPACE) && this->_player.getCurrentNbBomb() < this->_player.getNbBombsMax()) {
-        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player.getPos(), true ));
-        //this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
+        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player.getPos().rounded(), true ));
+        this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
     }
     if ((Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_RIGHT_SHIFT) || Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) && this->_player2.getCurrentNbBomb() < this->_player2.getNbBombsMax()) {
-        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player2.getPos(), true ));
-        //this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
+        this->_bombList2.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player2.getPos().rounded(), true ));
+        this->_player2.setCurrentNbBomb(this->_player2.getCurrentNbBomb() + 1);
     }
     for (auto &elem : this->_bombList) {
+        elem->update(elapsed);
+    }
+    for (auto &elem : this->_bombList2) {
         elem->update(elapsed);
     }
 }
@@ -265,4 +300,7 @@ void Indie::Scene::GameScene::draw()
     for (auto &elem : this->_bombList) {
             elem->draw();
     }
-}
+    for (auto &elem : this->_bombList2) {
+            elem->draw();
+    }
+};
