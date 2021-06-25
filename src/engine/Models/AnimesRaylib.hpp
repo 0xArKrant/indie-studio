@@ -24,7 +24,7 @@ namespace Indie {
                 void draw();
 
                 protected:
-                    float _frameCount = 0;
+                    unsigned int _frameCount = 0;
                     std::vector<std::string> _pathList;
                     std::vector<::Model> _objList;
                     std::vector<::Texture2D> _textureList;
