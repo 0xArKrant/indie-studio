@@ -69,6 +69,14 @@ namespace Misc {
                 return res;
             }
 
+            Misc::Vector<vSize> rounded()
+            {
+                Vector<vSize> res;
+                for (size_t size = 0; size < vSize; size++)
+                    res._vector[size] = round(this->_vector[size]);
+                return res;
+            }
+
             ~Vector() = default; /*! Rectangle default desctructor */
 
             template<typename ... x>

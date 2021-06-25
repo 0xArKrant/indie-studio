@@ -55,14 +55,13 @@ void Indie::Game::Fire::update(const double &elapsedTimes)
 
 }
 
-
 void Indie::Game::Fire::draw()
 {
 
     this->_model.DrawModel(this->_pos, 0.30f, Misc::Colors(255, 255, 255, 255));
-}
+} 
 
-void Indie::Game::Fire::setState(Indie::Game::Fire::firestate fireState)
+void Indie::Game::Fire::setState(Indie::Game::Fire::firestate fireState) 
 {
     this->_fireState = fireState;
 }

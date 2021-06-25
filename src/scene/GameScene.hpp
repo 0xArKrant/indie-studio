@@ -18,7 +18,6 @@
 #include "AnimesRaylib.hpp"
 #include <ctime>
 
-
 namespace Indie {
     namespace Scene {
         class GameScene : public Indie::Core::IScene {
