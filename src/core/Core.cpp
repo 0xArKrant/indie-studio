@@ -10,10 +10,7 @@
 #include "indie.hpp"
 
 Indie::Core::Core::Core() {
-    this->_height = 1600;
-    this->_width = 900;
-    this->_name = "Bomberman";
-    this->_sceneManagement = std::make_unique<Indie::Core::SceneManagement>(this->_width, this->_height, this->_name);
+    this->_sceneManagement = std::make_unique<Indie::Core::SceneManagement>();
 }
 
 Indie::Core::Core::~Core() {

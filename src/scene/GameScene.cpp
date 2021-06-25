@@ -17,6 +17,7 @@ _player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bom
 _bomb("./assets/bomb/bomb.obj")
 {
     _genMap();
+    this->_camera = {{ 16.f, 35.f, 0}, {0, 0, 0}, {0, 1, 0}, 25.0f, 0};
 }
 
 Indie::Scene::GameScene::~GameScene()
@@ -183,6 +184,7 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
 
 void Indie::Scene::GameScene::draw()
 {
+    Indie::Raylib::Core::Core::getInstance().BeginMode3D(this->_camera);
     _map.draw();
     _player.draw();
 
@@ -193,4 +195,5 @@ void Indie::Scene::GameScene::draw()
     for (auto &elem : this->_bombList) {
         elem->draw();
     }
+    Indie::Raylib::Core::Core::getInstance().EndMode3D();
 }

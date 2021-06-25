@@ -34,7 +34,7 @@ namespace Indie {
                 // Misc::Vector<3> _getDirection();
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
-                Misc::Camera3D _cam;
+                Misc::Camera3D _camera;
                 std::vector<std::unique_ptr<Indie::Game::GameObject>> _gameObjectList;
                 std::vector<std::unique_ptr<Indie::Game::Bomb>> _bombList;
                 Indie::Raylib::Models::ModelsRaylib _bomb;

@@ -19,13 +19,11 @@ namespace Indie {
             public:
                 MainMenu();
                 ~MainMenu();
-                void setMenu();
                 void update(Indie::Core::SceneManagement &scenemanagement, const double &);
                 void draw();
 
             protected:
             private:
-                //Indie::Raylib::Map _map;
         };
     }
 }

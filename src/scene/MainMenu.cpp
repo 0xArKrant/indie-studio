@@ -15,11 +15,6 @@ Indie::Scene::MainMenu::~MainMenu()
 {
 }
 
-void Indie::Scene::MainMenu::setMenu()
-{
-
-}
-
 void Indie::Scene::MainMenu::update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed)
 {
     (void) elapsed;
@@ -29,5 +24,4 @@ void Indie::Scene::MainMenu::update(Indie::Core::SceneManagement &scenemanagemen
 
 void Indie::Scene::MainMenu::draw()
 {
-    //_map.draw();
 }
