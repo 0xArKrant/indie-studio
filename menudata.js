@@ -86,6 +86,7 @@ var menudata={children:[
 {text:"_",url:"functions_vars.html#index__5F"},
 {text:"c",url:"functions_vars_c.html#index_c"},
 {text:"d",url:"functions_vars_d.html#index_d"},
+{text:"f",url:"functions_vars_f.html#index_f"},
 {text:"m",url:"functions_vars_m.html#index_m"},
 {text:"t",url:"functions_vars_t.html#index_t"}]},
 {text:"Enumerations",url:"functions_enum.html"},
