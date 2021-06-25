@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quit_2092',['QUIT',['../d0/d66/namespaceindie.html#ae786f0b6450641c68e0c8e5558d7b3a6ac0f41fd4ad97ba4197b15cf97fd5feae',1,'indie']]]
+  ['off_2120',['OFF',['../d9/d72/classIndie_1_1Game_1_1Fire.html#a2e91baf67457e73344031e5a5aec7a2ca2fd1c1e53adbcbecc50dc8014e835578',1,'Indie::Game::Fire']]],
+  ['on_2121',['ON',['../d9/d72/classIndie_1_1Game_1_1Fire.html#a2e91baf67457e73344031e5a5aec7a2ca4ea9f5b720ba4ffeeafddafc311cfd15',1,'Indie::Game::Fire']]]
 ];
