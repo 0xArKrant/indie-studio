@@ -229,6 +229,14 @@ void Indie::Scene::GameScene::_destroyBoxes(Misc::Vector<3> bombPos)
                 elem->setDisplay(false);
             }
     }
+    for (int i = 0; i < this->_player.getFire(); i++)
+        if ((this->_player.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f + i) || this->_player.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f - i) || this->_player.getPos() == bombPos + Misc::Vector<3>(0.f + i, 0.f, 0.f) || this->_player.getPos() == bombPos + Misc::Vector<3>(0.f - i, 0.f, 0.f))) {
+            this->_player.setDisplay(false);
+        }
+    for (int i = 0; i < this->_player.getFire(); i++)
+        if ((this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f + i) || this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f - i) || this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f + i, 0.f, 0.f) || this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f - i, 0.f, 0.f))) {
+            this->_player2.setDisplay(false);
+        }
 }
 
 void Indie::Scene::GameScene::_destroyBoxes2(Misc::Vector<3> bombPos)
@@ -239,11 +247,19 @@ void Indie::Scene::GameScene::_destroyBoxes2(Misc::Vector<3> bombPos)
                 elem->setDisplay(false);
             }
     }
+    for (int i = 0; i < this->_player2.getFire(); i++)
+        if ((this->_player.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f + i) || this->_player.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f - i) || this->_player.getPos() == bombPos + Misc::Vector<3>(0.f + i, 0.f, 0.f) || this->_player.getPos() == bombPos + Misc::Vector<3>(0.f - i, 0.f, 0.f))) {
+            this->_player.setDisplay(false);
+        }
+    for (int i = 0; i < this->_player2.getFire(); i++)
+        if ((this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f + i) || this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f, 0.f, 0.f - i) || this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f + i, 0.f, 0.f) || this->_player2.getPos() == bombPos + Misc::Vector<3>(0.f - i, 0.f, 0.f))) {
+            this->_player2.setDisplay(false);
+        }
 }
 
 void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanagement, const double &elapsed)
 {
-    (void)scenemanagement;
+    // (void)scenemanagement;
     auto oldPos = this->_player.getPos();
     auto oldPosPlayer2 = this->_player2.getPos();
     this->_gameObjectList.erase(std::remove_if(this->_gameObjectList.begin(), this->_gameObjectList.end(), [](std::unique_ptr<Indie::Game::GameObject> &gameObject) {return !gameObject->getDisplay();}), this->_gameObjectList.end());
@@ -273,11 +289,11 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
     if (_checkCollisionGOPlayer2())
         this->_player2.setPosition(oldPosPlayer2);
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_SPACE) && this->_player.getCurrentNbBomb() < this->_player.getNbBombsMax()) {
-        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player.getPos().rounded(), true ));
+        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player.getPos().rounded(), true, this->_player.getFire()));
         this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
     }
     if ((Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_RIGHT_SHIFT) || Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) && this->_player2.getCurrentNbBomb() < this->_player2.getNbBombsMax()) {
-        this->_bombList2.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player2.getPos().rounded(), true ));
+        this->_bombList2.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player2.getPos().rounded(), true, this->_player.getFire()));
         this->_player2.setCurrentNbBomb(this->_player2.getCurrentNbBomb() + 1);
     }
     for (auto &elem : this->_bombList) {
@@ -286,6 +302,8 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
     for (auto &elem : this->_bombList2) {
         elem->update(elapsed);
     }
+    // if (!_player.getDisplay() && !this->_player2.getDisplay())
+    //     scenemanagement.push<Indie::Scene::MainMenu>();
 }
 
 void Indie::Scene::GameScene::draw()

@@ -23,6 +23,7 @@ namespace Indie {
                 };
                 Bomb(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
                 Bomb(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
+                Bomb(const std::string &objPath, const std::string &id, Misc::Vector<3> pos, bool display, int fire);
                 Bomb(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~Bomb();
 
@@ -39,6 +40,7 @@ namespace Indie {
             private:
                 float _second;
                 int fireNbCase;
+                int _bonusFire;
                 std::string _state;
                 Misc::Vector<3> _fireRota;
                 Misc::Vector<3> _fireScale;

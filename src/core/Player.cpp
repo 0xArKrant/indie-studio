@@ -148,10 +148,12 @@ void Indie::Game::Player::update(float elapsedTimes)
 
 void Indie::Game::Player::draw()
 {
-    if (this->_state == WALKING)
-        this->_anim.draw();
-    if (this->_state == IDLE)
-        this->_animIdle.draw();
+    if (_display) {
+        if (this->_state == WALKING)
+            this->_anim.draw();
+        if (this->_state == IDLE)
+            this->_animIdle.draw();
+    }
 }
 
 bool Indie::Game::Player::isCollectable()
