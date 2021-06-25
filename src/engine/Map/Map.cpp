@@ -27,18 +27,14 @@ Indie::Raylib::Map::Map(const std::string texturePath, const std::string cubicPa
 
 void Indie::Raylib::Map::draw()
 {
-    //::UpdateCamera(&this->_camera);
-    //::BeginMode3D(this->_camera);
     ::DrawModel(this->_model, this->mapPosition, 1.0f, GRAY);
-    // ::EndMode3D();
-    ::DrawFPS(10, 10);
 }
 
 Indie::Raylib::Map::~Map()
 {
     ::UnloadTexture(this->cubicmap);    // Unload cubicmap texture
     ::UnloadTexture(this->texture);     // Unload map texture
-    ::UnloadModel(this->_model); 
+    ::UnloadModel(this->_model);
 }
 
 Misc::Vector<3> Indie::Raylib::Map::getMapPosition() const
