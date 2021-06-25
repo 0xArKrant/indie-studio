@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ellipse_1024',['Ellipse',['../d8/dc8/classIndie_1_1Raylib_1_1Shape_1_1Ellipse.html',1,'Indie::Raylib::Shape']]],
-  ['ellipselines_1025',['EllipseLines',['../d4/dd9/classIndie_1_1Raylib_1_1Shape_1_1EllipseLines.html',1,'Indie::Raylib::Shape']]],
-  ['exception_1026',['Exception',['../d7/d67/classIndie_1_1Errors_1_1Exception.html',1,'Indie::Errors']]]
+  ['ellipse_1038',['Ellipse',['../d8/dc8/classIndie_1_1Raylib_1_1Shape_1_1Ellipse.html',1,'Indie::Raylib::Shape']]],
+  ['ellipselines_1039',['EllipseLines',['../d4/dd9/classIndie_1_1Raylib_1_1Shape_1_1EllipseLines.html',1,'Indie::Raylib::Shape']]],
+  ['exception_1040',['Exception',['../d7/d67/classIndie_1_1Errors_1_1Exception.html',1,'Indie::Errors']]]
 ];
