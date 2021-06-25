@@ -16,7 +16,7 @@
 #include "../engine/Models/Collision.hpp"
 #include "Bomb.hpp"
 #include "AnimesRaylib.hpp"
-
+#include <ctime>
 
 namespace Indie {
     namespace Scene {
@@ -40,7 +40,7 @@ namespace Indie {
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
                 Indie::Game::Player _player2;
-                Misc::Camera3D _cam;
+                Misc::Camera3D _camera;
                 Indie::Raylib::AnimesRaylib _animFire;
                 std::vector<std::unique_ptr<Indie::Game::GameObject>> _gameObjectList;
                 std::vector<std::unique_ptr<Indie::Game::Bomb>> _bombList;

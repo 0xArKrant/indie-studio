@@ -15,7 +15,6 @@ Indie::Game::Bomb::Bomb(const std::string &objPath, const std::string &texturePa
     this->fireNbCase = 12;
     this->_type = BOMB;
     this->_bombState = PLACED;
-        std::cout << "PLACED" << std::endl;
     this->_second = 0;
     this->_fireRota = {0.0f, 1.0f, 0.0f};
     this->_fireScale = {40.0f, 40.0f, 40.0f};
@@ -100,13 +99,13 @@ void  Indie::Game::Bomb::setState(Indie::Game::Bomb::state _bombState)
     this->_bombState = _bombState;
 }
 
-Indie::Game::Bomb::state Indie::Game::Bomb::getState() 
+Indie::Game::Bomb::state Indie::Game::Bomb::getState()
 {
     return this->_bombState;
 }
 
 
-void Indie::Game::Bomb::update(float elapsedTimes)
+void Indie::Game::Bomb::update(const double &elapsedTimes)
 {
     this->_second += elapsedTimes;
     if (this->_second >= 3 && this->_bombState == PLACED) {

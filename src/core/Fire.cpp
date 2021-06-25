@@ -46,7 +46,7 @@ bool Indie::Game::Fire::isCollidable()
     return false;
 }
 
-void Indie::Game::Fire::update(float elapsedTimes)
+void Indie::Game::Fire::update(const double &elapsedTimes)
 {
     this->_secondFire += elapsedTimes;
     if (this->_secondFire >= 3) {
@@ -54,7 +54,6 @@ void Indie::Game::Fire::update(float elapsedTimes)
     }
 
 }
-
 
 void Indie::Game::Fire::draw()
 {

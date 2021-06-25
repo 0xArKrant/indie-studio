@@ -25,7 +25,7 @@ namespace Indie {
                 Fire(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display);
                 ~Fire();
 
-                void update(float elapsedTimes);
+                void update(const double &elapsedTimes);
                 void draw();
                 void setState(Indie::Game::Fire::firestate);
                 bool isCollectable();
