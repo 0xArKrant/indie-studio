@@ -15,6 +15,7 @@
 #include "Player.hpp"
 #include "../engine/Models/Collision.hpp"
 #include "Bomb.hpp"
+#include "AnimesRaylib.hpp"
 
 
 namespace Indie {
@@ -29,14 +30,19 @@ namespace Indie {
             protected:
             private:
                 bool _checkCollisionMap();
+                bool _checkCollisionMapPlayer2();
                 bool _checkCollisionGO();
+                bool _checkCollisionGOPlayer2();
                 void _genMap();
                 // Misc::Vector<3> _getDirection();
                 Indie::Raylib::Map _map;
                 Indie::Game::Player _player;
+                Indie::Game::Player _player2;
                 Misc::Camera3D _cam;
+                Indie::Raylib::AnimesRaylib _animFire;
                 std::vector<std::unique_ptr<Indie::Game::GameObject>> _gameObjectList;
                 std::vector<std::unique_ptr<Indie::Game::GameObject>> _bombList;
+
         };
     }
 }

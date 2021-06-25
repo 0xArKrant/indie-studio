@@ -29,7 +29,7 @@ namespace Indie {
                     NONE
                 };
                 Player(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
-                Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
+                Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display, int nbPlayer);
                 ~Player();
                 //void addBomb();
                 void update(float elapsedTimes);
@@ -55,9 +55,10 @@ namespace Indie {
                 Indie::Raylib::AnimesRaylib _animIdle;
                 Indie::Game::Player::state _state;
                 Indie::Game::Player::direction _direction;
+                int _nbPlayer;
                 //std::vector<Model3D> _bombs;
             private:
-            bool _move;
+                bool _move;
         };
     }
 }

@@ -13,7 +13,8 @@
 
 Indie::Scene::GameScene::GameScene() :
 _map("./assets/cubicmap_atlas.png", "./assets/cubicmap.png", CAMERA_PERSPECTIVE),
-_player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), true)
+_player("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(-7.0f, 0.0f, 6.0f), true, 1),
+_player2("./assets/Muhammer/Muhammer.obj", "./assets/Muhammer/Muhammer.png", "bomberman", Misc::Vector<3>(5.0f, 0.0f, -6.0f), true, 2)
 {
     _genMap();
 }
@@ -31,6 +32,7 @@ void Indie::Scene::GameScene::_genMap()
 {
     // Indie::Raylib::Models::ModelsRaylib model("./assets/box/box.obj", "./assets/box/box_wood.png");
     // for (int i = 2; i < this->_map.getMapSize().getX() - 4; i++) {
+    //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
     //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(-7.0f, 0.0f, 6.0f - i), true));
     //     this->_gameObjectList.emplace_back(std::make_unique<Indie::Game::Box>(model, "box", Misc::Vector<3>(5.0f, 0.0f, 6.0f - i), true));
     // }
@@ -121,9 +123,73 @@ bool Indie::Scene::GameScene::_checkCollisionGO()
     return false;
 }
 
+bool Indie::Scene::GameScene::_checkCollisionGOPlayer2()
+{
+    Misc::Vector<3> direction;
+    if (this->_player2.getDirection() == Indie::Game::Player::RIGHT)
+        direction = Misc::Vector<3>(0.f, 0.f, -0.4f);
+    if (this->_player2.getDirection() == Indie::Game::Player::DOWN)
+        direction = Misc::Vector<3>(0.4f, 0.f, 0.f);
+    if (this->_player2.getDirection() == Indie::Game::Player::UP)
+        direction = Misc::Vector<3>(-0.4f, 0.f, 0.f);
+    if (this->_player2.getDirection() == Indie::Game::Player::LEFT)
+        direction = Misc::Vector<3>(0.f, 0.f, 0.4f);
+    if (this->_player2.getDirection() == Indie::Game::Player::NONE)
+        direction = Misc::Vector<3>(0.f, 0.f, 0.f);
+    for (auto &elem : this->_gameObjectList)
+        if (elem->isCollidable() && elem->getPos() == this->_player2.getPos() + direction)
+            return true;
+    for (auto &elem : this->_gameObjectList) {
+        if (elem->isCollectable() && elem->getPos() == this->_player2.getPos()) {
+            if (elem->getType() == Indie::Game::GameObject::TypeObject::BOOST_BOMB && elem->getDisplay())
+                this->_player2.bombBonus();
+            if (elem->getType() == Indie::Game::GameObject::TypeObject::BOOST_FIRE && elem->getDisplay())
+                this->_player2.fireBonus();
+            if (elem->getType() == Indie::Game::GameObject::TypeObject::BOOST_SPEED && elem->getDisplay())
+                this->_player2.speedBonus();
+            elem->setDisplay(false);
+        }
+    }
+    return false;
+}
+
 bool Indie::Scene::GameScene::_checkCollisionMap()
 {
     Misc::Vector<2> playerPos(this->_player.getPos().getZ(), this->_player.getPos().getX());
+    auto cubicMap = this->_map.getMapSize();
+    int cubicMapX = static_cast<int>(cubicMap.getX());
+    int cubicMapY = static_cast<int>(cubicMap.getY());
+    float playerRadius = 0.30f;
+    std::vector<Misc::Colors> mapPixels = this->_map.getMapPixels();
+
+    int playerCellX = static_cast<int>(round(playerPos.getX() - this->_map.getMapPosition().getZ() + 0.5f));
+    int playerCellY = static_cast<int>(round(playerPos.getY() - this->_map.getMapPosition().getX() + 0.5f));
+
+    if (playerCellX < 0) playerCellX = 0;
+    else if (playerCellX >= cubicMapX) playerCellX = cubicMapX - 1;
+
+    if (playerCellY < 0) playerCellY = 0;
+    else if (playerCellY >= cubicMapY) playerCellY = cubicMapY - 1;
+
+    for (int y = 0; y < cubicMapY; y++) {
+        for (int x = 0; x < cubicMapX; x++) {
+            if ((mapPixels[y * cubicMapX + x].getR() == 255) &&
+                (Indie::Raylib::Models::Collision::CheckCollisionCircleRec(playerPos, playerRadius,
+                                         Misc::Rectangle ({ this->_map.getMapPosition().getZ() - 0.5f + x * 1.0f,
+                                                           this->_map.getMapPosition().getX() - 0.5f + y * 1.0f,
+                                                           1.0f,
+                                                           1.0f }))))
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool Indie::Scene::GameScene::_checkCollisionMapPlayer2()
+{
+    Misc::Vector<2> playerPos(this->_player2.getPos().getZ(), this->_player2.getPos().getX());
     auto cubicMap = this->_map.getMapSize();
     int cubicMapX = static_cast<int>(cubicMap.getX());
     int cubicMapY = static_cast<int>(cubicMap.getY());
@@ -159,18 +225,28 @@ void Indie::Scene::GameScene::update(Indie::Core::SceneManagement &scenemanageme
 {
     (void)scenemanagement;
     auto oldPos = this->_player.getPos();
+    auto oldPosPlayer2 = this->_player2.getPos();
     this->_gameObjectList.erase(std::remove_if(this->_gameObjectList.begin(), this->_gameObjectList.end(), [](std::unique_ptr<Indie::Game::GameObject> &gameObject) {return !gameObject->getDisplay();}), this->_gameObjectList.end());
-    for (auto &elem : _bombList)
-        if (!elem->getDisplay())
-            this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() - 1);
+    //for (auto &elem : _bombList)
+    //    if (!elem->getDisplay())
+    //        this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() - 1);
     this->_player.update(elapsed);
+    this->_player2.update(elapsed);
     if (_checkCollisionMap())
         this->_player.setPosition(oldPos);
+    if (_checkCollisionMapPlayer2())
+        this->_player2.setPosition(oldPosPlayer2);
     if (_checkCollisionGO())
         this->_player.setPosition(oldPos);
+    if (_checkCollisionGOPlayer2())
+        this->_player2.setPosition(oldPosPlayer2);
     if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_SPACE) && this->_player.getCurrentNbBomb() < this->_player.getNbBombsMax()) {
         this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player.getPos(), true ));
-        this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
+        //this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
+    }
+    if ((Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyPressed(KEY_RIGHT_SHIFT) || Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) && this->_player2.getCurrentNbBomb() < this->_player2.getNbBombsMax()) {
+        this->_bombList.emplace_back(std::make_unique<Indie::Game::Bomb>("./assets/bomb/bomb.obj", "bomb", this->_player2.getPos(), true ));
+        //this->_player.setCurrentNbBomb(this->_player.getCurrentNbBomb() + 1);
     }
     for (auto &elem : this->_bombList) {
         elem->update(elapsed);
@@ -181,12 +257,12 @@ void Indie::Scene::GameScene::draw()
 {
     _map.draw();
     _player.draw();
+    _player2.draw();
 
     for (auto &elem : this->_gameObjectList) {
         elem->draw();
     }
-
     for (auto &elem : this->_bombList) {
-        elem->draw();
+            elem->draw();
     }
 }
