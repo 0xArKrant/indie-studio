@@ -22,6 +22,7 @@ namespace Indie {
                     BOOST_FIRE,
                     TEXT,
                     MUSIC,
+                    FIRE
                 };
                 GameObject(const std::string &id, Misc::Vector<3> pos, bool display);
                 GameObject() = delete;

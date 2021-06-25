@@ -19,7 +19,7 @@ Indie::Game::Box::Box(const std::string &objPath, const std::string &texturePath
 
 Indie::Game::Box::Box(const Indie::Raylib::Models::ModelsRaylib &model, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(model, id, pos, display)
 {
-
+    this->_type = BOX;
 }
 
 Indie::Game::Box::~Box()

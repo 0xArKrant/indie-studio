@@ -29,16 +29,17 @@ namespace Indie {
                     NONE
                 };
                 Player(const std::string &fileName, const std::string &id, Misc::Vector<3> pos, bool display);
-                Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display);
+                Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display, int nbPlayer);
                 ~Player();
                 //void addBomb();
-                void update(const double &);
+                void update(const double &elapsedTimes);
                 void draw();
                 int getCurrentNbBomb();
                 int getNbBombsMax();
                 void setCurrentNbBomb(int nb);
                 bool isCollectable();
                 bool isCollidable();
+                int getFire();
                 Indie::Game::Player::direction getDirection();
                 void speedBonus();
                 void fireBonus();
@@ -55,9 +56,10 @@ namespace Indie {
                 Indie::Raylib::AnimesRaylib _animIdle;
                 Indie::Game::Player::state _state;
                 Indie::Game::Player::direction _direction;
+                int _nbPlayer;
                 //std::vector<Model3D> _bombs;
             private:
-            bool _move;
+                bool _move;
         };
     }
 }

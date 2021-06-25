@@ -22,7 +22,7 @@ Indie::Game::Player::Player(const std::string &objPath, const std::string &id, M
     this->_currentNbBomb = 0;
 }
 
-Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display) : Model3D(objPath, texturePath, id, pos, display),
+Indie::Game::Player::Player(const std::string &objPath, const std::string &texturePath, const std::string &id, Misc::Vector<3> pos, bool display, int nbPlayer) : Model3D(objPath, texturePath, id, pos, display),
 _anim("./assets/Muhammer/MuhammerAnim", "./assets/Muhammer/Muhammer.png"),
 _animIdle("./assets/Muhammer/MuhammerIdle", "./assets/Muhammer/Muhammer.png")
 {
@@ -37,6 +37,7 @@ _animIdle("./assets/Muhammer/MuhammerIdle", "./assets/Muhammer/Muhammer.png")
     this->_state = IDLE;
     this->_direction = NONE;
     this->_currentNbBomb = 0;
+    this->_nbPlayer = nbPlayer;
 }
 
 Indie::Game::Player::~Player()
@@ -45,31 +46,89 @@ Indie::Game::Player::~Player()
 
 void Indie::Game::Player::update(const double &elapsedTimes)
 {
-    if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_W) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_UP)) {
-        this->_rotaAngle = 270.0f;
-        this->_pos.move((-this->_speed * elapsedTimes), 0.0f, 0.0f);
-        this->_state = WALKING;
-        this->_direction = UP;
-    } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_A) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_LEFT)) {
-        this->_rotaAngle = 0.0f;
-        this->_pos.move(0.0f, 0.0f, (this->_speed * elapsedTimes * 2.f));
-        this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
-        this->_state = WALKING;
-        this->_direction = LEFT;
-    } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_S) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_DOWN)) {
-        this->_rotaAngle = 90.0f;
-        this->_pos.move((this->_speed * elapsedTimes), 0.0f, 0.0f);
-        this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
-        this->_state = WALKING;
-        this->_direction = DOWN;
-    } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_D) || Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_RIGHT)) {
-        this->_rotaAngle = 180.0f;
-        this->_pos.move(0.0f, 0.0f, (-this->_speed * elapsedTimes * 2.f));
-        this->_state = WALKING;
-        this->_direction = RIGHT;
-    } else {
-        this->_state = IDLE;
-        this->_direction = NONE;
+    if (this->_nbPlayer == 1) {
+        if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_W)) {
+            this->_rotaAngle = 270.0f;
+            this->_pos.move(static_cast<float>((-this->_speed * elapsedTimes)), 0.0f, 0.0f);
+            this->_state = WALKING;
+            this->_direction = UP;
+        } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_A)) {
+            this->_rotaAngle = 0.0f;
+            this->_pos.move(0.0f, 0.0f, static_cast<float>((this->_speed * elapsedTimes * 2.f)));
+            this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
+            this->_state = WALKING;
+            this->_direction = LEFT;
+        } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_S)) {
+            this->_rotaAngle = 90.0f;
+            this->_pos.move(static_cast<float>((this->_speed * elapsedTimes)), 0.0f, 0.0f);
+            this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
+            this->_state = WALKING;
+            this->_direction = DOWN;
+        } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_D)) {
+            this->_rotaAngle = 180.0f;
+            this->_pos.move(0.0f, 0.0f, static_cast<float>((-this->_speed * elapsedTimes * 2.f)));
+            this->_state = WALKING;
+            this->_direction = RIGHT;
+        } else {
+            this->_state = IDLE;
+            this->_direction = NONE;
+        }
+    }
+    if (this->_nbPlayer == 2) {
+        if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_UP)) {
+            this->_rotaAngle = 270.0f;
+            this->_pos.move(static_cast<float>((-this->_speed * elapsedTimes)), 0.0f, 0.0f);
+            this->_state = WALKING;
+            this->_direction = UP;
+        } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_LEFT)) {
+            this->_rotaAngle = 0.0f;
+            this->_pos.move(0.0f, 0.0f, static_cast<float>((this->_speed * elapsedTimes * 2.f)));
+            this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
+            this->_state = WALKING;
+            this->_direction = LEFT;
+        } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_DOWN)) {
+            this->_rotaAngle = 90.0f;
+            this->_pos.move(static_cast<float>((this->_speed * elapsedTimes)), 0.0f, 0.0f);
+            this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
+            this->_state = WALKING;
+            this->_direction = DOWN;
+        } else if (Indie::Raylib::Core::Core::getInstance().getInputKeyboard().IsKeyDown(KEY_RIGHT)) {
+            this->_rotaAngle = 180.0f;
+            this->_pos.move(0.0f, 0.0f, static_cast<float>((-this->_speed * elapsedTimes * 2.f)));
+            this->_state = WALKING;
+            this->_direction = RIGHT;
+        } else {
+            this->_state = IDLE;
+            this->_direction = NONE;
+        }
+        if (Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadAvailable(0)) {
+            if (Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadButtonReleased(0, GAMEPAD_BUTTON_LEFT_FACE_UP)) {
+                this->_rotaAngle = 270.0f;
+                this->_pos.move(static_cast<float>((-this->_speed * elapsedTimes)), 0.0f, 0.0f);
+                this->_state = WALKING;
+                this->_direction = UP;
+            } else if (Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadButtonReleased(0, GAMEPAD_BUTTON_LEFT_FACE_LEFT)) {
+                this->_rotaAngle = 0.0f;
+                this->_pos.move(0.0f, 0.0f, static_cast<float>((this->_speed * elapsedTimes * 2.f)));
+                this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
+                this->_state = WALKING;
+                this->_direction = LEFT;
+            } else if (Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadButtonReleased(0, GAMEPAD_BUTTON_LEFT_FACE_DOWN)) {
+                this->_rotaAngle = 90.0f;
+                this->_pos.move(static_cast<float>((this->_speed * elapsedTimes)), 0.0f, 0.0f);
+                this->_anim.update(elapsedTimes, this->_pos, this->_rotaAngle, this->_scale, this->_rota);
+                this->_state = WALKING;
+                this->_direction = DOWN;
+            } else if (Indie::Raylib::Core::Core::getInstance().getInputGamepads().IsGamepadButtonReleased(0, GAMEPAD_BUTTON_LEFT_FACE_RIGHT)) {
+                this->_rotaAngle = 180.0f;
+                this->_pos.move(0.0f, 0.0f, static_cast<float>((-this->_speed * elapsedTimes * 2.f)));
+                this->_state = WALKING;
+                this->_direction = RIGHT;
+            } else {
+                this->_state = IDLE;
+                this->_direction = NONE;
+            }
+        }
     }
     // if (this->_direction == Indie::Game::Player::RIGHT)
     //     std::cout << "RIGHT" << std::endl;
@@ -103,6 +162,11 @@ bool Indie::Game::Player::isCollectable()
 bool Indie::Game::Player::isCollidable()
 {
     return false;
+}
+
+int Indie::Game::Player::getFire()
+{
+    return this->_fire;
 }
 
 Indie::Game::Player::direction Indie::Game::Player::getDirection()
